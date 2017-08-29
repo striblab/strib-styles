@@ -3,3 +3,6 @@
  * all have the `!default` suffix so that
  * they can be overriden if needed
  */
+
+// Selector wrapper, make more specific if needed
+$selector-wrapper: '.strib' !default;

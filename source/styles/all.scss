@@ -1,3 +1,14 @@
 /**
  * This is the file that includes everything
  */
+
+@import '_variables';
+@import '_mixins';
+
+// These have selector wrapper built-in
+@import '_reset';
+@import '_normalize';
+
+#{$selector-wrapper} {
+  @import '_layout';
+}
