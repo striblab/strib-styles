@@ -23,8 +23,11 @@
     <!-- For proper phone zoom -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Guide-specific styles-->
+    <!-- Actual style guide styles -->
     <link rel="stylesheet" href="./styles/strib-styles.all.css" type="text/css">
+
+    <!-- Styles specific to guide -->
+    <link rel="stylesheet" href="./guide-styles/main.css" type="text/css">
 
     <!-- Social Media Tags -->
     <meta property="og:type" content="website">
@@ -48,21 +51,38 @@
     <a href="#main-content" class="to-main-content sr-only">Skip to main content</a>
 
     <!-- Header -->
-    <header class="project-header" role="banner">
+    <header class="project-header container-fluid" role="banner">
+      <h1>Star Tribune Styles</h1>
     </header>
 
     <!-- Main content here -->
-    <main id="main-content" class="content" role="main">
-      <h1 id="star-tribune-styles">Star Tribune Styles</h1>
-
-<p>This guide describes front-end styles used at the Star Tribune, specifically for special projects or embeds.</p>
+    <main id="main-content" class="container-fluid" role="main">
+      <p>This guide describes front-end styles used at the Star Tribune, specifically for special projects or embeds.</p>
 
 <h2 id="including">Including</h2>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"strib"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<div class="strib-guide-example" data-example-id="">
+<p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Link with href
+  </a>
+</p>
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">href=</span><span class="s">"#collapseExample"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseExample"</span><span class="nt">&gt;</span>
+    Link with href
+  <span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
 
     </main>
 
     <!-- Footer -->
-    <footer role="contentinfo">
+    <footer role="contentinfo container-fluid">
     </footer>
 
     <!-- Guide-specific scripts -->

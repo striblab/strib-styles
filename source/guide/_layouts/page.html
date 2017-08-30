@@ -23,8 +23,11 @@
     <!-- For proper phone zoom -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Guide-specific styles-->
+    <!-- Actual style guide styles -->
     <link rel="stylesheet" href="./styles/strib-styles.all.css" type="text/css">
+
+    <!-- Styles specific to guide -->
+    <link rel="stylesheet" href="./guide-styles/main.css" type="text/css">
 
     <!-- Social Media Tags -->
     <meta property="og:type" content="website">
@@ -48,16 +51,17 @@
     <a href="#main-content" class="to-main-content sr-only">Skip to main content</a>
 
     <!-- Header -->
-    <header class="project-header" role="banner">
+    <header class="project-header container-fluid" role="banner">
+      <h1>{{ page.title }}</h1>
     </header>
 
     <!-- Main content here -->
-    <main id="main-content" class="content" role="main">
+    <main id="main-content" class="container-fluid" role="main">
       {{ content }}
     </main>
 
     <!-- Footer -->
-    <footer role="contentinfo">
+    <footer role="contentinfo container-fluid">
     </footer>
 
     <!-- Guide-specific scripts -->

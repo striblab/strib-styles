@@ -1,0 +1,51 @@
+/**
+ * Typogrphy styling
+ */
+
+// Font base sizes
+& {
+  font-size: 15px;
+
+  @media (min-width: 400px) {
+    font-size: 15px;
+  }
+
+  @media (min-width: 800px) {
+    font-size: 16px;
+  }
+}
+
+// Default
+& {
+  font-family: $font-text;
+  background-color: $color-text-bg;
+  color: $color-text;
+  line-height: $font-line-height;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  line-height: $font-line-height;
+}
+
+// Text/copy
+p,
+.text {
+  letter-spacing: $font-text-letter-spacing;
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading {
+  font-family: $font-heading;
+}
+
+// Sans text (for labels)
+.sans {
+  font-family: $font-text-sans;
+}

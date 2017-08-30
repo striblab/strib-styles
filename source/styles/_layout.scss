@@ -1,1 +1,39 @@
+/**
+ * Layout and containers
+ */
 
+// Just a regular container
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+// Explicitly fluid
+.container-fluid {
+  @extend .container;
+
+  width: 100%;
+}
+
+// Box is like a container, but without padding
+.box {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+// Specific size boxes adding padding if screen becomes
+// that size
+.box-article {
+  @extend .box;
+
+  max-width: 525px;
+
+  @media only screen and (max-width: 525px) {
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+}

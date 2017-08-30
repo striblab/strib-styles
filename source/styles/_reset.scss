@@ -2,7 +2,19 @@
  * Some custom resets.
  */
 
+// Reset body
 body#{$selector-wrapper} {
   margin: 0;
   padding: 0;
+}
+
+// Box sizing so that width includes padding and border.
+#{$selector-wrapper} {
+  box-sizing: border-box;
+
+  & *,
+  & *::before,
+  & *::after {
+    box-sizing: inherit;
+  }
 }
