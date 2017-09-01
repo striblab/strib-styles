@@ -43,9 +43,47 @@ h5,
 h6,
 .heading {
   font-family: $font-heading;
+  line-height: 1.25em;
+  padding: 0.5em 0 0;
+  margin: 0 0 0.5em;
+
+  // A bit of a helper
+  &.text-alternate {
+    font-family: $font-heading-alt;
+  }
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h4 {
+  font-family: $font-heading-alt;
+  font-size: 1.5;
+  font-weight: bold;
+}
+
+h5 {
+  font-family: $font-heading-alt;
+  font-size: 1.25;
+  font-weight: bold;
+}
+
+h6 {
+  font-family: $font-heading-alt;
+  font-size: 1;
+  font-weight: bold;
 }
 
 // Sans text (for labels)
-.sans {
-  font-family: $font-text-sans;
+.text-alternate {
+  font-family: $font-text-alt;
 }

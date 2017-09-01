@@ -54,7 +54,7 @@ gulp.task('styles', ['styles:lint'], () => {
 });
 
 // Create guide with Jekyll
-gulp.task('guide', ['guide:get-build'], done => {
+gulp.task('guide', ['guide:get-build-styles'], done => {
   gulpRunner(
     'bundle',
     ['exec', 'jekyll', 'build', '-d', 'guide', '-s', 'source/guide'],
@@ -63,15 +63,16 @@ gulp.task('guide', ['guide:get-build'], done => {
 });
 
 // Copy build files over to guide
-gulp.task('guide:get-build', ['build:styles'], () => {
+gulp.task('guide:get-build-styles', ['styles'], () => {
   return gulp.src(['build/**/*']).pipe(gulp.dest('source/guide/styles'));
 });
 
 // Watch for building
 gulp.task('watch', () => {
+  // Since the guide requires that the styles get built, this
+  // will actually run the styles twice
   gulp.watch(['source/styles/**/*.scss'], ['styles']);
-  gulp.watch(['source/guide/**/*'], ['guide']);
-  gulp.watch(['build/**/*'], ['guide:get-build']);
+  gulp.watch(['build/**/*', 'source/guide/**/*'], ['guide']);
 });
 
 // Local server
@@ -92,7 +93,6 @@ gulp.task('default', ['build:styles', 'build:guide']);
 // Run command line task
 function gulpRunner(command, args, done) {
   const proc = child.spawn(command, args);
-
   const logger = buffer => {
     buffer
       .toString()

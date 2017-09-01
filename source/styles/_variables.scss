@@ -9,49 +9,52 @@ $selector-wrapper: '.strib' !default;
 
 // Font families
 $font-benton-sans: 'Benton Sans', Helvetica, Arial, sans-serif !default;
-$font-benton-sans-condensed: 'Benton Sans Condensed Medium', Helvetica, Arial, sans-serif !default;
+$font-benton-sans-condensed: 'Benton Sans Condensed Medium', Helvetica, Arial,
+  sans-serif !default;
 
 $font-popular: 'Popular', Helvetica, Arial, sans-serif !default;
-$font-popular-light: 'Popular Light', Helvetica, Arial,sans-serif !default;
+$font-popular-light: 'Popular Light', Helvetica, Arial, sans-serif !default;
 $font-popular-medium: 'Popular Medium', Helvetica, Arial, sans-serif !default;
 
 $font-poynter-serif: 'Poynter Serif RE', Georgia, Times, serif !default;
 
-$font-whitman-display-compressed-bold: 'Whitman Display Compressed Bold', serif !default;
-$font-whitman-display: 'Whitman Display', serif !default;
-$font-whitman-osf: 'Whitman OSF', serif !default;
+$font-whitman-display-compressed-bold: 'Whitman Display Compressed Bold',
+  Georgia, Times, serif !default;
+$font-whitman-display: 'Whitman Display', Georgia, Times, serif !default;
+$font-whitman-osf: 'Whitman OSF', Georgia, Times, serif !default;
 
 // Font and typography
 $font-text: $font-poynter-serif !default;
 $font-text-letter-spacing: -0.3px !default;
-$font-text-sans: $font-benton-sans !default;
-$font-heading: $font-benton-sans !default;
+$font-text-alt: $font-benton-sans !default;
+$font-heading: $font-whitman-display-compressed-bold !default;
+$font-heading-alt: $font-benton-sans !default;
 $font-line-height: 1.4em !default;
 
 // Colors
 $color-black: #000000 !default;
-$color-white: #FFFFFF !default;
+$color-white: #ffffff !default;
 
 $color-gray-darker: #222222 !default;
 $color-gray-dark: #444444 !default;
 $color-gray-medium: #676767 !default;
-$color-gray-light: #BDBDBD !default;
-$color-gray-lighter: #F1F1F1 !default;
+$color-gray-light: #bdbdbd !default;
+$color-gray-lighter: #f1f1f1 !default;
 
 $color-strib-green-dark: #005825 !default;
-$color-strib-green-light: #8DC63F !default;
-$color-strib-green-bg: #00824A !default;
+$color-strib-green-light: #8dc63f !default;
+$color-strib-green-bg: #00824a !default;
 
-$color-beige: #E4C691 !default;
-$color-dark-green-gold: #8D8862 !default;
-$color-light-green: #C0DC99 !default;
+$color-beige: #e4c691 !default;
+$color-dark-green-gold: #8d8862 !default;
+$color-light-green: #c0dc99 !default;
 $color-green: #507356 !default;
-$color-light-blue: #97D5D9 !default;
-$color-desat-blue: #464B65 !default;
-$color-purple: #3E2B3D !default;
-$color-dark-purple: #3A3248 !default;
-$color-pink: #CC8E94 !default;
-$color-skin: #B08B7B !default;
+$color-light-blue: #97d5d9 !default;
+$color-desat-blue: #464b65 !default;
+$color-purple: #3e2b3d !default;
+$color-dark-purple: #3a3248 !default;
+$color-pink: #cc8e94 !default;
+$color-skin: #b08b7b !default;
 
 // Common color use
 $color-text: $color-gray-darker !default;

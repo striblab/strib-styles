@@ -5,12 +5,25 @@
 
 .strib-guide-example {
   border: 1px solid #212121;
-  padding: 1em;
+  padding: 0.75em 1.25em;
 }
 
+figure.highlight {
+  margin: 0 1em 0 0;
+}
+
+figure.highlight,
 .strib-guide-highlight {
   font-family: monospace;
   background-color: #F1F1F1;
-  padding: 1em;
+  padding: 0.75em 1.25em;
   overflow-x: auto;
+}
+
+.strib-guide-highlight {
+  border: 1px solid #212121;
+
+  .strib-guide-example + & {
+    border-top: none;
+  }
 }

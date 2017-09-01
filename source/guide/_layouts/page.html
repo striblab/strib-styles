@@ -6,41 +6,49 @@
 
     <title>{{ page.title }} | Star Tribune Styles</title>
 
+    <!-- https://ricostacruz.com/til/relative-paths-in-jekyll -->
+    {% assign base = '' %}
+    {% assign depth = page.url | split: '/' | size | minus: 1 %}
+    {% if    depth <= 1 %}{% assign base = '.' %}
+    {% elsif depth == 2 %}{% assign base = '..' %}
+    {% elsif depth == 3 %}{% assign base = '../..' %}
+    {% elsif depth == 4 %}{% assign base = '../../..' %}{% endif %}
+
     <meta name="author" content="{{ site.authors }}">
     <meta name="description" content="{{ site.description }}">
     <meta name="robots" content="index, follow">
 
     <!-- Shortcut and related icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicons/favicon-16x16.png">
-    <link rel="manifest" href="./assets/favicons/manifest.json">
-    <link rel="mask-icon" href="./assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="./assets/favicons/favicon.ico">
-    <meta name="msapplication-config" content="./assets/favicons/browserconfig.xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ base }}/assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ base }}/assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ base }}/assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="{{ base }}/assets/favicons/manifest.json">
+    <link rel="mask-icon" href="{{ base }}/assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="{{ base }}/assets/favicons/favicon.ico">
+    <meta name="msapplication-config" content="{{ base }}/assets/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
     <!-- For proper phone zoom -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Actual style guide styles -->
-    <link rel="stylesheet" href="./styles/strib-styles.all.css" type="text/css">
+    <link rel="stylesheet" href="{{ base }}/styles/strib-styles.all.css" type="text/css">
 
     <!-- Styles specific to guide -->
-    <link rel="stylesheet" href="./guide-styles/main.css" type="text/css">
+    <link rel="stylesheet" href="{{ base }}/guide-styles/main.css" type="text/css">
 
     <!-- Social Media Tags -->
     <meta property="og:type" content="website">
     <!-- <meta property="og:url" content=""> -->
     <meta property="og:title" content="{{ page.title }}">
     <meta property="og:description" content="{{ site.description }}">
-    <meta property="og:image" content="./assets/images/strib-logo-name-social-card.png">
+    <meta property="og:image" content="{{ base }}/assets/images/strib-logo-name-social-card.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@StarTribune">
     <meta name="twitter:title" content="{{ page.title }}">
     <meta name="twitter:description" content="{{ site.description }}">
-    <meta name="twitter:image" content="./assets/images/strib-logo-name-social-card.png">
+    <meta name="twitter:image" content="{{ base }}/assets/images/strib-logo-name-social-card.png">
   </head>
 
   <body class="strib">
