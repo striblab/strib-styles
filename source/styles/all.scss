@@ -11,7 +11,7 @@
 @import '_normalize';
 
 #{$selector-wrapper} {
-  @import '_screenreaders.scss';
+  @import '_screen-readers.scss';
   @import '_layout';
   @import '_typography';
 }

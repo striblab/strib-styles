@@ -34,6 +34,12 @@ p,
   letter-spacing: $font-text-letter-spacing;
 }
 
+// Alternate
+.text-alternate {
+  font-family: $font-text-alt;
+  letter-spacing: normal;
+}
+
 // Headings
 h1,
 h2,
@@ -46,9 +52,10 @@ h6,
   line-height: 1.25em;
   padding: 0.5em 0 0;
   margin: 0 0 0.5em;
+  letter-spacing: normal;
 
   // A bit of a helper
-  &.text-alternate {
+  &.heading-alternate {
     font-family: $font-heading-alt;
   }
 }
@@ -84,6 +91,91 @@ h6 {
 }
 
 // Sans text (for labels)
-.text-alternate {
+.heading-alternate {
   font-family: $font-text-alt;
+}
+
+// Links
+a {
+  &,
+  &:visited {
+    color: $color-strib-blue;
+    transition: color 500ms;
+    text-decoration: underline;
+  }
+
+  &:hover {
+    color: $color-strib-green-dark;
+    text-decoration: none;
+  }
+}
+
+.link-alternate {
+  &,
+  &:visited {
+    color: $color-strib-green-dark;
+    transition: color 500ms;
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: darken($color-strib-green-dark, 15);
+    text-decoration: none;
+  }
+}
+
+// Lists
+ul,
+ol {
+  margin: 0 1em 1em;
+  padding: 0;
+
+  & ul,
+  & ol {
+    margin: 0 1em 0.25em;
+    padding-top: 0.25em;
+  }
+}
+
+ol li ol li {
+  list-style-type: upper-roman;
+
+  & ol li {
+    list-style-type: lower-alpha;
+  }
+}
+
+dl {
+  margin: 0 0 1em;
+  padding: 0;
+
+  dt {
+    margin: 0;
+    font-weight: bold;
+  }
+
+  dd {
+    margin: 0 0 0.5em;
+  }
+}
+
+// Lead paragraph
+.lead {
+  font-family: $font-text;
+  font-size: $font-size-large;
+  letter-spacing: normal;
+  margin-bottom: 1em;
+}
+
+// Inline elements
+mark,
+.highlight {
+  padding: 0.2em 0.5em;
+  background-color: $color-strib-highlight;
+}
+
+small,
+.small {
+  font-size: $font-size-small;
+  letter-spacing: normal;
 }

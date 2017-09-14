@@ -16,6 +16,8 @@ Pre-defined breakpoints are necessary, but arbitrary since there are basically i
 
 Font-sizes and spacing should be relative as much as possible.  This means using `em` mostly and `%` for things like width and height.  Since these styles are made to be able to be embedded in a site with existing styles, `rem` usage is avoided, though would be ideal for component-level sizes.
 
+Avoid `top-margin` as it can be be collapsed and create unexpected results.
+
 ## Development
 
 ### Dependencies and prerequisites

@@ -3,5 +3,8 @@ this: is needed for Jekyll
 ---
 // https://jekyllrb.com/docs/assets/
 
-@import "_syntax.scss";
-@import "_examples.scss";
+// Some extra specificity
+body.strib {
+  @import "_syntax.scss";
+  @import "_examples.scss";
+}

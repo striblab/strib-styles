@@ -47,3 +47,16 @@
   padding: 0.15em 1em;
   display: block;
 }
+
+// Header
+header {
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+}
+
+footer {
+  text-align: center;
+  font-size: $font-size-small;
+  padding-top: #{1em / $font-size-small}em;
+  padding-bottom: #{1em / $font-size-small}em;
+}

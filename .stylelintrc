@@ -4,7 +4,7 @@
     "stylelint-scss"
   ],
   "rules": {
-    "color-hex-case": "upper",
-    "color-hex-length": "long"
+    "color-hex-case": null,
+    "color-hex-length": null
   }
 }
