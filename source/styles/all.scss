@@ -4,7 +4,6 @@
 
 @import '_variables';
 @import '_mixins';
-
 @import '_fonts';
 
 // These have selector wrapper built-in
@@ -12,6 +11,7 @@
 @import '_normalize';
 
 #{$selector-wrapper} {
+  @import '_screenreaders.scss';
   @import '_layout';
   @import '_typography';
 }
