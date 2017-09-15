@@ -1,0 +1,27 @@
+/**
+ * Figures and figure like things
+ */
+
+figure {
+  display: block;
+  margin: 0 0 1em;
+  padding: 0;
+
+  & > cite {
+    font-size: $font-size-small;
+    color: $color-gray-medium;
+    font-family: $font-text-alt;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    display: block;
+    text-align: right;
+    font-style: normal;
+  }
+}
+
+figcaption {
+  font-size: $font-size-small;
+  color: $color-gray-medium;
+  font-family: $font-text-alt;
+  letter-spacing: normal;
+}

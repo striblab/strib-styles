@@ -30,8 +30,10 @@ $font-text-alt: $font-benton-sans !default;
 $font-heading: $font-whitman-display-compressed-bold !default;
 $font-heading-alt: $font-benton-sans !default;
 $font-line-height: 1.4em !default;
+$font-mono: Menlo, Monaco,Consolas, "Liberation Mono", "Courier New", monospace !default;
 
 $font-size-small: 0.85em !default;
+$font-size-small-adjust: 0.9em !default;
 $font-size-large: 1.25em !default;
 
 // Colors
@@ -49,6 +51,7 @@ $color-strib-green-light: #8dc63f !default;
 $color-strib-green-bg: #00824a !default;
 $color-strib-blue: #003366 !default;
 $color-strib-highlight: #FFFC19 !default;
+$color-strib-orange: #9D5D00 !default;
 
 $color-beige: #e4c691 !default;
 $color-dark-green-gold: #8d8862 !default;

@@ -1,0 +1,15 @@
+/**
+ * Styling for images.
+ */
+
+// Default to "responsive"
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-bg-fill {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}

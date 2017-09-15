@@ -1,0 +1,32 @@
+/**
+ * Code styles
+ */
+
+code {
+  font-family: $font-mono;
+  padding: 0.15em 0.4em;
+  background-color: $color-gray-lighter;
+  color: $color-strib-orange;
+}
+
+pre {
+  margin: 0 0 1em;
+
+  & code {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+  }
+}
+
+kbd {
+  font-size: $font-size-small-adjust;
+  padding: 0.15em 0.4em;
+  color: $color-white;
+  background-color: $color-gray-darker;
+  font-weight: bold;
+
+  & kbd {
+    padding: 0;
+  }
+}

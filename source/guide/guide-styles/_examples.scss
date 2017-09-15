@@ -14,16 +14,15 @@ figure.highlight {
 
 figure.highlight,
 .strib-guide-highlight {
-  font-family: monospace;
   background-color: #F1F1F1;
-  padding: 0.75em 1.25em;
+  padding: 1.5em 1.25em 0.5em;
   overflow-x: auto;
 }
 
 .strib-guide-highlight {
   border: 1px solid #212121;
+}
 
-  .strib-guide-example + & {
-    border-top: none;
-  }
+.strib-guide-example + .strib-guide-highlight {
+  border-top: none;
 }
