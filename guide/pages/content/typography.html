@@ -258,7 +258,7 @@
   <span class="nt">&lt;dd&gt;</span>The definition of the second term.<span class="nt">&lt;/dd&gt;</span>
 <span class="nt">&lt;/dl&gt;</span></code></pre></div>
 
-<h3 id="inline-text-elements">Inline text elements</h3>
+<h2 id="inline-text-elements">Inline text elements</h2>
 
 <div class="strib-guide-example" data-example-id="">
 <p>You can use the mark tag to <mark>highlight</mark> text.</p>
@@ -269,6 +269,7 @@
 <p><small>This line of text is meant to be treated as fine print.</small></p>
 <p><strong>This line rendered as bold text.</strong></p>
 <p><em>This line rendered as italicized text.</em></p>
+<p>This is an abbreviation for <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Lowercase Example">lowex</abbr>.</p>
 </div>
 <div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>You can use the mark tag to <span class="nt">&lt;mark&gt;</span>highlight<span class="nt">&lt;/mark&gt;</span> text.<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;p&gt;&lt;del&gt;</span>This line of text is meant to be treated as deleted text.<span class="nt">&lt;/del&gt;&lt;/p&gt;</span>
@@ -277,7 +278,38 @@
 <span class="nt">&lt;p&gt;&lt;u&gt;</span>This line of text will render as underlined<span class="nt">&lt;/u&gt;&lt;/p&gt;</span>
 <span class="nt">&lt;p&gt;&lt;small&gt;</span>This line of text is meant to be treated as fine print.<span class="nt">&lt;/small&gt;&lt;/p&gt;</span>
 <span class="nt">&lt;p&gt;&lt;strong&gt;</span>This line rendered as bold text.<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
-<span class="nt">&lt;p&gt;&lt;em&gt;</span>This line rendered as italicized text.<span class="nt">&lt;/em&gt;&lt;/p&gt;</span></code></pre></div>
+<span class="nt">&lt;p&gt;&lt;em&gt;</span>This line rendered as italicized text.<span class="nt">&lt;/em&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>This is an abbreviation for <span class="nt">&lt;abbr</span> <span class="na">title=</span><span class="s">"HyperText Markup Language"</span><span class="nt">&gt;</span>HTML<span class="nt">&lt;/abbr&gt;</span> and <span class="nt">&lt;abbr</span> <span class="na">title=</span><span class="s">"Lowercase Example"</span><span class="nt">&gt;</span>lowex<span class="nt">&lt;/abbr&gt;</span>.<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+<h2 id="blockquote">Blockquote</h2>
+
+<div class="strib-guide-example" data-example-id="">
+<blockquote>
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+</blockquote>
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;blockquote&gt;</span>
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+<span class="nt">&lt;/blockquote&gt;</span></code></pre></div>
+
+<p>Blockquote with source and citation.</p>
+
+<div class="strib-guide-example" data-example-id="">
+<blockquote>
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+
+  <footer>
+    Taken from <cite>Some Site</cite>
+  </footer>
+</blockquote>
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;blockquote&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.<span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;footer&gt;</span>
+    Taken from <span class="nt">&lt;cite&gt;</span>Some Site<span class="nt">&lt;/cite&gt;</span>
+  <span class="nt">&lt;/footer&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span></code></pre></div>
 
 
     </main>

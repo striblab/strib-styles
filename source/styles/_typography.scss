@@ -179,3 +179,34 @@ small,
   font-size: $font-size-small;
   letter-spacing: normal;
 }
+
+abbr {
+  cursor: help;
+}
+
+// Blockquote
+blockquote {
+  font-family: $font-text;
+  font-size: $font-size-large;
+  letter-spacing: normal;
+  margin: 0 0 #{1em / $font-size-large}em;
+
+  & > p {
+    margin-bottom: 0;
+  }
+
+  & > footer {
+    color: $color-gray-medium;
+    font-size: $font-size-small;
+    padding: 0.5em 0 0;
+    text-align: left;
+
+    &::before {
+      content: "\2014 \00A0";
+    }
+
+    & cite {
+      font-style: italic;
+    }
+  }
+}

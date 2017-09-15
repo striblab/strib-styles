@@ -5,9 +5,17 @@ layout: page
 
 This guide describes front-end styles used at the Star Tribune, specifically for special projects or embeds.
 
-## Styles
+## Content
 
-[Typography](./pages/styles/typography.html)
+[Typography](./pages/content/typography.html)
+
+## Layout
+
+* [Containers](./pages/layout/containers.html) TODO
+* [Breakpoints](./pages/layout/breakpoints.html) TODO
+* [Grid](./pages/layout/grid.html) TODO
+
+## Components
 
 ## Utilities
 

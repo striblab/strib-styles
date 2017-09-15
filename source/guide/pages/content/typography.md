@@ -138,7 +138,7 @@ To have a paragraph stand out, use the `.lead` class.
 </dl>
 {% endexample %}
 
-### Inline text elements
+## Inline text elements
 
 {% example html %}
 <p>You can use the mark tag to <mark>highlight</mark> text.</p>
@@ -149,4 +149,25 @@ To have a paragraph stand out, use the `.lead` class.
 <p><small>This line of text is meant to be treated as fine print.</small></p>
 <p><strong>This line rendered as bold text.</strong></p>
 <p><em>This line rendered as italicized text.</em></p>
+<p>This is an abbreviation for <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Lowercase Example">lowex</abbr>.</p>
+{% endexample %}
+
+## Blockquote
+
+{% example html %}
+<blockquote>
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+</blockquote>
+{% endexample %}
+
+Blockquote with source and citation.
+
+{% example html %}
+<blockquote>
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+
+  <footer>
+    Taken from <cite>Some Site</cite>
+  </footer>
+</blockquote>
 {% endexample %}

@@ -45,7 +45,11 @@ The uncompiled CSS/Sass styles are in the `source/styles` folder.
 
 ### Guide
 
-The guide, or the reference for the styles, is a [Jekyll](https://jekyllrb.com/) site under `source/guide` which will get compiled to the `guide` directory.
+The guide, or the reference for the styles, is a [Jekyll](https://jekyllrb.com/) site under `source/guide/` which will get compiled to the `guide/` directory.
+
+* Guide specific files are managed in `source/guide/guide-styles/`
+* The core styles will be compiled and added to the guide in `source/guide/styles/` via the build process.
+* *TODO*: Describe custom variables and plugins.
 
 ### Local server
 
