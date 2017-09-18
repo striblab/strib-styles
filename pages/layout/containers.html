@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>Code | Star Tribune Styles</title>
+    <title>Containers | Star Tribune Styles</title>
 
     <!-- https://ricostacruz.com/til/relative-paths-in-jekyll -->
     
@@ -37,13 +37,13 @@
     <!-- Social Media Tags -->
     <meta property="og:type" content="website">
     <!-- <meta property="og:url" content=""> -->
-    <meta property="og:title" content="Code">
+    <meta property="og:title" content="Containers">
     <meta property="og:description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
     <meta property="og:image" content="../../assets/images/strib-logo-name-social-card.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@StarTribune">
-    <meta name="twitter:title" content="Code">
+    <meta name="twitter:title" content="Containers">
     <meta name="twitter:description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
     <meta name="twitter:image" content="../../assets/images/strib-logo-name-social-card.png">
   </head>
@@ -57,53 +57,34 @@
 
     <!-- Header -->
     <header class="container-lg" role="banner">
-      <h1>Code</h1>
+      <h1>Containers</h1>
     </header>
 
     <!-- Main content here -->
     <main id="main-content" class="container-lg" role="main">
-      <p>Code and code-like styling.</p>
+      <p>It is always suggested to use a container by default.</p>
 
-<h2 id="inline-code">Inline code</h2>
+<h2 id="fluid-container">Fluid container</h2>
 
-<div class="strib-guide-example" data-example-id="">
-<p>Here is an inline <code>code</code> example.</p>
-</div>
-<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>Here is an inline <span class="nt">&lt;code&gt;</span>code<span class="nt">&lt;/code&gt;</span> example.<span class="nt">&lt;/p&gt;</span></code></pre></div>
-
-<h2 id="code-blocks">Code blocks</h2>
+<p>For a simple fluid container use the <code class="highlighter-rouge">.container-fluid</code> class.</p>
 
 <div class="strib-guide-example" data-example-id="">
-<pre><code>
-&lt;p&gt;Here is an inline &lt;code&gt;code&lt;/code&gt; example.&lt;/p&gt;
-</code></pre>
+<div class="container-fluid example-container-large"></div>
 </div>
-<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;pre&gt;&lt;code&gt;</span>
-<span class="ni">&amp;lt;</span>p<span class="ni">&amp;gt;</span>Here is an inline <span class="ni">&amp;lt;</span>code<span class="ni">&amp;gt;</span>code<span class="ni">&amp;lt;</span>/code<span class="ni">&amp;gt;</span> example.<span class="ni">&amp;lt;</span>/p<span class="ni">&amp;gt;</span>
-<span class="nt">&lt;/code&gt;&lt;/pre&gt;</span></code></pre></div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid example-container-large"</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></div>
 
-<h2 id="variables">Variables</h2>
+<h2 id="max-width-containers">Max width containers</h2>
+
+<p>Each breakpoint can be used to create a max width container with <code class="highlighter-rouge">.container-*</code> classes.  You can pull the container right and left if needed.</p>
 
 <div class="strib-guide-example" data-example-id="">
-<var>y</var> = <var>m</var><var>x</var> + <var>b</var>
+<div class="container-sm example-container-small"></div>
+<div class="container-sm container-left example-container-small"></div>
+<div class="container-sm container-right example-container-small"></div>
 </div>
-<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;var&gt;</span>y<span class="nt">&lt;/var&gt;</span> = <span class="nt">&lt;var&gt;</span>m<span class="nt">&lt;/var&gt;&lt;var&gt;</span>x<span class="nt">&lt;/var&gt;</span> + <span class="nt">&lt;var&gt;</span>b<span class="nt">&lt;/var&gt;</span></code></pre></div>
-
-<h2 id="user-input">User input</h2>
-
-<div class="strib-guide-example" data-example-id="">
-To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br />
-To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
-</div>
-<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html">To switch directories, type <span class="nt">&lt;kbd&gt;</span>cd<span class="nt">&lt;/kbd&gt;</span> followed by the name of the directory.<span class="nt">&lt;br&gt;</span>
-To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span class="nt">&lt;/kbd&gt;</span> + <span class="nt">&lt;kbd&gt;</span>,<span class="nt">&lt;/kbd&gt;&lt;/kbd&gt;</span></code></pre></div>
-
-<h2 id="sample-output">Sample output</h2>
-
-<div class="strib-guide-example" data-example-id="">
-<samp>This text is meant to be treated as sample output from a computer program.</samp>
-</div>
-<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;samp&gt;</span>This text is meant to be treated as sample output from a computer program.<span class="nt">&lt;/samp&gt;</span></code></pre></div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-sm example-container-small"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-sm container-left example-container-small"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-sm container-right example-container-small"</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></div>
 
 
     </main>

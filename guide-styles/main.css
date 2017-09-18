@@ -141,7 +141,7 @@ body.strib {
     user-select: none; }
   body.strib .strib-guide-example {
     border: 1px solid #212121;
-    padding: 0.75em 1.25em; }
+    padding: 1.25em; }
   body.strib figure.highlight {
     margin: 0 0 1em; }
   body.strib figure.highlight,
@@ -153,3 +153,13 @@ body.strib {
     border: 1px solid #212121; }
   body.strib .strib-guide-example + .strib-guide-highlight {
     border-top: none; }
+  body.strib .example-container, body.strib .example-container-small, body.strib .example-container-large {
+    width: 100%;
+    height: 10em;
+    background-color: #BDBDBD;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255, 255, 255, 0.5) 35px, rgba(255, 255, 255, 0.5) 70px);
+    margin-bottom: 1em; }
+  body.strib .example-container-small {
+    height: 5em; }
+  body.strib .example-container-large {
+    height: 15em; }
