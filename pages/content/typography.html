@@ -66,16 +66,48 @@
 
 <h2 id="text">Text</h2>
 
+<p>The are multiple font styles available.  The default used on the page for non-pragraphs are the following.</p>
+
+<div class="strib-guide-example" data-example-id="">
+<div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<p>For paragraphs or by adding a <code class="highlighter-rouge">.copy</code> (or <code class="highlighter-rouge">.text</code>) class.</p>
+
 <div class="strib-guide-example" data-example-id="">
 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+<div class="copy">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
 </div>
-<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<span class="nt">&lt;/p&gt;</span></code></pre></div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<span class="nt">&lt;/p&gt;</span>
 
-<p>The relative variables to change the defaults:</p>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"copy"</span><span class="nt">&gt;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="nv">$font-text</span><span class="p">:</span> <span class="nv">$font-poynter-serif</span> <span class="o">!</span><span class="nb">default</span><span class="err">;</span>
-<span class="nv">$font-text-letter-spacing</span><span class="p">:</span> <span class="m">-0</span><span class="mi">.3px</span> <span class="o">!</span><span class="nb">default</span><span class="err">;</span>
-<span class="nv">$font-text-alt</span><span class="p">:</span> <span class="nv">$font-benton-sans</span> <span class="o">!</span><span class="nb">default</span><span class="err">;</span></code></pre></figure>
+<p>And then for alternative text, add <code class="highlighter-rouge">.text-alternate</code> class.</p>
+
+<div class="strib-guide-example" data-example-id="">
+<p class="text-alternate">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-alternate"</span><span class="nt">&gt;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+<h3 id="variables">Variables</h3>
+
+<p>Text styles can be defined in the following variables:</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="nv">$font-default</span><span class="p">:</span> <span class="s2">"..."</span><span class="err">;</span>
+<span class="nv">$font-text</span><span class="p">:</span> <span class="s2">"..."</span><span class="err">;</span>
+<span class="nv">$font-text-alt</span><span class="p">:</span> <span class="s2">"..."</span><span class="err">;</span></code></pre></figure>
+
+<p>There are corresponding variables to override font specific properties:</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="nv">$font-default-weight</span><span class="p">:</span> <span class="s2">"..."</span><span class="err">;</span>
+<span class="nv">$font-default-line-height</span><span class="p">:</span> <span class="s2">"..."</span><span class="err">;</span>
+<span class="nv">$font-default-letter-spacing</span><span class="p">:</span> <span class="s2">"..."</span><span class="err">;</span></code></pre></figure>
+
+<h3 id="utilities">Utilities</h3>
+
+<p>To force specific typographic styles, use the following classes: <code class="highlighter-rouge">.typo-default</code>, <code class="highlighter-rouge">.typo-text</code>, <code class="highlighter-rouge">.type-text-alt</code>, <code class="highlighter-rouge">.typo-mono</code></p>
 
 <h2 id="headings">Headings</h2>
 
@@ -129,6 +161,13 @@
 
 <figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="nv">$font-heading</span><span class="p">:</span> <span class="nv">$font-whitman-display-compressed-bold</span> <span class="o">!</span><span class="nb">default</span><span class="err">;</span>
 <span class="nv">$font-heading-alt</span><span class="p">:</span> <span class="nv">$font-benton-sans</span> <span class="o">!</span><span class="nb">default</span><span class="err">;</span></code></pre></figure>
+
+<h3 id="variables-1">Variables</h3>
+
+<p>Heading styles can be defined in similar ways as the text with the following variable prefixes</p>
+
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="nv">$font-heading</span><span class="p">:</span> <span class="s2">"..."</span><span class="err">;</span>
+<span class="nv">$font-heading-alt</span><span class="p">:</span> <span class="s2">"..."</span><span class="err">;</span></code></pre></figure>
 
 <h2 id="links">Links</h2>
 
