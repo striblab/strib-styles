@@ -12,8 +12,7 @@
 
 // Containers that will only be a max width
 @each $breakpoint, $value in $breakpoints {
-  $next: breakpoint-next($breakpoint, $breakpoints);
-  $infix: breakpoint-infix($next, $breakpoints);
+  $infix: breakpoint-infix($breakpoint);
 
   .container#{$infix} {
     @extend .container;
@@ -55,4 +54,10 @@ footer {
   font-size: $font-size-small;
   padding-top: $spacer-component * 2;
   padding-bottom: $spacer-component * 2;
+}
+
+article footer {
+  text-align: left;
+  padding-top: $spacer-component;
+  padding-bottom: $spacer-component;
 }

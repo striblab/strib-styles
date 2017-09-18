@@ -20,6 +20,8 @@ This guide describes front-end styles used at the Star Tribune, specifically for
 
 ## Components
 
+* [Bylines and credits](./pages/components/credits.html)
+
 ## Utilities
 
-[Screen readers](./pages/utilities/screen-reader.html)
+* [Screen readers](./pages/utilities/screen-reader.html)

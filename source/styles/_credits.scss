@@ -1,0 +1,74 @@
+/**
+ * Credits and bylines
+ */
+
+.byline {
+  @include typo-text-alt;
+  margin: 0 0 $spacer-component;
+  font-size: $font-size-small;
+
+  address {
+    font-weight: bold;
+    font-style: normal;
+    display: inline;
+  }
+
+  a {
+    color: $color-text;
+    text-decoration: none;
+
+    &:hover {
+      color: map-get($grays, medium);
+    }
+  }
+
+  .spacer {
+    &::before {
+      font-weight: bold;
+      content: "•";
+    }
+  }
+
+  time {
+    display: inline-block;
+    float: right;
+    text-transform: uppercase;
+    color: map-get($grays, medium);
+    font-size: $font-size-small;
+    font-weight: bold;
+  }
+}
+
+// Credits at bottom of article
+footer .byline {
+  @include typo-text-alt;
+  font-size: $font-size-small;
+  color: map-get($grays, medium-light);
+  border-top: 1px solid map-get($grays, medium-light);
+  padding-top: $spacer-component;
+
+  address {
+    font-style: normal;
+    display: inline;
+  }
+
+  a {
+    color: map-get($grays, medium-light);
+    text-decoration: none;
+    margin-right: $spacer;
+
+    &:hover {
+      color: map-get($grays, darker);
+    }
+  }
+
+  a[href^="tel:"]:before {
+    content: "\260e";
+    margin-right: 0.4em;
+  }
+
+  a[href^="mailto:"]:before {
+    content: "\2709";
+    margin-right: 0.4em;
+  }
+}

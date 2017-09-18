@@ -1,0 +1,42 @@
+/**
+ * Typography utilities
+ */
+
+
+// Font profiles
+.typo-default {
+  @include typo-default;
+}
+
+.typo-text {
+  @include typo-text;
+}
+
+.typo-text-alt {
+  @include typo-text-alt;
+}
+
+.typo-heading {
+  @include typo-heading;
+}
+
+.typo-heading-alt {
+  @include typo-heading-alt;
+}
+
+.typo-mono {
+  @include typo-mono;
+}
+
+// Text sizes
+.text-small {
+  font-size: $font-size-small;
+}
+
+.text-large {
+  font-size: $font-size-large;
+}
+
+.text-xlarge {
+  font-size: $font-size-xlarge;
+}

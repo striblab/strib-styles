@@ -7,17 +7,47 @@ Typography.
 
 ## Text
 
+The are multiple font styles available.  The default used on the page for non-pragraphs are the following.
+
 {% example html %}
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+<div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
 {% endexample %}
 
-The relative variables to change the defaults:
+For paragraphs or by adding a `.copy` (or `.text`) class.
+
+{% example html %}
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+<div class="copy">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+{% endexample %}
+
+And then for alternative text, add `.text-alternate` class.
+
+{% example html %}
+<p class="text-alternate">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+{% endexample %}
+
+### Variables
+
+Text styles can be defined in the following variables:
 
 {% highlight sass %}
-$font-text: $font-poynter-serif !default;
-$font-text-letter-spacing: -0.3px !default;
-$font-text-alt: $font-benton-sans !default;
+$font-default: "...";
+$font-text: "...";
+$font-text-alt: "...";
 {% endhighlight %}
+
+There are corresponding variables to override font specific properties:
+
+{% highlight sass %}
+$font-default-weight: "...";
+$font-default-line-height: "...";
+$font-default-letter-spacing: "...";
+{% endhighlight %}
+
+### Utilities
+
+To force specific typographic styles, use the following classes: `.typo-default`, `.typo-text`, `.type-text-alt`, `.typo-mono`
 
 
 ## Headings
@@ -54,6 +84,15 @@ The relative variables to change the defaults:
 {% highlight sass %}
 $font-heading: $font-whitman-display-compressed-bold !default;
 $font-heading-alt: $font-benton-sans !default;
+{% endhighlight %}
+
+### Variables
+
+Heading styles can be defined in similar ways as the text with the following variable prefixes
+
+{% highlight sass %}
+$font-heading: "...";
+$font-heading-alt: "...";
 {% endhighlight %}
 
 ## Links

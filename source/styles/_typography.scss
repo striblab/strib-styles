@@ -13,27 +13,26 @@
 
 // Default
 & {
-  font-family: $font-text;
+  @include typo-default;
   background-color: $color-text-bg;
   color: $color-text;
-  line-height: $font-line-height;
   -webkit-font-smoothing: antialiased;
 }
 
 * {
-  line-height: $font-line-height;
+  line-height: $font-default-line-height;
 }
 
 // Text/copy
 p,
-.text {
-  letter-spacing: $font-text-letter-spacing;
+.text,
+.copy {
+  @include typo-text;
 }
 
 // Alternate
 .text-alternate {
-  font-family: $font-text-alt;
-  letter-spacing: normal;
+  @include typo-text-alt;
 }
 
 // Headings
@@ -44,16 +43,10 @@ h4,
 h5,
 h6,
 .heading {
-  font-family: $font-heading;
-  line-height: 1.25em;
-  padding: 0.5em 0 0;
-  margin: 0 0 0.5em;
-  letter-spacing: normal;
+  @include typo-heading;
 
-  // A bit of a helper
-  &.heading-alternate {
-    font-family: $font-heading-alt;
-  }
+  padding: ($spacer / 2) 0 0;
+  margin: 0 0 ($spacer / 2);
 }
 
 h1 {
@@ -69,26 +62,26 @@ h3 {
 }
 
 h4 {
-  font-family: $font-heading-alt;
+  @include typo-heading-alt;
   font-size: 1.5;
   font-weight: bold;
 }
 
 h5 {
-  font-family: $font-heading-alt;
+  @include typo-heading-alt;
   font-size: 1.25;
   font-weight: bold;
 }
 
 h6 {
-  font-family: $font-heading-alt;
+  @include typo-heading-alt;
   font-size: 1;
   font-weight: bold;
 }
 
 // Sans text (for labels)
 .heading-alternate {
-  font-family: $font-text-alt;
+  @include typo-heading-alt;
 }
 
 // Links
@@ -123,13 +116,13 @@ a {
 // Lists
 ul,
 ol {
-  margin: 0 1em 1em;
+  margin: 0 $spacer $spacer;
   padding: 0;
 
   & ul,
   & ol {
-    margin: 0 1em 0.25em;
-    padding-top: 0.25em;
+    margin: 0 $spacer ($spacer / 4);
+    padding-top: ($spacer / 4);
   }
 }
 
@@ -142,7 +135,7 @@ ol li ol li {
 }
 
 dl {
-  margin: 0 0 1em;
+  margin: 0 0 $spacer;
   padding: 0;
 
   dt {
@@ -151,16 +144,15 @@ dl {
   }
 
   dd {
-    margin: 0 0 0.5em;
+    margin: 0 0 ($spacer / 2);
   }
 }
 
 // Lead paragraph
 .lead {
-  font-family: $font-text;
-  font-size: $font-size-large;
-  letter-spacing: normal;
-  margin-bottom: 1em;
+  @include typo-heading;
+  font-size: $font-size-xlarge;
+  margin-bottom: $spacer;
 }
 
 // Inline elements

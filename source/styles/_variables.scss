@@ -34,18 +34,32 @@ $font-sets: (
 ) !default;
 
 // Fonts used and font-related variables
+$font-default: map-get($font-sets, benton-sans-condensed) !default;
+$font-default-line-height: 1.4em !default;
+
 $font-text: map-get($font-sets, poynter-serif) !default;
+$font-text-weight: normal !default;
 $font-text-letter-spacing: -0.3px !default;
+$font-text-line-height: 1.4em !default;
+
 $font-text-alt: map-get($font-sets, benton-sans) !default;
-$font-heading: map-get($font-sets, whitman-display-compressed-bold) !default;
+$font-text-alt-letter-spacing: normal !default;
+
+$font-heading: map-get($font-sets, whitman-display) !default;
+$font-heading-weight: 400 !default;
+$font-heading-line-height: 1.25em !default;
+$font-heading-letter-spacing: normal !default;
+
 $font-heading-alt: map-get($font-sets, benton-sans) !default;
-$font-line-height: 1.4em !default;
+$font-heading-alt-weight: normal !default;
+
 $font-mono: map-get($font-sets, mono) !default;
 
 // Font sizes
 $font-size-small: 0.85em !default;
 $font-size-small-adjust: 0.9em !default;
 $font-size-large: 1.25em !default;
+$font-size-xlarge: 2.35em !default;
 
 // Colors
 $color-black: #000000 !default;
@@ -56,6 +70,7 @@ $grays: (
   darker: #222222,
   dark: #444444,
   medium: #676767,
+  medium-light: #959595,
   light: #BDBDBD,
   lighter: #F1F1F1
 ) !default;

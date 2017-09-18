@@ -11,6 +11,7 @@
 @import 'normalize';
 
 #{$selector-wrapper} {
+  @import 'utilities/_all';
   @import 'screen-readers';
   @import 'layout';
   @import 'typography';
@@ -18,4 +19,5 @@
   @import 'images';
   @import 'figures';
   @import 'tables';
+  @import 'credits';
 }
