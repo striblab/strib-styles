@@ -64,7 +64,7 @@
     <main id="main-content" class="container-fluid" role="main">
       <p>Styling for figures, images, and similar.</p>
 
-<h2 id="images">Images</h2>
+<h2 id="responsive-images">Responsive images</h2>
 
 <p>By default, images are responsive, meaning that their max width is set to <code class="highlighter-rouge">100%</code> and their height to <code class="highlighter-rouge">auto</code>.</p>
 
@@ -73,9 +73,30 @@
 </div>
 <div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placekitten.com/1200/420"</span> <span class="na">alt=</span><span class="s">"Kitten placeholder image"</span><span class="nt">&gt;</span></code></pre></div>
 
+<h3 id="more-performant-images">More performant images</h3>
+
+<p>Though not specific to this style guide, using the <code class="highlighter-rouge">srcset</code> and <code class="highlighter-rouge">sizes</code> attributes for images can greatly help performance.  <a href="https://cloudfour.com/thinks/responsive-images-101-part-4-srcset-width-descriptors/">srcset</a> defines different sized images, and <a href="https://cloudfour.com/thinks/responsive-images-101-part-5-sizes/">sizes</a> describes when to use which images.  Note that the <code class="highlighter-rouge">sizes</code> attribute can be a bit confusing and annoying since its kind of like describing your CSS twice.</p>
+
+<div class="strib-guide-example" data-example-id="">
+<img src="http://placekitten.com/2400/1200" alt="Kitten placeholder image" srcset="http://placekitten.com/400/200 400w,
+      http://placekitten.com/800/400 800w,
+      http://placekitten.com/1000/500 1000w,
+      http://placekitten.com/1500/750 1500w,
+      http://placekitten.com/2000/1000 2000w" sizes="(max-width: 800px) 100vw, 95vw" />
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placekitten.com/2400/1200"</span> <span class="na">alt=</span><span class="s">"Kitten placeholder image"</span>
+    <span class="na">srcset=</span><span class="s">"http://placekitten.com/400/200 400w,
+      http://placekitten.com/800/400 800w,
+      http://placekitten.com/1000/500 1000w,
+      http://placekitten.com/1500/750 1500w,
+      http://placekitten.com/2000/1000 2000w"</span>
+    <span class="na">sizes=</span><span class="s">"(max-width: 800px) 100vw, 95vw"</span><span class="nt">&gt;</span></code></pre></div>
+
+<p>Note that if you load an image with multiple sources, the browser will simply use the largest one it has in cache, even if you make your window smaller.  So, for testing, you may need to clear the cache to see specific images loaded.</p>
+
 <h2 id="figure">Figure</h2>
 
-<p>A figure can be anything, usually something needs a caption, but this example uses an image.  Often a source is needed with an image.  Though there is not a very appropriate HTML tag for this, the <code class="highlighter-rouge">cite</code> tag is used.</p>
+<p>A figure can be anything really, though often is an image or video.  Figures usually need a caption which can be inserted with <code class="highlighter-rouge">&lt;figcaption&gt;</code>.  Often a source is needed with an image.  Though there is not a very appropriate HTML tag for this, the <code class="highlighter-rouge">cite</code> tag is used.</p>
 
 <div class="strib-guide-example" data-example-id="">
 <figure>
