@@ -3,14 +3,15 @@
  */
 
 code {
+  font-size: $font-size-small-adjust;
   font-family: $font-mono;
   padding: 0.15em 0.4em;
-  background-color: $color-gray-lighter;
-  color: $color-strib-orange;
+  background-color: map-get($grays, lighter);
+  color: map-get($theme, orange);
 }
 
 pre {
-  margin: 0 0 1em;
+  margin: 0 0 $spacer;
 
   & code {
     background-color: transparent;
@@ -23,7 +24,7 @@ kbd {
   font-size: $font-size-small-adjust;
   padding: 0.15em 0.4em;
   color: $color-white;
-  background-color: $color-gray-darker;
+  background-color: map-get($grays, darker);
   font-weight: bold;
 
   & kbd {

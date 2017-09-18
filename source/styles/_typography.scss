@@ -2,16 +2,12 @@
  * Typogrphy styling
  */
 
-// Font base sizes
-& {
-  font-size: 15px;
+// Font base sizes base on breakpoints
+@each $breakpoint in map-keys($breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $font-size: map-get($breakpoints-font-size, $breakpoint);
 
-  @media (min-width: 400px) {
-    font-size: 15px;
-  }
-
-  @media (min-width: 800px) {
-    font-size: 16px;
+    font-size: $font-size;
   }
 }
 
@@ -99,13 +95,13 @@ h6 {
 a {
   &,
   &:visited {
-    color: $color-strib-blue;
+    color: map-get($theme, blue-dark);
     transition: color 500ms;
     text-decoration: underline;
   }
 
   &:hover {
-    color: $color-strib-green-dark;
+    color: map-get($theme, green-dark);
     text-decoration: none;
   }
 }
@@ -113,13 +109,13 @@ a {
 .link-alternate {
   &,
   &:visited {
-    color: $color-strib-green-dark;
+    color: map-get($theme, green-dark);
     transition: color 500ms;
     text-decoration: none;
   }
 
   &:hover {
-    color: darken($color-strib-green-dark, 15);
+    color: darken(map-get($theme, green-dark), 15);
     text-decoration: none;
   }
 }
@@ -171,7 +167,7 @@ dl {
 mark,
 .highlight {
   padding: 0.15em 0.4em;
-  background-color: $color-strib-highlight;
+  background-color: map-get($theme, yellow-light);
 }
 
 small,
@@ -196,7 +192,7 @@ blockquote {
   }
 
   & > footer {
-    color: $color-gray-medium;
+    color: map-get($grays, medium);
     font-size: $font-size-small;
     padding: 0.5em 0 0;
     text-align: left;

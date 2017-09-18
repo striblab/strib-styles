@@ -41,3 +41,13 @@
 .sr-only-focusable {
   @include sr-only-focusable();
 }
+
+// Top-level link to main content, usually only for screenreaders
+.to-main-content {
+  @include sr-only();
+  @include sr-only-focusable();
+
+  text-align: center;
+  padding: 0.15em 1em;
+  display: block;
+}

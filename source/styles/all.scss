@@ -1,20 +1,5 @@
 /**
- * This is the file that includes everything
+ * This includes everything
  */
 
-@import '_variables';
-@import '_mixins';
-@import '_fonts';
-
-// These have selector wrapper built-in
-@import '_reset';
-@import '_normalize';
-
-#{$selector-wrapper} {
-  @import '_screen-readers';
-  @import '_layout';
-  @import '_typography';
-  @import '_code';
-  @import '_images';
-  @import '_figures';
-}
+@import 'default';

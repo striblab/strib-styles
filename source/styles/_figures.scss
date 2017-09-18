@@ -4,12 +4,12 @@
 
 figure {
   display: block;
-  margin: 0 0 1em;
+  margin: 0 0 $spacer;
   padding: 0;
 
   & > cite {
     font-size: $font-size-small;
-    color: $color-gray-medium;
+    color: $color-text-sub;
     font-family: $font-text-alt;
     letter-spacing: normal;
     text-transform: uppercase;
@@ -21,7 +21,7 @@ figure {
 
 figcaption {
   font-size: $font-size-small;
-  color: $color-gray-medium;
+  color: $color-text-sub;
   font-family: $font-text-alt;
   letter-spacing: normal;
 }

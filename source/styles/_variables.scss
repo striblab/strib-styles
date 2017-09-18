@@ -7,31 +7,42 @@
 // Selector wrapper, make more specific if needed
 $selector-wrapper: '.strib' !default;
 
-// Font families
-$font-benton-sans: 'Benton Sans', Helvetica, Arial, sans-serif !default;
-$font-benton-sans-condensed: 'Benton Sans Condensed Medium', Helvetica, Arial,
-  sans-serif !default;
+// Whether this is going to be used for the whole page, i.e. applied to body.
+// If this is a whole page, then we can confidently use rem's instead of em's
+$root: false !default;
 
-$font-popular: 'Popular', Helvetica, Arial, sans-serif !default;
-$font-popular-light: 'Popular Light', Helvetica, Arial, sans-serif !default;
-$font-popular-medium: 'Popular Medium', Helvetica, Arial, sans-serif !default;
+// Spacing
+$spacer: 1em;
+$spacer-component-magnitude: 1 !default;
+$spacer-component: $spacer-component-magnitude * 1em;
+@if $root {
+  $spacer-component: $spacer-component-magnitude * 1rem;
+}
 
-$font-poynter-serif: 'Poynter Serif RE', Georgia, Times, serif !default;
+// Set of fonts to reference
+$font-sets: (
+  benton-sans: #{'Benton Sans', Helvetica, Arial, sans-serif},
+  benton-sans-condensed: #{'Benton Sans Condensed Medium', Helvetica, Arial, sans-serif},
+  popular: #{'Popular', Helvetica, Arial, sans-serif},
+  popular-light: #{'Popular Light', Helvetica, Arial, sans-serif},
+  popular-medium: #{'Popular Medium', Helvetica, Arial, sans-serif},
+  poynter-serif: #{'Poynter Serif RE', Georgia, Times, serif},
+  whitman-display-compressed-bold: #{'Whitman Display Compressed Bold', Georgia, Times, serif},
+  whitman-display: #{'Whitman Display', Georgia, Times, serif},
+  whitman-osf: #{'Whitman OSF', Georgia, Times, serif},
+  mono: #{Menlo, Monaco,Consolas, "Liberation Mono", "Courier New", monospace}
+) !default;
 
-$font-whitman-display-compressed-bold: 'Whitman Display Compressed Bold',
-  Georgia, Times, serif !default;
-$font-whitman-display: 'Whitman Display', Georgia, Times, serif !default;
-$font-whitman-osf: 'Whitman OSF', Georgia, Times, serif !default;
-
-// Font and typography
-$font-text: $font-poynter-serif !default;
+// Fonts used and font-related variables
+$font-text: map-get($font-sets, poynter-serif) !default;
 $font-text-letter-spacing: -0.3px !default;
-$font-text-alt: $font-benton-sans !default;
-$font-heading: $font-whitman-display-compressed-bold !default;
-$font-heading-alt: $font-benton-sans !default;
+$font-text-alt: map-get($font-sets, benton-sans) !default;
+$font-heading: map-get($font-sets, whitman-display-compressed-bold) !default;
+$font-heading-alt: map-get($font-sets, benton-sans) !default;
 $font-line-height: 1.4em !default;
-$font-mono: Menlo, Monaco,Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-mono: map-get($font-sets, mono) !default;
 
+// Font sizes
 $font-size-small: 0.85em !default;
 $font-size-small-adjust: 0.9em !default;
 $font-size-large: 1.25em !default;
@@ -40,32 +51,48 @@ $font-size-large: 1.25em !default;
 $color-black: #000000 !default;
 $color-white: #FFFFFF !default;
 
-$color-gray-darker: #222222 !default;
-$color-gray-dark: #444444 !default;
-$color-gray-medium: #676767 !default;
-$color-gray-light: #BDBDBD !default;
-$color-gray-lighter: #F1F1F1 !default;
+// Grays
+$grays: (
+  darker: #222222,
+  dark: #444444,
+  medium: #676767,
+  light: #BDBDBD,
+  lighter: #F1F1F1
+) !default;
 
-$color-strib-green-dark: #005825 !default;
-$color-strib-green-light: #8dc63f !default;
-$color-strib-green-bg: #00824a !default;
-$color-strib-blue: #003366 !default;
-$color-strib-highlight: #FFFC19 !default;
-$color-strib-orange: #9D5D00 !default;
+// Theme colors
+$theme: (
+  green-dark: #005825,
+  green-dark-alt: #00824A,
+  green-light: #8DC63F,
+  blue-dark: #003366,
+  yellow-light: #FFFC19,
+  orange-dark: #9D5D00
+) !default;
 
-$color-beige: #e4c691 !default;
-$color-dark-green-gold: #8d8862 !default;
-$color-light-green: #c0dc99 !default;
-$color-green: #507356 !default;
-$color-light-blue: #97d5d9 !default;
-$color-desat-blue: #464b65 !default;
-$color-purple: #3e2b3d !default;
-$color-dark-purple: #3a3248 !default;
-$color-pink: #cc8e94 !default;
-$color-skin: #b08b7b !default;
-
-// Common color use
-$color-text: $color-gray-darker !default;
-$color-text-sub: $color-gray-medium !default;
+// Common color use for text
+$color-text: map-get($grays, darker) !default;
+$color-text-sub: map-get($grays, medium) !default;
 $color-text-bg: $color-white !default;
-$color-link: $color-strib-green-dark !default;
+$color-link: map-get($theme, green-dark) !default;
+
+// Breakpoints
+$breakpoints: (
+  default: 0,
+  xs: 420px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+// When using for the whole page, i.e. body class, then font-size
+// can change with the device width
+$breakpoints-font-size: (
+  default: 14px,
+  xs: 14px,
+  sm: 15px,
+  md: 15px,
+  lg: 16px,
+  xl: 16px
+) !default;

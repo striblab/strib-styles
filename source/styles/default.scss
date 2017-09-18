@@ -1,0 +1,21 @@
+/**
+ * This is the default file that includes the common parts.
+ */
+
+@import 'variables';
+@import 'mixins/_all';
+@import 'fonts';
+
+// These have selector wrapper built-in
+@import 'reset';
+@import 'normalize';
+
+#{$selector-wrapper} {
+  @import 'screen-readers';
+  @import 'layout';
+  @import 'typography';
+  @import 'code';
+  @import 'images';
+  @import 'figures';
+  @import 'tables';
+}

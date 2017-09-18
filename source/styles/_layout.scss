@@ -6,8 +6,24 @@
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-right: 1em;
-  padding-left: 1em;
+  padding-right: $spacer-component;
+  padding-left: $spacer-component;
+}
+
+// Containers that will only be a max width
+@each $breakpoint, $value in $breakpoints {
+  $next: breakpoint-next($breakpoint, $breakpoints);
+  $infix: breakpoint-infix($next, $breakpoints);
+
+  .container#{$infix} {
+    @extend .container;
+
+    @if $value != 0 {
+      @include media-breakpoint-up($breakpoint) {
+        max-width: $value;
+      }
+    }
+  }
 }
 
 // Explicitly fluid
@@ -17,46 +33,26 @@
   width: 100%;
 }
 
-// Box is like a container, but without padding
-.box {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 0;
-  padding-left: 0;
+// Push container left
+.container-left {
+  margin-left: 0;
 }
 
-// Specific size boxes adding padding if screen becomes
-// that size
-.box-article {
-  @extend .box;
-
-  max-width: 525px;
-
-  @media only screen and (max-width: 525px) {
-    padding-right: 1em;
-    padding-left: 1em;
-  }
-}
-
-// Top-level link to main content, usually only for screenreaders
-.to-main-content {
-  @include sr-only();
-  @include sr-only-focusable();
-
-  text-align: center;
-  padding: 0.15em 1em;
-  display: block;
+// Push container left
+.container-right {
+  margin-right: 0;
 }
 
 // Header
 header {
-  padding-top: 0.5em;
-  padding-bottom: 1em;
+  padding-top: $spacer-component / 2;
+  padding-bottom: $spacer-component;
 }
 
+// Footer
 footer {
   text-align: center;
   font-size: $font-size-small;
-  padding-top: #{1em / $font-size-small}em;
-  padding-bottom: #{1em / $font-size-small}em;
+  padding-top: $spacer-component * 2;
+  padding-bottom: $spacer-component * 2;
 }
