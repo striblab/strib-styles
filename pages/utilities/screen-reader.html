@@ -56,12 +56,25 @@
     <a href="#main-content" class="to-main-content">Skip to main content</a>
 
     <!-- Header -->
-    <header class="container-lg" role="banner">
-      <h1>Screen readers</h1>
+    <header role="banner">
+      <nav>
+        <div class="container-lg">
+          <a href="../.." class="logo" title="Home"></a>
+          <h1>Style guide</h1>
+
+          <ul>
+            <li><a href="../..">Layout</a></li>
+            <li><a href="../..">Styles</a></li>
+          </ul>
+        </div>
+      </nav>
+
     </header>
 
     <!-- Main content here -->
     <main id="main-content" class="container-lg" role="main">
+      <h1>Screen readers</h1>
+
       <p>Use screenreader utilities to hide elements on all devices except screen readers.</p>
 
 <p>Hide an element to all devices except screen readers with <code class="highlighter-rouge">.sr-only</code>. Combine <code class="highlighter-rouge">.sr-only</code> with <code class="highlighter-rouge">.sr-only-focusable</code> to show the element again when it’s focused (e.g. by a keyboard-only user). Can also be used as mixins.</p>
