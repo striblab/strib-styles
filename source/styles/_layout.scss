@@ -50,14 +50,17 @@ header {
 
 // Footer
 footer {
-  text-align: center;
   font-size: $font-size-small;
   padding-top: $spacer-component * 2;
   padding-bottom: $spacer-component * 2;
+  background-color: map-get($grays, lightest);
+  // Margin-top is not good, but better way?
+  margin-top: $spacer-component * 2;
 }
 
 article footer {
-  text-align: left;
+  margin-top: 0;
   padding-top: $spacer-component;
   padding-bottom: $spacer-component;
+  background-color: inherit;
 }

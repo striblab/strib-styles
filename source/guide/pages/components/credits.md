@@ -39,3 +39,13 @@ Credits and bylines styling.
   </footer>
 </article>
 {% endexample %}
+
+## Copyright
+
+{% example html %}
+<div class="copyright">
+  <div class="container-lg">
+    &copy; 2017 StarTribune. All rights reserved.
+  </div>
+</div>
+{% endexample %}

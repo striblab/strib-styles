@@ -46,6 +46,7 @@ footer .byline {
   color: map-get($grays, medium-light);
   border-top: 1px solid map-get($grays, medium-light);
   padding-top: $spacer-component;
+  line-height: $font-text-line-height * 1.5;
 
   address {
     font-style: normal;
@@ -71,4 +72,20 @@ footer .byline {
     content: "\2709";
     margin-right: 0.4em;
   }
+}
+
+.copyright {
+  @include typo-text-alt;
+
+  font-size: $font-size-small;
+  padding-top: $spacer-component;
+  padding-bottom: $spacer-component;
+  background-color: map-get($grays, lighter);
+  color: map-get($grays, medium-dark);
+}
+
+footer .copyright {
+  font-size: 1em / $font-size-small;
+  margin-top: $spacer-component * 2;
+  margin-bottom: $spacer-component * -2;
 }
