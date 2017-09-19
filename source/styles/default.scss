@@ -13,11 +13,14 @@
 #{$selector-wrapper} {
   @import 'utilities/_all';
   @import 'screen-readers';
+
   @import 'layout';
   @import 'typography';
   @import 'code';
   @import 'images';
   @import 'figures';
   @import 'tables';
+
+  @import 'navigation';
   @import 'credits';
 }

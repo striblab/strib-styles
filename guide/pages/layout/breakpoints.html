@@ -56,12 +56,25 @@
     <a href="#main-content" class="to-main-content">Skip to main content</a>
 
     <!-- Header -->
-    <header class="container-lg" role="banner">
-      <h1>Breakpoints</h1>
+    <header role="banner">
+      <nav>
+        <div class="container-lg">
+          <a href="../.." class="logo" title="Home"></a>
+          <h1>Style guide</h1>
+
+          <ul>
+            <li><a href="../..">Layout</a></li>
+            <li><a href="../..">Styles</a></li>
+          </ul>
+        </div>
+      </nav>
+
     </header>
 
     <!-- Main content here -->
     <main id="main-content" class="container-lg" role="main">
+      <h1>Breakpoints</h1>
+
       <p>Breakpoints are common device sizes at which content could change and re-align.  It’s important to note that breakpoints may be based on common device widths, but they are essentially arbitrary, especially given the multitude of devices available.  Content should look good at any reasonable device width.</p>
 
 <p>Media queries are “mobile-first”, meaning that the default without a media query is assumed to be the smallest possible device, and media queries such as <code class="highlighter-rouge">@media (min-width: 576px) { ... }</code> are used to change the design on larger screens.</p>

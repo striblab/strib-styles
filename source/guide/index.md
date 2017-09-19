@@ -20,6 +20,7 @@ This guide describes front-end styles used at the Star Tribune, specifically for
 
 ## Components
 
+* [Navigation](./pages/components/navigation.html)
 * [Bylines and credits](./pages/components/credits.html)
 
 ## Utilities

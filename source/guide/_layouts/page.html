@@ -59,12 +59,25 @@
     <a href="#main-content" class="to-main-content">Skip to main content</a>
 
     <!-- Header -->
-    <header class="container-lg" role="banner">
-      <h1>{{ page.title }}</h1>
+    <header role="banner">
+      <nav>
+        <div class="container-lg">
+          <a href="{{ base }}" class="logo" title="Home"></a>
+          <h1>Style guide</h1>
+
+          <ul>
+            <li><a href="{{ base }}">Layout</a></li>
+            <li><a href="{{ base }}">Styles</a></li>
+          </ul>
+        </div>
+      </nav>
+
     </header>
 
     <!-- Main content here -->
     <main id="main-content" class="container-lg" role="main">
+      <h1>{{ page.title }}</h1>
+
       {{ content }}
     </main>
 

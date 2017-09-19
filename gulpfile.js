@@ -3,6 +3,8 @@
  */
 
 // Dependencies
+const fs = require('fs');
+const querystring = require('querystring');
 const child = require('child_process');
 const path = require('path');
 const gulp = require('gulp');
@@ -14,6 +16,7 @@ const rename = require('gulp-rename');
 const util = require('gulp-util');
 const autoprefixer = require('autoprefixer');
 const browserSync = require('browser-sync').create();
+const mime = require('mime-types');
 
 // Lint styles/css
 gulp.task('styles:lint', () => {
@@ -33,7 +36,10 @@ gulp.task('styles', ['styles:lint'], () => {
     .pipe(
       sass({
         outputStyle: 'compressed',
-        includePaths: [path.join(__dirname, 'node_modules')]
+        includePaths: [path.join(__dirname, 'node_modules')],
+        functions: sassFunctions({
+          base: path.join(__dirname, 'source', 'styles')
+        })
       }).on('error', sass.logError)
     )
     .pipe(
@@ -105,4 +111,42 @@ function gulpRunner(command, args, done) {
   if (done) {
     proc.on('close', done);
   }
+}
+
+// Custom SASS functions
+function sassFunctions(options) {
+  options = options || {};
+  options.base = options.base || process.cwd();
+  const types = sass.compiler.types;
+  let funcs = {};
+
+  // See https://coderwall.com/p/fhgu_q/inlining-images-with-gulp-sass
+  funcs['inline-image($file)'] = (file, done) => {
+    file = path.resolve(options.base, file.getValue());
+    let m = mime.lookup(file);
+    let data;
+    if (!m) {
+      done('url(' + file.getValue() + ')');
+    }
+
+    // SVG doesn't need to be encoded
+    if (~m.indexOf('svg')) {
+      data = fs.readFileSync(file, 'utf-8');
+      //data = data.replace(/(\s|\n|\r)+/, ' ');
+      data = querystring.escape(data);
+      data = 'url("data:' + m + ';utf8,' + data + '")';
+      data = types.String(data);
+    }
+    else {
+      data = fs.readFileSync(file);
+      data = new Buffer(data);
+      data = data.toString('base64');
+      data = 'url(data:' + m + ';base64,' + data + ')';
+      data = types.String(data);
+    }
+
+    done(data);
+  };
+
+  return funcs;
 }
