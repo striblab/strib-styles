@@ -74,11 +74,15 @@ gulp.task('guide:get-build-styles', ['styles'], () => {
 });
 
 // Watch for building
-gulp.task('watch', () => {
-  // Since the guide requires that the styles get built, this
-  // will actually run the styles twice
-  gulp.watch(['source/styles/**/*.scss'], ['styles']);
-  gulp.watch(['build/**/*', 'source/guide/**/*'], ['guide']);
+gulp.task('watch:guide', () => {
+  gulp.watch(
+    [
+      'source/styles/**/*.scss',
+      'source/guide/**/*',
+      '!source/guide/styles/**/*'
+    ],
+    ['guide']
+  );
 });
 
 // Local server
@@ -93,7 +97,7 @@ gulp.task('server', ['build:guide'], () => {
 // Task combinations
 gulp.task('build:guide', ['guide']);
 gulp.task('build:styles', ['styles']);
-gulp.task('develop', ['server', 'watch']);
+gulp.task('develop', ['server', 'watch:guide']);
 gulp.task('default', ['build:styles', 'build:guide']);
 
 // Run command line task

@@ -39,6 +39,21 @@ For this project specifically:
 1. Install Ruby gems: `bundle install`
 1. Install Node packages: `npm install`
 
+### Docker
+
+To run the development environment, i.e. `gulp develop` in Docker, which will help if installing dependencies locally is a problem, do the following:
+
+1. Install [Docker](https://docs.docker.com/engine/installation/)
+1. Run `docker-compose up`
+1. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+Note that the live changes that trigger a build and should show up in the browser automatically are a little slower when running through Docker, but hopefully not restrictively so.
+
+To manually build and run with docker, the following commands should work:
+
+1. `docker build -t "strib-styles" .`
+1. `docker run -i -t --rm -v `pwd`:/src -p "3000:3000" -p "3001:3001" "strib-styles"`
+
 ### Styles
 
 The uncompiled CSS/Sass styles are in the `source/styles` folder.

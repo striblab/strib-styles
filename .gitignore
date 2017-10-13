@@ -2,6 +2,7 @@
 !source/guide/pages/components/*
 
 # Common
+.bundle
 .jekyll-metadata
 .drake
 *yarn.lock
