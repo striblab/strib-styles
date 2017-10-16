@@ -19,7 +19,7 @@ This guide describes front-end styles used at the Star Tribune, specifically for
 * [Grid](./pages/layout/grid.html) TODO
 
 ## Components
-
+* [Hero](./pages/components/hero.html)
 * [Navigation](./pages/components/navigation.html)
 * [Bylines and credits](./pages/components/credits.html)
 
