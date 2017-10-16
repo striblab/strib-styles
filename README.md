@@ -46,6 +46,7 @@ To run the development environment, i.e. `gulp develop` in Docker, which will he
 1. Install [Docker](https://docs.docker.com/engine/installation/)
 1. Run `docker-compose up`
 1. Open [http://localhost:3000](http://localhost:3000) in your browser.
+1. You can use `Control+C` to get out of the command, but make sure to run `docker-compose down` to completely stop the container from running.
 
 Note that the live changes that trigger a build and should show up in the browser automatically are a little slower when running through Docker, but hopefully not restrictively so.
 
