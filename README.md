@@ -102,3 +102,13 @@ The following will push only the contents of `guide` to `gh-pages` so that it ca
 ```
 git subtree push --prefix guide origin gh-pages
 ```
+
+## Publish
+
+To publish to [npm](https://docs.npmjs.com/getting-started/publishing-npm-packages).
+
+1. Update `pcakage.json` and rebuild with `gulp`
+1. Commit changes.
+1. Tag: `git tag 0.0.1`
+1. Push changes: `git push origin --tags`
+1. Publish: `npm publish`
