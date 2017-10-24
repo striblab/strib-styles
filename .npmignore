@@ -1,0 +1,16 @@
+guide/*
+scripts/*
+source/guide/*
+.editorconfig
+.dockerignore
+.babelrc
+.eslintrc
+.gitattributes
+.htmlhintrc
+.stylelintrc
+.browserlist
+docker-compose.yml
+Dockerfile
+Gemfile
+Gemfile.lock
+gulpfile.js
