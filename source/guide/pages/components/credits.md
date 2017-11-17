@@ -7,8 +7,10 @@ Credits and bylines styling.
 
 ## Bylines
 
+The following an example that spreads across the whole line.  This is the usual style for an article.
+
 {% example html %}
-<div class="byline">
+<div class="byline byline-spread">
   <address>By
     <a rel="author" href="http://example.com/author">John Doe</a>
     <span class="spacer"></span>
@@ -21,6 +23,37 @@ Credits and bylines styling.
 </div>
 
 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+{% endexample %}
+
+An alternate approach is one that is all together.
+
+{% example html %}
+<div class="byline byline-spread">
+  <address>By
+    <a rel="author" href="http://example.com/author">John Doe</a>
+    and
+    <a rel="author" href="http://example.com/author">Jane Doh</a>
+  </address>
+  <span class="spacer"></span>
+  Star Tribune
+  <time pubdate datetime="2017-07-30T16:00:00">July 30, 2017 &mdash; 4:00pm</time>
+</div>
+{% endexample %}
+
+And finally, a more spaced out, but not jutified approach.
+
+{% example html %}
+<div class="byline byline-space">
+  <address>
+    Story by <a rel="author" href="http://example.com/author">John Doe</a>
+    <span class="spacer"></span>
+    Photos by <a rel="author" href="http://example.com/author">Jane Doh</a>
+  </address>
+  <span class="spacer"></span>
+  Star Tribune
+  <span class="spacer"></span>
+  <time pubdate datetime="2017-07-30T16:00:00">July 30, 2017</time>
+</div>
 {% endexample %}
 
 ### Footer

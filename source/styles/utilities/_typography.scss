@@ -40,3 +40,12 @@
 .text-xlarge {
   font-size: $font-size-xlarge;
 }
+
+// Case
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}

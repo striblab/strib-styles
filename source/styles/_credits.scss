@@ -29,13 +29,32 @@
     }
   }
 
+  .spacer-alt {
+    &::before {
+      display: inline-block;
+      padding: 0 ($spacer / 2);
+      content: "|";
+      color: map-get($grays, medium-light);
+    }
+  }
+
   time {
     display: inline-block;
-    float: right;
     text-transform: uppercase;
-    color: map-get($grays, medium);
+    color: map-get($grays, medium-light);
     font-size: $font-size-small;
     font-weight: bold;
+  }
+
+  // Spreach across to line
+  &.byline-spread time {
+    float: right;
+  }
+
+  // Spreach across to line
+  &.byline-space .spacer::before {
+    display: inline-block;
+    padding: 0 $spacer;
   }
 }
 

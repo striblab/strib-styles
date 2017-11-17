@@ -1,0 +1,84 @@
+/**
+ * Hero (top of the page, large title sort of thing)
+ */
+
+.hero {
+  text-align: center;
+  padding: $spacer-component * 3 0;
+  position: relative;
+
+  h1 {
+    font-size: $font-size-xxlarge;
+    line-height: 102%;
+    letter-spacing: -1.85px;
+    padding-top: 0;
+  }
+
+  // Bottom part of hero, mostly used with .hero-full
+  .hero-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    // Reflects padding in .hero-full
+    padding-left: $spacer-component;
+    padding-right: $spacer-component;
+    padding-bottom: $spacer-component;
+  }
+
+  // Scroll down
+  .scroll-down {
+    text-transform: uppercase;
+    font-size: $font-size-small;
+    margin-bottom: $spacer-component;
+    line-height: $spacer;
+    opacity: 0.8;
+
+    i {
+      display: block;
+      font-size: 2.45em;
+      line-height: $spacer;
+    }
+  }
+
+  // Invert colors
+  &.hero-invert {
+    background-color: $color-black;
+    color: $color-white;
+
+    .byline,
+    .byline a {
+      color: $color-white;
+    }
+  }
+
+  // Fade in
+  @keyframes anim-hero-fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  &.hero-fade-in {
+    background-color: $color-black;
+    color: $color-white;
+    animation: anim-hero-fadein 3.2s ease-out forwards;
+  }
+
+  // Full background-image approach
+  &.hero-full {
+    height: 100vh;
+    height: calc(100vh - 80px);
+    padding-left: $spacer-component;
+    padding-right: $spacer-component;
+
+    // Image bg stuff
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    &.shadow {
+      text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
