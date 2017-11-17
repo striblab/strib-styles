@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Containers | Star Tribune Styles</title>
+
+    <!-- https://ricostacruz.com/til/relative-paths-in-jekyll -->
+    
+    
+    
+
+    <meta name="author" content="Alan Palazzolo">
+    <meta name="description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
+    <meta name="robots" content="index, follow">
+
+    <!-- Shortcut and related icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/favicons/manifest.json">
+    <link rel="mask-icon" href="../../assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../assets/favicons/favicon.ico">
+    <meta name="msapplication-config" content="../../assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- For proper phone zoom -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Actual style guide styles -->
+    <link rel="stylesheet" href="../../styles/strib-styles.root-all.css" type="text/css">
+
+    <!-- Styles specific to guide -->
+    <link rel="stylesheet" href="../../guide-styles/main.css" type="text/css">
+
+    <!-- Social Media Tags -->
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:url" content=""> -->
+    <meta property="og:title" content="Containers">
+    <meta property="og:description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
+    <meta property="og:image" content="../../assets/images/strib-logo-name-social-card.png">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@StarTribune">
+    <meta name="twitter:title" content="Containers">
+    <meta name="twitter:description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
+    <meta name="twitter:image" content="../../assets/images/strib-logo-name-social-card.png">
+  </head>
+
+  <body class="strib">
+    <!-- Screen reader announcements -->
+    <div aria-live="polite" id="announcer" class="sr-only"></div>
+
+    <!-- Skip to main content -->
+    <a href="#main-content" class="to-main-content">Skip to main content</a>
+
+    <!-- Header -->
+    <header role="banner">
+      <nav>
+        <div class="container-lg">
+          <a href="../.." class="logo" title="Home"></a>
+          <h1>Style guide</h1>
+
+          <ul>
+            <li><a href="../..">Layout</a></li>
+            <li><a href="../..">Styles</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    </header>
+
+    <!-- Main content here -->
+    <main id="main-content" class="container-lg" role="main">
+      <h1>Containers</h1>
+
+      <p>It is always suggested to use a container by default.</p>
+
+<h2 id="fluid-container">Fluid container</h2>
+
+<p>For a simple fluid container use the <code class="highlighter-rouge">.container-fluid</code> class.</p>
+
+<div class="strib-guide-example" data-example-id="">
+<div class="container-fluid example-container-large"></div>
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid example-container-large"</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></div>
+
+<h2 id="max-width-containers">Max width containers</h2>
+
+<p>Each breakpoint can be used to create a max width container with <code class="highlighter-rouge">.container-*</code> classes.  You can pull the container right and left if needed.</p>
+
+<div class="strib-guide-example" data-example-id="">
+<div class="container-sm example-container-small"></div>
+<div class="container-sm container-left example-container-small"></div>
+<div class="container-sm container-right example-container-small"></div>
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-sm example-container-small"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-sm container-left example-container-small"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-sm container-right example-container-small"</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></div>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+      <div class="container-lg">
+        Design by the <a href="http://startribune.com/" target="_blank" rel="noopener">Star Tribune</a>.  Details on code and use can be found on <a href="https://github.com/striblab/strib-styles" target="_blank" rel="noopener">Github</a>.
+      </div>
+
+      <div class="copyright">
+        <div class="container-lg">
+          &copy; 2017 StarTribune. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Guide-specific scripts -->
+    <script src=""></script>
+  </body>
+</html>
