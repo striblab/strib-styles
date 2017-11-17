@@ -37,3 +37,4 @@ layout: page
 ### Utilities
 
 * [Screen readers](./pages/utilities/screen-reader.html)
+* [Debug and diagnostics](./pages/utilities/debug.html)

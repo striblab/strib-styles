@@ -2,16 +2,6 @@
  * Styles that are helpful specifically for screen readers
  */
 
-// This becomes default so that people can know to use alt tags, or leave blank.
-img:not([alt]) {
-  border: 3px dashed red;
-
-  &::after {
-    position: absolute;
-    content: 'Should have an alt attribute describing the image or a blank alt attribute.';
-  }
-}
-
 // Only display content to screen readers
 //
 // See: http://a11yproject.com/posts/how-to-hide-content

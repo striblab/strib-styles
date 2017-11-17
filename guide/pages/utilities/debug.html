@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Debugging and Diagnostics | Star Tribune Styles</title>
+
+    <!-- https://ricostacruz.com/til/relative-paths-in-jekyll -->
+    
+    
+    
+
+    <meta name="author" content="Alan Palazzolo">
+    <meta name="description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
+    <meta name="robots" content="index, follow">
+
+    <!-- Shortcut and related icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/favicons/manifest.json">
+    <link rel="mask-icon" href="../../assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../assets/favicons/favicon.ico">
+    <meta name="msapplication-config" content="../../assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- For proper phone zoom -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Actual style guide styles -->
+    <link rel="stylesheet" href="../../styles/strib-styles.root-all-debug.css" type="text/css">
+
+    <!-- Styles specific to guide -->
+    <link rel="stylesheet" href="../../guide-styles/main.css" type="text/css">
+
+    <!-- Social Media Tags -->
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:url" content=""> -->
+    <meta property="og:title" content="Debugging and Diagnostics">
+    <meta property="og:description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
+    <meta property="og:image" content="../../assets/images/strib-logo-name-social-card.png">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@StarTribune">
+    <meta name="twitter:title" content="Debugging and Diagnostics">
+    <meta name="twitter:description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
+    <meta name="twitter:image" content="../../assets/images/strib-logo-name-social-card.png">
+  </head>
+
+  <body class="strib">
+    <!-- Screen reader announcements -->
+    <div aria-live="polite" id="announcer" class="sr-only"></div>
+
+    <!-- Skip to main content -->
+    <a href="#main-content" class="to-main-content">Skip to main content</a>
+
+    <!-- Header -->
+    <header role="banner">
+      <nav>
+        <div class="container-lg">
+          <a href="../.." class="logo" title="Home"><span class="sr-only">Go to homepage</span></a>
+          <h1>Style guide</h1>
+
+          <ul>
+            <li><a href="../..">Layout</a></li>
+            <li><a href="../..">Styles</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    </header>
+
+    <!-- Main content here -->
+    <main id="main-content" class="container-lg" role="main">
+      <h1>Debugging and Diagnostics</h1>
+
+      <p>The debug styles are helpful in identifying potential semantics, accessibility, and functional issues in markup. All the following are based on having the <code class="highlighter-rouge">$debug</code> variable set to <code class="highlighter-rouge">true</code>.</p>
+
+<h2 id="alt-tag-in-images">Alt tag in images</h2>
+
+<p>Alt tags tell screen readers how to describe images.  Images without an <code class="highlighter-rouge">alt</code> attribute will be styled distinctively.  In some cases, such as icons that are only useful visually, use a black <code class="highlighter-rouge">alt=""</code> attribute.</p>
+
+<div class="strib-guide-example" data-example-id="">
+<img src="http://placekitten.com/g/250/250" />
+<img src="http://placekitten.com/g/250/250" alt="" />
+<img src="http://placekitten.com/g/250/250" alt="Placeholder image of a kitten" />
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placekitten.com/g/250/250"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placekitten.com/g/250/250"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placekitten.com/g/250/250"</span> <span class="na">alt=</span><span class="s">"Placeholder image of a kitten"</span><span class="nt">&gt;</span></code></pre></div>
+
+<h2 id="links-and-href">Links and href</h2>
+
+<p>All links should have an <code class="highlighter-rouge">href</code> attribute.</p>
+
+<div class="strib-guide-example" data-example-id="">
+<a>No href</a> <br />
+<a href="javascript action">Sketchy href</a> <br />
+<a href="http://example.com">Valid</a>
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a&gt;</span>No href<span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript action"</span><span class="nt">&gt;</span>Sketchy href<span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com"</span><span class="nt">&gt;</span>Valid<span class="nt">&lt;/a&gt;</span></code></pre></div>
+
+<h2 id="forms">Forms</h2>
+
+<p>All input type elements should have an <code class="highlighter-rouge">id</code> attribute which corresponds to a <code class="highlighter-rouge">for</code> attribute on a <code class="highlighter-rouge">&lt;label&gt;</code> element.  And all <code class="highlighter-rouge">&lt;input&gt;</code> should have a <code class="highlighter-rouge">type</code> attribute.</p>
+
+<div class="strib-guide-example" data-example-id="">
+<form>
+  <label>Search:</label>
+  <input type="search" />
+
+  <br /><br />
+
+  <label for="search-no-type">Inputs should have a type:</label>
+  <input id="search-no-type" />
+
+  <br /><br />
+
+  <label for="search-input">Better search:</label>
+  <input id="search-input" type="search" />
+
+  <br /><br />
+
+  <input type="submit" />
+</form>
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;label&gt;</span>Search:<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;br&gt;&lt;br&gt;</span>
+
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"search-no-type"</span><span class="nt">&gt;</span>Inputs should have a type:<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"search-no-type"</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;br&gt;&lt;br&gt;</span>
+
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"search-input"</span><span class="nt">&gt;</span>Better search:<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"search-input"</span> <span class="na">type=</span><span class="s">"search"</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;br&gt;&lt;br&gt;</span>
+
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></div>
+
+<h2 id="deprecated-elements-and-attributes">Deprecated elements and attributes</h2>
+
+<p>These are just some examples of deprecated elements.</p>
+
+<div class="strib-guide-example" data-example-id="">
+<acronym>acronym</acronym> <br />
+<big>big</big> <br />
+<center>center</center>
+<p bgcolor="red">bgcolor attribute</p>
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;acronym&gt;</span>acronym<span class="nt">&lt;/acronym&gt;</span> <span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;big&gt;</span>big<span class="nt">&lt;/big&gt;</span> <span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;center&gt;</span>center<span class="nt">&lt;/center&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">bgcolor=</span><span class="s">"red"</span><span class="nt">&gt;</span>bgcolor attribute<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+<h2 id="inline-js-attributes">Inline JS attributes</h2>
+
+<p>You should not use inline Javascript event handlers.</p>
+
+<div class="strib-guide-example" data-example-id="">
+<p onclick="alert('this is a bad idea');">Watchout! This element has an inline JS event attribute for clicking.</p>
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">onclick=</span><span class="s">"alert('this is a bad idea');"</span><span class="nt">&gt;</span>Watchout! This element has an inline JS event attribute for clicking.<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+      <div class="container-lg">
+        Design by the <a href="http://startribune.com/" target="_blank" rel="noopener">Star Tribune</a>.  Details on code and use can be found on <a href="https://github.com/striblab/strib-styles" target="_blank" rel="noopener">Github</a>.
+      </div>
+
+      <div class="copyright">
+        <div class="container-lg">
+          &copy; 2017 StarTribune. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Guide-specific scripts -->
+    <script src=""></script>
+  </body>
+</html>

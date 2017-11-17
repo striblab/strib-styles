@@ -11,6 +11,9 @@ $selector-wrapper: '.strib' !default;
 // If this is a whole page, then we can confidently use rem's instead of em's
 $root: false !default;
 
+// Include debug
+$debug: false !default;
+
 // Spacing
 $spacer: 1em;
 $spacer-component-magnitude: 1 !default;
@@ -83,7 +86,8 @@ $theme: (
   green-light: #8DC63F,
   blue-dark: #003366,
   yellow-light: #FFFC19,
-  orange-dark: #9D5D00
+  orange-dark: #9D5D00,
+  red-dark: #9E003F
 ) !default;
 
 // Common color use for text
