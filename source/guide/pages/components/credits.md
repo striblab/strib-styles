@@ -28,7 +28,7 @@ The following an example that spreads across the whole line.  This is the usual 
 An alternate approach is one that is all together.
 
 {% example html %}
-<div class="byline byline-spread">
+<div class="byline">
   <address>By
     <a rel="author" href="http://example.com/author">John Doe</a>
     and
