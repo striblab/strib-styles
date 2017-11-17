@@ -42,25 +42,23 @@
   margin-right: 0;
 }
 
-// Header
-header {
+// Main header for a page should have the role=banner
+header[role="banner"] {
   padding-top: $spacer-component / 2;
   padding-bottom: $spacer-component;
 }
 
-// Footer
-footer {
+// Main for the page should have role=main
+main[role="main"] {
+  // Nothing, just helpful to show that this part if good
+}
+
+// Main footer for a page should have the role=contentinfo
+footer[role="contentinfo"] {
   font-size: $font-size-small;
   padding-top: $spacer-component * 2;
   padding-bottom: $spacer-component * 2;
   background-color: map-get($grays, lightest);
   // Margin-top is not good, but better way?
   margin-top: $spacer-component * 2;
-}
-
-article footer {
-  margin-top: 0;
-  padding-top: $spacer-component;
-  padding-bottom: $spacer-component;
-  background-color: inherit;
 }
