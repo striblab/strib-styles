@@ -1,0 +1,13 @@
+/**
+ * Alerts
+ */
+
+.alert {
+  padding: $spacer;
+  margin-bottom: $spacer;
+}
+
+.alert-warning {
+  background-color: map-get($theme, 'orange-dark');
+  color: $color-white;
+}
