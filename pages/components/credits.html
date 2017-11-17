@@ -28,8 +28,11 @@
     <!-- For proper phone zoom -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+
     <!-- Actual style guide styles -->
-    <link rel="stylesheet" href="../../styles/strib-styles.root-all.css" type="text/css">
+    <link rel="stylesheet" href="../../styles/strib-styles.root-all-debug.css" type="text/css">
 
     <!-- Styles specific to guide -->
     <link rel="stylesheet" href="../../guide-styles/main.css" type="text/css">
@@ -59,7 +62,7 @@
     <header role="banner">
       <nav>
         <div class="container-lg">
-          <a href="../.." class="logo" title="Home"></a>
+          <a href="../.." class="logo" title="Home"><span class="sr-only">Go to homepage</span></a>
           <h1>Style guide</h1>
 
           <ul>
@@ -79,8 +82,10 @@
 
 <h2 id="bylines">Bylines</h2>
 
+<p>The following an example that spreads across the whole line.  This is the usual style for an article.</p>
+
 <div class="strib-guide-example" data-example-id="">
-<div class="byline">
+<div class="byline byline-spread">
   <address>By
     <a rel="author" href="http://example.com/author">John Doe</a>
     <span class="spacer"></span>
@@ -94,7 +99,7 @@
 
 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 </div>
-<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"byline"</span><span class="nt">&gt;</span>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"byline byline-spread"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;address&gt;</span>By
     <span class="nt">&lt;a</span> <span class="na">rel=</span><span class="s">"author"</span> <span class="na">href=</span><span class="s">"http://example.com/author"</span><span class="nt">&gt;</span>John Doe<span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"spacer"</span><span class="nt">&gt;&lt;/span&gt;</span>
@@ -107,6 +112,58 @@
 <span class="nt">&lt;/div&gt;</span>
 
 <span class="nt">&lt;p&gt;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+<p>An alternate approach is one that is all together.</p>
+
+<div class="strib-guide-example" data-example-id="">
+<div class="byline byline-spread">
+  <address>By
+    <a rel="author" href="http://example.com/author">John Doe</a>
+    and
+    <a rel="author" href="http://example.com/author">Jane Doh</a>
+  </address>
+  <span class="spacer"></span>
+  Star Tribune
+  <time pubdate="" datetime="2017-07-30T16:00:00">July 30, 2017 &mdash; 4:00pm</time>
+</div>
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"byline byline-spread"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;address&gt;</span>By
+    <span class="nt">&lt;a</span> <span class="na">rel=</span><span class="s">"author"</span> <span class="na">href=</span><span class="s">"http://example.com/author"</span><span class="nt">&gt;</span>John Doe<span class="nt">&lt;/a&gt;</span>
+    and
+    <span class="nt">&lt;a</span> <span class="na">rel=</span><span class="s">"author"</span> <span class="na">href=</span><span class="s">"http://example.com/author"</span><span class="nt">&gt;</span>Jane Doh<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/address&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"spacer"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  Star Tribune
+  <span class="nt">&lt;time</span> <span class="na">pubdate</span> <span class="na">datetime=</span><span class="s">"2017-07-30T16:00:00"</span><span class="nt">&gt;</span>July 30, 2017 <span class="ni">&amp;mdash;</span> 4:00pm<span class="nt">&lt;/time&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<p>And finally, a more spaced out, but not jutified approach.</p>
+
+<div class="strib-guide-example" data-example-id="">
+<div class="byline byline-space">
+  <address>
+    Story by <a rel="author" href="http://example.com/author">John Doe</a>
+    <span class="spacer"></span>
+    Photos by <a rel="author" href="http://example.com/author">Jane Doh</a>
+  </address>
+  <span class="spacer"></span>
+  Star Tribune
+  <span class="spacer"></span>
+  <time pubdate="" datetime="2017-07-30T16:00:00">July 30, 2017</time>
+</div>
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"byline byline-space"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;address&gt;</span>
+    Story by <span class="nt">&lt;a</span> <span class="na">rel=</span><span class="s">"author"</span> <span class="na">href=</span><span class="s">"http://example.com/author"</span><span class="nt">&gt;</span>John Doe<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"spacer"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    Photos by <span class="nt">&lt;a</span> <span class="na">rel=</span><span class="s">"author"</span> <span class="na">href=</span><span class="s">"http://example.com/author"</span><span class="nt">&gt;</span>Jane Doh<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/address&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"spacer"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  Star Tribune
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"spacer"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;time</span> <span class="na">pubdate</span> <span class="na">datetime=</span><span class="s">"2017-07-30T16:00:00"</span><span class="nt">&gt;</span>July 30, 2017<span class="nt">&lt;/time&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
 
 <h3 id="footer">Footer</h3>
 
