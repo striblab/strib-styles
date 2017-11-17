@@ -14,6 +14,7 @@ const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const rename = require('gulp-rename');
 const util = require('gulp-util');
+const ghPages = require('gulp-gh-pages');
 const autoprefixer = require('autoprefixer');
 const browserSync = require('browser-sync').create();
 const mime = require('mime-types');
@@ -94,11 +95,21 @@ gulp.task('server', ['build:guide'], () => {
   });
 });
 
+// Publish to gh-pages
+gulp.task('publish', ['build'], () => {
+  return gulp.src('guide/**/*').pipe(
+    ghPages({
+      message: 'Automatically updated with gulp-gh-pages [timestamp]'
+    })
+  );
+});
+
 // Task combinations
 gulp.task('build:guide', ['guide']);
 gulp.task('build:styles', ['styles']);
+gulp.task('build', ['build:styles', 'build:guide']);
 gulp.task('develop', ['server', 'watch:guide']);
-gulp.task('default', ['build:styles', 'build:guide']);
+gulp.task('default', ['build']);
 
 // Run command line task
 function gulpRunner(command, args, done) {

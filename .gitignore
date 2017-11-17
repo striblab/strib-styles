@@ -2,6 +2,7 @@
 !source/guide/pages/components/*
 
 # Common
+.publish
 .bundle
 .jekyll-metadata
 .drake

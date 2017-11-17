@@ -100,7 +100,7 @@ gulp build:guide
 The following will push only the contents of `guide` to `gh-pages` so that it can be easily hosted on Github:
 
 ```
-git subtree push --prefix guide origin gh-pages
+gulp publish
 ```
 
 ## Publish
