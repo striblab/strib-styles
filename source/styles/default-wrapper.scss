@@ -1,6 +1,8 @@
 /**
- * This is the default file that includes the common parts.
+ * Default with selector
  */
+
+$selector-wrapper: '.strib';
 
 @import 'variables';
 @import 'mixins/_all';
@@ -9,4 +11,6 @@
 @import 'reset';
 @import 'normalize';
 
-@import 'common-default';
+#{$selector-wrapper} {
+  @import 'common-default';
+}

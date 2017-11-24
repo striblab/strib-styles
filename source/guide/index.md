@@ -43,3 +43,7 @@ layout: page
 
 * [Screen readers](./pages/utilities/screen-reader.html)
 * [Debug and diagnostics](./pages/utilities/debug.html)
+
+## Examples
+
+* [Wrapper class](./pages/examples/wrapper.html)

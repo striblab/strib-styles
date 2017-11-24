@@ -4,7 +4,7 @@ this: is needed for Jekyll
 // https://jekyllrb.com/docs/assets/
 
 // Some extra specificity
-body.strib {
+body {
   @import "_syntax.scss";
   @import "_examples.scss";
 }

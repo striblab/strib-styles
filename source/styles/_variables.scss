@@ -5,11 +5,11 @@
  */
 
 // Selector wrapper, make more specific if needed
-$selector-wrapper: '.strib' !default;
+$selector-wrapper: false !default;
 
 // Whether this is going to be used for the whole page, i.e. applied to body.
 // If this is a whole page, then we can confidently use rem's instead of em's
-$root: false !default;
+$root: if($selector-wrapper == false, true, false) !default;
 
 // Include debug
 $debug: false !default;

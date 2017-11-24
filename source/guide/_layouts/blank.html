@@ -32,12 +32,6 @@
     <!-- For proper phone zoom -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-
-    <!-- Actual style guide styles -->
-    <link rel="stylesheet" href="{{ base }}/styles/strib-styles.default-debug.css" type="text/css">
-
     <!-- Styles specific to guide -->
     <link rel="stylesheet" href="{{ base }}/guide-styles/main.css" type="text/css">
 
@@ -56,49 +50,6 @@
   </head>
 
   <body>
-    <!-- Screen reader announcements -->
-    <div aria-live="polite" id="announcer" class="sr-only"></div>
-
-    <!-- Skip to main content -->
-    <a href="#main-content" class="to-main-content">Skip to main content</a>
-
-    <!-- Header -->
-    <header role="banner">
-      <nav>
-        <div class="container-lg">
-          <a href="{{ base }}" class="logo" title="Home"><span class="sr-only">Go to homepage</span></a>
-          <h1>Style guide</h1>
-
-          <ul>
-            <li><a href="{{ base }}">Layout</a></li>
-            <li><a href="{{ base }}">Styles</a></li>
-          </ul>
-        </div>
-      </nav>
-
-    </header>
-
-    <!-- Main content here -->
-    <main id="main-content" class="container-lg" role="main">
-      <h1>{{ page.title }}</h1>
-
-      {{ content }}
-    </main>
-
-    <!-- Footer -->
-    <footer role="contentinfo">
-      <div class="container-lg">
-        Design by the <a href="http://startribune.com/" target="_blank" rel="noopener">Star Tribune</a>.  Details on code and use can be found on <a href="https://github.com/striblab/strib-styles" target="_blank" rel="noopener">Github</a>.
-      </div>
-
-      <div class="copyright">
-        <div class="container-lg">
-          &copy; 2017 StarTribune. All rights reserved.
-        </div>
-      </div>
-    </footer>
-
-    <!-- Guide-specific scripts -->
-    <script src=""></script>
+    {{ content }}
   </body>
 </html>

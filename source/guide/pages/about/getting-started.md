@@ -19,7 +19,7 @@ To get up and running quickly, use the CDN version (**TODO: Put on static**) and
     <!-- Strib Styles CSS -->
     <link rel="stylesheet" href="http://static.startribune.com/news/projects/strib-styles/X.X.X/strib-styles.default.css" crossorigin="anonymous">
   </head>
-  <body class="strib">
+  <body>
     <!-- boilerplate -->
     <a href="#main-content" class="to-main-content">Skip to main content</a>
 
@@ -58,33 +58,26 @@ To get up and running quickly, use the CDN version (**TODO: Put on static**) and
 If you are including Strib Styles with plain CSS, there are a few different versions you can use:
 
 * `strib-styles.default.css`: This is the default with the most common parts included.
-* `strib-styles.all.css`: This has everything included, which may be unnecessary for your use.
-* `strib-styles.root.css`: Same as `default` but with `$root` set to true (see below).
-* `strib-styles.default.css`: Same as `all` but with `$root` set to true (see below).
+* `strib-styles.default-wrapper.css`: The default but uses the `.strib` wrapper class; useful if using on a page that already has styles and elements on it.
+* `strib-styles.default-debug.css`: The default with `$debug` set to true.
 
 Note that all CSS files are minified and come with a corresponding `.map` that will map back to the original SASS files.
 
-## Wrapper class and root
+## Wrapper class
 
-Strib Styles wraps all its styles in a single class.  This is to help encapsulate the styles as they could be used on a page that has existing styles that we may not want to override.  The default class is `strib`.
+By default, Strib Styles applies to a whole HTML page.
 
-### Root of the page
-
-If you are using Strib Styles on the full page, you should make sure to add the `strib` class to the `<body>` tag as noted in the Quick start.  You will also want to set the `$root` variable to true, or use the `strib-styles.root.css` version.
-
-{% highlight sass %}
-$root: true;
-{% endhighlight %}
+In some cases, you may be using this on a page that has some styles and elements that you do not want to override.  In this case, you can use the `default-wrapper` version of Strib Styles.  The default wrapper class is `.strib`.
 
 {% highlight html %}
-<html>
-  <head></head>
+<div class="some-other-stuff">Other content</div>
 
-  <body class="strib">
-    <p>Component-level styling will use rems...</p>
-  </body>
-</html>
+<div class="strib">
+  <h1>Strib Styles styling here</h1>
+</div>
 {% endhighlight %}
+
+If using a wrapper class, the usage of `rem` is not very effective, so this is avoided and replaced with just `em`.  This may cause some differences.
 
 ### More specificity
 

@@ -1,4 +1,4 @@
-body.strib {
+body {
   /**
    * Syntax highlighting styles
    */
@@ -6,164 +6,164 @@ body.strib {
    * Styles for examples.
    * See _plugin/examples.rb
    */ }
-  body.strib .hll {
+  body .hll {
     background-color: #ffc; }
-  body.strib .c {
+  body .c {
     color: #999; }
-  body.strib .k {
+  body .k {
     color: #069; }
-  body.strib .o {
+  body .o {
     color: #555; }
-  body.strib .cm {
+  body .cm {
     color: #999; }
-  body.strib .cp {
+  body .cp {
     color: #099; }
-  body.strib .c1 {
+  body .c1 {
     color: #999; }
-  body.strib .cs {
+  body .cs {
     color: #999; }
-  body.strib .gd {
+  body .gd {
     background-color: #fcc;
     border: 1px solid #c00; }
-  body.strib .ge {
+  body .ge {
     font-style: italic; }
-  body.strib .gr {
+  body .gr {
     color: #f00; }
-  body.strib .gh {
+  body .gh {
     color: #030; }
-  body.strib .gi {
+  body .gi {
     background-color: #cfc;
     border: 1px solid #0c0; }
-  body.strib .go {
+  body .go {
     color: #aaa; }
-  body.strib .gp {
+  body .gp {
     color: #009; }
-  body.strib .gu {
+  body .gu {
     color: #030; }
-  body.strib .gt {
+  body .gt {
     color: #9c6; }
-  body.strib .kc {
+  body .kc {
     color: #069; }
-  body.strib .kd {
+  body .kd {
     color: #069; }
-  body.strib .kn {
+  body .kn {
     color: #069; }
-  body.strib .kp {
+  body .kp {
     color: #069; }
-  body.strib .kr {
+  body .kr {
     color: #069; }
-  body.strib .kt {
+  body .kt {
     color: #078; }
-  body.strib .m {
+  body .m {
     color: #f60; }
-  body.strib .s {
+  body .s {
     color: #d44950; }
-  body.strib .na {
+  body .na {
     color: #4f9fcf; }
-  body.strib .nb {
+  body .nb {
     color: #366; }
-  body.strib .nc {
+  body .nc {
     color: #0a8; }
-  body.strib .no {
+  body .no {
     color: #360; }
-  body.strib .nd {
+  body .nd {
     color: #99f; }
-  body.strib .ni {
+  body .ni {
     color: #999; }
-  body.strib .ne {
+  body .ne {
     color: #c00; }
-  body.strib .nf {
+  body .nf {
     color: #c0f; }
-  body.strib .nl {
+  body .nl {
     color: #99f; }
-  body.strib .nn {
+  body .nn {
     color: #0cf; }
-  body.strib .nt {
+  body .nt {
     color: #2f6f9f; }
-  body.strib .nv {
+  body .nv {
     color: #033; }
-  body.strib .ow {
+  body .ow {
     color: #000; }
-  body.strib .w {
+  body .w {
     color: #bbb; }
-  body.strib .mf {
+  body .mf {
     color: #f60; }
-  body.strib .mh {
+  body .mh {
     color: #f60; }
-  body.strib .mi {
+  body .mi {
     color: #f60; }
-  body.strib .mo {
+  body .mo {
     color: #f60; }
-  body.strib .sb {
+  body .sb {
     color: #c30; }
-  body.strib .sc {
+  body .sc {
     color: #c30; }
-  body.strib .sd {
+  body .sd {
     font-style: italic;
     color: #c30; }
-  body.strib .s2 {
+  body .s2 {
     color: #c30; }
-  body.strib .se {
+  body .se {
     color: #c30; }
-  body.strib .sh {
+  body .sh {
     color: #c30; }
-  body.strib .si {
+  body .si {
     color: #a00; }
-  body.strib .sx {
+  body .sx {
     color: #c30; }
-  body.strib .sr {
+  body .sr {
     color: #3aa; }
-  body.strib .s1 {
+  body .s1 {
     color: #c30; }
-  body.strib .ss {
+  body .ss {
     color: #fc3; }
-  body.strib .bp {
+  body .bp {
     color: #366; }
-  body.strib .vc {
+  body .vc {
     color: #033; }
-  body.strib .vg {
+  body .vg {
     color: #033; }
-  body.strib .vi {
+  body .vi {
     color: #033; }
-  body.strib .il {
+  body .il {
     color: #f60; }
-  body.strib .css .o,
-  body.strib .css .o + .nt,
-  body.strib .css .nt + .nt {
+  body .css .o,
+  body .css .o + .nt,
+  body .css .nt + .nt {
     color: #999; }
-  body.strib .language-bash::before {
+  body .language-bash::before {
     color: #009;
     content: "$ ";
     user-select: none; }
-  body.strib .language-powershell::before {
+  body .language-powershell::before {
     color: #009;
     content: "PM> ";
     user-select: none; }
-  body.strib .strib-guide-example {
+  body .strib-guide-example {
     border: 1px solid #212121;
     padding: 1.25em; }
-  body.strib figure.highlight {
+  body figure.highlight {
     margin: 0 0 1em; }
-  body.strib figure.highlight,
-  body.strib .strib-guide-highlight {
+  body figure.highlight,
+  body .strib-guide-highlight {
     background-color: #F1F1F1;
     padding: 1.5em 1.25em 0.5em;
     overflow-x: auto; }
-  body.strib .strib-guide-highlight {
+  body .strib-guide-highlight {
     border: 1px solid #212121; }
-  body.strib .strib-guide-example + .strib-guide-highlight {
+  body .strib-guide-example + .strib-guide-highlight {
     border-top: none; }
-  body.strib .example-container, body.strib .example-container-small, body.strib .example-container-large {
+  body .example-container, body .example-container-small, body .example-container-large {
     width: 100%;
     height: 10em;
     background-color: #BDBDBD;
     background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255, 255, 255, 0.5) 35px, rgba(255, 255, 255, 0.5) 70px);
     margin-bottom: 1em; }
-  body.strib .example-container-small {
+  body .example-container-small {
     height: 5em; }
-  body.strib .example-container-large {
+  body .example-container-large {
     height: 15em; }
-  body.strib .example-color-swatch {
+  body .example-color-swatch {
     width: 25%;
     float: left;
     margin: 0.5em;

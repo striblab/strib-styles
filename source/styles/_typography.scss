@@ -7,20 +7,45 @@
   @include media-breakpoint-up($breakpoint) {
     $font-size: map-get($breakpoints-font-size, $breakpoint);
 
-    font-size: $font-size;
+    @if ($selector-wrapper == false) {
+      body {
+        font-size: $font-size;
+      }
+    }
+    @else {
+      & {
+        font-size: $font-size;
+      }
+    }
   }
 }
 
 // Default
-& {
-  @include type-default;
-  background-color: $color-text-bg;
-  color: $color-text;
-  -webkit-font-smoothing: antialiased;
-}
+@if ($selector-wrapper == false) {
+  body {
+    @include type-default;
+    background-color: $color-text-bg;
+    color: $color-text;
+    -webkit-font-smoothing: antialiased;
+    line-height: $font-default-line-height;
+  }
 
-* {
-  line-height: $font-default-line-height;
+  * {
+    line-height: $font-default-line-height;
+  }
+}
+@else {
+  & {
+    @include type-default;
+    background-color: $color-text-bg;
+    color: $color-text;
+    -webkit-font-smoothing: antialiased;
+    line-height: $font-default-line-height;
+  }
+
+  & * {
+    line-height: $font-default-line-height;
+  }
 }
 
 // Text/copy

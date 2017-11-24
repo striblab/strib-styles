@@ -3,7 +3,7 @@
  */
 
 nav {
-  @include type-text-alt;
+  @include type-text;
   line-height: $font-text-line-height;
   padding-top: $spacer-component * 0.75;
   padding-bottom: $spacer-component * 0.75;

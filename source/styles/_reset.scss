@@ -2,19 +2,36 @@
  * Some custom resets.
  */
 
-// Reset body
-body#{$selector-wrapper} {
-  margin: 0;
-  padding: 0;
-}
+// If we have a selector-wrapper
+@if ($selector-wrapper == false) {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
 
-// Box sizing so that width includes padding and border.
-#{$selector-wrapper} {
-  box-sizing: border-box;
-
-  & *,
-  & *::before,
-  & *::after {
+  // Box sizing so that width includes padding and border.
+  *,
+  *::before,
+  *::after {
     box-sizing: inherit;
+  }
+}
+@else {
+  // Reset body
+  body#{$selector-wrapper} {
+    margin: 0;
+    padding: 0;
+  }
+
+  // Box sizing so that width includes padding and border.
+  #{$selector-wrapper} {
+    box-sizing: border-box;
+
+    & *,
+    & *::before,
+    & *::after {
+      box-sizing: inherit;
+    }
   }
 }
