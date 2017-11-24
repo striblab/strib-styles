@@ -1,0 +1,17 @@
+/**
+ * Dateline for articles
+ */
+
+// General
+.dateline {
+  .dateline-location {
+    text-transform: uppercase;
+  }
+}
+
+// Inline
+span.dateline {
+  &:after {
+    content: '—';
+  }
+}

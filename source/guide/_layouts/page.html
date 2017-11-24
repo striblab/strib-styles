@@ -13,6 +13,7 @@
     {% elsif depth == 2 %}{% assign base = '..' %}
     {% elsif depth == 3 %}{% assign base = '../..' %}
     {% elsif depth == 4 %}{% assign base = '../../..' %}{% endif %}
+    {% assign site.base = base %}
 
     <meta name="author" content="{{ site.authors }}">
     <meta name="description" content="{{ site.description }}">

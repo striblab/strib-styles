@@ -21,6 +21,7 @@ layout: page
 * [Figures and images](./pages/content/figures-images.html)
 * [Tables](./pages/content/tables.html)
 * [Code](./pages/content/code.html)
+* [Datelines](./pages/content/dateline.html)
 
 ### Layout
 
@@ -33,6 +34,7 @@ layout: page
 * [Hero](./pages/components/hero.html)
 * [Navigation](./pages/components/navigation.html)
 * [Bylines and credits](./pages/components/credits.html)
+* [Alerts](./pages/components/alerts.html)
 
 ### Utilities
 
