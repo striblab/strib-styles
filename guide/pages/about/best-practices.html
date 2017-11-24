@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Best practices | Star Tribune Styles</title>
+
+    <!-- https://ricostacruz.com/til/relative-paths-in-jekyll -->
+    
+    
+    
+    
+
+    <meta name="author" content="Alan Palazzolo">
+    <meta name="description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
+    <meta name="robots" content="index, follow">
+
+    <!-- Shortcut and related icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/favicons/manifest.json">
+    <link rel="mask-icon" href="../../assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../assets/favicons/favicon.ico">
+    <meta name="msapplication-config" content="../../assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- For proper phone zoom -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+
+    <!-- Actual style guide styles -->
+    <link rel="stylesheet" href="../../styles/strib-styles.root-all-debug.css" type="text/css">
+
+    <!-- Styles specific to guide -->
+    <link rel="stylesheet" href="../../guide-styles/main.css" type="text/css">
+
+    <!-- Social Media Tags -->
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:url" content=""> -->
+    <meta property="og:title" content="Best practices">
+    <meta property="og:description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
+    <meta property="og:image" content="../../assets/images/strib-logo-name-social-card.png">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@StarTribune">
+    <meta name="twitter:title" content="Best practices">
+    <meta name="twitter:description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
+    <meta name="twitter:image" content="../../assets/images/strib-logo-name-social-card.png">
+  </head>
+
+  <body class="strib">
+    <!-- Screen reader announcements -->
+    <div aria-live="polite" id="announcer" class="sr-only"></div>
+
+    <!-- Skip to main content -->
+    <a href="#main-content" class="to-main-content">Skip to main content</a>
+
+    <!-- Header -->
+    <header role="banner">
+      <nav>
+        <div class="container-lg">
+          <a href="../.." class="logo" title="Home"><span class="sr-only">Go to homepage</span></a>
+          <h1>Style guide</h1>
+
+          <ul>
+            <li><a href="../..">Layout</a></li>
+            <li><a href="../..">Styles</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    </header>
+
+    <!-- Main content here -->
+    <main id="main-content" class="container-lg" role="main">
+      <h1>Best practices</h1>
+
+      <p>How we write markup and styles, both as content and as syntax, matters.  A consistent approach means leads to efficiency and improves readability.</p>
+
+<p>The following describes best practices for creating markup and styling both for the Star Tribune Styles and other projects at the Star Tribune.</p>
+
+<h2 id="philosophies">Philosophies</h2>
+
+<ul>
+  <li>Use the most appropriate semantic and accessible elements and attributes when writing HTML, specifically with  <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5">HTML5</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">ARIA</a>.
+    <ul>
+      <li>This will improve readability, improve searchability (SEO), and most importantly help make the project as accessible as possible.</li>
+    </ul>
+  </li>
+  <li>Use the cascading nature of CSS.  Specifically, this means style the most general thing first, then target the exceptions when necessary.
+    <ul>
+      <li>For instance, style the <code class="highlighter-rouge">figure</code> element, then when an exception is needed, look for a different context selector, or, if you must, add a class.</li>
+    </ul>
+  </li>
+  <li>Avoid unnecessary elements.
+    <ul>
+      <li>If an element is unnecessary to target something with CSS, try to avoid.</li>
+    </ul>
+  </li>
+  <li>Avoid unnecessary classes.
+    <ul>
+      <li>If a class is unnecessary to target something with CSS, try to avoid.  By using semantic and accessible markup, many styles can be reasonable applied with those.</li>
+    </ul>
+  </li>
+  <li>Don’t use the <code class="highlighter-rouge">id</code> attribute for styling.
+    <ul>
+      <li>Using an <code class="highlighter-rouge">id</code> for styling usually leads to problems if the project needs to change.</li>
+    </ul>
+  </li>
+  <li>Make everything responsive (will fit and look appropriate on different sizes and types of screens).
+    <ul>
+      <li>This means using relative units as much as possible (see CSS section).</li>
+    </ul>
+  </li>
+  <li>Responsive design is about content, not about specific devices.  Use media queries when the content and design need to be adjusted; do not use media queries based on specific devices sizes as they will change and there are too many to target.
+    <ul>
+      <li>Note that this project does have predefined breakpoints which makes the most sense for a reusable library like it.</li>
+    </ul>
+  </li>
+  <li>Separate code and files into components as much as possible.
+    <ul>
+      <li>Specifically when using SASS, make sure not to have a single, massive file, and utilize <code class="highlighter-rouge">@import</code> to separate parts.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Avoid unnecessary nesting (in SASS).  Nesting can be very helpful, but it can lead to annoying specificity which can be hard to override, and it creates larger file sizes.</p>
+  </li>
+  <li>Consider using tools that automatically find issues with syntax and help document code styles such as <a href="http://editorconfig.org/">editorconfig</a>, <a href="https://eslint.org/">eslint</a>, <a href="https://stylelint.io/">stylelint</a>, <a href="https://www.npmjs.com/package/html-lint">htmllint</a>, and <a href="https://prettier.io/">prettier</a>.</li>
+  <li>Consider CSS post-processors such as <a href="https://github.com/postcss/autoprefixer">autoprefixer</a> to help manage prefixes and cross-browser support.</li>
+</ul>
+
+<h2 id="html-syntax-and-specifics">HTML syntax and specifics</h2>
+
+<ul>
+  <li>Use 2 spaces (soft tabs) to indent.
+    <ul>
+      <li>This make sure that the code looks consistent across editors and environments.</li>
+      <li>Consider using <a href="http://editorconfig.org/">editorconfig</a>, specifically the <a href="http://editorconfig.org/#download">plugins</a>, to make this easy, specifically if you have different styles in different projects.</li>
+    </ul>
+  </li>
+  <li>Nested elements should be indented, and any multiple line element should vertically match up.</li>
+  <li>Always include optional closing tags, such as <code class="highlighter-rouge">&lt;/ul&gt;</code>.</li>
+  <li>Do not include the trailing slash on self-closing elements, such as <code class="highlighter-rouge">&lt;img&gt;</code>.
+    <ul>
+      <li>OK: <code class="highlighter-rouge">&lt;img src="" alt=""&gt;</code></li>
+      <li>NOT OK: <code class="highlighter-rouge">&lt;img src="" /&gt;</code></li>
+    </ul>
+  </li>
+  <li>Use HTML5, specifically with the doctype: <code class="highlighter-rouge"><span class="cp">&lt;!DOCTYPE html&gt;</span></code></li>
+  <li>Set languages on the <code class="highlighter-rouge"><span class="nt">&lt;html&gt;</span></code> element: <code class="highlighter-rouge"><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en-us"</span><span class="nt">&gt;</span> ... <span class="nt">&lt;/html&gt;</span></code></li>
+  <li>Use the following meta tags:
+    <ul>
+      <li><code class="highlighter-rouge">&lt;meta http-equiv="X-UA-Compatible" content="IE=Edge"&gt;</code></li>
+      <li><code class="highlighter-rouge">&lt;meta charset="UTF-8"&gt;</code></li>
+    </ul>
+  </li>
+  <li>Leave boolean attributes, such as <code class="highlighter-rouge">checked</code> or <code class="highlighter-rouge">disabled</code> blank as a value is not needed.</li>
+  <li>All elements and attributes should be lowercase.
+    <ul>
+      <li>OK: <code class="highlighter-rouge">&lt;p&gt;thing&lt;/p&gt;</code></li>
+      <li>NOT OK: <code class="highlighter-rouge">&lt;P&gt;thing&lt;/P&gt;</code></li>
+    </ul>
+  </li>
+  <li>Use double quotes for attributes.
+    <ul>
+      <li>OK: <code class="highlighter-rouge">&lt;a href="example.com"&gt;e&lt;/a&gt;</code></li>
+      <li>NOT OK: <code class="highlighter-rouge">&lt;a href='example.com'&gt;e&lt;/a&gt;</code></li>
+    </ul>
+  </li>
+  <li>Use <a href="https://en.wikipedia.org/wiki/Letter_case#Special_case_styles">kebab case</a> for <code class="highlighter-rouge">class</code> and <code class="highlighter-rouge">id</code> names.
+    <ul>
+      <li>OK: <code class="highlighter-rouge">&lt;p class="semantic-class-name"&gt;content&lt;/p&gt;</code></li>
+      <li>NOT OK: <code class="highlighter-rouge">&lt;p class="semanticClassName"&gt;content&lt;/p&gt;</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="csssass-syntax-and-specifics">CSS/SASS syntax and specifics</h2>
+
+<ul>
+  <li>Use 2 spaces (soft tabs) to indent.
+    <ul>
+      <li>This make sure that the code looks consistent across editors and environments.</li>
+      <li>Consider using <a href="http://editorconfig.org/">editorconfig</a>, specifically the <a href="http://editorconfig.org/#download">plugins</a>, to make this easy, specifically if you have different styles in different projects.</li>
+    </ul>
+  </li>
+  <li>Follow the <a href="https://stylelint.io/">.stylelintrc</a> rules.  Mostly this follows the <a href="https://github.com/stylelint/stylelint-config-standard">standard stylelint rules</a> with a few exceptions.
+    <ul>
+      <li>Consider using one of the <a href="https://stylelint.io/user-guide/complementary-tools/#editor-plugins">editor plugins</a>, that will highlight any issues as you type them.</li>
+      <li>On this project, the <code class="highlighter-rouge">gulp develop</code> task will notify you of any rule breaking.</li>
+    </ul>
+  </li>
+  <li>Use <a href="https://en.wikipedia.org/wiki/Letter_case#Special_case_styles">kebab case</a> for <code class="highlighter-rouge">class</code> and <code class="highlighter-rouge">id</code> names.
+    <ul>
+      <li>OK: <code class="highlighter-rouge">&lt;p class="semantic-class-name"&gt;content&lt;/p&gt;</code></li>
+      <li>NOT OK: <code class="highlighter-rouge">&lt;p class="semanticClassName"&gt;content&lt;/p&gt;</code></li>
+    </ul>
+  </li>
+  <li>Use relative units, specifically <code class="highlighter-rouge">em</code> or <code class="highlighter-rouge">rem</code>, or when approriate <code class="highlighter-rouge">%</code>, <code class="highlighter-rouge">vh</code>, or <code class="highlighter-rouge">vw</code>.  Avoid using <code class="highlighter-rouge">px</code> or <code class="highlighter-rouge">pt</code>.</li>
+  <li>Try to order properties with the following grouping and order:
+    <ul>
+      <li>Positioning such as <code class="highlighter-rouge">position</code> or <code class="highlighter-rouge">top</code></li>
+      <li>Box model properties such as <code class="highlighter-rouge">display</code>, <code class="highlighter-rouge">margin</code>, or <code class="highlighter-rouge">float</code></li>
+      <li>Typographic such as <code class="highlighter-rouge">font-size</code>, <code class="highlighter-rouge">text-transform</code>, or <code class="highlighter-rouge">text-align</code></li>
+      <li>Visual such as <code class="highlighter-rouge">color</code></li>
+      <li>Other</li>
+    </ul>
+  </li>
+  <li>Avoid <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties">shorthand properties</a> unless the goal is to set all of those properties.
+    <ul>
+      <li>Setting with a shorthand can have unintended consequences.</li>
+    </ul>
+  </li>
+  <li>Keep media queries next to the relative styling.  Do not use a mobile section or a <code class="highlighter-rouge">mobile.css</code> file.</li>
+</ul>
+
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+      <div class="container-lg">
+        Design by the <a href="http://startribune.com/" target="_blank" rel="noopener">Star Tribune</a>.  Details on code and use can be found on <a href="https://github.com/striblab/strib-styles" target="_blank" rel="noopener">Github</a>.
+      </div>
+
+      <div class="copyright">
+        <div class="container-lg">
+          &copy; 2017 StarTribune. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Guide-specific scripts -->
+    <script src=""></script>
+  </body>
+</html>

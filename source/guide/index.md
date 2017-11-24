@@ -12,6 +12,7 @@ layout: page
 * [Getting started](./pages/about/getting-started.html)
 * [Browser support](./pages/about/browser-support.html)
 * [Accessibility](./pages/about/accessibility.html)
+* [Best practices and writing code](./pages/about/best-practices.html)
 
 ## The styles
 
