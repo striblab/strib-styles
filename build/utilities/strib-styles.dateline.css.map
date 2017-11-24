@@ -1,1 +1,0 @@
-{"version":3,"sources":["utilities/dateline.scss"],"names":[],"mappings":"AAKA,UACE,wBAAyB,CAC1B","file":"strib-styles.dateline.css","sourcesContent":["/**\n * Dateline for articles\n */\n\n\n.dateline {\n  text-transform: uppercase;\n}\n\np.dateline {\n\n}\n"]}

@@ -1,0 +1,39 @@
+/**
+ * Color utility classes
+ */
+
+@each $name, $color in $theme {
+  .color-#{$name} {
+    color: $color;
+  }
+
+  .color-bg-#{$name} {
+    background-color: $color;
+  }
+}
+
+@each $name, $color in $grays {
+  .color-gray-#{$name} {
+    color: $color;
+  }
+
+  .color-bg-gray-#{$name} {
+    background-color: $color;
+  }
+}
+
+.color-bg-white {
+  background-color: $color-white;
+}
+
+.color-white {
+  color: $color-white;
+}
+
+.color-bg-black {
+  background-color: $color-black;
+}
+
+.color-black {
+  color: $color-black;
+}

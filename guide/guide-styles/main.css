@@ -163,3 +163,9 @@ body.strib {
     height: 5em; }
   body.strib .example-container-large {
     height: 15em; }
+  body.strib .example-color-swatch {
+    width: 25%;
+    float: left;
+    margin: 0.5em;
+    padding: 1em;
+    min-height: 5em; }

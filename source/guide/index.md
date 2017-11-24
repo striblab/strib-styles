@@ -23,6 +23,7 @@ layout: page
 * [Tables](./pages/content/tables.html)
 * [Code](./pages/content/code.html)
 * [Datelines](./pages/content/dateline.html)
+* [Colors](./pages/content/colors.html)
 
 ### Layout
 
