@@ -35,6 +35,7 @@ layout: page
 * [Navigation](./pages/components/navigation.html)
 * [Bylines and credits](./pages/components/credits.html)
 * [Alerts](./pages/components/alerts.html)
+* [Asides](./pages/components/asides.html)
 
 ### Utilities
 

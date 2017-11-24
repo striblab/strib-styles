@@ -15,11 +15,11 @@ $root: false !default;
 $debug: false !default;
 
 // Spacing
-$spacer: 1em;
+$spacer: 1em !default;
 $spacer-component-magnitude: 1 !default;
-$spacer-component: $spacer-component-magnitude * 1em;
+$spacer-component: $spacer-component-magnitude * 1em !default;
 @if $root {
-  $spacer-component: $spacer-component-magnitude * 1rem;
+  $spacer-component: $spacer-component-magnitude * 1rem !default;
 }
 
 // Set of fonts to reference
@@ -37,7 +37,7 @@ $font-sets: (
 ) !default;
 
 // Fonts used and font-related variables
-$font-default: map-get($font-sets, benton-sans-condensed) !default;
+$font-default: map-get($font-sets, benton-sans) !default;
 $font-default-line-height: 1.4em !default;
 
 $font-text: map-get($font-sets, poynter-serif) !default;
@@ -45,7 +45,7 @@ $font-text-weight: normal !default;
 $font-text-letter-spacing: -0.3px !default;
 $font-text-line-height: 1.4em !default;
 
-$font-text-alt: map-get($font-sets, benton-sans) !default;
+$font-text-alt: map-get($font-sets, benton-sans-condensed) !default;
 $font-text-alt-letter-spacing: normal !default;
 
 $font-heading: map-get($font-sets, whitman-display) !default;
@@ -59,6 +59,11 @@ $font-heading-alt-weight: normal !default;
 $font-mono: map-get($font-sets, mono) !default;
 
 // Font sizes
+$font-size-component-unit: 1em !default;
+@if $root {
+  $font-size-component-unit: 1rem !default;
+}
+
 $font-size-small: 0.85em !default;
 $font-size-small-adjust: 0.9em !default;
 $font-size-large: 1.25em !default;

@@ -1,0 +1,81 @@
+/**
+ * Aside elements
+ * http://www.w3.org/TR/html5/sections.html#the-aside-element
+ */
+
+// Though one should not use a class for this, allow for someone to
+// just in case
+.aside,
+aside {
+  font-size: $font-size-component-unit;
+  margin-bottom: $spacer-component * 2;
+  margin-top: $spacer-component * 2;
+  font-family: $font-default;
+  line-height: $font-default-line-height;
+
+  .copy,
+  p {
+    font-family: $font-default;
+    line-height: $font-default-line-height;
+  }
+
+  // Update headings
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-size: 1em;
+    margin: 0 0 $spacer / 2;
+    padding: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    & + p {
+      margin-top: 0;
+    }
+  }
+
+  &.aside-right {
+    width: $spacer-component * 10;
+    float: right;
+    margin: 0 0 $spacer-component $spacer-component * 2;
+  }
+
+  &.aside-left {
+    width: $spacer-component * 10;
+    float: left;
+    margin: 0 $spacer-component * 2 $spacer-component 0;
+  }
+
+  &.aside-right.aside-pull {
+    margin-right: $spacer-component * -5;
+  }
+
+  &.aside-left.aside-pull {
+    margin-right: $spacer-component * -5;
+  }
+
+  @each $breakpoint, $value in $breakpoints {
+    $infix: breakpoint-infix($breakpoint);
+
+    @if $infix {
+      &.aside-right.aside-pull#{$infix} {
+        margin-right: 0;
+      }
+
+      &.aside-left.aside-pull#{$infix} {
+        margin-left: 0;
+      }
+
+      @include media-breakpoint-up($breakpoint) {
+        &.aside-right.aside-pull#{$infix} {
+          margin-right: $spacer-component * -5;
+        }
+
+        &.aside-left.aside-pull#{$infix} {
+          margin-left: $spacer-component * -5;
+        }
+      }
+    }
+  }
+}
