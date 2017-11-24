@@ -59,6 +59,7 @@ $font-heading-alt-weight: normal !default;
 $font-mono: map-get($font-sets, mono) !default;
 
 // Font sizes
+$font-size-unit: 1em !default;
 $font-size-component-unit: 1em !default;
 @if $root {
   $font-size-component-unit: 1rem !default;

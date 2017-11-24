@@ -7,11 +7,11 @@
 // just in case
 .aside,
 aside {
+  @include type-default;
+
   font-size: $font-size-component-unit;
   margin-bottom: $spacer-component * 2;
   margin-top: $spacer-component * 2;
-  font-family: $font-default;
-  line-height: $font-default-line-height;
 
   .copy,
   p {

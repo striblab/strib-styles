@@ -3,7 +3,7 @@
  */
 
 .byline {
-  @include typo-text-alt;
+  @include type-text-alt;
   margin: 0 0 $spacer-component;
   font-size: $font-size-small;
 
@@ -60,7 +60,7 @@
 
 // Credits at bottom of article
 footer .byline {
-  @include typo-text-alt;
+  @include type-text-alt;
   font-size: $font-size-small;
   color: map-get($grays, medium-light);
   border-top: 1px solid map-get($grays, medium-light);
@@ -94,7 +94,7 @@ footer .byline {
 }
 
 .copyright {
-  @include typo-text-alt;
+  @include type-text-alt;
 
   font-size: $font-size-small;
   padding-top: $spacer-component;

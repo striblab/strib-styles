@@ -1,44 +1,44 @@
 /**
- * Some mixins around typography.
+ * Some mixins around typegraphy.
  */
 
 // Different font sets
-@mixin typo-default {
+@mixin type-default {
   font-family: $font-default;
   line-height: $font-default-line-height;
   letter-spacing: if(variable-exists(font-default-letter-spacing), $font-default-letter-spacing, normal);
   font-weight: if(variable-exists(font-default-weight), $font-default-weight, normal);
 }
 
-@mixin typo-text {
+@mixin type-text {
   font-family: $font-text;
   line-height: $font-text-line-height;
   letter-spacing: if(variable-exists(font-text-letter-spacing), $font-text-letter-spacing, normal);
   font-weight: if(variable-exists(font-text-weight), $font-text-weight, normal);
 }
 
-@mixin typo-text-alt {
+@mixin type-text-alt {
   font-family: $font-text-alt;
   line-height: if(variable-exists(font-text-alt-line-height), $font-text-alt-line-height, $font-text-line-height);
   letter-spacing: if(variable-exists(font-text-alt-letter-spacing), $font-text-alt-letter-spacing, normal);
   font-weight: if(variable-exists(font-text-alt-weight), $font-text-alt-weight, normal);
 }
 
-@mixin typo-heading {
+@mixin type-heading {
   font-family: $font-heading;
   line-height: $font-heading-line-height;
   letter-spacing: if(variable-exists(font-heading-letter-spacing), $font-heading-letter-spacing, normal);
   font-weight: if(variable-exists(font-heading-weight), $font-heading-weight, normal);
 }
 
-@mixin typo-heading-alt {
+@mixin type-heading-alt {
   font-family: $font-heading-alt;
   line-height: if(variable-exists(font-heading-alt-line-height), $font-heading-alt-line-height, $font-heading-line-height);
   letter-spacing: if(variable-exists(font-heading-alt-letter-spacing), $font-heading-alt-letter-spacing, normal);
   font-weight: if(variable-exists(font-heading-alt-weight), $font-heading-alt-weight, normal);
 }
 
-@mixin typo-mono {
+@mixin type-mono {
   font-family: $font-mono;
   line-height: if(variable-exists(font-mono-line-height), $font-mono-line-height, $font-text-line-height);
   letter-spacing: if(variable-exists(font-mono-letter-spacing), $font-mono-letter-spacing, normal);

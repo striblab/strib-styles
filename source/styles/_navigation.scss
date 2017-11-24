@@ -3,7 +3,7 @@
  */
 
 nav {
-  @include typo-text-alt;
+  @include type-text-alt;
   line-height: $font-text-line-height;
   padding-top: $spacer-component * 0.75;
   padding-bottom: $spacer-component * 0.75;
@@ -29,7 +29,7 @@ nav {
   }
 
   h1 {
-    @include typo-text-alt;
+    @include type-text-alt;
     font-size: 1em;
     display: inline-block;
     padding: 0;

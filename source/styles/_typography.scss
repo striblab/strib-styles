@@ -1,5 +1,5 @@
 /**
- * Typogrphy styling
+ * typegrphy styling
  */
 
 // Font base sizes base on breakpoints
@@ -13,7 +13,7 @@
 
 // Default
 & {
-  @include typo-default;
+  @include type-default;
   background-color: $color-text-bg;
   color: $color-text;
   -webkit-font-smoothing: antialiased;
@@ -27,12 +27,12 @@
 p,
 .text,
 .copy {
-  @include typo-text;
+  @include type-text;
 }
 
 // Alternate
 .text-alternate {
-  @include typo-text-alt;
+  @include type-text-alt;
 }
 
 // Headings
@@ -43,7 +43,7 @@ h4,
 h5,
 h6,
 .heading {
-  @include typo-heading;
+  @include type-heading;
 
   padding: ($spacer / 2) 0 0;
   margin: 0 0 ($spacer / 2);
@@ -62,26 +62,26 @@ h3 {
 }
 
 h4 {
-  @include typo-heading-alt;
+  @include type-heading-alt;
   font-size: 1.5;
   font-weight: bold;
 }
 
 h5 {
-  @include typo-heading-alt;
+  @include type-heading-alt;
   font-size: 1.25;
   font-weight: bold;
 }
 
 h6 {
-  @include typo-heading-alt;
+  @include type-heading-alt;
   font-size: 1;
   font-weight: bold;
 }
 
 // Sans text (for labels)
 .heading-alternate {
-  @include typo-heading-alt;
+  @include type-heading-alt;
 }
 
 // Links
@@ -150,9 +150,28 @@ dl {
 
 // Lead paragraph
 .lead {
-  @include typo-heading;
+  @include type-heading;
   font-size: $font-size-xlarge;
   margin-bottom: $spacer;
+}
+
+// Drop caps (big first letter)
+.drop-caps::first-letter {
+  font-size: $font-size-unit * 6;
+  float: left;
+  margin: $font-size-unit / 4 $font-size-unit / 6 $font-size-unit / 4 0;
+}
+
+.drop-caps-image {
+  display: block;
+  float: left;
+  width: $font-size-unit * 6;
+  height: $font-size-unit * 6;
+  margin: $font-size-unit / 2 $font-size-unit / 3 $font-size-unit / 3 0;
+  text-indent: -9000px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 // Inline elements

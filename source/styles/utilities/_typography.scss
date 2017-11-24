@@ -1,31 +1,31 @@
 /**
- * Typography utilities
+ * typegraphy utilities
  */
 
 
 // Font profiles
-.typo-default {
-  @include typo-default;
+.type-default {
+  @include type-default;
 }
 
-.typo-text {
-  @include typo-text;
+.type-text {
+  @include type-text;
 }
 
-.typo-text-alt {
-  @include typo-text-alt;
+.type-text-alt {
+  @include type-text-alt;
 }
 
-.typo-heading {
-  @include typo-heading;
+.type-heading {
+  @include type-heading;
 }
 
-.typo-heading-alt {
-  @include typo-heading-alt;
+.type-heading-alt {
+  @include type-heading-alt;
 }
 
-.typo-mono {
-  @include typo-mono;
+.type-mono {
+  @include type-mono;
 }
 
 // Text sizes
