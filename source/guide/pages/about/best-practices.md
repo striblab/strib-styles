@@ -26,7 +26,8 @@ The following describes best practices for creating markup and styling both for 
 * Separate code and files into components as much as possible.
     * Specifically when using SASS, make sure not to have a single, massive file, and utilize `@import` to separate parts.
 * Avoid unnecessary nesting (in SASS).  Nesting can be very helpful, but it can lead to annoying specificity which can be hard to override, and it creates larger file sizes.
-
+* Use `<body>` classes if there is a need for large context switching.
+    * For instance, though not great, the Star Tribune has a mobile specific site; a mobile class should be added for styling.
 * Consider using tools that automatically find issues with syntax and help document code styles such as [editorconfig](http://editorconfig.org/), [eslint](https://eslint.org/), [stylelint](https://stylelint.io/), [htmllint](https://www.npmjs.com/package/html-lint), and [prettier](https://prettier.io/).
 * Consider CSS post-processors such as [autoprefixer](https://github.com/postcss/autoprefixer) to help manage prefixes and cross-browser support.
 

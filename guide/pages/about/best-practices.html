@@ -126,8 +126,11 @@
       <li>Specifically when using SASS, make sure not to have a single, massive file, and utilize <code class="highlighter-rouge">@import</code> to separate parts.</li>
     </ul>
   </li>
-  <li>
-    <p>Avoid unnecessary nesting (in SASS).  Nesting can be very helpful, but it can lead to annoying specificity which can be hard to override, and it creates larger file sizes.</p>
+  <li>Avoid unnecessary nesting (in SASS).  Nesting can be very helpful, but it can lead to annoying specificity which can be hard to override, and it creates larger file sizes.</li>
+  <li>Use <code class="highlighter-rouge">&lt;body&gt;</code> classes if there is a need for large context switching.
+    <ul>
+      <li>For instance, though not great, the Star Tribune has a mobile specific site; a mobile class should be added for styling.</li>
+    </ul>
   </li>
   <li>Consider using tools that automatically find issues with syntax and help document code styles such as <a href="http://editorconfig.org/">editorconfig</a>, <a href="https://eslint.org/">eslint</a>, <a href="https://stylelint.io/">stylelint</a>, <a href="https://www.npmjs.com/package/html-lint">htmllint</a>, and <a href="https://prettier.io/">prettier</a>.</li>
   <li>Consider CSS post-processors such as <a href="https://github.com/postcss/autoprefixer">autoprefixer</a> to help manage prefixes and cross-browser support.</li>
