@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>Accessibility | Star Tribune Styles</title>
+    <title>Selector wrapper example | Star Tribune Styles</title>
 
     <!-- https://ricostacruz.com/til/relative-paths-in-jekyll -->
     
@@ -29,74 +29,46 @@
     <!-- For proper phone zoom -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-
-    <!-- Actual style guide styles -->
-    <link rel="stylesheet" href="../../styles/strib-styles.default-debug.css" type="text/css">
-
     <!-- Styles specific to guide -->
     <link rel="stylesheet" href="../../guide-styles/main.css" type="text/css">
 
     <!-- Social Media Tags -->
     <meta property="og:type" content="website">
     <!-- <meta property="og:url" content=""> -->
-    <meta property="og:title" content="Accessibility">
+    <meta property="og:title" content="Selector wrapper example">
     <meta property="og:description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
     <meta property="og:image" content="../../assets/images/strib-logo-name-social-card.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@StarTribune">
-    <meta name="twitter:title" content="Accessibility">
+    <meta name="twitter:title" content="Selector wrapper example">
     <meta name="twitter:description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
     <meta name="twitter:image" content="../../assets/images/strib-logo-name-social-card.png">
   </head>
 
   <body>
-    <!-- Screen reader announcements -->
-    <div aria-live="polite" id="announcer" class="sr-only"></div>
+    <link rel="stylesheet" href="../../styles/strib-styles.default-wrapper.css" type="text/css" />
 
-    <!-- Skip to main content -->
-    <a href="#main-content" class="to-main-content">Skip to main content</a>
+<p>Some content here is not styled at all.  Go back <a href="../../">home</a>.</p>
 
-    <!-- Header -->
-    <header role="banner">
-      <nav>
-        <div class="container-lg">
-          <a href="../.." class="logo" title="Home"><span class="sr-only">Go to homepage</span></a>
-          <h1>Style guide</h1>
+<div class="strib">
+  <div class="container-lg">
+    <h1>Wrapper class example</h1>
+    <p>Etc.</p>
+  </div>
 
-          <ul>
-            <li><a href="../..">Layout</a></li>
-            <li><a href="../..">Styles</a></li>
-          </ul>
-        </div>
-      </nav>
+  <footer role="contentinfo">
+    <div class="container-lg">
+      Design by the <a href="http://startribune.com/" target="_blank" rel="noopener">Star Tribune</a>.  Details on code and use can be found on <a href="https://github.com/striblab/strib-styles" target="_blank" rel="noopener">Github</a>.
+    </div>
 
-    </header>
-
-    <!-- Main content here -->
-    <main id="main-content" class="container-lg" role="main">
-      <h1>Accessibility</h1>
-
-      <p><strong>TODO</strong>: Info about accessibility.</p>
-
-    </main>
-
-    <!-- Footer -->
-    <footer role="contentinfo">
+    <div class="copyright">
       <div class="container-lg">
-        Design by the <a href="http://startribune.com/" target="_blank" rel="noopener">Star Tribune</a>.  Details on code and use can be found on <a href="https://github.com/striblab/strib-styles" target="_blank" rel="noopener">Github</a>.
+        &copy; 2017 StarTribune. All rights reserved.
       </div>
+    </div>
+  </footer>
+</div>
 
-      <div class="copyright">
-        <div class="container-lg">
-          &copy; 2017 StarTribune. All rights reserved.
-        </div>
-      </div>
-    </footer>
-
-    <!-- Guide-specific scripts -->
-    <script src=""></script>
   </body>
 </html>
