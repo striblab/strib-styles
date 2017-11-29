@@ -2,12 +2,39 @@
  * Navigation styling
  */
 
+// Default nav anywhere
 nav {
-  @include type-text;
+  ul,
+  ul li {
+    line-height: $font-text-line-height;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+  }
+
+  ul {
+    vertical-align: text-bottom;
+  }
+
+  ul li {
+    margin-right: $spacer;
+  }
+
+  a {
+    text-decoration: none;
+    color: map-get($grays, darker);
+    transition: none;
+  }
+}
+
+// Nav at top fo page
+nav.nav-top,
+header[role="banner"] nav {
   line-height: $font-text-line-height;
   padding-top: $spacer-component * 0.75;
   padding-bottom: $spacer-component * 0.75;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  margin-top: $spacer-component * -0.5;
 
   .logo {
     background-image: #{inline-image("../images/startribune-logo.svg")};
@@ -38,30 +65,7 @@ nav {
     margin-right: $spacer;
   }
 
-  ul,
   ul li {
-    line-height: $font-text-line-height;
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-  }
-
-  ul {
-    vertical-align: text-bottom;
-  }
-
-  ul li {
-    margin-right: $spacer;
     font-size: $font-size-small;
   }
-
-  a {
-    text-decoration: none;
-    // TODO: Not sure why important is needed
-    color: map-get($grays, darker) !important;
-  }
-}
-
-header nav {
-  margin-top: $spacer-component * -0.5;
 }
