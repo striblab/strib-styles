@@ -2,7 +2,7 @@
  * Default with selector
  */
 
-$selector-wrapper: '.strib';
+$selector-wrapper: '.strib' !default;
 
 @import 'variables';
 @import 'mixins/_all';
