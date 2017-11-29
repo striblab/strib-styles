@@ -1,6 +1,6 @@
 {
   "name": "strib-styles",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Star Tribune style guide",
   "main": "gulpfile.js",
   "scripts": {
