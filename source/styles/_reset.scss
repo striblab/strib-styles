@@ -8,6 +8,7 @@
   body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
 
   // Box sizing so that width includes padding and border.
@@ -22,6 +23,7 @@
   body#{$selector-wrapper} {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
 
   // Box sizing so that width includes padding and border.
