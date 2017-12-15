@@ -108,6 +108,7 @@ gulp publish
 To publish to [npm](https://docs.npmjs.com/getting-started/publishing-npm-packages).
 
 1. Update `package.json` and rebuild with `gulp`
+1. Run `npm install` to update `package-lock.json`
 1. Commit changes.
 1. Tag: `git tag 0.0.1`
 1. Push changes: `git push origin --tags`
