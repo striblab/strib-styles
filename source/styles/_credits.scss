@@ -3,7 +3,7 @@
  */
 
 .byline {
-  @include context-property-set('default', 'text');
+  @include all-contexts('default');
   margin: 0 0 $spacer-component;
   font-size: $font-size-small;
 

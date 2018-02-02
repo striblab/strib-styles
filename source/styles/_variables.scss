@@ -168,8 +168,9 @@ $contexts: (
         heading: $font-whitman-display,
         lead: $font-whitman-display,
         heading-depth: $font-benton-sans,
-        label: $font-benton-sans,
-        title: map-merge($font-popular,  (text-transform: uppercase)),
+        label: map-merge($font-benton-sans,  (font-weight: bold)),
+        title: map-merge($font-popular,  (text-transform: uppercase, font-weight:
+                bold)),
         mono: $font-menlo
       ),
     feature:
@@ -186,7 +187,8 @@ $contexts: (
   )
   !default;
 // Set default
-$contexts: map-merge($contexts,  (default: map-get($contexts, news)));
+$context-default: 'news' !default;
+$contexts: map-merge($contexts,  (default: map-get($contexts, $context-default)));
 
 // Font sizes
 $font-size-unit: 1em !default;

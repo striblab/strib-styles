@@ -54,7 +54,7 @@ header[role='banner'] nav {
   }
 
   h1 {
-    @include context-property-set('default', 'default');
+    @include font-styles('benton-sans');
     font-size: 1em;
     display: inline-block;
     padding: 0;

@@ -22,7 +22,7 @@
 // Default
 @if ($selector-wrapper == false) {
   body {
-    @include context-property-set('default', 'default');
+    @include all-contexts('default', true);
     background-color: $color-text-bg;
     color: $color-text;
     -webkit-font-smoothing: antialiased;
@@ -33,7 +33,7 @@
   }
 } @else {
   & {
-    @include context-property-set('default', 'default');
+    @include all-contexts('default', true);
     background-color: $color-text-bg;
     color: $color-text;
     -webkit-font-smoothing: antialiased;
@@ -48,7 +48,7 @@
 p,
 .text,
 .copy {
-  @include context-property-set('default', 'text');
+  @include all-contexts('text');
 }
 
 // Headings
@@ -59,7 +59,7 @@ h4,
 h5,
 h6,
 .heading {
-  @include context-property-set('default', 'heading');
+  @include all-contexts('heading');
 
   padding: ($spacer / 2) 0 0;
   margin: 0 0 ($spacer / 2);
@@ -78,26 +78,37 @@ h3 {
 }
 
 h4 {
-  @include context-property-set('default', 'heading-depth');
+  @include all-contexts('heading-depth');
   font-size: 1.5;
   font-weight: bold;
 }
 
 h5 {
-  @include context-property-set('default', 'heading-depth');
+  @include all-contexts('heading-depth');
   font-size: 1.25;
   font-weight: bold;
 }
 
 h6 {
-  @include context-property-set('default', 'heading-depth');
+  @include all-contexts('heading-depth');
   font-size: 1;
   font-weight: bold;
 }
 
+// Section title
+.title {
+  @include all-contexts('title');
+  font-size: 5em;
+  padding: ($spacer / 3) 0 0;
+  margin: 0 0 ($spacer / 3);
+}
+
 // Label
 .label {
-  @include context-property-set('default', 'label');
+  @include all-contexts('label');
+  font-size: $font-size-unit;
+  padding: 0;
+  margin: 0;
 }
 
 // Links
@@ -166,7 +177,7 @@ dl {
 
 // Lead paragraph
 .lead {
-  @include context-property-set('default', 'lead');
+  @include all-contexts('lead');
   font-size: $font-size-xlarge;
   margin-bottom: $spacer;
 }
@@ -209,7 +220,7 @@ abbr {
 
 // Blockquote
 blockquote {
-  @include context-property-set('default', 'text');
+  @include all-contexts('text');
   font-size: $font-size-large;
   letter-spacing: normal;
   margin: 0 0 #{1em / $font-size-large}em;
@@ -219,6 +230,7 @@ blockquote {
   }
 
   & > footer {
+    @include all-contexts('default');
     color: map-get($grays, medium);
     font-size: $font-size-small;
     padding: 0.5em 0 0;

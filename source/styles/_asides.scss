@@ -7,15 +7,15 @@
 // just in case
 .aside,
 aside {
-  @include context-property-set('default', 'default');
-
+  @include all-contexts('default');
   font-size: $font-size-component-unit;
   margin-bottom: $spacer-component * 2;
   margin-top: $spacer-component * 2;
 
+  .text,
   .copy,
   p {
-    @include context-property-set('default', 'default');
+    @include all-contexts('default');
   }
 
   // Update headings
@@ -23,11 +23,7 @@ aside {
   h2,
   h3,
   h4 {
-    font-size: 1em;
-    margin: 0 0 $spacer / 2;
-    padding: 0;
-    font-weight: bold;
-    text-transform: uppercase;
+    @extend .label;
 
     & + p {
       margin-top: 0;

@@ -3,7 +3,7 @@
  */
 
 code {
-  @include context-property-set('default', 'mono');
+  @include all-contexts('mono');
   font-size: $font-size-small-adjust;
   padding: 0.15em 0.4em;
   background-color: map-get($grays, lighter);

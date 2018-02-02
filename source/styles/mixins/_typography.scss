@@ -30,3 +30,23 @@
     }
   }
 }
+
+// Include a property set for all contexts
+@mixin all-contexts($property-set: 'default', $attach: false) {
+  @each $context-name, $context in $contexts {
+    // Handle the default
+    @if $context-name == 'default' {
+      @include context-property-set($context-name, $property-set);
+    } @else {
+      @if $attach {
+        &.context-#{$context-name} {
+          @include context-property-set($context-name, $property-set);
+        }
+      } @else {
+        .context-#{$context-name} & {
+          @include context-property-set($context-name, $property-set);
+        }
+      }
+    }
+  }
+}

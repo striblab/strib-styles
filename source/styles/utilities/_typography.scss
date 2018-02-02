@@ -11,6 +11,14 @@
   }
 }
 
+// Context utilities.  Use the default context to define
+// the different classes
+@each $property-set-name, $property-set in map-get($contexts, 'default') {
+  .context-set-#{$property-set-name} {
+    @include all-contexts($property-set-name);
+  }
+}
+
 // Text sizes
 .text-small {
   font-size: $font-size-small;
