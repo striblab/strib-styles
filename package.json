@@ -21,6 +21,7 @@
     "gulp-stylelint": "^4.0.0",
     "gulp-util": "^3.0.8",
     "mime-types": "^2.1.17",
+    "node-sass": "^4.7.2",
     "stylelint-config-recommended-scss": "^2.0.0",
     "stylelint-config-standard": "^17.0.0",
     "stylelint-scss": "^2.1.0"

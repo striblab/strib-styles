@@ -19,6 +19,9 @@ const autoprefixer = require('autoprefixer');
 const browserSync = require('browser-sync').create();
 const mime = require('mime-types');
 
+// Make sure we are using a good node-sass
+sass.compiler = require('node-sass');
+
 // Lint styles/css
 gulp.task('styles:lint', () => {
   return gulp.src(['source/styles/**/*.scss']).pipe(
@@ -40,7 +43,8 @@ gulp.task('styles', ['styles:lint'], () => {
         includePaths: [path.join(__dirname, 'node_modules')],
         functions: sassFunctions({
           base: path.join(__dirname, 'source', 'styles')
-        })
+        }),
+        sourceComments: true
       }).on('error', sass.logError)
     )
     .pipe(
