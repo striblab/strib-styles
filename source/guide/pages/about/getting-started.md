@@ -105,7 +105,6 @@ for example, if you install Strib Styles with `npm`, you can include it like thi
 
 {% highlight sass %}
 // Override some Strib Styles variables
-$root: true;
 @import "node_modules/strib-styles/source/styles/default";
 
 .project-styles {
