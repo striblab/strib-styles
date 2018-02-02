@@ -14,7 +14,9 @@ $root: if($selector-wrapper == false, true, false) !default;
 // Include debug
 $debug: false !default;
 
-// Spacing
+// Spacing.  For component spacing, we want to use rem's, but if
+// this is being used within existing content/styles, rems are not very
+// dependable.
 $spacer: 1em !default;
 $spacer-component-magnitude: 1 !default;
 $spacer-component: $spacer-component-magnitude * 1em !default;
@@ -22,75 +24,169 @@ $spacer-component: $spacer-component-magnitude * 1em !default;
   $spacer-component: $spacer-component-magnitude * 1rem !default;
 }
 
+// Font face display
+$font-display: fallback !default;
+
+// Font defaults
+$font-default-line-height: 1.4em !default;
+$font-default-letter-spacing: normal !default;
+$font-default-font-weight: normal !default;
+
 // Set of fonts to reference
-$font-sets: (
-    benton-sans: #{'Benton Sans',
+$font-benton-sans: (
+    font-family: #{'Benton Sans',
     Helvetica,
     Arial,
     sans-serif},
-    benton-sans-condensed: #{'Benton Sans Condensed Medium',
+    line-height: $font-default-line-height,
+    letter-spacing: $font-default-letter-spacing,
+    font-weight: $font-default-font-weight
+  )
+  !default;
+
+$font-benton-sans-condensed: (
+    font-family: #{'Benton Sans Condensed Medium',
     Helvetica,
     Arial,
     sans-serif},
-    popular: #{'Popular',
+    line-height: $font-default-line-height,
+    letter-spacing: $font-default-letter-spacing,
+    font-weight: $font-default-font-weight
+  )
+  !default;
+
+$font-popular: (
+    font-family: #{'Popular',
     Helvetica,
     Arial,
     sans-serif},
-    popular-light: #{'Popular Light',
+    line-height: $font-default-line-height,
+    letter-spacing: $font-default-letter-spacing,
+    font-weight: $font-default-font-weight
+  )
+  !default;
+
+$font-popular-light: (
+    font-family: #{'Popular Light',
     Helvetica,
     Arial,
     sans-serif},
-    popular-medium: #{'Popular Medium',
+    line-height: $font-default-line-height,
+    letter-spacing: $font-default-letter-spacing,
+    font-weight: $font-default-font-weight
+  )
+  !default;
+
+$font-popular-medium: (
+    font-family: #{'Popular Medium',
     Helvetica,
     Arial,
     sans-serif},
-    poynter-serif: #{'Poynter Serif RE',
+    line-height: $font-default-line-height,
+    letter-spacing: $font-default-letter-spacing,
+    font-weight: $font-default-font-weight
+  )
+  !default;
+
+$font-poynter-serif: (
+    font-family: #{'Poynter Serif RE',
     Georgia,
     Times,
     serif},
-    whitman-display-compressed-bold: #{'Whitman Display Compressed Bold',
+    line-height: $font-default-line-height,
+    letter-spacing: -0.2px,
+    font-weight: $font-default-font-weight
+  )
+  !default;
+
+$font-whitman-display: (
+    font-family: #{'Whitman Display',
     Georgia,
     Times,
     serif},
-    whitman-display: #{'Whitman Display',
+    line-height: 1.25em,
+    letter-spacing: $font-default-letter-spacing,
+    font-weight: 400
+  )
+  !default;
+
+$font-whitman-display-compressed-bold: (
+    font-family: #{'Whitman Display Compressed Bold',
     Georgia,
     Times,
     serif},
-    whitman-osf: #{'Whitman OSF',
+    line-height: $font-default-line-height,
+    letter-spacing: $font-default-letter-spacing,
+    font-weight: $font-default-font-weight
+  )
+  !default;
+
+$font-whitman-osf: (
+    font-family: #{'Whitman OSF',
     Georgia,
     Times,
     serif},
-    mono: #{Menlo,
+    line-height: $font-default-line-height,
+    letter-spacing: $font-default-letter-spacing,
+    font-weight: $font-default-font-weight
+  )
+  !default;
+
+$font-menlo: (
+    font-family: #{Menlo,
     Monaco,
     Consolas,
     'Liberation Mono',
     'Courier New',
-    monospace}
+    monospace},
+    line-height: $font-default-line-height,
+    letter-spacing: $font-default-letter-spacing,
+    font-weight: $font-default-font-weight
   )
   !default;
-$font-display: fallback !default;
 
-// Fonts used and font-related variables
-$font-default: map-get($font-sets, benton-sans) !default;
-$font-default-line-height: 1.4em !default;
+$font-sets: (
+    benton-sans: $font-benton-sans,
+    benton-sans-condensed: $font-benton-sans-condensed,
+    popular: $font-popular,
+    popular-light: $font-popular-light,
+    popular-medium: $font-popular-medium,
+    poynter-serif: $font-poynter-serif,
+    whitman-display-compressed-bold: $font-whitman-display-compressed-bold,
+    whitman-display: $font-whitman-display,
+    whitman-osf: $font-whitman-osf,
+    menlo: $font-menlo
+  )
+  !default;
 
-$font-text: map-get($font-sets, poynter-serif) !default;
-$font-text-weight: normal !default;
-$font-text-letter-spacing: -0.3px !default;
-$font-text-line-height: 1.4em !default;
-
-$font-text-alt: map-get($font-sets, benton-sans-condensed) !default;
-$font-text-alt-letter-spacing: normal !default;
-
-$font-heading: map-get($font-sets, whitman-display) !default;
-$font-heading-weight: 400 !default;
-$font-heading-line-height: 1.25em !default;
-$font-heading-letter-spacing: normal !default;
-
-$font-heading-alt: map-get($font-sets, benton-sans) !default;
-$font-heading-alt-weight: normal !default;
-
-$font-mono: map-get($font-sets, mono) !default;
+// Contexts.  These mostly switch fonts for different contexts
+$contexts: (
+    news:
+      (
+        default: $font-benton-sans,
+        text: $font-poynter-serif,
+        heading: $font-whitman-display,
+        lead: $font-whitman-display,
+        heading-depth: $font-benton-sans,
+        label: $font-benton-sans,
+        title: map-merge($font-popular,  (text-transform: uppercase)),
+        mono: $font-menlo
+      ),
+    feature:
+      (
+        default: $font-benton-sans,
+        text: $font-benton-sans-condensed,
+        heading: $font-benton-sans,
+        lead: $font-popular,
+        heading-depth: $font-benton-sans,
+        label: $font-benton-sans,
+        title: map-merge($font-popular,  (text-transform: uppercase)),
+        mono: $font-menlo
+      )
+  )
+  !default;
+// Set default
+$contexts: map-merge($contexts,  (default: map-get($contexts, news)));
 
 // Font sizes
 $font-size-unit: 1em !default;
@@ -152,12 +248,16 @@ $breakpoints: (
 
 // When using for the whole page, i.e. body class, then font-size
 // can change with the device width
+//
+// Note, according to Lighthouse, a minimum of 16px is good for
+// legibility and SEO
+// https://github.com/GoogleChrome/lighthouse/issues/3174
 $breakpoints-font-size: (
-    default: 14px,
-    xs: 14px,
-    sm: 15px,
-    md: 15px,
-    lg: 16px,
-    xl: 16px
+    default: 16px,
+    xs: 16px,
+    sm: 16px,
+    md: 16px,
+    lg: 17px,
+    xl: 18px
   )
   !default;

@@ -3,8 +3,8 @@
  */
 
 code {
+  @include context-property-set('default', 'mono');
   font-size: $font-size-small-adjust;
-  font-family: $font-mono;
   padding: 0.15em 0.4em;
   background-color: map-get($grays, lighter);
   color: map-get($theme, orange);

@@ -16,10 +16,6 @@ table {
     padding: 0.5em 0.75em;
   }
 
-  tbody {
-    font-family: $font-text-alt;
-  }
-
   tbody th,
   td {
     border-top: 1px solid map-get($grays, light);

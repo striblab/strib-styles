@@ -2,30 +2,13 @@
  * typegraphy utilities
  */
 
-
 // Font profiles
-.type-default {
-  @include type-default;
-}
-
-.type-text {
-  @include type-text;
-}
-
-.type-text-alt {
-  @include type-text-alt;
-}
-
-.type-heading {
-  @include type-heading;
-}
-
-.type-heading-alt {
-  @include type-heading-alt;
-}
-
-.type-mono {
-  @include type-mono;
+@each $name, $properties in $font-sets {
+  .font-#{$name} {
+    @each $property, $value in $properties {
+      #{$property}: $value;
+    }
+  }
 }
 
 // Text sizes

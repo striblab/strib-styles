@@ -3,7 +3,7 @@
  */
 
 .byline {
-  @include type-text-alt;
+  @include context-property-set('default', 'text');
   margin: 0 0 $spacer-component;
   font-size: $font-size-small;
 
@@ -25,7 +25,7 @@
   .spacer {
     &::before {
       font-weight: bold;
-      content: "•";
+      content: '•';
     }
   }
 
@@ -33,7 +33,7 @@
     &::before {
       display: inline-block;
       padding: 0 ($spacer / 2);
-      content: "|";
+      content: '|';
       color: map-get($grays, medium-light);
     }
   }
@@ -60,12 +60,11 @@
 
 // Credits at bottom of article
 footer .byline {
-  @include type-text-alt;
   font-size: $font-size-small;
   color: map-get($grays, medium-light);
   border-top: 1px solid map-get($grays, medium-light);
   padding-top: $spacer-component;
-  line-height: $font-text-line-height * 1.5;
+  line-height: $font-size-unit * 1.5;
 
   address {
     font-style: normal;
@@ -82,20 +81,18 @@ footer .byline {
     }
   }
 
-  a[href^="tel:"]:before {
-    content: "\260e";
+  a[href^='tel:']:before {
+    content: '\260e';
     margin-right: 0.4em;
   }
 
-  a[href^="mailto:"]:before {
-    content: "\2709";
+  a[href^='mailto:']:before {
+    content: '\2709';
     margin-right: 0.4em;
   }
 }
 
 .copyright {
-  @include type-text-alt;
-
   font-size: $font-size-small;
   padding-top: $spacer-component;
   padding-bottom: $spacer-component;

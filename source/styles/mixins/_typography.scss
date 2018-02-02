@@ -2,45 +2,31 @@
  * Some mixins around typegraphy.
  */
 
-// Different font sets
-@mixin type-default {
-  font-family: $font-default;
-  line-height: $font-default-line-height;
-  letter-spacing: if(variable-exists(font-default-letter-spacing), $font-default-letter-spacing, normal);
-  font-weight: if(variable-exists(font-default-weight), $font-default-weight, normal);
+// Include font from $font-sets
+@mixin font-styles($font-set) {
+  $font-properties: map-get($font-sets, $font-set);
+  @if $font-properties {
+    // Each font-set should be a map of properties
+    @each $property, $value in $font-properties {
+      #{$property}: $value;
+    }
+  }
 }
 
-@mixin type-text {
-  font-family: $font-text;
-  line-height: $font-text-line-height;
-  letter-spacing: if(variable-exists(font-text-letter-spacing), $font-text-letter-spacing, normal);
-  font-weight: if(variable-exists(font-text-weight), $font-text-weight, normal);
-}
+// Include property set (such as text, heading) context ($font-contexts)
+@mixin context-property-set($context: 'default', $property-set: 'default') {
+  $c: map-get($contexts, $context);
+  @if $c {
+    // Look for the specific font
+    $font-properties: map-get($c, $property-set);
 
-@mixin type-text-alt {
-  font-family: $font-text-alt;
-  line-height: if(variable-exists(font-text-alt-line-height), $font-text-alt-line-height, $font-text-line-height);
-  letter-spacing: if(variable-exists(font-text-alt-letter-spacing), $font-text-alt-letter-spacing, normal);
-  font-weight: if(variable-exists(font-text-alt-weight), $font-text-alt-weight, normal);
-}
-
-@mixin type-heading {
-  font-family: $font-heading;
-  line-height: $font-heading-line-height;
-  letter-spacing: if(variable-exists(font-heading-letter-spacing), $font-heading-letter-spacing, normal);
-  font-weight: if(variable-exists(font-heading-weight), $font-heading-weight, normal);
-}
-
-@mixin type-heading-alt {
-  font-family: $font-heading-alt;
-  line-height: if(variable-exists(font-heading-alt-line-height), $font-heading-alt-line-height, $font-heading-line-height);
-  letter-spacing: if(variable-exists(font-heading-alt-letter-spacing), $font-heading-alt-letter-spacing, normal);
-  font-weight: if(variable-exists(font-heading-alt-weight), $font-heading-alt-weight, normal);
-}
-
-@mixin type-mono {
-  font-family: $font-mono;
-  line-height: if(variable-exists(font-mono-line-height), $font-mono-line-height, $font-text-line-height);
-  letter-spacing: if(variable-exists(font-mono-letter-spacing), $font-mono-letter-spacing, normal);
-  font-weight: if(variable-exists(font-mono-weight), $font-mono-weight, normal);
+    // If map, includ properties
+    @if type-of($font-properties) == 'map' {
+      @each $property, $value in $font-properties {
+        #{$property}: $value;
+      }
+    } @else if type-of($font-properties) == 'string' {
+      @include font-styles($font-properties);
+    }
+  }
 }

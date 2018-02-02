@@ -7,7 +7,7 @@
 // just in case
 .aside,
 aside {
-  @include type-default;
+  @include context-property-set('default', 'default');
 
   font-size: $font-size-component-unit;
   margin-bottom: $spacer-component * 2;
@@ -15,8 +15,7 @@ aside {
 
   .copy,
   p {
-    font-family: $font-default;
-    line-height: $font-default-line-height;
+    @include context-property-set('default', 'default');
   }
 
   // Update headings

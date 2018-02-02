@@ -11,7 +11,6 @@ figure {
   & > cite {
     font-size: $font-size-small;
     color: $color-text-sub;
-    font-family: $font-text-alt;
     letter-spacing: normal;
     text-transform: uppercase;
     display: block;
@@ -24,6 +23,5 @@ figure {
 figcaption {
   font-size: $font-size-small;
   color: $color-text-sub;
-  font-family: $font-text-alt;
   letter-spacing: normal;
 }

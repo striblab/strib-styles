@@ -11,8 +11,7 @@
       body {
         font-size: $font-size;
       }
-    }
-    @else {
+    } @else {
       & {
         font-size: $font-size;
       }
@@ -23,24 +22,21 @@
 // Default
 @if ($selector-wrapper == false) {
   body {
-    @include type-default;
+    @include context-property-set('default', 'default');
     background-color: $color-text-bg;
     color: $color-text;
     -webkit-font-smoothing: antialiased;
-    line-height: $font-default-line-height;
   }
 
   * {
     line-height: $font-default-line-height;
   }
-}
-@else {
+} @else {
   & {
-    @include type-default;
+    @include context-property-set('default', 'default');
     background-color: $color-text-bg;
     color: $color-text;
     -webkit-font-smoothing: antialiased;
-    line-height: $font-default-line-height;
   }
 
   & * {
@@ -52,12 +48,7 @@
 p,
 .text,
 .copy {
-  @include type-text;
-}
-
-// Alternate
-.text-alternate {
-  @include type-text-alt;
+  @include context-property-set('default', 'text');
 }
 
 // Headings
@@ -68,7 +59,7 @@ h4,
 h5,
 h6,
 .heading {
-  @include type-heading;
+  @include context-property-set('default', 'heading');
 
   padding: ($spacer / 2) 0 0;
   margin: 0 0 ($spacer / 2);
@@ -87,26 +78,26 @@ h3 {
 }
 
 h4 {
-  @include type-heading-alt;
+  @include context-property-set('default', 'heading-depth');
   font-size: 1.5;
   font-weight: bold;
 }
 
 h5 {
-  @include type-heading-alt;
+  @include context-property-set('default', 'heading-depth');
   font-size: 1.25;
   font-weight: bold;
 }
 
 h6 {
-  @include type-heading-alt;
+  @include context-property-set('default', 'heading-depth');
   font-size: 1;
   font-weight: bold;
 }
 
-// Sans text (for labels)
-.heading-alternate {
-  @include type-heading-alt;
+// Label
+.label {
+  @include context-property-set('default', 'label');
 }
 
 // Links
@@ -175,7 +166,7 @@ dl {
 
 // Lead paragraph
 .lead {
-  @include type-heading;
+  @include context-property-set('default', 'lead');
   font-size: $font-size-xlarge;
   margin-bottom: $spacer;
 }
@@ -218,7 +209,7 @@ abbr {
 
 // Blockquote
 blockquote {
-  font-family: $font-text;
+  @include context-property-set('default', 'text');
   font-size: $font-size-large;
   letter-spacing: normal;
   margin: 0 0 #{1em / $font-size-large}em;
@@ -234,7 +225,7 @@ blockquote {
     text-align: left;
 
     &::before {
-      content: "\2014 \00A0";
+      content: '\2014 \00A0';
     }
 
     & cite {
