@@ -51,6 +51,12 @@ figure.highlight,
   height: 15em;
 }
 
+.example-container-no-height {
+  @extend .example-container;
+  height: auto;
+  min-height: none;
+}
+
 .example-color-swatch {
   width: 10%;
   float: left;

@@ -1,0 +1,72 @@
+/**
+ * Containers
+ */
+
+// Just a regular container
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacer-component;
+  padding-left: $spacer-component;
+}
+
+// Containers that will only be a max width
+@each $breakpoint, $value in $breakpoints {
+  $infix: breakpoint-infix($breakpoint);
+
+  .container#{$infix} {
+    @extend .container;
+
+    @if $value != 0 {
+      @include media-breakpoint-up($breakpoint) {
+        max-width: $value;
+      }
+    }
+  }
+}
+
+// Explicitly fluid
+.container-fluid {
+  @extend .container;
+
+  width: 100%;
+}
+
+// Push container left
+.container-left {
+  margin-left: 0;
+}
+
+// Push container left
+.container-right {
+  margin-right: 0;
+}
+
+// Aspect ratio Containers
+.container-4-3 {
+  @include aspect-ratio(4, 3);
+}
+
+.container-16-9 {
+  @include aspect-ratio(16, 9);
+}
+
+.container-185-1 {
+  @include aspect-ratio(1.85, 1);
+}
+
+.container-16-9 {
+  @include aspect-ratio(16, 9);
+}
+
+.container-16-10 {
+  @include aspect-ratio(16, 9);
+}
+
+.container-1618-1 {
+  @include aspect-ratio(1.618, 1);
+}
+
+.container-golden {
+  @include aspect-ratio(1.618, 1);
+}

@@ -1,60 +1,20 @@
 /**
- * Layout and containers
+ * General, semantic layout
  */
 
-// Just a regular container
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: $spacer-component;
-  padding-left: $spacer-component;
-}
-
-// Containers that will only be a max width
-@each $breakpoint, $value in $breakpoints {
-  $infix: breakpoint-infix($breakpoint);
-
-  .container#{$infix} {
-    @extend .container;
-
-    @if $value != 0 {
-      @include media-breakpoint-up($breakpoint) {
-        max-width: $value;
-      }
-    }
-  }
-}
-
-// Explicitly fluid
-.container-fluid {
-  @extend .container;
-
-  width: 100%;
-}
-
-// Push container left
-.container-left {
-  margin-left: 0;
-}
-
-// Push container left
-.container-right {
-  margin-right: 0;
-}
-
 // Main header for a page should have the role=banner
-header[role="banner"] {
+header[role='banner'] {
   padding-top: $spacer-component / 2;
   padding-bottom: $spacer-component;
 }
 
 // Main for the page should have role=main
-main[role="main"] {
-  // Nothing, just helpful to show that this part if good
+main[role='main'] {
+  // Nothing, just helpful to show that this part is good
 }
 
 // Main footer for a page should have the role=contentinfo
-footer[role="contentinfo"] {
+footer[role='contentinfo'] {
   font-size: $font-size-small;
   padding-top: $spacer-component * 2;
   padding-bottom: $spacer-component * 2;
