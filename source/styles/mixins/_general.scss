@@ -13,3 +13,12 @@
   }
   @return $map;
 }
+
+// Set foreground color based on another color
+@function foreground-color($color) {
+  @if (lightness($color) > 50) {
+    @return $color-text;
+  } @else {
+    @return $color-white;
+  }
+}

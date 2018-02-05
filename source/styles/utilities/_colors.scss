@@ -2,6 +2,7 @@
  * Color utility classes
  */
 
+// Theme colors
 @each $name, $color in $theme {
   .color-#{$name} {
     color: $color;
@@ -9,9 +10,11 @@
 
   .color-bg-#{$name} {
     background-color: $color;
+    color: foreground-color($color);
   }
 }
 
+// Grays
 @each $name, $color in $grays {
   .color-gray-#{$name} {
     color: $color;
@@ -19,11 +22,14 @@
 
   .color-bg-gray-#{$name} {
     background-color: $color;
+    color: foreground-color($color);
   }
 }
 
+// Black and white
 .color-bg-white {
   background-color: $color-white;
+  color: foreground-color($color-white);
 }
 
 .color-white {
@@ -32,8 +38,37 @@
 
 .color-bg-black {
   background-color: $color-black;
+  color: foreground-color($color-black);
 }
 
 .color-black {
   color: $color-black;
+}
+
+// Data colors
+@each $set-name, $set in $colors-data {
+  @each $color in $set {
+    $i: index($set, $color);
+
+    .color-data-#{$set-name}-#{$i} {
+      color: $color;
+    }
+
+    .color-bg-data-#{$set-name}-#{$i} {
+      background-color: $color;
+      color: foreground-color($color);
+    }
+  }
+}
+
+// Political colors
+@each $name, $color in $colors-political {
+  .color-political-#{$name} {
+    color: $color;
+  }
+
+  .color-bg-political-#{$name} {
+    background-color: $color;
+    color: foreground-color($color);
+  }
 }

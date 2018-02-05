@@ -188,7 +188,10 @@ $contexts: (
   !default;
 // Set default
 $context-default: 'news' !default;
-$contexts: map-merge($contexts,  (default: map-get($contexts, $context-default)));
+$contexts: map-merge(
+  $contexts,
+   (default: map-get($contexts, $context-default))
+);
 
 // Font sizes
 $font-size-unit: 1em !default;
@@ -236,6 +239,28 @@ $color-text: map-get($grays, darker) !default;
 $color-text-sub: map-get($grays, medium) !default;
 $color-text-bg: $color-white !default;
 $color-link: map-get($theme, green-dark) !default;
+
+// Data colors
+$colors-data: (
+    reds: (#f2ac93, #f28670, #f2614c, #c22a22, #9c0004),
+    oranges: (#f2d2a4, #f2af80, #e07242, #c2421f, #822010),
+    blues: (#d1e6e1, #a7e6e3, #67b4c2, #3580a3, #0d4673),
+    greens: (#c7e5b5, #9ee384, #5bbf48, #299e3d, #118241),
+    grays: (#f7f7f7, #cccccc, #969696, #636363, #252525),
+    light-blue: (#dae1e7, #c6d1d9, #a8b9c5, #7f98aa, #556e7f, #2c3942),
+    categories: (#66af50, #bf603c, #59a897, #4c4c39),
+    political-parties: (#9c0004, #f2614c, #f7f7f7, #67b4c2, #0d4673),
+    divergent: (#271d42, #857aaa, #f7f7f7, #5bbf48, #118241)
+  )
+  !default;
+
+// Political colors
+$colors-political: (
+  r: #9C0004,
+  gop: #9C0004,
+  d: #0D4673,
+  dfl: #0D4673
+) !default;
 
 // Breakpoints
 $breakpoints: (
