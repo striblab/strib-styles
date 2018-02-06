@@ -4,6 +4,7 @@
 
 // Dependencies
 const fs = require('fs');
+const _ = require('lodash');
 const querystring = require('querystring');
 const child = require('child_process');
 const path = require('path');
@@ -15,9 +16,16 @@ const postcss = require('gulp-postcss');
 const rename = require('gulp-rename');
 const util = require('gulp-util');
 const ghPages = require('gulp-gh-pages');
+const geach = require('gulp-each');
+const mochaPhantom = require('gulp-mocha-phantomjs');
 const autoprefixer = require('autoprefixer');
 const browserSync = require('browser-sync').create();
 const mime = require('mime-types');
+const rollup = require('rollup');
+const rollupResolve = require('rollup-plugin-node-resolve');
+const rollupBabel = require('rollup-plugin-babel');
+const rollupUglify = require('rollup-plugin-uglify');
+const rollupJSON = require('rollup-plugin-json');
 
 // Make sure we are using a good node-sass
 sass.compiler = require('node-sass');
@@ -78,6 +86,52 @@ gulp.task('guide:get-build-styles', ['styles'], () => {
   return gulp.src(['build/**/*']).pipe(gulp.dest('source/guide/styles'));
 });
 
+// Use Rollup to compile JS.  TODO: Try to move to a config file
+gulp.task('js', async () => {
+  return gulp.src(['source/js/**/*.js']).pipe(
+    geach(async (content, file, done) => {
+      let name = file.relative.replace('.js', '');
+      name = _.camelCase(
+        name === 'all' ? 'strib-styles' : 'strib-styles-' + name
+      );
+
+      const bundle = await rollup.rollup({
+        input: 'source/js/' + file.relative,
+        plugins: [
+          rollupJSON(),
+          rollupResolve(),
+          rollupBabel({
+            exclude: 'node_modules/**'
+          }),
+          rollupUglify()
+        ]
+      });
+
+      await bundle.write({
+        file: './build/strib-styles.' + file.relative,
+        format: 'umd',
+        name: name,
+        sourcemap: true
+      });
+
+      done(null);
+    })
+  );
+});
+
+// Use Phantom JS to run tests in a "browser"
+
+// Create guide with Jekyll
+gulp.task('js:test', ['js'], () => {
+  return gulp.src(['tests/js/**/*.html']).pipe(
+    mochaPhantom({
+      phantomjs: {
+        useColors: true
+      }
+    })
+  );
+});
+
 // Watch for building
 gulp.task('watch:guide', () => {
   gulp.watch(
@@ -117,12 +171,13 @@ gulp.task('default', ['build']);
 
 // Run command line task
 function gulpRunner(command, args, done) {
+  const commandLog = command.split('/').pop();
   const proc = child.spawn(command, args);
   const logger = buffer => {
     buffer
       .toString()
       .split(/\n/)
-      .forEach(message => util.log(command + ': ' + message));
+      .forEach(message => util.log(commandLog + ': ' + message));
   };
 
   proc.stdout.on('data', logger);
