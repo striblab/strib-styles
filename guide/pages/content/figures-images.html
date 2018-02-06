@@ -92,7 +92,7 @@
 
 <h3 id="more-performant-images">More performant images</h3>
 
-<p>Though not specific to this style guide, using the <code class="highlighter-rouge">srcset</code> and <code class="highlighter-rouge">sizes</code> attributes for images can greatly help performance.  <a href="https://cloudfour.com/thinks/responsive-images-101-part-4-srcset-width-descriptors/">srcset</a> defines different sized images, and <a href="https://cloudfour.com/thinks/responsive-images-101-part-5-sizes/">sizes</a> describes when to use which images.  Note that the <code class="highlighter-rouge">sizes</code> attribute can be a bit confusing and annoying since its kind of like describing your CSS twice.</p>
+<p>Though not specific to this style guide, using the <code class="highlighter-rouge">srcset</code> and <code class="highlighter-rouge">sizes</code> attributes for images can greatly help performance. <a href="https://cloudfour.com/thinks/responsive-images-101-part-4-srcset-width-descriptors/">srcset</a> defines different sized images, and <a href="https://cloudfour.com/thinks/responsive-images-101-part-5-sizes/">sizes</a> describes when to use which images. Note that the <code class="highlighter-rouge">sizes</code> attribute can be a bit confusing and annoying since its kind of like describing your CSS twice. And for further performance and cross-platform capatability, consider using the <code class="highlighter-rouge">&lt;picture&gt;</code> to support <code class="highlighter-rouge">webp</code> and other formats.</p>
 
 <div class="strib-guide-example" data-example-id="">
 <img src="http://placekitten.com/2400/1200" alt="Kitten placeholder image" srcset="http://placekitten.com/400/200 400w,
@@ -109,35 +109,37 @@
       http://placekitten.com/2000/1000 2000w"</span>
     <span class="na">sizes=</span><span class="s">"(max-width: 800px) 100vw, 95vw"</span><span class="nt">&gt;</span></code></pre></div>
 
-<p>Note that if you load an image with multiple sources, the browser will simply use the largest one it has in cache, even if you make your window smaller.  So, for testing, you may need to clear the cache to see specific images loaded.</p>
+<p>Note that if you load an image with multiple sources, the browser will simply use the largest one it has in cache, even if you make your window smaller. So, for testing, you may need to clear the cache to see specific images loaded.</p>
 
 <h2 id="figure">Figure</h2>
 
-<p>A figure can be anything really, though often is an image or video.  Figures usually need a caption which can be inserted with <code class="highlighter-rouge">&lt;figcaption&gt;</code>.  Often a source is needed with an image.  Though there is not a very appropriate HTML tag for this, the <code class="highlighter-rouge">cite</code> tag is used.</p>
+<p>A figure can be anything really, though often is an image or video. Figures usually need a caption which can be inserted with <code class="highlighter-rouge">&lt;figcaption&gt;</code>. Often a source is needed with an image. Though there is not a very appropriate HTML tag for this, the <code class="highlighter-rouge">cite</code> tag is used.</p>
 
 <div class="strib-guide-example" data-example-id="">
 <figure>
   <img src="http://placekitten.com/1200/420" alt="Kitten placeholder image" />
 
-  <cite>PlaceKitten</cite>
+<cite>PlaceKitten</cite>
+
   <figcaption>Fuzzy the kitten</figcaption>
 </figure>
 </div>
 <div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;figure&gt;</span>
   <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placekitten.com/1200/420"</span> <span class="na">alt=</span><span class="s">"Kitten placeholder image"</span><span class="nt">&gt;</span>
 
-  <span class="nt">&lt;cite&gt;</span>PlaceKitten<span class="nt">&lt;/cite&gt;</span>
+<span class="nt">&lt;cite&gt;</span>PlaceKitten<span class="nt">&lt;/cite&gt;</span>
+
   <span class="nt">&lt;figcaption&gt;</span>Fuzzy the kitten<span class="nt">&lt;/figcaption&gt;</span>
 <span class="nt">&lt;/figure&gt;</span></code></pre></div>
 
 <h2 id="background-fill">Background fill</h2>
 
-<p>To get an image to completely fill the background of a container, add the <code class="highlighter-rouge">.image-bg-fill</code> class and set the background image.</p>
+<p>To get an image to completely fill the background of a container, add the <code class="highlighter-rouge">.image-bg-fill</code> class and set the background image. Not that this is using an <a href="../layout/containers.html">aspect ratio container</a> to maintain a specific aspect ratio.</p>
 
 <div class="strib-guide-example" data-example-id="">
-<div class="image-bg-fill" style="background-image: url(http://placekitten.com/1200/1200); width: 100%; height: 30em;"></div>
+<div class="image-bg-fill container-16-9" style="background-image: url(http://placekitten.com/1500/1500);"></div>
 </div>
-<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"image-bg-fill"</span> <span class="na">style=</span><span class="s">"background-image: url(http://placekitten.com/1200/1200); width: 100%; height: 30em;"</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"image-bg-fill container-16-9"</span> <span class="na">style=</span><span class="s">"background-image: url(http://placekitten.com/1500/1500);"</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></div>
 
 
     </main>
