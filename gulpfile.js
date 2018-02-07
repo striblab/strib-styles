@@ -17,7 +17,8 @@ const rename = require('gulp-rename');
 const util = require('gulp-util');
 const ghPages = require('gulp-gh-pages');
 const geach = require('gulp-each');
-const mochaPhantom = require('gulp-mocha-phantomjs');
+const eslint = require('gulp-eslint');
+const jest = require('jest-cli');
 const autoprefixer = require('autoprefixer');
 const browserSync = require('browser-sync').create();
 const mime = require('mime-types');
@@ -72,22 +73,16 @@ gulp.task('styles', ['styles:lint'], () => {
     .pipe(gulp.dest('build/'));
 });
 
-// Create guide with Jekyll
-gulp.task('guide', ['guide:get-build-styles'], done => {
-  gulpRunner(
-    'bundle',
-    ['exec', 'jekyll', 'build', '-d', 'guide', '-s', 'source/guide'],
-    done
-  );
-});
-
-// Copy build files over to guide
-gulp.task('guide:get-build-styles', ['styles'], () => {
-  return gulp.src(['build/**/*']).pipe(gulp.dest('source/guide/styles'));
+// Lint JS
+gulp.task('js:lint', () => {
+  return gulp
+    .src(['source/js/**/*.js', 'gulpfile.js'])
+    .pipe(eslint())
+    .pipe(eslint.format());
 });
 
 // Use Rollup to compile JS.  TODO: Try to move to a config file
-gulp.task('js', async () => {
+gulp.task('js', ['js:lint'], async () => {
   return gulp.src(['source/js/**/*.js']).pipe(
     geach(async (content, file, done) => {
       let name = file.relative.replace('.js', '');
@@ -119,17 +114,33 @@ gulp.task('js', async () => {
   );
 });
 
-// Use Phantom JS to run tests in a "browser"
+// Test JS via Jest (and JSDOM)
+gulp.task(
+  'js:test',
+  gulpJest('js:test', {
+    rootDir: __dirname,
+    cache: false,
+    testMatch: ['**/*.test.js'],
+    transform: {
+      '^.+\\.js$': 'babel-jest'
+    }
+    //setupFiles: ['./tests/globals.js']
+  })
+);
 
 // Create guide with Jekyll
-gulp.task('js:test', ['js'], () => {
-  return gulp.src(['tests/js/**/*.html']).pipe(
-    mochaPhantom({
-      phantomjs: {
-        useColors: true
-      }
-    })
+gulp.task('guide', ['guide:get-build'], done => {
+  gulpRunner(
+    'bundle',
+    ['exec', 'jekyll', 'build', '-d', 'guide', '-s', 'source/guide'],
+    done
   );
+});
+
+// Copy build files over to guide.  This is probably stupid
+// since it is just duplicating things
+gulp.task('guide:get-build', ['styles', 'js'], () => {
+  return gulp.src(['build/**/*']).pipe(gulp.dest('source/guide/build'));
 });
 
 // Watch for building
@@ -137,11 +148,14 @@ gulp.task('watch:guide', () => {
   gulp.watch(
     [
       'source/styles/**/*.scss',
+      'source/js/**/*.js',
       'source/guide/**/*',
-      '!source/guide/styles/**/*'
+      // Ensure we don't watch the build since it gets copied over
+      '!source/guide/build/**/*'
     ],
     ['guide']
   );
+  gulp.watch(['source/js/**/*.js'], ['js:test']);
 });
 
 // Local server
@@ -165,7 +179,8 @@ gulp.task('publish', ['build'], () => {
 // Task combinations
 gulp.task('build:guide', ['guide']);
 gulp.task('build:styles', ['styles']);
-gulp.task('build', ['build:styles', 'build:guide']);
+gulp.task('build:js', ['js', 'js:test']);
+gulp.task('build', ['build:guide']);
 gulp.task('develop', ['server', 'watch:guide']);
 gulp.task('default', ['build']);
 
@@ -185,6 +200,33 @@ function gulpRunner(command, args, done) {
   if (done) {
     proc.on('close', done);
   }
+}
+
+// Run jest tests
+function gulpJest(name, options) {
+  return done => {
+    let oldEnv = process.env.BABEL_ENV;
+    process.env.BABEL_ENV = 'test';
+
+    jest
+      .runCLI(options, [options.rootDir || process.cwd()], results => {
+        if (results.numFailedTests) {
+          return done(
+            new util.PluginError(
+              name,
+              results.numFailedTests + ' tests failed.'
+            )
+          );
+        }
+
+        process.env.BABEL_ENV = oldEnv;
+        done(null);
+      })
+      .catch(() => {
+        process.env.BABEL_ENV = oldEnv;
+        return done(new util.PluginError(name, 'Test did not pass.'));
+      });
+  };
 }
 
 // Custom SASS functions
