@@ -138,7 +138,8 @@ gulp.task('guide', ['guide:get-build'], done => {
 });
 
 // Copy build files over to guide.  This is probably stupid
-// since it is just duplicating things
+// since it is just duplicating things.  Maybe copy this over
+// to the Jekyll output.
 gulp.task('guide:get-build', ['styles', 'js'], () => {
   return gulp.src(['build/**/*']).pipe(gulp.dest('source/guide/build'));
 });
