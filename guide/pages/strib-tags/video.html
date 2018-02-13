@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Video | Star Tribune Styles</title>
+
+    <!-- https://ricostacruz.com/til/relative-paths-in-jekyll -->
+    
+    
+    
+    
+
+    <meta name="author" content="Alan Palazzolo">
+    <meta name="description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
+    <meta name="robots" content="index, follow">
+
+    <!-- Shortcut and related icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/favicons/manifest.json">
+    <link rel="mask-icon" href="../../assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../assets/favicons/favicon.ico">
+    <meta name="msapplication-config" content="../../assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- For proper phone zoom -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Actual style guide styles -->
+    <link rel="stylesheet" href="../../build/strib-styles.default-debug.css" type="text/css">
+
+    <!-- Styles specific to guide -->
+    <link rel="stylesheet" href="../../guide-styles/main.css" type="text/css">
+
+    <!-- Social Media Tags -->
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:url" content=""> -->
+    <meta property="og:title" content="Video">
+    <meta property="og:description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
+    <meta property="og:image" content="../../assets/images/strib-logo-name-social-card.png">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@StarTribune">
+    <meta name="twitter:title" content="Video">
+    <meta name="twitter:description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
+    <meta name="twitter:image" content="../../assets/images/strib-logo-name-social-card.png">
+  </head>
+
+  <body>
+    <!-- Screen reader announcements -->
+    <div aria-live="polite" id="announcer" class="sr-only"></div>
+
+    <!-- Skip to main content -->
+    <a href="#main-content" class="to-main-content">Skip to main content</a>
+
+    <!-- Header -->
+    <header role="banner">
+      <nav>
+        <div class="container-lg">
+          <a href="../.." class="logo" title="Home"><span class="sr-only">Go to homepage</span></a>
+          <h1>Style guide</h1>
+
+          <ul>
+            <li><a href="../..">Layout</a></li>
+            <li><a href="../..">Styles</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    </header>
+
+    <!-- Main content here -->
+    <main id="main-content" class="container-lg" role="main">
+      <h1>Video</h1>
+
+      <h2 id="the-video-strib-tag-allows-you-to-place-any-clickability-video-into-any-spot-in-your-article">The video &lt;strib-tag&gt; allows you to place any Clickability video into any spot in your article.</h2>
+
+<p>The video &lt;strib-tag&gt; accepts the following required and optional parameters:</p>
+
+<ul>
+  <li><code>id</code></li>
+</ul>
+
+<p>A required parameter populated with the id of a Clickability video.
+Video must be published in order to be seen on news-platform branches or ?preview=1.</p>
+
+<ul>
+  <li><code>readin</code></li>
+</ul>
+
+<p>An optional parameter populated with a readin, which appears in bold just before the caption begins.</p>
+
+<p>Readin will push the video icon and “ Video (02:15) “ to the end of the caption.</p>
+
+<ul>
+  <li><code>class</code></li>
+</ul>
+
+<p>An optional parameter populated with a special class useful to designers.</p>
+
+<p>If class contains ‘videoplayer small’ then the video will display thumbnail going to a modal video display.</p>
+
+<ul>
+  <li><code>w</code> and <code>h</code></li>
+</ul>
+
+<p>An optional parameter which overrides the default 300 x 194 thumbnail, used for bigger, clearer displays of video thumbnails.</p>
+
+<ul>
+  <li><code>layout</code></li>
+</ul>
+
+<p>An optional parameter that, when set to “overline”, displays the thumbnail going to a modal video display with design elements (see below)</p>
+
+<h2 id="twig-locations">twig locations</h2>
+
+<p>desktop-theme/strib-tag/video.twig</p>
+
+<h2 id="standard-example">Standard example</h2>
+
+<figure class="highlight"><pre><code class="language-twig" data-lang="twig"><span class="nt">&lt;strib</span> <span class="na">type=</span><span class="s">"video"</span> <span class="na">id=</span><span class="s">"299767921"</span><span class="nt">&gt;&lt;/strib&gt;</span></code></pre></figure>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+      <div class="container-lg">
+        Design by the <a href="http://startribune.com/" target="_blank" rel="noopener">Star Tribune</a>.  Details on code and use can be found on <a href="https://github.com/striblab/strib-styles" target="_blank" rel="noopener">Github</a>.
+      </div>
+
+      <div class="copyright">
+        <div class="container-lg">
+          &copy; 2018 StarTribune. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Guide-specific scripts -->
+    <script src="../../build/strib-styles.all.js"></script>
+  </body>
+</html>

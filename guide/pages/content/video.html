@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Video | Star Tribune Styles</title>
+
+    <!-- https://ricostacruz.com/til/relative-paths-in-jekyll -->
+    
+    
+    
+    
+
+    <meta name="author" content="Alan Palazzolo">
+    <meta name="description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
+    <meta name="robots" content="index, follow">
+
+    <!-- Shortcut and related icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/favicons/manifest.json">
+    <link rel="mask-icon" href="../../assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../assets/favicons/favicon.ico">
+    <meta name="msapplication-config" content="../../assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- For proper phone zoom -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Actual style guide styles -->
+    <link rel="stylesheet" href="../../build/strib-styles.default-debug.css" type="text/css">
+
+    <!-- Styles specific to guide -->
+    <link rel="stylesheet" href="../../guide-styles/main.css" type="text/css">
+
+    <!-- Social Media Tags -->
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:url" content=""> -->
+    <meta property="og:title" content="Video">
+    <meta property="og:description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
+    <meta property="og:image" content="../../assets/images/strib-logo-name-social-card.png">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@StarTribune">
+    <meta name="twitter:title" content="Video">
+    <meta name="twitter:description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
+    <meta name="twitter:image" content="../../assets/images/strib-logo-name-social-card.png">
+  </head>
+
+  <body>
+    <!-- Screen reader announcements -->
+    <div aria-live="polite" id="announcer" class="sr-only"></div>
+
+    <!-- Skip to main content -->
+    <a href="#main-content" class="to-main-content">Skip to main content</a>
+
+    <!-- Header -->
+    <header role="banner">
+      <nav>
+        <div class="container-lg">
+          <a href="../.." class="logo" title="Home"><span class="sr-only">Go to homepage</span></a>
+          <h1>Style guide</h1>
+
+          <ul>
+            <li><a href="../..">Layout</a></li>
+            <li><a href="../..">Styles</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    </header>
+
+    <!-- Main content here -->
+    <main id="main-content" class="container-lg" role="main">
+      <h1>Video</h1>
+
+      <p>Styling for figures, images, and similar.</p>
+
+<h2 id="responsive-images">Responsive images</h2>
+
+<p>By default, images are responsive, meaning that their max width is set to <code class="highlighter-rouge">100%</code> and their height to <code class="highlighter-rouge">auto</code>.</p>
+
+<div class="strib-guide-example" data-example-id="">
+<img src="http://placekitten.com/1200/420" alt="Kitten placeholder image" />
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placekitten.com/1200/420"</span> <span class="na">alt=</span><span class="s">"Kitten placeholder image"</span><span class="nt">&gt;</span></code></pre></div>
+
+<h3 id="more-performant-images">More performant images</h3>
+
+<p>Though not specific to this style guide, using the <code class="highlighter-rouge">srcset</code> and <code class="highlighter-rouge">sizes</code> attributes for images can greatly help performance. <a href="https://cloudfour.com/thinks/responsive-images-101-part-4-srcset-width-descriptors/">srcset</a> defines different sized images, and <a href="https://cloudfour.com/thinks/responsive-images-101-part-5-sizes/">sizes</a> describes when to use which images. Note that the <code class="highlighter-rouge">sizes</code> attribute can be a bit confusing and annoying since its kind of like describing your CSS twice. And for further performance and cross-platform capatability, consider using the <code class="highlighter-rouge">&lt;picture&gt;</code> to support <code class="highlighter-rouge">webp</code> and other formats.</p>
+
+<div class="strib-guide-example" data-example-id="">
+<img src="http://placekitten.com/2400/1200" alt="Kitten placeholder image" srcset="http://placekitten.com/400/200 400w,
+      http://placekitten.com/800/400 800w,
+      http://placekitten.com/1000/500 1000w,
+      http://placekitten.com/1500/750 1500w,
+      http://placekitten.com/2000/1000 2000w" sizes="(max-width: 800px) 100vw, 95vw" />
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placekitten.com/2400/1200"</span> <span class="na">alt=</span><span class="s">"Kitten placeholder image"</span>
+    <span class="na">srcset=</span><span class="s">"http://placekitten.com/400/200 400w,
+      http://placekitten.com/800/400 800w,
+      http://placekitten.com/1000/500 1000w,
+      http://placekitten.com/1500/750 1500w,
+      http://placekitten.com/2000/1000 2000w"</span>
+    <span class="na">sizes=</span><span class="s">"(max-width: 800px) 100vw, 95vw"</span><span class="nt">&gt;</span></code></pre></div>
+
+<p>Note that if you load an image with multiple sources, the browser will simply use the largest one it has in cache, even if you make your window smaller. So, for testing, you may need to clear the cache to see specific images loaded.</p>
+
+<h2 id="figure">Figure</h2>
+
+<p>A figure can be anything really, though often is an image or video. Figures usually need a caption which can be inserted with <code class="highlighter-rouge">&lt;figcaption&gt;</code>. Often a source is needed with an image. Though there is not a very appropriate HTML tag for this, the <code class="highlighter-rouge">cite</code> tag is used.</p>
+
+<div class="strib-guide-example" data-example-id="">
+<figure>
+  <img src="http://placekitten.com/1200/420" alt="Kitten placeholder image" />
+
+<cite>PlaceKitten</cite>
+
+  <figcaption>Fuzzy the kitten</figcaption>
+</figure>
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;figure&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placekitten.com/1200/420"</span> <span class="na">alt=</span><span class="s">"Kitten placeholder image"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;cite&gt;</span>PlaceKitten<span class="nt">&lt;/cite&gt;</span>
+
+  <span class="nt">&lt;figcaption&gt;</span>Fuzzy the kitten<span class="nt">&lt;/figcaption&gt;</span>
+<span class="nt">&lt;/figure&gt;</span></code></pre></div>
+
+<h2 id="background-fill">Background fill</h2>
+
+<p>To get an image to completely fill the background of a container, add the <code class="highlighter-rouge">.image-bg-fill</code> class and set the background image. Not that this is using an <a href="../layout/containers.html">aspect ratio container</a> to maintain a specific aspect ratio.</p>
+
+<div class="strib-guide-example" data-example-id="">
+<div class="image-bg-fill container-16-9" style="background-image: url(http://placekitten.com/1500/1500);"></div>
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"image-bg-fill container-16-9"</span> <span class="na">style=</span><span class="s">"background-image: url(http://placekitten.com/1500/1500);"</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></div>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+      <div class="container-lg">
+        Design by the <a href="http://startribune.com/" target="_blank" rel="noopener">Star Tribune</a>.  Details on code and use can be found on <a href="https://github.com/striblab/strib-styles" target="_blank" rel="noopener">Github</a>.
+      </div>
+
+      <div class="copyright">
+        <div class="container-lg">
+          &copy; 2018 StarTribune. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Guide-specific scripts -->
+    <script src="../../build/strib-styles.all.js"></script>
+  </body>
+</html>

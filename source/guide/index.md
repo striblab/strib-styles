@@ -20,6 +20,7 @@ layout: page
 
 * [Typography](./pages/content/typography.html)
 * [Figures and images](./pages/content/figures-images.html)
+* [Video](./pages/content/video.html)
 * [Tables](./pages/content/tables.html)
 * [Code](./pages/content/code.html)
 * [Datelines](./pages/content/dateline.html)
@@ -38,6 +39,18 @@ layout: page
 * [Bylines and credits](./pages/components/credits.html)
 * [Alerts](./pages/components/alerts.html)
 * [Asides](./pages/components/asides.html)
+
+### Strib-embeds
+
+* [Bug](./pages/strib-tags/bug.html)
+* [Gallery](./pages/strib-tags/gallery.html)
+* [Graphic](./pages/strib-tags/graphic.html)
+* [Image](./pages/strib-tags/image.html)
+* [Link](./pages/strib-tags/link.html)
+* [Quote](./pages/strib-tags/quote.html)
+* [Text](./pages/strib-tags/text.html)
+* [Video](./pages/strib-tags/video.html)
+
 
 ### Utilities
 
