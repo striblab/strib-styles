@@ -29,11 +29,8 @@
     <!-- For proper phone zoom -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-
     <!-- Actual style guide styles -->
-    <link rel="stylesheet" href="../../styles/strib-styles.default-debug.css" type="text/css">
+    <link rel="stylesheet" href="../../build/strib-styles.default-debug.css" type="text/css">
 
     <!-- Styles specific to guide -->
     <link rel="stylesheet" href="../../guide-styles/main.css" type="text/css">
@@ -174,8 +171,7 @@
 <p>for example, if you install Strib Styles with <code class="highlighter-rouge">npm</code>, you can include it like this:</p>
 
 <figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="c1">// Override some Strib Styles variables
-</span><span class="nv">$root</span><span class="p">:</span> <span class="bp">true</span><span class="err">;</span>
-<span class="k">@import</span> <span class="s">"node_modules/strib-styles/source/styles/default";</span>
+</span><span class="k">@import</span> <span class="s">"node_modules/strib-styles/source/styles/default";</span>
 
 <span class="nc">.project-styles</span> <span class="err">{</span>
   <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="err">;</span>
@@ -195,12 +191,12 @@
 
       <div class="copyright">
         <div class="container-lg">
-          &copy; 2017 StarTribune. All rights reserved.
+          &copy; 2018 StarTribune. All rights reserved.
         </div>
       </div>
     </footer>
 
     <!-- Guide-specific scripts -->
-    <script src=""></script>
+    <script src="../../build/strib-styles.all.js"></script>
   </body>
 </html>

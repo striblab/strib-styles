@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>Browser support | Star Tribune Styles</title>
+    <title>Video | Star Tribune Styles</title>
 
     <!-- https://ricostacruz.com/til/relative-paths-in-jekyll -->
     
@@ -38,13 +38,13 @@
     <!-- Social Media Tags -->
     <meta property="og:type" content="website">
     <!-- <meta property="og:url" content=""> -->
-    <meta property="og:title" content="Browser support">
+    <meta property="og:title" content="Video">
     <meta property="og:description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
     <meta property="og:image" content="../../assets/images/strib-logo-name-social-card.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@StarTribune">
-    <meta name="twitter:title" content="Browser support">
+    <meta name="twitter:title" content="Video">
     <meta name="twitter:description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
     <meta name="twitter:image" content="../../assets/images/strib-logo-name-social-card.png">
   </head>
@@ -74,9 +74,55 @@
 
     <!-- Main content here -->
     <main id="main-content" class="container-lg" role="main">
-      <h1>Browser support</h1>
+      <h1>Video</h1>
 
-      <p><strong>TODO</strong>: What browsers do we aim to support, why, and how.</p>
+      <h2 id="the-video-strib-tag-allows-you-to-place-any-clickability-video-into-any-spot-in-your-article">The video &lt;strib-tag&gt; allows you to place any Clickability video into any spot in your article.</h2>
+
+<p>The video &lt;strib-tag&gt; accepts the following required and optional parameters:</p>
+
+<ul>
+  <li><code>id</code></li>
+</ul>
+
+<p>A required parameter populated with the id of a Clickability video.
+Video must be published in order to be seen on news-platform branches or ?preview=1.</p>
+
+<ul>
+  <li><code>readin</code></li>
+</ul>
+
+<p>An optional parameter populated with a readin, which appears in bold just before the caption begins.</p>
+
+<p>Readin will push the video icon and “ Video (02:15) “ to the end of the caption.</p>
+
+<ul>
+  <li><code>class</code></li>
+</ul>
+
+<p>An optional parameter populated with a special class useful to designers.</p>
+
+<p>If class contains ‘videoplayer small’ then the video will display thumbnail going to a modal video display.</p>
+
+<ul>
+  <li><code>w</code> and <code>h</code></li>
+</ul>
+
+<p>An optional parameter which overrides the default 300 x 194 thumbnail, used for bigger, clearer displays of video thumbnails.</p>
+
+<ul>
+  <li><code>layout</code></li>
+</ul>
+
+<p>An optional parameter that, when set to “overline”, displays the thumbnail going to a modal video display with design elements (see below)</p>
+
+<h2 id="twig-locations">twig locations</h2>
+
+<p>desktop-theme/strib-tag/video.twig</p>
+
+<h2 id="standard-example">Standard example</h2>
+
+<figure class="highlight"><pre><code class="language-twig" data-lang="twig"><span class="nt">&lt;strib</span> <span class="na">type=</span><span class="s">"video"</span> <span class="na">id=</span><span class="s">"299767921"</span><span class="nt">&gt;&lt;/strib&gt;</span></code></pre></figure>
+
 
     </main>
 

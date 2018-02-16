@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>Browser support | Star Tribune Styles</title>
+    <title>gallery | Star Tribune Styles</title>
 
     <!-- https://ricostacruz.com/til/relative-paths-in-jekyll -->
     
@@ -38,13 +38,13 @@
     <!-- Social Media Tags -->
     <meta property="og:type" content="website">
     <!-- <meta property="og:url" content=""> -->
-    <meta property="og:title" content="Browser support">
+    <meta property="og:title" content="gallery">
     <meta property="og:description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
     <meta property="og:image" content="../../assets/images/strib-logo-name-social-card.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@StarTribune">
-    <meta name="twitter:title" content="Browser support">
+    <meta name="twitter:title" content="gallery">
     <meta name="twitter:description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
     <meta name="twitter:image" content="../../assets/images/strib-logo-name-social-card.png">
   </head>
@@ -74,9 +74,75 @@
 
     <!-- Main content here -->
     <main id="main-content" class="container-lg" role="main">
-      <h1>Browser support</h1>
+      <h1>gallery</h1>
 
-      <p><strong>TODO</strong>: What browsers do we aim to support, why, and how.</p>
+      <p>The gallery &lt;strib-tag&gt; allows you to place any Clickability photo gallery into any spot in your article.
+The gallery &lt;strib-tag&gt; accepts the following required and optional parameters:</p>
+
+<ul>
+  <li><code>id</code></li>
+</ul>
+
+<p>A required parameter populated with the id of a Clickability photo gallery</p>
+
+<ul>
+  <li><code>readin</code></li>
+</ul>
+
+<p>An optional parameter populated with a readin, which appears in bold just before the caption begins. If used with class=”multi-gallery” readin will replace the gallery icon and word “ Gallery: “</p>
+
+<ul>
+  <li><code>caption</code></li>
+</ul>
+
+<p>An optional parameter populated with the caption you which to see adjacent to the image.</p>
+
+<ul>
+  <li><code>byline</code></li>
+</ul>
+
+<p>An optional parameter populated with the photographer’s credit.</p>
+
+<ul>
+  <li><code>class</code></li>
+</ul>
+
+<p>An optional parameter populated with a special class useful to designers. 
+If class contains ‘multi-gallery’ then the gallery will display thumbnail going to a modal gallery display. 
+This is the only way multiple galleries can be shown on the page at the same time.
+defaults to ‘gallery’ - which displays and functions inline.</p>
+
+<ul>
+  <li><code>scale</code></li>
+</ul>
+
+<p>An optional parameter populated with a size value corresponding to one of our standard layout widths. The absence of a scale value will result in a small image floated left in the copy. 
+Other scale values are: m = 525px  l = 853px  xl = 970px</p>
+
+<ul>
+  <li><code>click</code></li>
+</ul>
+
+<p>An optional parameter that, when set to “no”, disables the popup overlay and removes the popup icon from the image</p>
+
+<ul>
+  <li><code>layout</code></li>
+</ul>
+
+<p>An optional parameter that, when set to “overline”, displays the thumbnail going to a modal gallery display with design elements (see below)</p>
+
+<h2 id="twig-locations">twig locations</h2>
+
+<p>desktop-theme/strib-tag/gallery.twig</p>
+
+<p>uses components/media-gallery-inline.twig
+and components/media-gallery.twig</p>
+
+<h2 id="standard-example">Standard example</h2>
+
+<p>The default gallery strib-tag without optional parameters will generate this inline gallery:</p>
+
+<figure class="highlight"><pre><code class="language-twig" data-lang="twig"><span class="nt">&lt;strib</span> <span class="na">type=</span><span class="s">"gallery"</span> <span class="na">id=</span><span class="s">"302652371"</span><span class="nt">&gt;&lt;/strib&gt;</span></code></pre></figure>
 
     </main>
 

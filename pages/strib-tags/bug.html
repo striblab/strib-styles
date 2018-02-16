@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>Browser support | Star Tribune Styles</title>
+    <title>bug | Star Tribune Styles</title>
 
     <!-- https://ricostacruz.com/til/relative-paths-in-jekyll -->
     
@@ -38,13 +38,13 @@
     <!-- Social Media Tags -->
     <meta property="og:type" content="website">
     <!-- <meta property="og:url" content=""> -->
-    <meta property="og:title" content="Browser support">
+    <meta property="og:title" content="bug">
     <meta property="og:description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
     <meta property="og:image" content="../../assets/images/strib-logo-name-social-card.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@StarTribune">
-    <meta name="twitter:title" content="Browser support">
+    <meta name="twitter:title" content="bug">
     <meta name="twitter:description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
     <meta name="twitter:image" content="../../assets/images/strib-logo-name-social-card.png">
   </head>
@@ -74,9 +74,21 @@
 
     <!-- Main content here -->
     <main id="main-content" class="container-lg" role="main">
-      <h1>Browser support</h1>
+      <h1>bug</h1>
 
-      <p><strong>TODO</strong>: What browsers do we aim to support, why, and how.</p>
+      <p>Place this &lt;strib&gt; tag anywhere in the story body to control where the article’s bug content appears.</p>
+
+<p>The tag requires no configuration</p>
+
+<p>Bugs appear in articles by default - all of the css and html are put in the bug field of the Clickability article, this tag simply allows you to control positioning.</p>
+
+<h2 id="twig-locations">twig locations</h2>
+
+<p>desktop-theme/strib-tag/bug.twig</p>
+
+<h2 id="standard-example">Standard example</h2>
+
+<figure class="highlight"><pre><code class="language-twig" data-lang="twig"><span class="nt">&lt;strib</span> <span class="na">type=</span><span class="s">"bug"</span><span class="nt">&gt;&lt;/strib&gt;</span></code></pre></figure>
 
     </main>
 
