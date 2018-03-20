@@ -35,7 +35,7 @@ header[role='banner'] nav {
   margin-top: $spacer-component * -0.5;
 
   .logo {
-    background-image: #{inline-image('../images/startribune-logo.svg')};
+    background-image: image('startribune-logo.svg');
     background-position: left bottom;
     background-repeat: no-repeat;
     background-size: contain;

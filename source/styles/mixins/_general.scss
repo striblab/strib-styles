@@ -43,3 +43,12 @@
     bottom: 0;
   }
 }
+
+// Create path to an image
+//
+// @param {String} $image - Image name and extension (and possible sub path)
+// @param {String} $path - Path to image folder
+// @return {String} - Full path to asset
+@function image($image, $path: $image-path) {
+  @return url($path + '/' + $image);
+}

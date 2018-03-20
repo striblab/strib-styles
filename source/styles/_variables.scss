@@ -24,6 +24,11 @@ $spacer-component: $spacer-component-magnitude * 1em !default;
   $spacer-component: $spacer-component-magnitude * 1rem !default;
 }
 
+// Path to where images are.  This can be whatever, but do not include
+// trailing slash.
+// See function: image()
+$image-path: './images' !default;
+
 // Font face display
 $font-display: fallback !default;
 
