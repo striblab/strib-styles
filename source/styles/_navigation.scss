@@ -67,3 +67,116 @@ header[role='banner'] nav {
     font-size: $font-size-small;
   }
 }
+
+// Site reproduction nav
+nav.nav-strib-site {
+  border-bottom: 1px solid #e8e8e8;
+  //box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  color: rgb(34, 34, 34);
+  position: relative;
+  text-align: center;
+
+  [class^='container-'] {
+    position: relative;
+  }
+
+  a {
+    display: inline-block;
+  }
+
+  ul {
+    padding: 7px 0 5px;
+    margin: 0;
+  }
+
+  ul.section-start {
+    float: left;
+    text-align: left;
+  }
+
+  ul.section-center {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    left: 0;
+    z-index: -999;
+  }
+
+  ul.section-end {
+    float: right;
+    text-align: right;
+  }
+
+  ul li {
+    font-size: 11px;
+    line-height: 1em;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    -webkit-font-smoothing: subpixel-antialiased;
+    padding: 1px 12px;
+    margin: 0 auto;
+
+    &.spacer-right {
+      border-right: 1px solid #666666;
+    }
+
+    &.align-start {
+      align-content: flex-start;
+    }
+
+    &.align-end {
+      align-content: flex-end;
+    }
+  }
+
+  .icon {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    //text-indent: 10000px;
+    color: transparent;
+    vertical-align: text-top;
+  }
+
+  .icon-logo {
+    height: 25px;
+    width: 160px;
+    margin-top: -2px;
+    background-image: image('startribune-logo.png');
+    background-image: image('startribune-logo.svg');
+  }
+
+  .icon-home {
+    background-image: image('icon-home.png');
+    background-image: image('icon-home.svg');
+  }
+
+  .icon-search {
+    background-image: image('icon-search.png');
+    background-image: image('icon-search.svg');
+  }
+
+  .icon-person {
+    background-image: image('icon-person.png');
+    background-image: image('icon-person.svg');
+  }
+
+  .weekly-ads {
+    a {
+      display: block;
+    }
+
+    img {
+      display: block;
+      height: 24px;
+    }
+  }
+}
