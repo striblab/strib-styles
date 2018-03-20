@@ -22,6 +22,7 @@ const jest = require('jest-cli');
 const autoprefixer = require('autoprefixer');
 const browserSync = require('browser-sync').create();
 const mime = require('mime-types');
+const del = require('del');
 const rollup = require('rollup');
 const rollupResolve = require('rollup-plugin-node-resolve');
 const rollupBabel = require('rollup-plugin-babel');
@@ -71,6 +72,11 @@ gulp.task('styles', ['styles:lint'], () => {
     )
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('build/'));
+});
+
+// Assets images
+gulp.task('assets:images', () => {
+  return gulp.src(['source/images/**/*']).pipe(gulp.dest('build/images/'));
 });
 
 // Lint JS
@@ -140,7 +146,7 @@ gulp.task('guide', ['guide:get-build'], done => {
 // Copy build files over to guide.  This is probably stupid
 // since it is just duplicating things.  Maybe copy this over
 // to the Jekyll output.
-gulp.task('guide:get-build', ['styles', 'js'], () => {
+gulp.task('guide:get-build', ['assets:images', 'styles', 'js'], () => {
   return gulp.src(['build/**/*']).pipe(gulp.dest('source/guide/build'));
 });
 
@@ -177,12 +183,23 @@ gulp.task('publish', ['build'], () => {
   );
 });
 
+// Cleanup
+gulp.task('build:clean', () => {
+  return del(['build/**/*']);
+});
+gulp.task('guide:clean', () => {
+  return del(['guide/**/*', 'source/guide/build/**/*']);
+});
+
 // Task combinations
 gulp.task('build:guide', ['guide']);
 gulp.task('build:styles', ['styles']);
 gulp.task('build:js', ['js', 'js:test']);
+gulp.task('build:assets', ['assets:images']);
+
 gulp.task('build', ['build:guide']);
 gulp.task('develop', ['server', 'watch:guide']);
+gulp.task('clean', ['build:clean', 'guide:clean']);
 gulp.task('default', ['build']);
 
 // Run command line task
