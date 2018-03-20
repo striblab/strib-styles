@@ -1,3 +1,8 @@
+guide/*
+guide/**/*
+source/guide/build/*
+source/guide/build/**/*
+
 !source/guide/pages/components/*
 
 # Common
