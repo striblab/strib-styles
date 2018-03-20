@@ -1,1 +1,0 @@
-{"version":3,"file":"strib-styles.dropdown.js","sources":["../source/js/dropdown.js"],"sourcesContent":["/**\n * Dropdown code\n */\n\nlet dropdown = () => {\n  return 'TODO';\n};\n\n// Export\nexport default dropdown;\n"],"names":[],"mappings":"sMAIe,iBACN"}
