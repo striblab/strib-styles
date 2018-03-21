@@ -49,6 +49,7 @@ p,
 .text,
 .copy {
   @include all-contexts('text');
+  margin-top: 0;
 }
 
 // Headings

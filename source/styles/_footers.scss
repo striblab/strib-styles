@@ -1,0 +1,57 @@
+/**
+ * Different footer styles.
+ */
+
+footer {
+  p,
+  .text,
+  .copy {
+    @include all-contexts('default');
+  }
+}
+
+// Main footer for a page should have the role=contentinfo
+footer[role='contentinfo'] {
+  font-size: $font-size-small;
+  padding-top: $spacer-component * 2;
+  padding-bottom: $spacer-component * 2;
+  background-color: map-get($grays, lightest);
+  // Margin-top is not good, but better way?
+  margin-top: $spacer-component * 2;
+
+  &.with-copyright {
+    padding-bottom: 0;
+  }
+}
+
+// Articles
+.article-footer,
+article footer {
+  font-size: $font-size-small;
+  border-top: 1px solid map-get($grays, medium-light);
+  padding-top: $spacer-component;
+
+  h1 {
+    @include all-contexts('label');
+    font-size: $font-size-unit;
+    margin-bottom: $spacer / 2;
+    padding-top: 0;
+    font-weight: bold;
+  }
+}
+
+footer .credits {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: $spacer;
+}
+
+// Copyright in footer
+footer .copyright {
+  background-color: map-get($grays, lighter);
+  color: map-get($grays, medium);
+  padding-top: $spacer-component;
+  padding-bottom: $spacer-component;
+  margin-top: $spacer-component * 2;
+}
