@@ -55,3 +55,55 @@ footer .copyright {
   padding-bottom: $spacer-component;
   margin-top: $spacer-component * 2;
 }
+
+// Strib site replication
+footer.footer-strib-site {
+  color: #444444;
+  font-size: 12px;
+
+  .footer-strib-site-top-section {
+    margin-bottom: 3em;
+  }
+
+  .logo {
+    width: 20em;
+    height: 3.333em;
+    display: inline-block;
+    margin-right: 3em;
+    background-image: image('startribune-logo.svg');
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .link-set {
+    a {
+      color: #444444;
+      text-decoration: none;
+    }
+
+    .link-set-label {
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 0.5em;
+      color: map-get($theme, green-light);
+      letter-spacing: 1px;
+    }
+
+    ul {
+      margin: 0 0 1em;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  .copyright {
+    color: #909090;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+  }
+}
