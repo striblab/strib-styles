@@ -260,12 +260,7 @@ $colors-data: (
   !default;
 
 // Political colors
-$colors-political: (
-  r: #9C0004,
-  gop: #9C0004,
-  d: #0D4673,
-  dfl: #0D4673
-) !default;
+$colors-political: (r: #9c0004, gop: #9c0004, d: #0d4673, dfl: #0d4673) !default;
 
 // Breakpoints
 $breakpoints: (
@@ -293,3 +288,6 @@ $breakpoints-font-size: (
     xl: 18px
   )
   !default;
+
+// Default grid spacing
+$grid-padding: 0.5rem !default;

@@ -1,0 +1,90 @@
+/**
+ * Simple (float based), responsive grid.
+ *
+ * TODO: Move to flex or css-grid
+ */
+
+.row {
+  margin-left: -1 * $grid-padding;
+  margin-right: -1 * $grid-padding;
+
+  &.row-no-padding {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  &::after {
+    content: ' ';
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+  }
+
+  .col {
+    display: inline;
+    vertical-align: baseline;
+    padding-left: $grid-padding;
+    padding-right: $grid-padding;
+    float: left;
+  }
+
+  &.row-no-padding .col {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  // Go by 5 percent steps
+  @for $i from 0 through 20 {
+    .col-#{($i * 5)} {
+      width: $i * 5 * 1%;
+    }
+  }
+
+  // Specifically for thirds
+  @for $i from 1 through 2 {
+    .col-#{($i * 33)} {
+      width: ($i * 33.33332) * 1%;
+    }
+  }
+
+  // Mobile first classes
+  @each $name, $size in $breakpoints {
+    @for $i from 0 through 20 {
+      @media only screen and (min-width: #{$size}) {
+        .col-#{$name}-#{($i * 5)} {
+          width: $i * 5 * 1%;
+        }
+      }
+    }
+
+    @for $i from 1 through 2 {
+      @media only screen and (min-width: #{$size}) {
+        .col-#{$name}-#{($i * 33)} {
+          width: ($i * 33.33332) * 1%;
+        }
+      }
+    }
+  }
+
+  // Bottom space
+  .grid-bottom {
+    margin-bottom: $grid-padding * 2;
+  }
+
+  @each $name, $size in $breakpoints {
+    @media only screen and (min-width: #{$size}) {
+      .grid-bottom-#{$name} {
+        margin-bottom: $grid-padding * 2;
+      }
+    }
+  }
+
+  @each $name, $size in $breakpoints {
+    @media only screen and (min-width: #{$size}) {
+      .no-grid-bottom-#{$name} {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

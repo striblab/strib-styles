@@ -30,13 +30,14 @@ layout: page
 
 * [Containers](./pages/layout/containers.html)
 * [Breakpoints](./pages/layout/breakpoints.html)
-* [Grid](./pages/layout/grid.html) TODO
+* [Grid](./pages/layout/grid.html)
 
 ### Components
 
 * [Hero](./pages/components/hero.html)
 * [Navigation](./pages/components/navigation.html)
 * [Bylines and credits](./pages/components/credits.html)
+* [Footers](./pages/components/footers.html)
 * [Alerts](./pages/components/alerts.html)
 * [Asides](./pages/components/asides.html)
 
@@ -50,7 +51,6 @@ layout: page
 * [Quote](./pages/strib-tags/quote.html)
 * [Text](./pages/strib-tags/text.html)
 * [Video](./pages/strib-tags/video.html)
-
 
 ### Utilities
 
