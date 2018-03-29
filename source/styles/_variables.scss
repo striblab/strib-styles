@@ -4,7 +4,9 @@
  * they can be overriden if needed
  */
 
-// Selector wrapper, make more specific if needed
+// Selector wrapper.  If defined, such as `.strib`, it wraps all the styles
+// in that selector.  Useful if using strib-styles on a page that already
+// has styles.
 $selector-wrapper: false !default;
 
 // Whether this is going to be used for the whole page, i.e. applied to body.

@@ -25,6 +25,7 @@ layout: page
 * [Code](./pages/content/code.html)
 * [Datelines](./pages/content/dateline.html)
 * [Colors](./pages/content/colors.html)
+* [Icons](./pages/content/icons.html)
 
 ### Layout
 

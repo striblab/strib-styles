@@ -10,7 +10,9 @@
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "@striblab/strib-icons": "0.0.8"
+  },
   "devDependencies": {
     "autoprefixer": "^7.1.3",
     "babel-core": "^6.26.0",

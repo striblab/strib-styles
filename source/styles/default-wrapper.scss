@@ -1,5 +1,6 @@
 /**
- * Default with selector
+ * Default with selector.  You can't do an @import statement in
+ * a conditional/if block, so hence the need for another "version"
  */
 
 $selector-wrapper: '.strib' !default;
