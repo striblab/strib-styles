@@ -111,6 +111,7 @@
       <li><a href="/layout">Layout</a></li>
       <li><a href="/styles">Styles</a></li>
     </ul>
+
   </div>
 </nav>
 </div>
@@ -123,6 +124,155 @@
       <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/layout"</span><span class="nt">&gt;</span>Layout<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
       <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/styles"</span><span class="nt">&gt;</span>Styles<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;/ul&gt;</span>
+
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></div>
+
+<h2 id="site-nav">Site nav</h2>
+
+<p>The following is a not-pixel-perfect reproduction of the navigation found on most pages on the StarTribune site.</p>
+
+<div class="strib-guide-example" data-example-id="">
+<nav class="nav-strib-site">
+  <div class="container-lg cf">
+    <ul class="section-center">
+      <li>
+        <a href="http://startribune.com/" class="logo">
+          <span class="icon icon-logo"></span>
+          <span class="sr-only">Star Tribune home</span>
+        </a>
+      </li>
+    </ul>
+
+    <ul class="section-start">
+      <li class="spacer-right">
+        <a href="http://startribune.com/" class="home">
+          <span class="icon icon-home"></span>
+          <span class="sr-only">Star Tribune home</span>
+        </a>
+      </li>
+
+      <li class="spacer-right">All sections</li>
+
+      <li class="spacer-right">
+        <a href="http://startribune.com/search" class="logo">
+          <span class="icon icon-search"></span>
+          <span class="sr-only">Search the Star Tribune</span>
+        </a>
+      </li>
+
+      <li class="weekly-ads">
+        <a href="http://startribune.com/weekly-ads">
+          <img src="https://stmedia.stimg.co/weeklyAdsLabel.png" alt="Weekly ads label" />
+        </a>
+      </li>
+    </ul>
+
+    <ul class="section-end">
+      <li class="spacer-right">
+        <a href="http://startribune.com/login" class="logo">
+          <span class="icon icon-person"></span>
+          &nbsp;Log in
+        </a>
+      </li>
+
+      <li class="align-end">
+        <a href="http://startribune.com/signup" class="logo">Subscriptions</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"nav-strib-site"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-lg cf"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"section-center"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://startribune.com/"</span> <span class="na">class=</span><span class="s">"logo"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-logo"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Star Tribune home<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"section-start"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"spacer-right"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://startribune.com/"</span> <span class="na">class=</span><span class="s">"home"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-home"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Star Tribune home<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"spacer-right"</span><span class="nt">&gt;</span>All sections<span class="nt">&lt;/li&gt;</span>
+
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"spacer-right"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://startribune.com/search"</span> <span class="na">class=</span><span class="s">"logo"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-search"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Search the Star Tribune<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"weekly-ads"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://startribune.com/weekly-ads"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://stmedia.stimg.co/weeklyAdsLabel.png"</span> <span class="na">alt=</span><span class="s">"Weekly ads label"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"section-end"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"spacer-right"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://startribune.com/login"</span> <span class="na">class=</span><span class="s">"logo"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-person"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="ni">&amp;nbsp;</span>Log in
+        <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"align-end"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://startribune.com/signup"</span> <span class="na">class=</span><span class="s">"logo"</span><span class="nt">&gt;</span>Subscriptions<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></div>
+
+<h3 id="site-sub-nav">Site sub nav</h3>
+
+<p>Note that this sub-navigation disappears at sizes smaller than <code class="highlighter-rouge">md</code> breakpoint.</p>
+
+<div class="strib-guide-example" data-example-id="">
+<nav class="subnav-strib-site">
+  <div class="container-lg">
+    <ul>
+      <li><a href="http://startribune.com/">Home</a></li>
+      <li><a href="http://startribune.com/local/">Local</a></li>
+      <li><a href="http://startribune.com/sports/">Sports</a></li>
+      <li><a href="http://startribune.com/business/">Business</a></li>
+      <li><a href="http://startribune.com/opinion/">Opinion</a></li>
+      <li><a href="http://startribune.com/variety/">Variety</a></li>
+      <li><a href="http://startribune.com/obituaries/">Obituaries</a></li>
+      <li><a href="http://startribune.com/classifieds/">Classifieds</a></li>
+      <li><a href="http://startribune.com/autos/">Autos</a></li>
+      <li><a href="http://startribune.com/housing/">Housing</a></li>
+      <li><a href="http://startribune.com/jobs/">Jobs</a></li>
+    </ul>
+  </div>
+</nav>
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"subnav-strib-site"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-lg"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://startribune.com/"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://startribune.com/local/"</span><span class="nt">&gt;</span>Local<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://startribune.com/sports/"</span><span class="nt">&gt;</span>Sports<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://startribune.com/business/"</span><span class="nt">&gt;</span>Business<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://startribune.com/opinion/"</span><span class="nt">&gt;</span>Opinion<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://startribune.com/variety/"</span><span class="nt">&gt;</span>Variety<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://startribune.com/obituaries/"</span><span class="nt">&gt;</span>Obituaries<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://startribune.com/classifieds/"</span><span class="nt">&gt;</span>Classifieds<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://startribune.com/autos/"</span><span class="nt">&gt;</span>Autos<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://startribune.com/housing/"</span><span class="nt">&gt;</span>Housing<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://startribune.com/jobs/"</span><span class="nt">&gt;</span>Jobs<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/nav&gt;</span></code></pre></div>
 
@@ -130,7 +280,7 @@
     </main>
 
     <!-- Footer -->
-    <footer role="contentinfo">
+    <footer role="contentinfo" class="with-copyright">
       <div class="container-lg">
         Design by the <a href="http://startribune.com/" target="_blank" rel="noopener">Star Tribune</a>.  Details on code and use can be found on <a href="https://github.com/striblab/strib-styles" target="_blank" rel="noopener">Github</a>.
       </div>
@@ -141,6 +291,8 @@
         </div>
       </div>
     </footer>
+
+    <!-- SVG Star Tribune icons -->
 
     <!-- Guide-specific scripts -->
     <script src="../../build/strib-styles.all.js"></script>
