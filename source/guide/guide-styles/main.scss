@@ -3,6 +3,10 @@ this: is needed for Jekyll
 ---
 // https://jekyllrb.com/docs/assets/
 
+// Strib icons
+$strib-fonts-location: '//static.startribune.com/assets/libs/strib-icons/0.0.8/';
+@import '../../../node_modules/@striblab/strib-icons/build/strib-icons.scss';
+
 // Some extra specificity
 body {
   @import "_syntax.scss";

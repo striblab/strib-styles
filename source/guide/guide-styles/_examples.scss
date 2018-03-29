@@ -85,3 +85,8 @@ figure.highlight,
     font-size: 0.85em;
   }
 }
+
+// markdown parser use highlight class
+pre.highlight {
+  background-color: #f1f1f1;
+}
