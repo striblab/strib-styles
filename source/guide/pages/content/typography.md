@@ -35,16 +35,16 @@ For paragraphs or by adding a `.copy` (or `.text`) class.
 <h2>Heading two</h2>
 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 
-<h3>Heading two</h3>
+<h3>Heading three</h3>
 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 
-<h4>Heading two</h4>
+<h4>Heading four</h4>
 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 
-<h5>Heading two</h5>
+<h5>Heading five</h5>
 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 
-<h6>Heading two</h6>
+<h6>Heading six</h6>
 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 {% endexample %}
 
@@ -236,13 +236,13 @@ All fonts for reference both visual and utility classes.
 
 {% example html %}
 
-<h2 class="font-beton-sans">Benton Sans</h2>
+<h2 class="font-benton-sans">Benton Sans (<span style="font-style:italic">italic</span>, <span style="font-weight:bold">bold</span>)</h2>
 <p class="font-benton-sans">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
 
 <h2 class="font-benton-sans-condensed">Benton Sans Condensed</h2>
 <p class="font-benton-sans-condensed">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
 
-<h2 class="font-popular">Popular</h2>
+<h2 class="font-popular">Popular (<span style="font-weight:bold">bold</span>)</h2>
 <p class="font-populars">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
 
 <h2 class="font-popular-light">Popular Light</h2>
@@ -251,16 +251,19 @@ All fonts for reference both visual and utility classes.
 <h2 class="font-popular-medium">Popular Medium</h2>
 <p class="font-popular-medium">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
 
-<h2 class="font-poynter-serif">Poynter Serif</h2>
+<h2 class="font-poynter-serif">Poynter Serif (<span style="font-style:italic">italic</span>, <span style="font-weight:bold">bold</span>, <span style="font-style:italic;font-weight:bold">bold italic</span>)</h2>
 <p class="font-poynter-serif">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
 
-<h2 class="font-whitman-display">Whitman Display</h2>
+<h2 class="font-whitman-display">Whitman Display (<span style="font-style:italic">italic</span>, <span style="font-weight:bold">bold</span>)</h2>
 <p class="font-whitman-display">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+
+<h2 class="font-whitman-display-condensed-bold">Whitman Display Condensed Bold</h2>
+<p class="font-whitman-display-condensed-bold">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
 
 <h2 class="font-whitman-display-compressed-bold">Whitman Display Compressed Bold</h2>
 <p class="font-whitman-display-compressed-bold">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
 
-<h2 class="font-whitman-osf">Whitman OSF</h2>
+<h2 class="font-whitman-osf">Whitman OSF (<span style="font-style:italic">italic</span>, <span style="font-weight:bold">bold</span>)</h2>
 <p class="font-whitman-osf">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
 
 <h2 class="font-menlo">Menlo</h2>
@@ -281,6 +284,7 @@ $font-popular
 $font-popular-light
 $font-popular-medium
 $font-poynter-serif
+$font-whitman-display-condensed-bold
 $font-whitman-display-compressed-bold
 $font-whitman-display
 $font-whitman-osf
@@ -294,6 +298,7 @@ $font-sets: (
   popular-light: $font-popular-light,
   popular-medium: $font-popular-medium,
   poynter-serif: $font-poynter-serif,
+  whitman-display-condensed-bold: $font-whitman-display-condensed-bold,
   whitman-display-compressed-bold: $font-whitman-display-compressed-bold,
   whitman-display: $font-whitman-display,
   whitman-osf: $font-whitman-osf,
