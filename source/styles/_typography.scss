@@ -26,6 +26,13 @@
     background-color: $color-text-bg;
     color: $color-text;
     -webkit-font-smoothing: subpixel-antialiased;
+
+    ::-moz-selection {
+      background-color: map-get($theme, 'blue-light');
+    }
+    ::selection {
+      background-color: map-get($theme, 'blue-light');
+    }
   }
 
   * {
@@ -37,6 +44,13 @@
     background-color: $color-text-bg;
     color: $color-text;
     -webkit-font-smoothing: subpixel-antialiased;
+
+    ::-moz-selection {
+      background-color: map-get($theme, 'blue-light');
+    }
+    ::selection {
+      background-color: map-get($theme, 'blue-light');
+    }
   }
 
   & * {
