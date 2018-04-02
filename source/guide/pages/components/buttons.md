@@ -68,3 +68,25 @@ Link style buttons.
 <button type="button" class="dark" disabled>Dark</button>
 <button type="button" class="light" disabled>Light</button>
 {% endexample %}
+
+## Icons
+
+Feel free to use icons in buttons, though, make sure to see the [icons](../content/icons.html) section.
+
+{% example html %}
+<button type="button">
+  <i class="strib-icon strib-search"></i>
+</button>
+
+<button type="button" class="button-outline">
+  <i class="strib-icon strib-person"></i>
+</button>
+
+<button type="button" class="secondary">
+  <i class="strib-icon strib-strib-star "></i>
+</button>
+
+<button type="button" class="button-outline secondary">
+  <i class="strib-icon strib-close"></i>
+</button>
+{% endexample %}

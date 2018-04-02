@@ -1,5 +1,5 @@
 ---
-title: Buttons
+title: Forms
 layout: page
 ---
 
@@ -139,7 +139,9 @@ For forms that are compact together, you must wrap each form item, i.e. the `lab
   </div>
 
   <div class="form-item">
-    <button class="warning" type="reset">Oh no</button>
+    <button class="warning" type="reset">
+      <i class="strib-icon strib-search"></i>
+    </button>
   </div>
 </form>
 {% endexample %}
