@@ -260,6 +260,7 @@ $color-text: map-get($grays, darker) !default;
 $color-text-sub: map-get($grays, medium) !default;
 $color-text-bg: $color-white !default;
 $color-link: map-get($theme, green-dark) !default;
+$color-text-mute: map-get($grays, medium) !default;
 
 // Data colors
 $colors-data: (

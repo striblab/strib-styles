@@ -42,6 +42,7 @@ layout: page
 * [Alerts](./pages/components/alerts.html)
 * [Asides](./pages/components/asides.html)
 * [Buttons](./pages/components/buttons.html)
+* [Forms](./pages/components/forms.html)
 
 ### Strib-embeds
 
