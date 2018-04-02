@@ -1,0 +1,136 @@
+/**
+ * Forms
+ */
+
+.form,
+form {
+  margin-bottom: $spacer-component;
+
+  // Labels can be used for anything, so we only
+  // want labels in context of forms.
+  label {
+    display: block;
+    margin-bottom: $spacer / 2;
+  }
+
+  // Help text
+  small {
+    display: block;
+    font-size: $font-size-small;
+    color: $color-text-mute;
+  }
+
+  input ~ small {
+    margin-top: -1 * $spacer;
+    margin-bottom: $spacer / 0.85;
+  }
+
+  // For custom error messages
+  .invalid-message {
+    display: none;
+    font-size: $font-size-small;
+    margin-top: -1 * $spacer;
+    margin-bottom: $spacer / 0.85;
+    color: map-get($theme, 'red-dark');
+  }
+  .invalid ~ .invalid-message {
+    display: block;
+  }
+}
+
+// Buttons are styled separately
+.input,
+select,
+textarea,
+input:not([type="submit"]):not([type="reset"]):not([type="button"]) {
+  display: block;
+  margin-bottom: $spacer;
+  outline: none;
+  padding: $spacer * 0.5 $spacer;
+  width: 100%;
+  border: 1px solid map-get($grays, 'dark');
+  transition:
+    color .15s ease-in-out,
+    box-shadow .15s ease-in-out;
+  background-color: $color-white;
+  background-clip: padding-box;
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba(lighten(map-get($grays, 'dark'), 10%), 0.3);
+  }
+
+  &.invalid,
+  &:invalid {
+    border-color: map-get($theme, 'red-dark');
+    box-shadow: 0 0 0 0.2rem rgba(lighten(map-get($theme, 'red-dark'), 10%), 0.3);
+  }
+
+  // The :valid is on if a field passes, i.e. for non-required fields
+  //&:valid
+  &.valid {
+    border-color: map-get($theme, 'green-dark');
+    box-shadow: 0 0 0 0.2rem rgba(lighten(map-get($theme, 'green-dark'), 10%), 0.3);
+  }
+
+  // color specific
+  &[type="color"] {
+    height: 2.25 * $spacer;
+    width: auto;
+    min-width: 10em;
+  }
+
+  &[disabled] {
+    border: 1px solid map-get($grays, 'medium');
+    color: map-get($grays, 'medium');
+    background-color: map-get($grays, 'lighter');
+  }
+}
+
+// Select specific
+select:not([multiple]) {
+  // Padding is not honored
+  height: 2.25 * $spacer;
+  border-radius: none;
+}
+
+// Textarea specific
+textarea {
+  min-height: 5em;
+}
+
+// Check box or radio list
+.radio-list,
+.check-list {
+  margin-bottom: $spacer;
+
+  input[type="checkbox"]:not([type="submit"]):not([type="reset"]):not([type="button"]),
+  input[type="radio"]:not([type="submit"]):not([type="reset"]):not([type="button"]),
+  label {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin: 0 0 $spacer * 0.5;
+    width: auto;
+  }
+
+  input[type="checkbox"]:not([type="submit"]):not([type="reset"]):not([type="button"]),
+  input[type="radio"]:not([type="submit"]):not([type="reset"]):not([type="button"]) {
+    bottom: 2px;
+    margin-right: $spacer * 0.5;
+  }
+}
+
+.form-compact {
+  display: flex;
+  align-items: top;
+
+  .form-item {
+    button {
+      margin-left: 0.5 * $spacer;
+
+      // Same padding as input (account for border)
+      padding: 0.5 * $spacer $spacer;
+      padding: calc(#{0.5 * $spacer} + 1px) $spacer;
+    }
+  }
+}

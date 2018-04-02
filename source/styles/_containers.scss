@@ -70,3 +70,10 @@
 .container-golden {
   @include aspect-ratio(1.618, 1);
 }
+
+// Container for copy
+.container-copy {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 40em;
+}
