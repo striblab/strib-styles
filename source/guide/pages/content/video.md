@@ -3,14 +3,20 @@ title: Video
 layout: page
 ---
 
-Styling for figures, images, and similar.
+Styling for videos.
 
-## Responsive images
+## Responsive video
 
-By default, images are responsive, meaning that their max width is set to `100%` and their height to `auto`.
-
+By default, videos are responsive, meaning that their max width is set to `100%` and their height to `auto`.<br>
+That will fill the parent container width with the correct aspect ratio of the video (16x9 vs 4:3).<br>
+The `autoplay` attribute does not work on iOs devices.<br>
+The `controls` attribute will overlay the controls at the bottom of the video. Aspect ratio is not altered.
 {% example html %}
-<img src="http://placekitten.com/1200/420" alt="Kitten placeholder image">
+<video width="100%" height="auto" autoplay controls>
+  <source src="http://static.startribune.com.s3.amazonaws.com/video/tragic-harvest-330403811.mp4" type="video/mp4">
+  <source src="http://static.startribune.com.s3.amazonaws.com/video/tragic-harvest-330403811.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
 {% endexample %}
 
 ### More performant images
@@ -46,7 +52,7 @@ A figure can be anything really, though often is an image or video. Figures usua
 
 ## Background fill
 
-To get an image to completely fill the background of a container, add the `.image-bg-fill` class and set the background image. Not that this is using an [aspect ratio container](../layout/containers.html) to maintain a specific aspect ratio.
+To get an image to completely fill the background of a container, add the `.image-bg-fill` class and set the background image. Note that this is using an [aspect ratio container](../layout/containers.html) to maintain a specific aspect ratio.
 
 {% example html %}
 

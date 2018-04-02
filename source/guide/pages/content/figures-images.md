@@ -46,7 +46,7 @@ A figure can be anything really, though often is an image or video. Figures usua
 
 ## Background fill
 
-To get an image to completely fill the background of a container, add the `.image-bg-fill` class and set the background image. Not that this is using an [aspect ratio container](../layout/containers.html) to maintain a specific aspect ratio.
+To get an image to completely fill the background of a container, add the `.image-bg-fill` class and set the background image. Note that this is using an [aspect ratio container](../layout/containers.html) to maintain a specific aspect ratio.
 
 {% example html %}
 
