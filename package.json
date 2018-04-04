@@ -36,7 +36,7 @@
     "lodash": "^4.17.5",
     "mime-types": "^2.1.17",
     "node-sass": "^4.7.2",
-    "rollup": "^0.55.3",
+    "rollup": "^0.57.1",
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-json": "^2.3.0",
     "rollup-plugin-node-resolve": "^3.0.2",
