@@ -20,7 +20,7 @@ The `controls` attribute will overlay the controls at the bottom of the video. A
 		Your browser does not support the video tag.
 	</video>
 	<cite>Ms. Videographer</cite>
-	<figcaption>Tractor McTractorface crushes rows and rows of innocent plants.</figcaption>
+	<figcaption><span class="readin">READIN: </span>Tractor McTractorface crushes rows and rows of innocent plants.</figcaption>
 </figure>
 {% endexample %}
 
