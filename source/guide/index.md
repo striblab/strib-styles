@@ -43,6 +43,8 @@ layout: page
 * [Asides](./pages/components/asides.html)
 * [Buttons](./pages/components/buttons.html)
 * [Forms](./pages/components/forms.html)
+* [Galleries](./pages/components/gallery.html)
+* [Maps](./pages/components/maps.html)
 
 ### Strib-embeds
 
