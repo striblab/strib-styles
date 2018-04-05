@@ -40,7 +40,7 @@ A figure can be anything really, though often is an image or video. Figures usua
 
 <cite>PlaceKitten</cite>
 
-  <figcaption>Fuzzy the kitten</figcaption>
+  <figcaption>Fuzzy the kitten pounces on imaginary mice in her winter wonderland.</figcaption>
 </figure>
 {% endexample %}
 

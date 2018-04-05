@@ -9,9 +9,9 @@ figure {
   padding: 0;
 
   & > cite {
-    font-size: $font-size-small;
-    color: $color-text-sub;
-    letter-spacing: normal;
+    font-size: $font-size-micro;
+    color: map-get($grays, light);
+    letter-spacing: 1px;
     text-transform: uppercase;
     display: block;
     text-align: right;
@@ -21,7 +21,8 @@ figure {
 
 .figcaption,
 figcaption {
-  font-size: $font-size-small;
+  font-size: $font-size-small-adjust;
   color: $color-text-sub;
   letter-spacing: normal;
+  span.readin {font-weight:bold;}
 }
