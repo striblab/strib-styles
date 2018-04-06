@@ -25,7 +25,7 @@ Best practices and styles for using maps.
 </figure>
 
 <script>
-mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA';
+mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiODRHdjBSWSJ9.lF4ymp-69zdGvZ5X4Tokzg';
 var map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/shadowflare/cjfljh7oh6v6k2smuvb3jftac',
@@ -54,7 +54,7 @@ map.addControl(nav, 'top-left');
 </figure>
 
 <script>
-L.mapbox.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA';
+L.mapbox.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiODRHdjBSWSJ9.lF4ymp-69zdGvZ5X4Tokzg';
 var fallbackMap = L.mapbox.map('map-fallback', undefined, {
   attributionControl: false,
 }).setView([44.960911, -93.191872], 9 + 1);
