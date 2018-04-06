@@ -39,11 +39,12 @@ An alternate approach is one that is all together.
   </address>
   <span class="spacer"></span>
   Star Tribune
+  <span class="spacer-alt"></span>
   <time pubdate datetime="2017-07-30T16:00:00">July 30, 2017 &mdash; 4:00pm</time>
 </div>
 {% endexample %}
 
-And finally, a more spaced out, but not jutified approach.
+And finally, a more spaced out, but not justified approach.
 
 {% example html %}
 
@@ -55,7 +56,6 @@ And finally, a more spaced out, but not jutified approach.
   </address>
   <span class="spacer"></span>
   Star Tribune
-  <span class="spacer"></span>
   <time pubdate datetime="2017-07-30T16:00:00">July 30, 2017</time>
 </div>
 {% endexample %}
