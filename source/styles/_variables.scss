@@ -41,10 +41,7 @@ $font-default-font-weight: normal !default;
 
 // Set of fonts to reference
 $font-benton-sans: (
-    font-family: #{'Benton Sans',
-    Helvetica,
-    Arial,
-    sans-serif},
+    font-family: #{'Benton Sans', Helvetica, Arial, sans-serif},
     line-height: $font-default-line-height,
     letter-spacing: $font-default-letter-spacing,
     font-weight: $font-default-font-weight
@@ -52,10 +49,7 @@ $font-benton-sans: (
   !default;
 
 $font-benton-sans-condensed: (
-    font-family: #{'Benton Sans Condensed Medium',
-    Helvetica,
-    Arial,
-    sans-serif},
+    font-family: #{'Benton Sans Condensed Medium', Helvetica, Arial, sans-serif},
     line-height: $font-default-line-height,
     letter-spacing: $font-default-letter-spacing,
     font-weight: $font-default-font-weight
@@ -63,10 +57,7 @@ $font-benton-sans-condensed: (
   !default;
 
 $font-popular: (
-    font-family: #{'Popular',
-    Helvetica,
-    Arial,
-    sans-serif},
+    font-family: #{'Popular', Helvetica, Arial, sans-serif},
     line-height: $font-default-line-height,
     letter-spacing: $font-default-letter-spacing,
     font-weight: $font-default-font-weight
@@ -74,10 +65,7 @@ $font-popular: (
   !default;
 
 $font-popular-light: (
-    font-family: #{'Popular Light',
-    Helvetica,
-    Arial,
-    sans-serif},
+    font-family: #{'Popular Light', Helvetica, Arial, sans-serif},
     line-height: $font-default-line-height,
     letter-spacing: $font-default-letter-spacing,
     font-weight: $font-default-font-weight
@@ -85,10 +73,7 @@ $font-popular-light: (
   !default;
 
 $font-popular-medium: (
-    font-family: #{'Popular Medium',
-    Helvetica,
-    Arial,
-    sans-serif},
+    font-family: #{'Popular Medium', Helvetica, Arial, sans-serif},
     line-height: $font-default-line-height,
     letter-spacing: $font-default-letter-spacing,
     font-weight: $font-default-font-weight
@@ -96,10 +81,7 @@ $font-popular-medium: (
   !default;
 
 $font-poynter-serif: (
-    font-family: #{'Poynter Serif RE',
-    Georgia,
-    Times,
-    serif},
+    font-family: #{'Poynter Serif RE', Georgia, Times, serif},
     line-height: $font-default-line-height,
     letter-spacing: -0.2px,
     font-weight: $font-default-font-weight
@@ -107,10 +89,7 @@ $font-poynter-serif: (
   !default;
 
 $font-whitman-display: (
-    font-family: #{'Whitman Display',
-    Georgia,
-    Times,
-    serif},
+    font-family: #{'Whitman Display', Georgia, Times, serif},
     line-height: 1.25em,
     letter-spacing: $font-default-letter-spacing,
     font-weight: 400
@@ -118,10 +97,7 @@ $font-whitman-display: (
   !default;
 
 $font-whitman-display-condensed-bold: (
-    font-family: #{'Whitman Display Condensed Bold',
-    Georgia,
-    Times,
-    serif},
+    font-family: #{'Whitman Display Condensed Bold', Georgia, Times, serif},
     line-height: $font-default-line-height,
     letter-spacing: $font-default-letter-spacing,
     font-weight: $font-default-font-weight
@@ -129,10 +105,7 @@ $font-whitman-display-condensed-bold: (
   !default;
 
 $font-whitman-display-compressed-bold: (
-    font-family: #{'Whitman Display Compressed Bold',
-    Georgia,
-    Times,
-    serif},
+    font-family: #{'Whitman Display Compressed Bold', Georgia, Times, serif},
     line-height: $font-default-line-height,
     letter-spacing: $font-default-letter-spacing,
     font-weight: $font-default-font-weight
@@ -140,10 +113,7 @@ $font-whitman-display-compressed-bold: (
   !default;
 
 $font-whitman-osf: (
-    font-family: #{'Whitman OSF',
-    Georgia,
-    Times,
-    serif},
+    font-family: #{'Whitman OSF', Georgia, Times, serif},
     line-height: $font-default-line-height,
     letter-spacing: $font-default-letter-spacing,
     font-weight: $font-default-font-weight
@@ -151,12 +121,7 @@ $font-whitman-osf: (
   !default;
 
 $font-menlo: (
-    font-family: #{Menlo,
-    Monaco,
-    Consolas,
-    'Liberation Mono',
-    'Courier New',
-    monospace},
+    font-family: #{Menlo,  Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace},
     line-height: $font-default-line-height,
     letter-spacing: $font-default-letter-spacing,
     font-weight: $font-default-font-weight

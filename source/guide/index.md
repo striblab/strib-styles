@@ -38,6 +38,7 @@ layout: page
 * [Hero](./pages/components/hero.html)
 * [Navigation](./pages/components/navigation.html)
 * [Bylines and credits](./pages/components/credits.html)
+* [Teases](./pages/components/teases.html)
 * [Footers](./pages/components/footers.html)
 * [Alerts](./pages/components/alerts.html)
 * [Asides](./pages/components/asides.html)
