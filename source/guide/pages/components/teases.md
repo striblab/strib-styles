@@ -28,8 +28,14 @@ Note that teases are not semantic entities. They are usually associated as a cla
 
 <div class="tease-related">
   <ul>
-  <li class="related-icn-photo">
-    <a href="/xxx">Photo: photo</a>
+  <li class="related-icn-photox">
+    <a href="/xxx"><i class="strib-icon strib-camera color-green-light"></i>Photo: photo</a>
+  </li>
+  <li class="related-icn-document">
+    <a href="/xxx">Document: Associated document</a>
+  </li>
+  <li class="related-icn-videox">
+    <a href="/xxx"><i class="strib-icon strib-media-video color-green-light"></i>Video: Associated video</a>
   </li>
    <li class="related-icn-graphic">
     <a href="/xxx">Graphic: Associated graphic</a>

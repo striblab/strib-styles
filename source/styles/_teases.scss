@@ -11,6 +11,7 @@ article.tease {
   margin-bottom: $spacer-component * 2;
   margin-top: $spacer-component * 2;
 
+//DB not sure what this does
   .text,
   .copy,
   p {
@@ -26,6 +27,8 @@ article.tease {
       margin-top: 0;
     }
   }
+
+  // DB
   header {
     @include font-styles('benton-sans');
     font-size: $font-size-micro;
@@ -61,7 +64,7 @@ article.tease {
   .tease-timestamp {
     @include font-styles('benton-sans');
     color: #61bf1a;
-    margin-bottom: 7px;
+    margin-bottom: $spacer-component/2;
     text-transform: uppercase;
     font-size: $font-size-micro;
     letter-spacing: .5px;
@@ -82,7 +85,7 @@ article.tease {
       color: map-get($grays, darker);
       display: block;
       margin-bottom: 5px;
-      margin-left: 12px;
+      margin-left: $spacer-component;
       text-indent: -12px;
       a {
         text-decoration: none;
