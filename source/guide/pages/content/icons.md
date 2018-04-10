@@ -10,7 +10,7 @@ The [Star Tribune icons](https://striblab.github.io/strib-icons/) set is a usefu
     * If you only need the SVG icons, the bit of CSS that is needed is included in these styles, so all you need to include is the JS.
 * You can use it with SASS by installing, such as `npm install @striblab/strib-icons`, then importing like:
   ```sass
-  $strib-fonts-location: '//static.startribune.com/assets/libs/strib-icons/0.0.8/';
+  $strib-fonts-location: '//static.startribune.com/assets/libs/strib-icons/0.0.9/';
   @import '../../../node_modules/@striblab/strib-icons/build/strib-icons.scss';
   ```
 
@@ -34,7 +34,7 @@ Using the Star Tribune icons as SVG icons, you should include both the bit of CS
 Note, if you only want to use the SVG icons, the default styles have the necessary styles, so all you need is the JS from the Star Tribune icons.
 
 {% example html %}
-<script src="//static.startribune.com/assets/libs/strib-icons/0.0.8/strib-icons.js"></script>
+<script src="//static.startribune.com/assets/libs/strib-icons/0.0.9/strib-icons.js"></script>
 
 <svg class="strib-icon-svg">
   <use xlink:href="#strib-home"></use>

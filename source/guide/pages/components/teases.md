@@ -22,32 +22,32 @@ Note that teases are not semantic entities. They are usually associated as a cla
   <header>
     <a href="/sports/">Sports</a>
   </header>
-  <h3><a href="/xxx" >Lorem Ipsum is simply dummy text of the printing and typesetting industry</a></h3>
-  <div class="tease-timestamp js-timestamp " data-st-timestamp="2018-04-06T11:44:12.000Z">6:44am</div>
-  <div class="tease-summary ">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div>
+  <h1><a href="/xxx" >Lorem Ipsum is simply dummy text of the printing and typesetting industry</a></h1>
+  <div class="tease-timestamp js-timestamp" data-st-timestamp="2018-04-06T11:44:12.000Z">6:44am</div>
+  <div class="tease-summary">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div>
 
 <div class="tease-related">
   <ul>
   <li class="related-icn-photox">
     <a href="/xxx"><i class="strib-icon strib-camera color-green-light"></i>Photo: photo</a>
   </li>
-  <li class="related-icn-document">
-    <a href="/xxx">Document: Associated document</a>
+  <li class="related-icn-documentx">
+    <a href="/xxx"><i class="strib-icon strib-document color-green-light"></i>Document: Associated document</a>
   </li>
   <li class="related-icn-videox">
-    <a href="/xxx"><i class="strib-icon strib-media-video color-green-light"></i>Video: Associated video</a>
+    <a href="/xxx"><i class="strib-icon strib-media-video-square color-green-light"></i>Video: Associated video</a>
   </li>
-   <li class="related-icn-graphic">
-    <a href="/xxx">Graphic: Associated graphic</a>
+   <li class="related-icn-graphicx">
+    <a href="/xxx"><i class="strib-icon strib-graphic color-green-light"></i>Graphic: Associated graphic</a>
   </li>
-   <li class="related-icn-podcast">
-    <a href="/xxx">Podcast: Associated podcast</a>
+   <li class="related-icn-podcastx">
+    <a href="/xxx"><i class="strib-icon strib-podcast color-green-light"></i>Podcast: Associated podcast</a>
   </li>
-   <li class="related-icn-poll">
-    <a href="/xxx">Poll: Associated poll</a>
+   <li class="related-icn-pollx">
+    <a href="/xxx"><i class="strib-icon strib-poll color-green-light"></i>Poll: Associated poll</a>
   </li>
-  <li class="related-icn-comments">
-    <a href="/xxx/#comments">159 comments </a>
+  <li class="related-icn-commentsx">
+    <a href="/xxx/#comments"><i class="strib-icon strib-comment-bubble color-green-light"></i>159 comments </a>
   </li>
   <li class="related-icn-gallery">
     <a href="/xxx/" >Photos: Associated gallery</a>

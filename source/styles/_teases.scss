@@ -11,7 +11,7 @@ article.tease {
   margin-bottom: $spacer-component * 2;
   margin-top: $spacer-component * 2;
 
-//DB not sure what this does
+  //DB not sure what this does
   .text,
   .copy,
   p {
@@ -26,9 +26,7 @@ article.tease {
     &+p {
       margin-top: 0;
     }
-  }
-
-  // DB
+  } // DB
   header {
     @include font-styles('benton-sans');
     font-size: $font-size-micro;
@@ -42,13 +40,14 @@ article.tease {
       text-decoration: none;
     }
   }
-  h3 {
+  h1 {
     a {
       @include font-styles('whitman-display-condensed-bold');
       color: map-get($grays, darker);
       display: block;
-      margin-bottom: 7px;
+      margin-bottom: $spacer-component/4;
       font-size: 1.76923em;
+       line-height:100%;
       font-weight: bold;
       -o-transition: color .1s linear;
       -webkit-transition: color .1s linear;
@@ -63,7 +62,7 @@ article.tease {
   }
   .tease-timestamp {
     @include font-styles('benton-sans');
-    color: #61bf1a;
+    color: map-get($theme, green-medium);
     margin-bottom: $spacer-component/2;
     text-transform: uppercase;
     font-size: $font-size-micro;
@@ -72,29 +71,31 @@ article.tease {
   .tease-summary {
     @include font-styles('poynter-serif');
     color: map-get($grays, dark);
-    margin-bottom: 7px;
+    margin-bottom: $spacer-component/2;
     letter-spacing: -.2px;
+    line-height:1.38em;
   }
 
   ul {
-    list-style: none;
-    margin:0;
+    // list-style: none;
+    margin: 0;
+    list-style-type: none;
     li {
       @include font-styles('benton-sans-condensed');
       font-size: $font-size-small;
       color: map-get($grays, darker);
       display: block;
-      margin-bottom: 5px;
+      margin-bottom: $spacer-component/4;
       margin-left: $spacer-component;
       text-indent: -12px;
       a {
         text-decoration: none;
-        color:inherit;
+        color: inherit;
       }
       &:before {
         color: #61bf1a;
         content: "\2022";
-        font-size: 1.2em;
+        // font-size: 1.2em;
         padding-right: 0.23em;
         position: relative;
         top: .1em;
@@ -107,7 +108,6 @@ article.tease {
       &.related-icn-podcast,
       &.related-icn-poll,
       &.related-icn-comments {
-        content: "";
         margin-left: -5px;
         text-indent: 0;
       }
@@ -157,7 +157,7 @@ article.tease {
 .article.tease,
 article.tease {
   &:after {
-    content: "";
+    content: " ";
     display: table;
     clear: both;
   }
@@ -165,7 +165,7 @@ article.tease {
     height: 1px;
     width: 100%;
     border-bottom: solid 1px #ccc;
-    margin: 0px 0 20px 0;
+    margin: 0 0 $spacer-component*1.75 0;
     content: " ";
     display: block;
   }
