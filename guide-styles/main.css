@@ -1,133 +1,3 @@
-/**
- * Star Tribune icons (strib-icons)
- * Version: 
- * Copyright Star Tribune
- */
-@font-face {
-  font-family: "strib-icons";
-  src: url("//static.startribune.com/assets/libs/strib-icons/0.0.8/strib-icons.svg?1522352864894#strib-icons") format("embedded-opentype"), url("//static.startribune.com/assets/libs/strib-icons/0.0.8/strib-icons.ttf?1522352864894") format("truetype"), url("//static.startribune.com/assets/libs/strib-icons/0.0.8/strib-icons.woff?1522352864894") format("woff"), url("//static.startribune.com/assets/libs/strib-icons/0.0.8/strib-icons.woff2?1522352864894") format("woff2"), url("//static.startribune.com/assets/libs/strib-icons/0.0.8/strib-icons.eot?1522352864894#iefix") format("embedded-opentype"); }
-.strib-icon {
-  line-height: 1; }
-
-.strib-icon:before {
-  font-family: "strib-icons" !important;
-  font-style: normal;
-  font-weight: normal !important;
-  vertical-align: top; }
-
-.strib-arrow-right:before {
-  content: "\f101"; }
-
-.strib-arrow-value-down:before {
-  content: "\f102"; }
-
-.strib-arrow-value-up:before {
-  content: "\f103"; }
-
-.strib-camera:before {
-  content: "\f104"; }
-
-.strib-close:before {
-  content: "\f105"; }
-
-.strib-comment-bubble-long:before {
-  content: "\f106"; }
-
-.strib-comment-bubble:before {
-  content: "\f107"; }
-
-.strib-data-drop:before {
-  content: "\f108"; }
-
-.strib-email:before {
-  content: "\f109"; }
-
-.strib-hamburger:before {
-  content: "\f10a"; }
-
-.strib-home:before {
-  content: "\f10b"; }
-
-.strib-like:before {
-  content: "\f10c"; }
-
-.strib-map-pin:before {
-  content: "\f10d"; }
-
-.strib-media-play:before {
-  content: "\f10e"; }
-
-.strib-media-video:before {
-  content: "\f10f"; }
-
-.strib-modal:before {
-  content: "\f110"; }
-
-.strib-nav-back:before {
-  content: "\f111"; }
-
-.strib-nav-forward:before {
-  content: "\f112"; }
-
-.strib-person:before {
-  content: "\f113"; }
-
-.strib-phone-app:before {
-  content: "\f114"; }
-
-.strib-phone-landline:before {
-  content: "\f115"; }
-
-.strib-print:before {
-  content: "\f116"; }
-
-.strib-reply:before {
-  content: "\f117"; }
-
-.strib-reprint:before {
-  content: "\f118"; }
-
-.strib-search:before {
-  content: "\f119"; }
-
-.strib-social-facebook-circle:before {
-  content: "\f11a"; }
-
-.strib-social-facebook:before {
-  content: "\f11b"; }
-
-.strib-social-google-circle:before {
-  content: "\f11c"; }
-
-.strib-social-instagram-circle:before {
-  content: "\f11d"; }
-
-.strib-social-linkedin-social:before {
-  content: "\f11e"; }
-
-.strib-social-pinterest-circle:before {
-  content: "\f11f"; }
-
-.strib-social-tumblr-circle:before {
-  content: "\f120"; }
-
-.strib-social-twitter-circle:before {
-  content: "\f121"; }
-
-.strib-social-twitter:before {
-  content: "\f122"; }
-
-.strib-strib-star:before {
-  content: "\f123"; }
-
-.strib-text-size:before {
-  content: "\f124"; }
-
-.strib-icon-svg {
-  display: inline-block;
-  width: 1em;
-  height: 1em; }
-
 body {
   /**
    * Syntax highlighting styles
@@ -272,13 +142,12 @@ body {
   body .strib-guide-example {
     border: 1px solid #212121;
     padding: 1.25em; }
-  body figure.highlight {
-    margin: 0 0 1em; }
   body figure.highlight,
   body .strib-guide-highlight {
     background-color: #f1f1f1;
     padding: 1.5em 1.25em 0.5em;
-    overflow-x: auto; }
+    overflow-x: auto;
+    margin: 0 0 1em; }
   body .strib-guide-highlight {
     border: 1px solid #212121; }
   body .strib-guide-example + .strib-guide-highlight {

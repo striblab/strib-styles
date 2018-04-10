@@ -29,6 +29,9 @@
     <!-- For proper phone zoom -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Strib icons -->
+    <link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.9/strib-icons.css" type="text/css">
+
     <!-- Actual style guide styles -->
     <link rel="stylesheet" href="../../build/strib-styles.default-debug.css" type="text/css">
 
@@ -86,7 +89,7 @@
     </ul>
   </li>
   <li>You can use it with SASS by installing, such as <code class="highlighter-rouge">npm install @striblab/strib-icons</code>, then importing like:
-    <div class="language-sass highlighter-rouge"><pre class="highlight"><code><span class="nv">$strib-fonts-location</span><span class="p">:</span> <span class="s1">'//static.startribune.com/assets/libs/strib-icons/0.0.8/'</span><span class="err">;</span>
+    <div class="language-sass highlighter-rouge"><pre class="highlight"><code><span class="nv">$strib-fonts-location</span><span class="p">:</span> <span class="s1">'//static.startribune.com/assets/libs/strib-icons/0.0.9/'</span><span class="err">;</span>
 <span class="k">@import</span> <span class="s">'../../../node_modules/@striblab/strib-icons/build/strib-icons.scss';</span>
 </code></pre>
     </div>
@@ -117,7 +120,7 @@
 <p>Note, if you only want to use the SVG icons, the default styles have the necessary styles, so all you need is the JS from the Star Tribune icons.</p>
 
 <div class="strib-guide-example" data-example-id="">
-<script src="//static.startribune.com/assets/libs/strib-icons/0.0.8/strib-icons.js"></script>
+<script src="//static.startribune.com/assets/libs/strib-icons/0.0.9/strib-icons.js"></script>
 
 <svg class="strib-icon-svg">
   <use xlink:href="#strib-home"></use>
@@ -139,7 +142,7 @@
   <use xlink:href="#strib-strib-star"></use>
 </svg>
 </div>
-<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//static.startribune.com/assets/libs/strib-icons/0.0.8/strib-icons.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//static.startribune.com/assets/libs/strib-icons/0.0.9/strib-icons.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 
 <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"strib-icon-svg"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"#strib-home"</span><span class="nt">&gt;&lt;/use&gt;</span>
@@ -177,9 +180,13 @@
       </div>
     </footer>
 
-    <!-- SVG Star Tribune icons -->
+    <!-- Dependencies for JS (note the Strib site uses jQuery 1.11) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
     <!-- Guide-specific scripts -->
     <script src="../../build/strib-styles.all.js"></script>
+
+    <!-- Page specific JS or other -->
+    
   </body>
 </html>

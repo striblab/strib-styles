@@ -29,6 +29,9 @@
     <!-- For proper phone zoom -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Strib icons -->
+    <link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.9/strib-icons.css" type="text/css">
+
     <!-- Actual style guide styles -->
     <link rel="stylesheet" href="../../build/strib-styles.default-debug.css" type="text/css">
 
@@ -100,6 +103,39 @@
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-sm container-left example-container-small"</span><span class="nt">&gt;&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-sm container-right example-container-small"</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></div>
 
+<h3 id="copy-container">Copy container</h3>
+
+<p>Using the <code class="highlighter-rouge">.container-copy</code> class makes a max-width container of <code class="highlighter-rouge">40em</code> (<code class="highlighter-rouge">em</code>’s are based on the <code class="highlighter-rouge">font-size</code> of the parent container).  This is based on the idea that there is an optimal line length for copy to ensure the best readability.</p>
+
+<div class="strib-guide-example" data-example-id="">
+<div class="container-copy">
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+</div>
+
+<div class="container-lg example-container-small"></div>
+
+<div class="container-copy">
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+</div>
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-copy"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;p&gt;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;p&gt;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-lg example-container-small"</span><span class="nt">&gt;&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-copy"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
 <h2 id="aspect-ratios">Aspect ratios</h2>
 
 <p>For containers that need to maintain a specific aspect ratio, such as for images or embeds, there are some helpful classes.</p>
@@ -137,9 +173,13 @@
       </div>
     </footer>
 
-    <!-- SVG Star Tribune icons -->
+    <!-- Dependencies for JS (note the Strib site uses jQuery 1.11) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
     <!-- Guide-specific scripts -->
     <script src="../../build/strib-styles.all.js"></script>
+
+    <!-- Page specific JS or other -->
+    
   </body>
 </html>

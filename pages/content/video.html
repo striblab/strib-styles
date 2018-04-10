@@ -29,6 +29,9 @@
     <!-- For proper phone zoom -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Strib icons -->
+    <link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.9/strib-icons.css" type="text/css">
+
     <!-- Actual style guide styles -->
     <link rel="stylesheet" href="../../build/strib-styles.default-debug.css" type="text/css">
 
@@ -76,16 +79,35 @@
     <main id="main-content" class="container-lg" role="main">
       <h1>Video</h1>
 
-      <p>Styling for figures, images, and similar.</p>
+      <p>Styling for videos.</p>
 
-<h2 id="responsive-images">Responsive images</h2>
+<h2 id="responsive-video">Responsive video</h2>
 
-<p>By default, images are responsive, meaning that their max width is set to <code class="highlighter-rouge">100%</code> and their height to <code class="highlighter-rouge">auto</code>.</p>
+<p>By default, videos are responsive, meaning that their max width is set to <code class="highlighter-rouge">100%</code> and their height to <code class="highlighter-rouge">auto</code>.<br />
+That will fill the parent container width with the correct aspect ratio of the video (16x9 vs 4:3).<br />
+The <code class="highlighter-rouge">autoplay</code> attribute does not work on iOs devices.<br />
+The <code class="highlighter-rouge">controls</code> attribute will overlay the controls at the bottom of the video. Aspect ratio is not altered.</p>
 
 <div class="strib-guide-example" data-example-id="">
-<img src="http://placekitten.com/1200/420" alt="Kitten placeholder image" />
+<figure>
+	<video width="100%" height="auto" autoplay="" controls="">
+		<source src="http://static.startribune.com.s3.amazonaws.com/video/tragic-harvest-330403811.mp4" type="video/mp4" />
+		<source src="http://static.startribune.com.s3.amazonaws.com/video/tragic-harvest-330403811.ogg" type="video/ogg" />
+		Your browser does not support the video tag.
+	</video>
+	<cite>Ms. Videographer</cite>
+	<figcaption><span class="readin">Crop Killer: </span>Tractor McTractorface crushes rows and rows of innocent plants.</figcaption>
+</figure>
 </div>
-<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placekitten.com/1200/420"</span> <span class="na">alt=</span><span class="s">"Kitten placeholder image"</span><span class="nt">&gt;</span></code></pre></div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;figure&gt;</span>
+	<span class="nt">&lt;video</span> <span class="na">width=</span><span class="s">"100%"</span> <span class="na">height=</span><span class="s">"auto"</span> <span class="na">autoplay</span> <span class="na">controls</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"http://static.startribune.com.s3.amazonaws.com/video/tragic-harvest-330403811.mp4"</span> <span class="na">type=</span><span class="s">"video/mp4"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"http://static.startribune.com.s3.amazonaws.com/video/tragic-harvest-330403811.ogg"</span> <span class="na">type=</span><span class="s">"video/ogg"</span><span class="nt">&gt;</span>
+		Your browser does not support the video tag.
+	<span class="nt">&lt;/video&gt;</span>
+	<span class="nt">&lt;cite&gt;</span>Ms. Videographer<span class="nt">&lt;/cite&gt;</span>
+	<span class="nt">&lt;figcaption&gt;&lt;span</span> <span class="na">class=</span><span class="s">"readin"</span><span class="nt">&gt;</span>Crop Killer: <span class="nt">&lt;/span&gt;</span>Tractor McTractorface crushes rows and rows of innocent plants.<span class="nt">&lt;/figcaption&gt;</span>
+<span class="nt">&lt;/figure&gt;</span></code></pre></div>
 
 <h3 id="more-performant-images">More performant images</h3>
 
@@ -131,7 +153,7 @@
 
 <h2 id="background-fill">Background fill</h2>
 
-<p>To get an image to completely fill the background of a container, add the <code class="highlighter-rouge">.image-bg-fill</code> class and set the background image. Not that this is using an <a href="../layout/containers.html">aspect ratio container</a> to maintain a specific aspect ratio.</p>
+<p>To get an image to completely fill the background of a container, add the <code class="highlighter-rouge">.image-bg-fill</code> class and set the background image. Note that this is using an <a href="../layout/containers.html">aspect ratio container</a> to maintain a specific aspect ratio.</p>
 
 <div class="strib-guide-example" data-example-id="">
 <div class="image-bg-fill container-16-9" style="background-image: url(http://placekitten.com/1500/1500);"></div>
@@ -154,9 +176,13 @@
       </div>
     </footer>
 
-    <!-- SVG Star Tribune icons -->
+    <!-- Dependencies for JS (note the Strib site uses jQuery 1.11) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
     <!-- Guide-specific scripts -->
     <script src="../../build/strib-styles.all.js"></script>
+
+    <!-- Page specific JS or other -->
+    
   </body>
 </html>

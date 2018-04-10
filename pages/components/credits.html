@@ -29,6 +29,9 @@
     <!-- For proper phone zoom -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Strib icons -->
+    <link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.9/strib-icons.css" type="text/css">
+
     <!-- Actual style guide styles -->
     <link rel="stylesheet" href="../../build/strib-styles.default-debug.css" type="text/css">
 
@@ -124,6 +127,7 @@
   </address>
   <span class="spacer"></span>
   Star Tribune
+  <span class="spacer-alt"></span>
   <time pubdate="" datetime="2017-07-30T16:00:00">July 30, 2017 &mdash; 4:00pm</time>
 </div>
 </div>
@@ -135,10 +139,11 @@
   <span class="nt">&lt;/address&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"spacer"</span><span class="nt">&gt;&lt;/span&gt;</span>
   Star Tribune
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"spacer-alt"</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;time</span> <span class="na">pubdate</span> <span class="na">datetime=</span><span class="s">"2017-07-30T16:00:00"</span><span class="nt">&gt;</span>July 30, 2017 <span class="ni">&amp;mdash;</span> 4:00pm<span class="nt">&lt;/time&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<p>And finally, a more spaced out, but not jutified approach.</p>
+<p>And finally, a more spaced out, but not justified approach.</p>
 
 <div class="strib-guide-example" data-example-id="">
 <div class="byline byline-space">
@@ -149,7 +154,6 @@
   </address>
   <span class="spacer"></span>
   Star Tribune
-  <span class="spacer"></span>
   <time pubdate="" datetime="2017-07-30T16:00:00">July 30, 2017</time>
 </div>
 </div>
@@ -161,7 +165,6 @@
   <span class="nt">&lt;/address&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"spacer"</span><span class="nt">&gt;&lt;/span&gt;</span>
   Star Tribune
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"spacer"</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;time</span> <span class="na">pubdate</span> <span class="na">datetime=</span><span class="s">"2017-07-30T16:00:00"</span><span class="nt">&gt;</span>July 30, 2017<span class="nt">&lt;/time&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
@@ -241,9 +244,13 @@
       </div>
     </footer>
 
-    <!-- SVG Star Tribune icons -->
+    <!-- Dependencies for JS (note the Strib site uses jQuery 1.11) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
     <!-- Guide-specific scripts -->
     <script src="../../build/strib-styles.all.js"></script>
+
+    <!-- Page specific JS or other -->
+    
   </body>
 </html>

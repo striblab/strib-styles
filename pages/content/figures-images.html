@@ -29,6 +29,9 @@
     <!-- For proper phone zoom -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Strib icons -->
+    <link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.9/strib-icons.css" type="text/css">
+
     <!-- Actual style guide styles -->
     <link rel="stylesheet" href="../../build/strib-styles.default-debug.css" type="text/css">
 
@@ -114,24 +117,20 @@
 
 <div class="strib-guide-example" data-example-id="">
 <figure>
-  <img src="http://placekitten.com/1200/420" alt="Kitten placeholder image" />
-
-<cite>PlaceKitten</cite>
-
-  <figcaption>Fuzzy the kitten</figcaption>
+ 	<img src="http://placekitten.com/1200/420" alt="Kitten placeholder image" />
+	<cite>PlaceKitten</cite>
+	<figcaption><span class="readin">Feline Frenzy: </span>Fuzzy the kitten pounces on imaginary mice in her winter wonderland.</figcaption>
 </figure>
 </div>
 <div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;figure&gt;</span>
-  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placekitten.com/1200/420"</span> <span class="na">alt=</span><span class="s">"Kitten placeholder image"</span><span class="nt">&gt;</span>
-
-<span class="nt">&lt;cite&gt;</span>PlaceKitten<span class="nt">&lt;/cite&gt;</span>
-
-  <span class="nt">&lt;figcaption&gt;</span>Fuzzy the kitten<span class="nt">&lt;/figcaption&gt;</span>
+ 	<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placekitten.com/1200/420"</span> <span class="na">alt=</span><span class="s">"Kitten placeholder image"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;cite&gt;</span>PlaceKitten<span class="nt">&lt;/cite&gt;</span>
+	<span class="nt">&lt;figcaption&gt;&lt;span</span> <span class="na">class=</span><span class="s">"readin"</span><span class="nt">&gt;</span>Feline Frenzy: <span class="nt">&lt;/span&gt;</span>Fuzzy the kitten pounces on imaginary mice in her winter wonderland.<span class="nt">&lt;/figcaption&gt;</span>
 <span class="nt">&lt;/figure&gt;</span></code></pre></div>
 
 <h2 id="background-fill">Background fill</h2>
 
-<p>To get an image to completely fill the background of a container, add the <code class="highlighter-rouge">.image-bg-fill</code> class and set the background image. Not that this is using an <a href="../layout/containers.html">aspect ratio container</a> to maintain a specific aspect ratio.</p>
+<p>To get an image to completely fill the background of a container, add the <code class="highlighter-rouge">.image-bg-fill</code> class and set the background image. Note that this is using an <a href="../layout/containers.html">aspect ratio container</a> to maintain a specific aspect ratio.</p>
 
 <div class="strib-guide-example" data-example-id="">
 <div class="image-bg-fill container-16-9" style="background-image: url(http://placekitten.com/1500/1500);"></div>
@@ -154,9 +153,13 @@
       </div>
     </footer>
 
-    <!-- SVG Star Tribune icons -->
+    <!-- Dependencies for JS (note the Strib site uses jQuery 1.11) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
     <!-- Guide-specific scripts -->
     <script src="../../build/strib-styles.all.js"></script>
+
+    <!-- Page specific JS or other -->
+    
   </body>
 </html>

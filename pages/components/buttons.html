@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Buttons | Star Tribune Styles</title>
+
+    <!-- https://ricostacruz.com/til/relative-paths-in-jekyll -->
+    
+    
+    
+    
+
+    <meta name="author" content="Alan Palazzolo">
+    <meta name="description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
+    <meta name="robots" content="index, follow">
+
+    <!-- Shortcut and related icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/favicons/manifest.json">
+    <link rel="mask-icon" href="../../assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../assets/favicons/favicon.ico">
+    <meta name="msapplication-config" content="../../assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- For proper phone zoom -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Strib icons -->
+    <link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.9/strib-icons.css" type="text/css">
+
+    <!-- Actual style guide styles -->
+    <link rel="stylesheet" href="../../build/strib-styles.default-debug.css" type="text/css">
+
+    <!-- Styles specific to guide -->
+    <link rel="stylesheet" href="../../guide-styles/main.css" type="text/css">
+
+    <!-- Social Media Tags -->
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:url" content=""> -->
+    <meta property="og:title" content="Buttons">
+    <meta property="og:description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
+    <meta property="og:image" content="../../assets/images/strib-logo-name-social-card.png">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@StarTribune">
+    <meta name="twitter:title" content="Buttons">
+    <meta name="twitter:description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
+    <meta name="twitter:image" content="../../assets/images/strib-logo-name-social-card.png">
+  </head>
+
+  <body>
+    <!-- Screen reader announcements -->
+    <div aria-live="polite" id="announcer" class="sr-only"></div>
+
+    <!-- Skip to main content -->
+    <a href="#main-content" class="to-main-content">Skip to main content</a>
+
+    <!-- Header -->
+    <header role="banner">
+      <nav>
+        <div class="container-lg">
+          <a href="../.." class="logo" title="Home"><span class="sr-only">Go to homepage</span></a>
+          <h1>Style guide</h1>
+
+          <ul>
+            <li><a href="../..">Layout</a></li>
+            <li><a href="../..">Styles</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    </header>
+
+    <!-- Main content here -->
+    <main id="main-content" class="container-lg" role="main">
+      <h1>Buttons</h1>
+
+      <p>Buttons are used in forms and for interaction in other places.</p>
+
+<h2 id="default">Default</h2>
+
+<p>There are many ways to get a button style.</p>
+
+<div class="strib-guide-example" data-example-id="">
+<button type="button">Button</button>
+<input id="example-input-submit" type="submit" value="Input" />
+<input id="example-input-reset" type="reset" value="Input reset" />
+<input id="example-input-button" type="button" value="Input button" />
+<a class="button" href="http://startribune.com" target="_blank" rel="noopener">Link</a>
+<a href="#" role="button" type="button">Interactive link button</a>
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"example-input-submit"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Input"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"example-input-reset"</span> <span class="na">type=</span><span class="s">"reset"</span> <span class="na">value=</span><span class="s">"Input reset"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"example-input-button"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"Input button"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button"</span> <span class="na">href=</span><span class="s">"http://startribune.com"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">rel=</span><span class="s">"noopener"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Interactive link button<span class="nt">&lt;/a&gt;</span></code></pre></div>
+
+<h2 id="styles">Styles</h2>
+
+<div class="strib-guide-example" data-example-id="">
+<button type="button">Button</button>
+<button type="button" class="secondary">Secondary</button>
+<button type="button" class="alt">Alt</button>
+<button type="button" class="danger">Danger</button>
+<button type="button" class="warning">Warning</button>
+<button type="button" class="dark">Dark</button>
+<button type="button" class="light">Light</button>
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"secondary"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"alt"</span><span class="nt">&gt;</span>Alt<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"warning"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"dark"</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"light"</span><span class="nt">&gt;</span>Light<span class="nt">&lt;/button&gt;</span></code></pre></div>
+
+<h2 id="outlines">Outlines</h2>
+
+<div class="strib-guide-example" data-example-id="">
+<button type="button" class="button-outline">Button</button>
+<button type="button" class="button-outline secondary">Secondary</button>
+<button type="button" class="button-outline alt">Alt</button>
+<button type="button" class="button-outline danger">Danger</button>
+<button type="button" class="button-outline warning">Warning</button>
+<button type="button" class="button-outline dark">Dark</button>
+<button type="button" class="button-outline light">Light</button>
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-outline"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-outline secondary"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-outline alt"</span><span class="nt">&gt;</span>Alt<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-outline danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-outline warning"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-outline dark"</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-outline light"</span><span class="nt">&gt;</span>Light<span class="nt">&lt;/button&gt;</span></code></pre></div>
+
+<h2 id="link">Link</h2>
+
+<p>Link style buttons.</p>
+
+<div class="strib-guide-example" data-example-id="">
+<button type="button">Button</button>
+<button type="button" class="button-link">Button</button>
+<button type="button" class="button-link secondary">Secondary</button>
+<button type="button" class="button-link alt">Alt</button>
+<button type="button" class="button-link danger">Danger</button>
+<button type="button" class="button-link warning">Warning</button>
+<button type="button" class="button-link dark">Dark</button>
+<button type="button" class="button-link light">Light</button>
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-link"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-link secondary"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-link alt"</span><span class="nt">&gt;</span>Alt<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-link danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-link warning"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-link dark"</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-link light"</span><span class="nt">&gt;</span>Light<span class="nt">&lt;/button&gt;</span></code></pre></div>
+
+<h2 id="disabled">Disabled</h2>
+
+<div class="strib-guide-example" data-example-id="">
+<button type="button" disabled="">Button</button>
+<button type="button" class="secondary" disabled="">Secondary</button>
+<button type="button" class="alt" disabled="">Alt</button>
+<button type="button" class="danger" disabled="">Danger</button>
+<button type="button" class="warning" disabled="">Warning</button>
+<button type="button" class="dark" disabled="">Dark</button>
+<button type="button" class="light" disabled="">Light</button>
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"secondary"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"alt"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Alt<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"danger"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"warning"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"dark"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"light"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Light<span class="nt">&lt;/button&gt;</span></code></pre></div>
+
+<h2 id="icons">Icons</h2>
+
+<p>Feel free to use icons in buttons, though, make sure to see the <a href="../content/icons.html">icons</a> section.</p>
+
+<div class="strib-guide-example" data-example-id="">
+<button type="button">
+  <i class="strib-icon strib-search"></i>
+</button>
+
+<button type="button" class="button-outline">
+  <i class="strib-icon strib-person"></i>
+</button>
+
+<button type="button" class="secondary">
+  <i class="strib-icon strib-strib-star "></i>
+</button>
+
+<button type="button" class="button-outline secondary">
+  <i class="strib-icon strib-close"></i>
+</button>
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"strib-icon strib-search"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-outline"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"strib-icon strib-person"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"secondary"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"strib-icon strib-strib-star "</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-outline secondary"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"strib-icon strib-close"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span></code></pre></div>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo" class="with-copyright">
+      <div class="container-lg">
+        Design by the <a href="http://startribune.com/" target="_blank" rel="noopener">Star Tribune</a>.  Details on code and use can be found on <a href="https://github.com/striblab/strib-styles" target="_blank" rel="noopener">Github</a>.
+      </div>
+
+      <div class="copyright">
+        <div class="container-lg">
+          &copy; 2018 StarTribune. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Dependencies for JS (note the Strib site uses jQuery 1.11) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- Guide-specific scripts -->
+    <script src="../../build/strib-styles.all.js"></script>
+
+    <!-- Page specific JS or other -->
+    
+  </body>
+</html>

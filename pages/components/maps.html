@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Maps | Star Tribune Styles</title>
+
+    <!-- https://ricostacruz.com/til/relative-paths-in-jekyll -->
+    
+    
+    
+    
+
+    <meta name="author" content="Alan Palazzolo">
+    <meta name="description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
+    <meta name="robots" content="index, follow">
+
+    <!-- Shortcut and related icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/favicons/manifest.json">
+    <link rel="mask-icon" href="../../assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../assets/favicons/favicon.ico">
+    <meta name="msapplication-config" content="../../assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- For proper phone zoom -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Strib icons -->
+    <link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.9/strib-icons.css" type="text/css">
+
+    <!-- Actual style guide styles -->
+    <link rel="stylesheet" href="../../build/strib-styles.default-debug.css" type="text/css">
+
+    <!-- Styles specific to guide -->
+    <link rel="stylesheet" href="../../guide-styles/main.css" type="text/css">
+
+    <!-- Social Media Tags -->
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:url" content=""> -->
+    <meta property="og:title" content="Maps">
+    <meta property="og:description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
+    <meta property="og:image" content="../../assets/images/strib-logo-name-social-card.png">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@StarTribune">
+    <meta name="twitter:title" content="Maps">
+    <meta name="twitter:description" content="Star Tribune styles and style guide for front-end work at the Star Tribune">
+    <meta name="twitter:image" content="../../assets/images/strib-logo-name-social-card.png">
+  </head>
+
+  <body>
+    <!-- Screen reader announcements -->
+    <div aria-live="polite" id="announcer" class="sr-only"></div>
+
+    <!-- Skip to main content -->
+    <a href="#main-content" class="to-main-content">Skip to main content</a>
+
+    <!-- Header -->
+    <header role="banner">
+      <nav>
+        <div class="container-lg">
+          <a href="../.." class="logo" title="Home"><span class="sr-only">Go to homepage</span></a>
+          <h1>Style guide</h1>
+
+          <ul>
+            <li><a href="../..">Layout</a></li>
+            <li><a href="../..">Styles</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    </header>
+
+    <!-- Main content here -->
+    <main id="main-content" class="container-lg" role="main">
+      <h1>Maps</h1>
+
+      <p>Best practices and styles for using maps.</p>
+
+<h2 id="mapbox-example">Mapbox example</h2>
+
+<div class="strib-guide-example" data-example-id="">
+<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js"></script>
+<link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css" rel="stylesheet" />
+
+<figure>
+  <div id="map" class="" style="height: 30em;"></div>
+
+  <figcaption>
+    This map depicts blah blah blah.  Some map and design data
+    &copy; <a href="https://www.mapbox.com/about/maps/" target="_blank" rel="noopener">Mapbox</a>
+    &copy; <a href="http://www.openstreetmap.org/about/" target="_blank" rel="noopener">OpenStreetMap</a>
+  </figcaption>
+</figure>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA';
+var map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/shadowflare/cjfljh7oh6v6k2smuvb3jftac',
+  center: [-93.191872, 44.960911],
+  zoom: 9,
+  attributionControl: false
+});
+
+var nav = new mapboxgl.NavigationControl();
+map.addControl(nav, 'top-left');
+</script>
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;figure&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"map"</span> <span class="na">style=</span><span class="s">"height: 30em;"</span><span class="nt">&gt;&lt;/div&gt;</span>
+
+  <span class="nt">&lt;figcaption&gt;</span>
+    This map depicts blah blah blah.  Some map and design data
+    <span class="ni">&amp;copy;</span> <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.mapbox.com/about/maps/"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">rel=</span><span class="s">"noopener"</span><span class="nt">&gt;</span>Mapbox<span class="nt">&lt;/a&gt;</span>
+    <span class="ni">&amp;copy;</span> <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://www.openstreetmap.org/about/"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">rel=</span><span class="s">"noopener"</span><span class="nt">&gt;</span>OpenStreetMap<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/figcaption&gt;</span>
+<span class="nt">&lt;/figure&gt;</span>
+
+<span class="nt">&lt;script&gt;</span>
+<span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">accessToken</span> <span class="o">=</span> <span class="s1">'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA'</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">Map</span><span class="p">({</span>
+  <span class="na">container</span><span class="p">:</span> <span class="s1">'map'</span><span class="p">,</span>
+  <span class="na">style</span><span class="p">:</span> <span class="s1">'mapbox://styles/shadowflare/cjfljh7oh6v6k2smuvb3jftac'</span><span class="p">,</span>
+  <span class="na">center</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">93.191872</span><span class="p">,</span> <span class="mf">44.960911</span><span class="p">],</span>
+  <span class="na">zoom</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+  <span class="na">attributionControl</span><span class="p">:</span> <span class="kc">false</span>
+<span class="p">});</span>
+
+<span class="kd">var</span> <span class="nx">nav</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mapboxgl</span><span class="p">.</span><span class="nx">NavigationControl</span><span class="p">();</span>
+<span class="nx">map</span><span class="p">.</span><span class="nx">addControl</span><span class="p">(</span><span class="nx">nav</span><span class="p">,</span> <span class="s1">'top-left'</span><span class="p">);</span>
+<span class="nt">&lt;/script&gt;</span></code></pre></div>
+
+<div class="strib-guide-example" data-example-id="">
+<script src="https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"></script>
+<link href="https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css" rel="stylesheet" />
+
+<figure>
+  <div id="map-fallback" class="" style="height: 30em;"></div>
+
+  <figcaption>
+    This map depicts blah blah blah.  Some map and design data
+    &copy; <a href="https://www.mapbox.com/about/maps/" target="_blank" rel="noopener">Mapbox</a>
+    &copy; <a href="http://www.openstreetmap.org/about/" target="_blank" rel="noopener">OpenStreetMap</a>
+  </figcaption>
+</figure>
+
+<script>
+L.mapbox.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA';
+var fallbackMap = L.mapbox.map('map-fallback', undefined, {
+  attributionControl: false,
+}).setView([44.960911, -93.191872], 9 + 1);
+var styleLayer = L.mapbox.styleLayer('mapbox://styles/shadowflare/cjfljh7oh6v6k2smuvb3jftac')
+    .addTo(fallbackMap);
+</script>
+</div>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;figure&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"map-fallback"</span> <span class="na">style=</span><span class="s">"height: 30em;"</span><span class="nt">&gt;&lt;/div&gt;</span>
+
+  <span class="nt">&lt;figcaption&gt;</span>
+    This map depicts blah blah blah.  Some map and design data
+    <span class="ni">&amp;copy;</span> <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.mapbox.com/about/maps/"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">rel=</span><span class="s">"noopener"</span><span class="nt">&gt;</span>Mapbox<span class="nt">&lt;/a&gt;</span>
+    <span class="ni">&amp;copy;</span> <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://www.openstreetmap.org/about/"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">rel=</span><span class="s">"noopener"</span><span class="nt">&gt;</span>OpenStreetMap<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/figcaption&gt;</span>
+<span class="nt">&lt;/figure&gt;</span>
+
+<span class="nt">&lt;script&gt;</span>
+<span class="nx">L</span><span class="p">.</span><span class="nx">mapbox</span><span class="p">.</span><span class="nx">accessToken</span> <span class="o">=</span> <span class="s1">'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA'</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">fallbackMap</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">mapbox</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="s1">'map-fallback'</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">attributionControl</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+<span class="p">}).</span><span class="nx">setView</span><span class="p">([</span><span class="mf">44.960911</span><span class="p">,</span> <span class="o">-</span><span class="mf">93.191872</span><span class="p">],</span> <span class="mi">9</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">styleLayer</span> <span class="o">=</span> <span class="nx">L</span><span class="p">.</span><span class="nx">mapbox</span><span class="p">.</span><span class="nx">styleLayer</span><span class="p">(</span><span class="s1">'mapbox://styles/shadowflare/cjfljh7oh6v6k2smuvb3jftac'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">fallbackMap</span><span class="p">);</span>
+<span class="nt">&lt;/script&gt;</span></code></pre></div>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo" class="with-copyright">
+      <div class="container-lg">
+        Design by the <a href="http://startribune.com/" target="_blank" rel="noopener">Star Tribune</a>.  Details on code and use can be found on <a href="https://github.com/striblab/strib-styles" target="_blank" rel="noopener">Github</a>.
+      </div>
+
+      <div class="copyright">
+        <div class="container-lg">
+          &copy; 2018 StarTribune. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Dependencies for JS (note the Strib site uses jQuery 1.11) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- Guide-specific scripts -->
+    <script src="../../build/strib-styles.all.js"></script>
+
+    <!-- Page specific JS or other -->
+    <script>
+</script>
+
+  </body>
+</html>
