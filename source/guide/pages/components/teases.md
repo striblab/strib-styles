@@ -28,29 +28,29 @@ Note that teases are not semantic entities. They are usually associated as a cla
 
 <div class="tease-related">
   <ul>
-  <li class="related-icn-photox">
+  <li>
     <a href="/xxx"><i class="strib-icon strib-camera color-green-light"></i>Photo: photo</a>
   </li>
-  <li class="related-icn-documentx">
+  <li>
     <a href="/xxx"><i class="strib-icon strib-document color-green-light"></i>Document: Associated document</a>
   </li>
-  <li class="related-icn-videox">
+  <li>
     <a href="/xxx"><i class="strib-icon strib-media-video-square color-green-light"></i>Video: Associated video</a>
   </li>
-   <li class="related-icn-graphicx">
+   <li>
     <a href="/xxx"><i class="strib-icon strib-graphic color-green-light"></i>Graphic: Associated graphic</a>
   </li>
-   <li class="related-icn-podcastx">
+   <li>
     <a href="/xxx"><i class="strib-icon strib-podcast color-green-light"></i>Podcast: Associated podcast</a>
   </li>
-   <li class="related-icn-pollx">
+   <li>
     <a href="/xxx"><i class="strib-icon strib-poll color-green-light"></i>Poll: Associated poll</a>
   </li>
-  <li class="related-icn-commentsx">
+  <li>
     <a href="/xxx/#comments"><i class="strib-icon strib-comment-bubble color-green-light"></i>159 comments </a>
   </li>
-  <li class="related-icn-gallery">
-    <a href="/xxx/" >Photos: Associated gallery</a>
+  <li>
+    <a href="/xxx/" ><i class="strib-icon strib-gallery-grid color-green-light"></i>Gallery: Associated gallery</a>
   </li>
   <li class="related-icn-article">
     <a href="/xxx">Associated article</a>

@@ -12,6 +12,7 @@ All these colors are managed in the `$theme` SASS variable.
 <div class="cf">
   <div class="example-color-swatch color-bg-green-dark">.color-bg-green-dark</div>
   <div class="example-color-swatch color-bg-green-dark-alt">.color-bg-green-dark-alt</div>
+  <div class="example-color-swatch color-bg-green-medium">.color-bg-green-medium</div>
   <div class="example-color-swatch color-bg-green-light">.color-bg-green-light</div>
   <div class="example-color-swatch color-bg-blue-dark">.color-bg-blue-dark</div>
   <div class="example-color-swatch color-bg-yellow-light">.color-bg-yellow-light</div>
