@@ -1,6 +1,6 @@
 {
-  "name": "strib-styles",
-  "version": "0.0.7",
+  "name": "@striblab/strib-styles",
+  "version": "0.0.8",
   "description": "Star Tribune style guide",
   "main": "build/strib-styles.all.js",
   "jsnext:main": "source/js/all.js",
