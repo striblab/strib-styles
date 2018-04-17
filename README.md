@@ -53,7 +53,7 @@ Note that the live changes that trigger a build and should show up in the browse
 To manually build and run with docker, the following commands should work:
 
 1.  `docker build -t "strib-styles" .`
-1.  `docker run -i -t --rm -v`pwd`:/src -p "3000:3000" -p "3001:3001" "strib-styles"`
+1.  `` docker run -i -t --rm -v`pwd`:/src -p "3000:3000" -p "3001:3001" "strib-styles" ``
 
 ### Styles
 
