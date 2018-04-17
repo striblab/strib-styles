@@ -47,7 +47,7 @@ layout: page
 * [Galleries](./pages/components/gallery.html)
 * [Maps](./pages/components/maps.html)
 
-### Strib-embeds
+<!-- ### Strib-embeds
 
 * [Bug](./pages/strib-tags/bug.html)
 * [Gallery](./pages/strib-tags/gallery.html)
@@ -56,7 +56,7 @@ layout: page
 * [Link](./pages/strib-tags/link.html)
 * [Quote](./pages/strib-tags/quote.html)
 * [Text](./pages/strib-tags/text.html)
-* [Video](./pages/strib-tags/video.html)
+* [Video](./pages/strib-tags/video.html) -->
 
 ### Utilities
 

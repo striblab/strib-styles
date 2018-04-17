@@ -7,10 +7,10 @@ $selector-wrapper: '.strib' !default;
 
 @import 'variables';
 @import 'mixins/_all';
-@import 'fonts';
+@import 'content/fonts';
 
-@import 'reset';
-@import 'normalize';
+@import 'resets/reset';
+@import 'resets/normalize';
 
 #{$selector-wrapper} {
   @import 'common-default';

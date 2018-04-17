@@ -2,40 +2,42 @@
  * Common default imports
  */
 
-@import 'utilities/_all';
-@import 'screen-readers';
+@import 'utilities/clearfix';
+@import 'utilities/typography';
+@import 'utilities/colors';
+@import 'utilities/screen-readers';
 
-@import 'layout';
-@import 'containers';
-@import 'grid';
-@import 'footers';
+@import 'layout/layout';
+@import 'layout/containers';
+@import 'layout/grid';
+@import 'layout/footers';
 
-@import 'typography';
-@import 'code';
-@import 'images';
-@import 'figures';
-@import 'video';
-@import 'tables';
-@import 'dateline';
-@import 'strib-icons';
+@import 'content/typography';
+@import 'content/code';
+@import 'content/images';
+@import 'content/figures';
+@import 'content/video';
+@import 'content/tables';
+@import 'content/dateline';
+@import 'content/strib-icons';
 
-@import 'st-bug';
-@import 'st-gallery';
-@import 'st-graphic';
-@import 'st-image';
-@import 'st-link';
-@import 'st-text';
-@import 'st-quote';
-@import 'st-video';
+// @import 'st-bug';
+// @import 'st-gallery';
+// @import 'st-graphic';
+// @import 'st-image';
+// @import 'st-link';
+// @import 'st-text';
+// @import 'st-quote';
+// @import 'st-video';
 
-@import 'navigation';
-@import 'credits';
-@import 'hero';
-@import 'asides';
-@import 'teases';
-@import 'alerts';
-@import 'buttons';
-@import 'forms';
-@import 'gallery';
+@import 'components/navigation';
+@import 'components/credits';
+@import 'components/hero';
+@import 'components/asides';
+@import 'components/teases';
+@import 'components/alerts';
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/gallery';
 
-@import 'debug';
+@import 'utilities/debug';
