@@ -7,17 +7,40 @@ The following demonstrates what variables and classes are available for use of c
 
 ## Theme colors
 
-All these colors are managed in the `$theme` SASS variable.
+All these colors are managed in the `$theme` SASS variable. The brand-specific primary and secondary greens are the following:
 
 <div class="cf">
-  <div class="example-color-swatch color-bg-green-dark">.color-bg-green-dark</div>
-  <div class="example-color-swatch color-bg-green-dark-alt">.color-bg-green-dark-alt</div>
-  <div class="example-color-swatch color-bg-green-medium">.color-bg-green-medium</div>
-  <div class="example-color-swatch color-bg-green-light">.color-bg-green-light</div>
-  <div class="example-color-swatch color-bg-blue-dark">.color-bg-blue-dark</div>
+  <div class="example-color-swatch color-bg-green-primary-emerald">.color-bg-green-primary-emerald</div>
+  <div class="example-color-swatch color-bg-green-primary-spring">.color-bg-green-primary-spring</div>
+  <div class="example-color-swatch color-bg-green-secondary-forest">.color-bg-green-secondary-forest</div>
+</div>
+
+Alternatives and other colors available to follow the pallet if needed:
+
+<div>
+  <div class="cf">
+    <div class="example-color-swatch color-bg-green-secondary-light">.color-bg-green-secondary-light</div>
+  </div>
+
+  <div class="cf">
+    <div class="example-color-swatch color-bg-blue-light">.color-bg-blue-light</div>
+    <div class="example-color-swatch color-bg-blue-dark">.color-bg-blue-dark</div>
+  </div>
+
+  <div class="cf">
   <div class="example-color-swatch color-bg-yellow-light">.color-bg-yellow-light</div>
-  <div class="example-color-swatch color-bg-orange-dark">.color-bg-orange-dark</div>
-  <div class="example-color-swatch color-bg-red-dark">.color-bg-red-dark</div>
+    <div class="example-color-swatch color-bg-yellow-dark">.color-bg-yellow-dark</div>
+  </div>
+
+  <div class="cf">
+    <div class="example-color-swatch color-bg-orange-light">.color-bg-orange-light</div>
+    <div class="example-color-swatch color-bg-orange-dark">.color-bg-orange-dark</div>
+  </div>
+
+  <div class="cf">
+    <div class="example-color-swatch color-bg-red-light">.color-bg-red-light</div>
+    <div class="example-color-swatch color-bg-red-dark">.color-bg-red-dark</div>
+  </div>
 </div>
 
 ## Grays
@@ -25,7 +48,6 @@ All these colors are managed in the `$theme` SASS variable.
 All these colors are managed in the `$grays` SASS variable.
 
 <div class="cf">
-  <div class="example-color-swatch color-bg-gray-darker">.color-bg-gray-darker</div>
   <div class="example-color-swatch color-bg-gray-dark">.color-bg-gray-dark</div>
   <div class="example-color-swatch color-bg-gray-medium">.color-bg-gray-medium</div>
   <div class="example-color-swatch color-bg-gray-medium-light">.color-bg-gray-medium-light</div>
@@ -36,7 +58,7 @@ All these colors are managed in the `$grays` SASS variable.
 
 ## Black and white
 
-Black and white are stored as vairables, `$color-black` and `$color-white`, in case there is a need to use slightly off values.
+Black and white are stored as vairables, `$color-black` and `$color-white`. The black is a specific off-black color.
 
 <div class="cf">.
   <div class="example-color-swatch color-bg-white">.color-bg-white</div>

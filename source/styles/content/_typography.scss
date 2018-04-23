@@ -130,13 +130,13 @@ h6 {
 a {
   &,
   &:visited {
-    color: map-get($theme, blue-dark);
+    color: $color-link;
     transition: color 500ms;
     text-decoration: underline;
   }
 
   &:hover {
-    color: map-get($theme, green-dark);
+    color: darken($color-link, 15);
     text-decoration: none;
   }
 }
@@ -144,13 +144,13 @@ a {
 .link-alternate {
   &,
   &:visited {
-    color: map-get($theme, green-dark);
+    color: $color-secondary-link;
     transition: color 500ms;
     text-decoration: none;
   }
 
   &:hover {
-    color: darken(map-get($theme, green-dark), 15);
+    color: darken($color-secondary-link, 15);
     text-decoration: none;
   }
 }

@@ -42,16 +42,14 @@ form {
 .input,
 select,
 textarea,
-input:not([type="submit"]):not([type="reset"]):not([type="button"]) {
+input:not([type='submit']):not([type='reset']):not([type='button']) {
   display: block;
   margin-bottom: $spacer;
   outline: none;
   padding: $spacer * 0.5 $spacer;
   width: 100%;
   border: 1px solid map-get($grays, 'dark');
-  transition:
-    color .15s ease-in-out,
-    box-shadow .15s ease-in-out;
+  transition: color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   background-color: $color-white;
   background-clip: padding-box;
 
@@ -62,18 +60,20 @@ input:not([type="submit"]):not([type="reset"]):not([type="button"]) {
   &.invalid,
   &:invalid {
     border-color: map-get($theme, 'red-dark');
-    box-shadow: 0 0 0 0.2rem rgba(lighten(map-get($theme, 'red-dark'), 10%), 0.3);
+    box-shadow: 0 0 0 0.2rem
+      rgba(lighten(map-get($theme, 'red-dark'), 10%), 0.3);
   }
 
   // The :valid is on if a field passes, i.e. for non-required fields
   //&:valid
   &.valid {
     border-color: map-get($theme, 'green-dark');
-    box-shadow: 0 0 0 0.2rem rgba(lighten(map-get($theme, 'green-dark'), 10%), 0.3);
+    box-shadow: 0 0 0 0.2rem
+      rgba(lighten(map-get($theme, 'green-secondary-forest'), 10%), 0.3);
   }
 
   // color specific
-  &[type="color"] {
+  &[type='color'] {
     height: 2.25 * $spacer;
     width: auto;
     min-width: 10em;
@@ -103,8 +103,8 @@ textarea {
 .check-list {
   margin-bottom: $spacer;
 
-  input[type="checkbox"]:not([type="submit"]):not([type="reset"]):not([type="button"]),
-  input[type="radio"]:not([type="submit"]):not([type="reset"]):not([type="button"]),
+  input[type='checkbox']:not([type='submit']):not([type='reset']):not([type='button']),
+  input[type='radio']:not([type='submit']):not([type='reset']):not([type='button']),
   label {
     display: inline-block;
     vertical-align: middle;
@@ -113,8 +113,8 @@ textarea {
     width: auto;
   }
 
-  input[type="checkbox"]:not([type="submit"]):not([type="reset"]):not([type="button"]),
-  input[type="radio"]:not([type="submit"]):not([type="reset"]):not([type="button"]) {
+  input[type='checkbox']:not([type='submit']):not([type='reset']):not([type='button']),
+  input[type='radio']:not([type='submit']):not([type='reset']):not([type='button']) {
     bottom: 2px;
     margin-right: $spacer * 0.5;
   }

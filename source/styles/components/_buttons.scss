@@ -3,7 +3,7 @@
  */
 
 // Mixins for creating different types of buttons more easily
-@mixin button-colors($color: map-get($theme, 'green-light')) {
+@mixin button-colors($color: map-get($theme, 'green-primary-emerald')) {
   background-color: $color;
 
   &:focus {
@@ -24,7 +24,10 @@
     }
   }
 }
-@mixin button-outline-colors($color: map-get($theme, 'green-light'), $link: false) {
+@mixin button-outline-colors(
+  $color: map-get($theme, 'green-primary-emerald'),
+  $link: false
+) {
   background-color: transparent;
   color: $color;
   @if not $link {
@@ -44,18 +47,18 @@
 
 // Default button
 button,
-a[role="button"],
+a[role='button'],
 a.button,
-input[type="button"],
-input[type="submit"],
-input[type="reset"],
+input[type='button'],
+input[type='submit'],
+input[type='reset'],
 .button {
   display: inline-block;
   line-height: 1em;
   margin: 0;
   padding: $spacer * 0.85 $spacer;
   color: $color-white;
-  background-color: map-get($theme, 'green-light');
+  background-color: map-get($theme, 'green-primary-emerald');
   // Provide border, in case one needs to be added
   border: 1px solid transparent;
   outline: none;
@@ -64,11 +67,8 @@ input[type="reset"],
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
-  transition:
-    color .15s ease-in-out,
-    background-color .15s ease-in-out,
-    border-color .15s ease-in-out,
-    box-shadow .15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   cursor: pointer;
   border-radius: $spacer * 0.33333;
 
@@ -77,11 +77,12 @@ input[type="reset"],
   }
 
   @include button-colors;
+
   &.secondary {
-    @include button-colors(map-get($theme, 'green-dark'));
+    @include button-colors(map-get($theme, 'green-primary-spring'));
   }
-  &.alt {
-    @include button-colors(map-get($theme, 'green-dark-alt'));
+  &.secondary-dark {
+    @include button-colors(map-get($theme, 'green-secondary-forest'));
   }
   &.danger {
     @include button-colors(map-get($theme, 'red-dark'));
@@ -99,7 +100,7 @@ input[type="reset"],
 
 // Normalize sets this to button, but this messes things up for some
 // reason
-a[role="button"] {
+a[role='button'] {
   -webkit-appearance: inherit;
 }
 
@@ -108,10 +109,10 @@ a[role="button"] {
   @include button-outline-colors;
 
   &.secondary {
-    @include button-outline-colors(map-get($theme, 'green-dark'));
+    @include button-outline-colors(map-get($theme, 'green-primary-spring'));
   }
-  &.alt {
-    @include button-outline-colors(map-get($theme, 'green-dark-alt'));
+  &.secondary-dark {
+    @include button-outline-colors(map-get($theme, 'green-secondary-forest'));
   }
   &.danger {
     @include button-outline-colors(map-get($theme, 'red-dark'));
@@ -129,13 +130,19 @@ a[role="button"] {
 
 // "Link" style
 .button-link {
-  @include button-outline-colors(map-get($theme, 'green-light'), true);
+  @include button-outline-colors(map-get($theme, 'green-primary-spring'), true);
 
   &.secondary {
-    @include button-outline-colors(map-get($theme, 'green-dark'), true);
+    @include button-outline-colors(
+      map-get($theme, 'green-secondary-forest'),
+      true
+    );
   }
-  &.alt {
-    @include button-outline-colors(map-get($theme, 'green-dark-alt'), true);
+  &.secondary-dark {
+    @include button-outline-colors(
+      map-get($theme, 'green-secondary-forest'),
+      true
+    );
   }
   &.danger {
     @include button-outline-colors(map-get($theme, 'red-dark'), true);
