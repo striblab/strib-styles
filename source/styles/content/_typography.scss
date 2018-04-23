@@ -64,6 +64,7 @@ p,
 .copy {
   @include all-contexts('text');
   margin-top: 0;
+  margin-bottom: $spacer;
 }
 
 // Headings
