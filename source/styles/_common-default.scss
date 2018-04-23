@@ -7,11 +7,6 @@
 @import 'utilities/colors';
 @import 'utilities/screen-readers';
 
-@import 'layout/layout';
-@import 'layout/containers';
-@import 'layout/grid';
-@import 'layout/footers';
-
 @import 'content/typography';
 @import 'content/code';
 @import 'content/images';
@@ -20,6 +15,11 @@
 @import 'content/tables';
 @import 'content/dateline';
 @import 'content/strib-icons';
+
+@import 'layout/layout';
+@import 'layout/containers';
+@import 'layout/grid';
+@import 'layout/footers';
 
 // @import 'st-bug';
 // @import 'st-gallery';

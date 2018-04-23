@@ -59,7 +59,7 @@ The following is a not-pixel-perfect reproduction of the navigation found on mos
     <ul class="section-start">
       <li class="spacer-right">
         <a href="http://startribune.com/" class="home">
-          <span class="icon icon-home"></span>
+          <i class="strib-icon strib-home"></i>
           <span class="sr-only">Star Tribune home</span>
         </a>
       </li>
@@ -68,7 +68,7 @@ The following is a not-pixel-perfect reproduction of the navigation found on mos
 
       <li class="spacer-right">
         <a href="http://startribune.com/search" class="logo">
-          <span class="icon icon-search"></span>
+          <i class="strib-icon strib-search"></i>
           <span class="sr-only">Search the Star Tribune</span>
         </a>
       </li>
@@ -83,7 +83,7 @@ The following is a not-pixel-perfect reproduction of the navigation found on mos
     <ul class="section-end">
       <li class="spacer-right">
         <a href="http://startribune.com/login" class="logo">
-          <span class="icon icon-person"></span>
+          <i class="strib-icon strib-person"></i>
           &nbsp;Log in
         </a>
       </li>

@@ -19,10 +19,14 @@ nav {
     margin-right: $spacer;
   }
 
-  a {
+  a,
+  a:visited {
     text-decoration: none;
-    color: map-get($grays, darker);
-    transition: none;
+    color: $color-text;
+
+    &:hover {
+      color: $color-secondary-link;
+    }
   }
 }
 
@@ -143,21 +147,6 @@ nav.nav-strib-site {
     margin-top: -2px;
     background-image: image('startribune-logo.png');
     background-image: image('startribune-logo.svg');
-  }
-
-  .icon-home {
-    background-image: image('icon-home.png');
-    background-image: image('icon-home.svg');
-  }
-
-  .icon-search {
-    background-image: image('icon-search.png');
-    background-image: image('icon-search.svg');
-  }
-
-  .icon-person {
-    background-image: image('icon-person.png');
-    background-image: image('icon-person.svg');
   }
 
   .weekly-ads {
