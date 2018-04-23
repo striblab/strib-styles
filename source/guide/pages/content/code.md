@@ -8,15 +8,19 @@ Code and code-like styling.
 ## Inline code
 
 {% example html %}
+
 <p>Here is an inline <code>code</code> example.</p>
 {% endexample %}
 
 ## Code blocks
 
 {% example html %}
+
 <pre><code>
-&lt;p&gt;Here is an inline &lt;code&gt;code&lt;/code&gt; example.&lt;/p&gt;
+&lt;p&gt;Here is an block of code example.  This for
+code that has many lines&lt;/p&gt;
 </code></pre>
+
 {% endexample %}
 
 ## Variables
