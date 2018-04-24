@@ -3,7 +3,7 @@ title: Navigation
 layout: page
 ---
 
-Navigation styling.
+Navigation styling. Note that the StarTribune logo and wordmark are from the [Strib Icons](../content/icons.html), and you will need to make sure the JS is included to use it.
 
 ## Default navigation list
 
@@ -21,13 +21,20 @@ The default is a simple horizontal list.
 
 ## Top nav
 
-The `.top-nav` class is not necessary if within a `header[role="banner"]` element.
+Use `.top-nav` to make a simple nav for the top of a page.
 
 {% example html %}
 
 <nav class="nav-top">
   <div class="container-lg">
-    <a href="/" class="logo" title="Home"><span class="sr-only">Go to homepage</span></a>
+    <a href="/" class="logo" title="Home">      
+      <svg class="strib-icon-svg">
+        <use xlink:href="#strib-strib-logo"></use>
+      </svg>
+
+      <span class="sr-only">Go to homepage</span>
+    </a>
+
     <h1>Style guide</h1>
 
     <ul>
@@ -50,7 +57,10 @@ The following is a not-pixel-perfect reproduction of the navigation found on mos
     <ul class="section-center">
       <li>
         <a href="http://startribune.com/" class="logo">
-          <span class="icon icon-logo"></span>
+          <svg class="strib-icon-svg">
+            <use xlink:href="#strib-strib-logo"></use>
+          </svg>
+
           <span class="sr-only">Star Tribune home</span>
         </a>
       </li>
@@ -58,7 +68,7 @@ The following is a not-pixel-perfect reproduction of the navigation found on mos
 
     <ul class="section-start">
       <li class="spacer-right">
-        <a href="http://startribune.com/" class="home">
+        <a href="http://startribune.com/">
           <i class="strib-icon strib-home"></i>
           <span class="sr-only">Star Tribune home</span>
         </a>
@@ -67,7 +77,7 @@ The following is a not-pixel-perfect reproduction of the navigation found on mos
       <li class="spacer-right">All sections</li>
 
       <li class="spacer-right">
-        <a href="http://startribune.com/search" class="logo">
+        <a href="http://startribune.com/search">
           <i class="strib-icon strib-search"></i>
           <span class="sr-only">Search the Star Tribune</span>
         </a>
@@ -82,14 +92,14 @@ The following is a not-pixel-perfect reproduction of the navigation found on mos
 
     <ul class="section-end">
       <li class="spacer-right">
-        <a href="http://startribune.com/login" class="logo">
+        <a href="http://startribune.com/login">
           <i class="strib-icon strib-person"></i>
           &nbsp;Log in
         </a>
       </li>
 
       <li class="align-end">
-        <a href="http://startribune.com/signup" class="logo">Subscriptions</a>
+        <a href="http://startribune.com/signup">Subscriptions</a>
       </li>
     </ul>
 

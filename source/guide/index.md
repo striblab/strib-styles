@@ -67,3 +67,4 @@ layout: page
 ## Examples
 
 * [Wrapper class](./pages/examples/wrapper.html)
+* [Full page](./pages/examples/full-page.html)

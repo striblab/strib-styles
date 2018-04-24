@@ -3,6 +3,7 @@
  */
 
 // Default nav anywhere
+.nav,
 nav {
   ul,
   ul li {
@@ -31,29 +32,25 @@ nav {
 }
 
 // Nav at top fo page
-nav.nav-top,
-header[role='banner'] nav {
+nav.nav-top {
   padding-top: $spacer-component * 0.75;
   padding-bottom: $spacer-component * 0.75;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-  margin-top: $spacer-component * -0.5;
-
-  .logo {
-    background-image: image('startribune-logo.svg');
-    background-position: left bottom;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
 
   a.logo {
     display: inline-block;
-    min-width: 10em;
-    min-height: 1.5em;
     line-height: 1em;
     transition: opacity 150ms;
+    margin-right: $spacer * 0.5;
 
     &:hover {
       opacity: 0.8;
+    }
+
+    .strib-icon-svg {
+      min-width: 12em;
+      height: 2em;
+      vertical-align: baseline;
     }
   }
 
@@ -79,6 +76,9 @@ nav.nav-strib-site {
   //box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
   position: relative;
   text-align: center;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
 
   [class^='container-'] {
     position: relative;
@@ -141,12 +141,20 @@ nav.nav-strib-site {
     vertical-align: text-top;
   }
 
-  .icon-logo {
-    height: 25px;
-    width: 160px;
-    margin-top: -2px;
-    background-image: image('startribune-logo.png');
-    background-image: image('startribune-logo.svg');
+  a.logo {
+    display: inline-block;
+    line-height: 1em;
+    transition: opacity 150ms;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    .strib-icon-svg {
+      min-width: 13em;
+      height: 2em;
+      vertical-align: baseline;
+    }
   }
 
   .weekly-ads {
@@ -186,11 +194,14 @@ nav.nav-strib-site {
   }
 }
 
+// Sub-nav, site style
 nav.subnav-strib-site {
   border-bottom: 1px solid #e8e8e8;
   box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.3);
   //box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
   text-align: center;
+  padding-top: 0;
+  padding-bottom: 0;
 
   ul {
     display: block;
