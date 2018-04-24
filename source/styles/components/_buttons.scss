@@ -56,7 +56,7 @@ input[type='reset'],
   display: inline-block;
   line-height: 1em;
   margin: 0;
-  padding: $spacer * 0.85 $spacer;
+  padding: $spacer * 0.5 $spacer;
   color: $color-white;
   background-color: map-get($theme, 'green-primary-emerald');
   // Provide border, in case one needs to be added
