@@ -23,7 +23,7 @@ There are many ways to get a button style.
 {% example html %}
 <button type="button">Button</button>
 <button type="button" class="secondary">Secondary</button>
-<button type="button" class="alt">Alt</button>
+<button type="button" class="secondary-dark">Secondary dark</button>
 <button type="button" class="danger">Danger</button>
 <button type="button" class="warning">Warning</button>
 <button type="button" class="dark">Dark</button>
@@ -35,7 +35,7 @@ There are many ways to get a button style.
 {% example html %}
 <button type="button" class="button-outline">Button</button>
 <button type="button" class="button-outline secondary">Secondary</button>
-<button type="button" class="button-outline alt">Alt</button>
+<button type="button" class="button-outline secondary-dark">Secondary dark</button>
 <button type="button" class="button-outline danger">Danger</button>
 <button type="button" class="button-outline warning">Warning</button>
 <button type="button" class="button-outline dark">Dark</button>
@@ -50,7 +50,7 @@ Link style buttons.
 <button type="button">Button</button>
 <button type="button" class="button-link">Button</button>
 <button type="button" class="button-link secondary">Secondary</button>
-<button type="button" class="button-link alt">Alt</button>
+<button type="button" class="button-link secondary-dark">Secondary dark</button>
 <button type="button" class="button-link danger">Danger</button>
 <button type="button" class="button-link warning">Warning</button>
 <button type="button" class="button-link dark">Dark</button>
@@ -62,7 +62,7 @@ Link style buttons.
 {% example html %}
 <button type="button" disabled>Button</button>
 <button type="button" class="secondary" disabled>Secondary</button>
-<button type="button" class="alt" disabled>Alt</button>
+<button type="button" class="secondary-dark" disabled>Secondary dark</button>
 <button type="button" class="danger" disabled>Danger</button>
 <button type="button" class="warning" disabled>Warning</button>
 <button type="button" class="dark" disabled>Dark</button>
@@ -75,7 +75,7 @@ Feel free to use icons in buttons, though, make sure to see the [icons](../conte
 
 {% example html %}
 <button type="button">
-  <i class="strib-icon strib-search"></i>
+<i class="strib-icon strib-search"></i>
 </button>
 
 <button type="button" class="button-outline">
