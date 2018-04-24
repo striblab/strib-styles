@@ -11,7 +11,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@striblab/strib-icons": "0.0.9"
+    "@striblab/strib-icons": "0.0.10"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.3",

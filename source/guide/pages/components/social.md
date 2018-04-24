@@ -42,7 +42,7 @@ Use the appropriate `social-link-*` class to assign the corresponding color to t
 
   <li class="social-link-linkedin">
     <a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fstrib.mn%2Fexample&title=Example+title&summary=Example+summary" target="_blank" rel="noopener">
-      <i class="strib-icon strib-social-linkedin-social"></i>
+      <i class="strib-icon strib-social-linkedin-circle"></i>
       <span class="sr-only">Share this page on LinkedIn</span>
     </a>
   </li>
@@ -107,7 +107,7 @@ Use the `.social-links-muted` class to show a muted version.
 
   <li class="social-link-linkedin">
     <a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fstrib.mn%2Fexample&title=Example+title&summary=Example+summary" target="_blank" rel="noopener">
-      <i class="strib-icon strib-social-linkedin-social"></i>
+      <i class="strib-icon strib-social-linkedin-circle"></i>
       <span class="sr-only">Share this page on LinkedIn</span>
     </a>
   </li>
@@ -143,43 +143,43 @@ Use the `.social-links-muted` class to show a muted version.
 
 <ul class="social-links social-links-vertical social-links-muted">
   <li class="social-link-facebook">
-    <a href="https://www.facebook.com/startribune/" target="_blank" rel="noopener">
-      <i class="strib-icon strib-social-facebook-circle"></i>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fstrib.mn%2Fexample" target="_blank" rel="noopener">
+      <i class="strib-icon strib-social-facebook"></i>
       Share
     </a>
   </li>
 
   <li class="social-link-twitter">
-    <a href="https://twitter.com/StarTribune/" target="_blank" rel="noopener">
-      <i class="strib-icon strib-social-twitter-circle"></i>
+    <a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fstrib.mn%2Fexample&text=Example+text" target="_blank" rel="noopener">
+      <i class="strib-icon strib-social-twitter"></i>
       Tweet
     </a>
   </li>
 
   <li class="social-link-google">
-    <a href="https://plus.google.com/+startribune/" target="_blank" rel="noopener">
-      <i class="strib-icon strib-social-google-circle"></i>
+    <a href="https://plus.google.com/share?url=http%3A%2F%2Fstrib.mn%2Fexample" target="_blank" rel="noopener">
+      <i class="strib-icon strib-social-google"></i>
       Post
     </a>
   </li>
 
   <li class="social-link-pinterest">
-    <a href="http://pinterest.com/startribune/" target="_blank" rel="noopener">
-      <i class="strib-icon strib-social-pinterest-circle"></i>
+    <a href="https://pinterest.com/pin/create/button/?url=http%3A%2F%2Fstrib.mn%2Fexample&description=Example+description" target="_blank" rel="noopener">
+      <i class="strib-icon strib-social-pinterest"></i>
       Pin
     </a>
   </li>
 
-  <li class="social-link-instagram">
-    <a href="http://www.instagram.com/startribune/" target="_blank" rel="noopener">
-      <i class="strib-icon strib-social-instagram-circle"></i>
-      Post
+  <li class="social-link-linkedin">
+    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fstrib.mn%2Fexample&title=Example+title&summary=Example+summary" target="_blank" rel="noopener">
+      <i class="strib-icon strib-social-linkedin"></i>
+      Share
     </a>
   </li>
 
   <li class="social-link-tumblr">
-    <a href="http://startribune.tumblr.com/" target="_blank" rel="noopener">
-      <i class="strib-icon strib-social-tumblr-circle"></i>
+    <a href="http://www.tumblr.com/share/link?url=http%3A%2F%2Fstrib.mn%2Fexample" target="_blank" rel="noopener">
+      <i class="strib-icon strib-social-tumblr"></i>
       Post
     </a>
   </li>
