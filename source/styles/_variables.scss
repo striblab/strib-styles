@@ -272,6 +272,22 @@ $colors-political: (
   dfl: #0d4673
 ) !default;
 
+// Social colors
+$colors-social: (
+  facebook: #3b5998,
+  twitter: #55acee,
+  google: #dd4b39,
+  pinterest: #cb2027,
+  instagram: #e95950,
+  tumblr: #32506d,
+  flickr: #ff0084,
+  youtube: #ff0000,
+  whatsapp: #4dc247,
+  vimeo: #aad450,
+  reddit: #ff4500,
+  linkedin: #007bb5
+) !default;
+
 // Breakpoints
 $breakpoints: (
   default: 0,

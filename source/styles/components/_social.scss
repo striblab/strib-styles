@@ -1,0 +1,98 @@
+/**
+ * Social links and the such.
+ */
+
+.social-links {
+  display: block;
+  margin: 0 0 $spacer * 0.5;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    font-size: $font-size-xlarge;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  i {
+    color: map-get($theme, green-primary-spring);
+    transition: color 500ms;
+
+    &:hover {
+      color: darken(map-get($theme, green-primary-spring), 15);
+    }
+  }
+
+  &.social-links-muted a i {
+    color: map-get($grays, light);
+  }
+
+  &.social-links-muted a:hover i {
+    color: map-get($theme, green-primary-spring);
+  }
+
+  @each $s, $color in $colors-social {
+    .social-link-#{$s} a i {
+      color: $color;
+    }
+
+    .social-link-#{$s} a:hover i {
+      color: darken($color, 15);
+    }
+  }
+
+  @each $s, $color in $colors-social {
+    &.social-links-muted .social-link-#{$s} a i {
+      color: map-get($grays, light);
+    }
+
+    &.social-links-muted .social-link-#{$s} a:hover i {
+      color: $color;
+    }
+  }
+
+  &.social-links-vertical {
+    max-width: 10em;
+    color: map-get($grays, light);
+
+    li {
+      display: block;
+      text-align: left;
+    }
+
+    a {
+      display: block;
+      text-align: left;
+      font-size: $font-size-micro;
+      border-bottom: 1px solid map-get($grays, light);
+      padding-bottom: $spacer * 0.5;
+      margin-bottom: $spacer * 0.5;
+      color: map-get($grays, light);
+      text-transform: uppercase;
+      padding-left: $spacer * 0.25;
+
+      &:hover {
+        color: $color-text;
+      }
+
+      i {
+        font-size: 1.75em;
+        margin-right: 0.5em;
+
+        &:before {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}

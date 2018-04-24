@@ -19,7 +19,6 @@
 @import 'layout/layout';
 @import 'layout/containers';
 @import 'layout/grid';
-@import 'layout/footers';
 
 // @import 'st-bug';
 // @import 'st-gallery';
@@ -30,6 +29,7 @@
 // @import 'st-quote';
 // @import 'st-video';
 
+@import 'components/footers';
 @import 'components/navigation';
 @import 'components/credits';
 @import 'components/hero';
@@ -39,5 +39,6 @@
 @import 'components/buttons';
 @import 'components/forms';
 @import 'components/gallery';
+@import 'components/social';
 
 @import 'utilities/debug';

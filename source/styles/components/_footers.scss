@@ -76,6 +76,26 @@ footer.footer-strib-site {
     background-size: contain;
   }
 
+  .social-links {
+    display: inline-block;
+    margin-left: 1em;
+    margin-bottom: 0;
+    vertical-align: bottom;
+    text-align: left;
+
+    a {
+      font-size: 2.5em;
+      margin-right: 0.05em;
+      margin-left: 0.05em;
+      text-align: left;
+      vertical-align: bottom;
+    }
+
+    a i::before {
+      vertical-align: bottom;
+    }
+  }
+
   .link-set {
     a {
       color: #444444;
@@ -86,7 +106,7 @@ footer.footer-strib-site {
       text-transform: uppercase;
       font-weight: bold;
       margin-bottom: 0.5em;
-      color: map-get($theme, green-light);
+      color: map-get($theme, green-primary-spring);
       letter-spacing: 1px;
     }
 

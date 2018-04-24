@@ -80,8 +80,52 @@ A not-pixel-perfect replication of the Star Tribune web site footer.
   <div class="container-lg">
     <div class="footer-strib-site-top-section">
       <div class="logo"></div>
+      
       <span>Follow us on:</span>
-      <!-- TODO: social share icons -->
+
+      <ul class="social-links">
+        <li>
+          <a href="https://www.facebook.com/startribune/" target="_blank" rel="noopener">
+            <i class="strib-icon strib-social-facebook-circle"></i>
+            <span class="sr-only">Star Tribune Facebook page</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://twitter.com/StarTribune/" target="_blank" rel="noopener">
+            <i class="strib-icon strib-social-twitter-circle"></i>
+            <span class="sr-only">Star Tribune Twitter account</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://plus.google.com/+startribune/" target="_blank" rel="noopener">
+            <i class="strib-icon strib-social-google-circle"></i>
+            <span class="sr-only">Star Tribune Google+ account</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="http://pinterest.com/startribune/" target="_blank" rel="noopener">
+            <i class="strib-icon strib-social-pinterest-circle"></i>
+            <span class="sr-only">Star Tribune Pinterest page</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="http://www.instagram.com/startribune/" target="_blank" rel="noopener">
+            <i class="strib-icon strib-social-instagram-circle"></i>
+            <span class="sr-only">Star Tribune Instagram account</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="http://startribune.tumblr.com/" target="_blank" rel="noopener">
+            <i class="strib-icon strib-social-tumblr-circle"></i>
+            <span class="sr-only">Star Tribune Tumblr page</span>
+          </a>
+        </li>
+      </ul>
     </div>
 
     <div class="row link-set">
