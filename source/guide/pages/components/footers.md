@@ -78,9 +78,11 @@ A not-pixel-perfect replication of the Star Tribune web site footer.
 
 <footer role="contentinfo" class="with-copyright footer-strib-site">
   <div class="container-lg">
-    <div class="footer-strib-site-top-section">
-      <div class="logo"></div>
-      
+    <div class="footer-strib-site-top-section">      
+      <svg class="strib-icon-svg logo">
+        <use xlink:href="#strib-strib-logo"></use>
+      </svg>
+
       <span>Follow us on:</span>
 
       <ul class="social-links">
