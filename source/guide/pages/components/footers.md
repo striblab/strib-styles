@@ -26,14 +26,14 @@ The page footer is simply a footer with semantic tags. Add copy right section if
 
 ## Article footer
 
-This is a general style for credits at the bottom of the article. You can use the `.article-footer` class if for some reason you are unable to use semantic tags. This is repeated in the [bylines and credits section](./credits.html).
+This is a general style for credits at the bottom of the article. You can use the `.article-footer` class. This is repeated in the [bylines and credits section](./credits.html).
 
 {% example html %}
 
 <article>
   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 
-  <footer>
+  <footer class="article-footer">
     <div class="byline">
       <address>
         <a rel="author" href="mailto:john.doe@example.com">john.doe@example.com</a>
@@ -53,7 +53,7 @@ For a longer list of credits at the bottom of a project.
 <article>
   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 
-  <footer>
+  <footer class="article-footer">
     <h1>Credits</h1>
 
     <ul class="credits">

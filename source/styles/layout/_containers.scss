@@ -73,7 +73,6 @@
 
 // Container for copy
 .container-copy {
-  margin-right: auto;
-  margin-left: auto;
+  @extend .container;
   max-width: 40em;
 }

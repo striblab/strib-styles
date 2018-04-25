@@ -24,9 +24,9 @@ footer[role='contentinfo'] {
   }
 }
 
-// Articles
-.article-footer,
-article footer {
+// Articles.  There could be many footers embedded in
+// an <article> tag, so use class.
+.article-footer {
   font-size: $font-size-small;
   border-top: 1px solid map-get($grays, medium-light);
   padding-top: $spacer-component;
