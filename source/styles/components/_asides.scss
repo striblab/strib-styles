@@ -16,6 +16,7 @@ aside {
   .copy,
   p {
     @include all-contexts('default');
+    font-size: $font-size-small;
   }
 
   // Update headings
@@ -29,47 +30,50 @@ aside {
       margin-top: 0;
     }
   }
+}
 
-  &.aside-right {
-    width: $spacer-component * 10;
-    float: right;
-    margin: 0 0 $spacer-component $spacer-component * 2;
-  }
+.aside-right {
+  width: $spacer-component * 10;
+  float: right;
+  margin: 0 0 $spacer-component $spacer-component * 2;
+}
 
-  &.aside-left {
-    width: $spacer-component * 10;
-    float: left;
-    margin: 0 $spacer-component * 2 $spacer-component 0;
-  }
+.aside-left {
+  width: $spacer-component * 10;
+  float: left;
+  margin: 0 $spacer-component * 2 $spacer-component 0;
+}
 
-  &.aside-right.aside-pull {
-    margin-right: $spacer-component * -5;
-  }
+.aside-right.aside-pull {
+  margin-right: $spacer-component * -5;
+}
 
-  &.aside-left.aside-pull {
-    margin-right: $spacer-component * -5;
-  }
+.aside-left.aside-pull {
+  margin-right: $spacer-component * -5;
+}
 
-  @each $breakpoint, $value in $breakpoints {
-    $infix: breakpoint-infix($breakpoint);
+// TODO: Styles that allow for full width at a specific breakpoint
 
-    @if $infix {
-      &.aside-right.aside-pull#{$infix} {
-        margin-right: 0;
+// Responsive pulls
+@each $breakpoint, $value in $breakpoints {
+  $infix: breakpoint-infix($breakpoint);
+
+  @if $infix {
+    .aside-right.aside-pull#{$infix} {
+      margin-right: 0;
+    }
+
+    .aside-left.aside-pull#{$infix} {
+      margin-left: 0;
+    }
+
+    @include media-breakpoint-up($breakpoint) {
+      .aside-right.aside-pull#{$infix} {
+        margin-right: $spacer-component * -5;
       }
 
-      &.aside-left.aside-pull#{$infix} {
-        margin-left: 0;
-      }
-
-      @include media-breakpoint-up($breakpoint) {
-        &.aside-right.aside-pull#{$infix} {
-          margin-right: $spacer-component * -5;
-        }
-
-        &.aside-left.aside-pull#{$infix} {
-          margin-left: $spacer-component * -5;
-        }
+      .aside-left.aside-pull#{$infix} {
+        margin-left: $spacer-component * -5;
       }
     }
   }
