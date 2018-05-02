@@ -67,4 +67,5 @@ layout: page
 ## Examples
 
 * [Wrapper class](./pages/examples/wrapper.html)
-* [Full page](./pages/examples/full-page.html)
+* [Full page single column](./pages/examples/full-page.html)
+* [Full page aside column](./pages/examples/feature-aside-column.html)

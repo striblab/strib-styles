@@ -31,6 +31,19 @@
     padding-bottom: $spacer-component;
   }
 
+  // Middle part of hero, mostly used with .hero-full
+  .hero-middle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    left: 0;
+    right: 0;
+
+    // Reflects padding in .hero-full
+    padding: $spacer-component;
+  }
+
   // Scroll down
   .scroll-down {
     text-transform: uppercase;
@@ -68,15 +81,13 @@
   }
 
   &.hero-fade-in {
-    background-color: $color-black;
-    color: $color-white;
     animation: anim-hero-fadein 3.2s ease-out forwards;
   }
 
   // Full background-image approach
   &.hero-full {
     height: 100vh;
-    height: calc(100vh - 80px);
+    // TODO: Deal with possible header nav
     padding-left: $spacer-component;
     padding-right: $spacer-component;
 
@@ -89,4 +100,21 @@
       text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
     }
   }
+
+  &.hero-with-header-nav,
+  &.hero-with-header-subnav {
+    height: 95vh;
+    height: calc(100vh - 40px);
+  }
+
+  &.hero-with-header-nav.hero-with-header-subnav {
+    height: 95vh;
+    height: calc(100vh - 40px - 40px);
+  }
+}
+
+.sub-hero {
+  padding-top: $spacer * 4;
+  margin-bottom: $spacer * 4;
+  text-align: center;
 }
