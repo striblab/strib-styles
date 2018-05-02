@@ -35,14 +35,29 @@ Note that if you load an image with multiple sources, the browser will simply us
 
 ## Figure
 
-A figure can be anything really, though often is an image or video. Figures usually need a caption which can be inserted with `<figcaption>`. Often a source is needed with an image. Though there is not a very appropriate HTML tag for this, the `cite` tag is used. 
+A figure can be anything really, though often is an image or video. Figures usually need a caption which can be inserted with `<figcaption>`. Often a source is needed with an image. Though there is not a very appropriate HTML tag for this, the `cite` tag is used.
 
 {% example html %}
 
 <figure>
- 	<img src="http://placekitten.com/1200/420" alt="Kitten placeholder image">
-	<cite>PlaceKitten</cite>
-	<figcaption><span class="readin">Feline Frenzy: </span>Fuzzy the kitten pounces on imaginary mice in her winter wonderland.</figcaption>
+  <img src="http://placekitten.com/1200/420" alt="Kitten placeholder image">
+  <cite>PlaceKitten</cite>
+  <figcaption><span class="readin">Feline Frenzy: </span>Fuzzy the kitten pounces on imaginary mice in her winter wonderland.</figcaption>
+</figure>
+
+{% endexample %}
+
+### Figure objects
+
+If you figure needs a bit of spacing at the bottom before the cite or caption, add the `.figure-object` class.
+
+{% example html %}
+
+<figure>
+  <div class="figure-object example-fill" style="height: 5em;">&nbsp;</div>
+
+  <figcaption><span class="readin">Figure spacing: </span>Use the <code>.figure-object</code> class to give the figure some bottom spacing.</figcaption>
+
 </figure>
 
 {% endexample %}

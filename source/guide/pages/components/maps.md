@@ -11,11 +11,13 @@ Best practices and styles for using maps.
 ## Mapbox example
 
 {% example html %}
+
 <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js"></script>
+
 <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css" rel="stylesheet">
 
 <figure>
-  <div id="map" class="" style="height: 30em;"></div>
+  <div id="map" class="figure-object" style="height: 30em;"></div>
 
   <figcaption>
     This map depicts blah blah blah.  Some map and design data
@@ -37,14 +39,17 @@ var map = new mapboxgl.Map({
 var nav = new mapboxgl.NavigationControl();
 map.addControl(nav, 'top-left');
 </script>
+
 {% endexample %}
 
 {% example html %}
+
 <script src="https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"></script>
+
 <link href="https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css" rel="stylesheet">
 
 <figure>
-  <div id="map-fallback" class="" style="height: 30em;"></div>
+  <div id="map-fallback" class="figure-object" style="height: 30em;"></div>
 
   <figcaption>
     This map depicts blah blah blah.  Some map and design data
@@ -61,4 +66,5 @@ var fallbackMap = L.mapbox.map('map-fallback', undefined, {
 var styleLayer = L.mapbox.styleLayer('mapbox://styles/shadowflare/cjfljh7oh6v6k2smuvb3jftac')
     .addTo(fallbackMap);
 </script>
+
 {% endexample %}

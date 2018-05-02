@@ -24,5 +24,12 @@ figcaption {
   font-size: $font-size-small-adjust;
   color: $color-text-sub;
   letter-spacing: normal;
-  span.readin {font-weight:bold;}
+  span.readin {
+    font-weight: bold;
+  }
+}
+
+// Use if some bottom spacing is needed
+.figure-object {
+  margin-bottom: $spacer * 0.5;
 }
