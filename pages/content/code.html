@@ -30,7 +30,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Strib icons -->
-    <link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.9/strib-icons.css" type="text/css">
+    <link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.10/strib-icons.css" type="text/css">
 
     <!-- Actual style guide styles -->
     <link rel="stylesheet" href="../../build/strib-styles.default-debug.css" type="text/css">
@@ -61,15 +61,17 @@
 
     <!-- Header -->
     <header role="banner">
-      <nav>
+      <nav class="nav-top">
         <div class="container-lg">
-          <a href="../.." class="logo" title="Home"><span class="sr-only">Go to homepage</span></a>
-          <h1>Style guide</h1>
+          <a href="/" class="logo" title="Home">
+            <svg class="strib-icon-svg">
+              <use xlink:href="#strib-strib-logo"></use>
+            </svg>
 
-          <ul>
-            <li><a href="../..">Layout</a></li>
-            <li><a href="../..">Styles</a></li>
-          </ul>
+            <span class="sr-only">Go to homepage</span>
+          </a>
+
+          <h1>Style guide</h1>
         </div>
       </nav>
 
@@ -92,11 +94,13 @@
 
 <div class="strib-guide-example" data-example-id="">
 <pre><code>
-&lt;p&gt;Here is an inline &lt;code&gt;code&lt;/code&gt; example.&lt;/p&gt;
+&lt;p&gt;Here is an block of code example.  This for
+code that has many lines&lt;/p&gt;
 </code></pre>
 </div>
 <div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;pre&gt;&lt;code&gt;</span>
-<span class="ni">&amp;lt;</span>p<span class="ni">&amp;gt;</span>Here is an inline <span class="ni">&amp;lt;</span>code<span class="ni">&amp;gt;</span>code<span class="ni">&amp;lt;</span>/code<span class="ni">&amp;gt;</span> example.<span class="ni">&amp;lt;</span>/p<span class="ni">&amp;gt;</span>
+<span class="ni">&amp;lt;</span>p<span class="ni">&amp;gt;</span>Here is an block of code example.  This for
+code that has many lines<span class="ni">&amp;lt;</span>/p<span class="ni">&amp;gt;</span>
 <span class="nt">&lt;/code&gt;&lt;/pre&gt;</span></code></pre></div>
 
 <h2 id="variables">Variables</h2>
@@ -137,6 +141,9 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
         </div>
       </div>
     </footer>
+
+    <!-- Strib icons SVG -->
+    <script src="//static.startribune.com/assets/libs/strib-icons/0.0.10/strib-icons.js"></script>
 
     <!-- Dependencies for JS (note the Strib site uses jQuery 1.11) -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

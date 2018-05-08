@@ -30,7 +30,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Strib icons -->
-    <link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.9/strib-icons.css" type="text/css">
+    <link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.10/strib-icons.css" type="text/css">
 
     <!-- Actual style guide styles -->
     <link rel="stylesheet" href="../../build/strib-styles.default-debug.css" type="text/css">
@@ -61,15 +61,17 @@
 
     <!-- Header -->
     <header role="banner">
-      <nav>
+      <nav class="nav-top">
         <div class="container-lg">
-          <a href="../.." class="logo" title="Home"><span class="sr-only">Go to homepage</span></a>
-          <h1>Style guide</h1>
+          <a href="/" class="logo" title="Home">
+            <svg class="strib-icon-svg">
+              <use xlink:href="#strib-strib-logo"></use>
+            </svg>
 
-          <ul>
-            <li><a href="../..">Layout</a></li>
-            <li><a href="../..">Styles</a></li>
-          </ul>
+            <span class="sr-only">Go to homepage</span>
+          </a>
+
+          <h1>Style guide</h1>
         </div>
       </nav>
 
@@ -83,17 +85,40 @@
 
 <h2 id="theme-colors">Theme colors</h2>
 
-<p>All these colors are managed in the <code class="highlighter-rouge">$theme</code> SASS variable.</p>
+<p>All these colors are managed in the <code class="highlighter-rouge">$theme</code> SASS variable. The brand-specific primary and secondary greens are the following:</p>
 
 <div class="cf">
-  <div class="example-color-swatch color-bg-green-dark">.color-bg-green-dark</div>
-  <div class="example-color-swatch color-bg-green-dark-alt">.color-bg-green-dark-alt</div>
-  <div class="example-color-swatch color-bg-green-medium">.color-bg-green-medium</div>
-  <div class="example-color-swatch color-bg-green-light">.color-bg-green-light</div>
-  <div class="example-color-swatch color-bg-blue-dark">.color-bg-blue-dark</div>
+  <div class="example-color-swatch color-bg-green-primary-emerald">.color-bg-green-primary-emerald</div>
+  <div class="example-color-swatch color-bg-green-primary-spring">.color-bg-green-primary-spring</div>
+  <div class="example-color-swatch color-bg-green-secondary-forest">.color-bg-green-secondary-forest</div>
+</div>
+
+<p>Alternatives and other colors available to follow the pallet if needed:</p>
+
+<div>
+  <div class="cf">
+    <div class="example-color-swatch color-bg-green-secondary-light">.color-bg-green-secondary-light</div>
+  </div>
+
+  <div class="cf">
+    <div class="example-color-swatch color-bg-blue-light">.color-bg-blue-light</div>
+    <div class="example-color-swatch color-bg-blue-dark">.color-bg-blue-dark</div>
+  </div>
+
+  <div class="cf">
   <div class="example-color-swatch color-bg-yellow-light">.color-bg-yellow-light</div>
-  <div class="example-color-swatch color-bg-orange-dark">.color-bg-orange-dark</div>
-  <div class="example-color-swatch color-bg-red-dark">.color-bg-red-dark</div>
+    <div class="example-color-swatch color-bg-yellow-dark">.color-bg-yellow-dark</div>
+  </div>
+
+  <div class="cf">
+    <div class="example-color-swatch color-bg-orange-light">.color-bg-orange-light</div>
+    <div class="example-color-swatch color-bg-orange-dark">.color-bg-orange-dark</div>
+  </div>
+
+  <div class="cf">
+    <div class="example-color-swatch color-bg-red-light">.color-bg-red-light</div>
+    <div class="example-color-swatch color-bg-red-dark">.color-bg-red-dark</div>
+  </div>
 </div>
 
 <h2 id="grays">Grays</h2>
@@ -101,7 +126,6 @@
 <p>All these colors are managed in the <code class="highlighter-rouge">$grays</code> SASS variable.</p>
 
 <div class="cf">
-  <div class="example-color-swatch color-bg-gray-darker">.color-bg-gray-darker</div>
   <div class="example-color-swatch color-bg-gray-dark">.color-bg-gray-dark</div>
   <div class="example-color-swatch color-bg-gray-medium">.color-bg-gray-medium</div>
   <div class="example-color-swatch color-bg-gray-medium-light">.color-bg-gray-medium-light</div>
@@ -112,7 +136,7 @@
 
 <h2 id="black-and-white">Black and white</h2>
 
-<p>Black and white are stored as vairables, <code class="highlighter-rouge">$color-black</code> and <code class="highlighter-rouge">$color-white</code>, in case there is a need to use slightly off values.</p>
+<p>Black and white are stored as vairables, <code class="highlighter-rouge">$color-black</code> and <code class="highlighter-rouge">$color-white</code>. The black is a specific off-black color.</p>
 
 <div class="cf">.
   <div class="example-color-swatch color-bg-white">.color-bg-white</div>
@@ -240,6 +264,9 @@
         </div>
       </div>
     </footer>
+
+    <!-- Strib icons SVG -->
+    <script src="//static.startribune.com/assets/libs/strib-icons/0.0.10/strib-icons.js"></script>
 
     <!-- Dependencies for JS (note the Strib site uses jQuery 1.11) -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

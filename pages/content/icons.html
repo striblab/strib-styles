@@ -30,7 +30,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Strib icons -->
-    <link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.9/strib-icons.css" type="text/css">
+    <link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.10/strib-icons.css" type="text/css">
 
     <!-- Actual style guide styles -->
     <link rel="stylesheet" href="../../build/strib-styles.default-debug.css" type="text/css">
@@ -61,15 +61,17 @@
 
     <!-- Header -->
     <header role="banner">
-      <nav>
+      <nav class="nav-top">
         <div class="container-lg">
-          <a href="../.." class="logo" title="Home"><span class="sr-only">Go to homepage</span></a>
-          <h1>Style guide</h1>
+          <a href="/" class="logo" title="Home">
+            <svg class="strib-icon-svg">
+              <use xlink:href="#strib-strib-logo"></use>
+            </svg>
 
-          <ul>
-            <li><a href="../..">Layout</a></li>
-            <li><a href="../..">Styles</a></li>
-          </ul>
+            <span class="sr-only">Go to homepage</span>
+          </a>
+
+          <h1>Style guide</h1>
         </div>
       </nav>
 
@@ -79,7 +81,7 @@
     <main id="main-content" class="container-lg" role="main">
       <h1>Icons</h1>
 
-      <p>The <a href="https://striblab.github.io/strib-icons/">Star Tribune icons</a> set is a useful set of icons for common Star Tribune projects.  Icons are <strong>not included in the styles</strong>, but as described in the project, there are a few ways to include it.</p>
+      <p>The <a href="https://striblab.github.io/strib-icons/">Star Tribune icons</a> set is a useful set of icons for common Star Tribune projects. Icons are <strong>not included in the styles</strong>, but as described in the project, there are a few ways to include it.</p>
 
 <ul>
   <li>Simply include the CSS on your page.</li>
@@ -89,7 +91,7 @@
     </ul>
   </li>
   <li>You can use it with SASS by installing, such as <code class="highlighter-rouge">npm install @striblab/strib-icons</code>, then importing like:
-    <div class="language-sass highlighter-rouge"><pre class="highlight"><code><span class="nv">$strib-fonts-location</span><span class="p">:</span> <span class="s1">'//static.startribune.com/assets/libs/strib-icons/0.0.9/'</span><span class="err">;</span>
+    <div class="language-sass highlighter-rouge"><pre class="highlight"><code><span class="nv">$strib-fonts-location</span><span class="p">:</span> <span class="s1">'//static.startribune.com/assets/libs/strib-icons/0.0.10/'</span><span class="err">;</span>
 <span class="k">@import</span> <span class="s">'../../../node_modules/@striblab/strib-icons/build/strib-icons.scss';</span>
 </code></pre>
     </div>
@@ -120,7 +122,7 @@
 <p>Note, if you only want to use the SVG icons, the default styles have the necessary styles, so all you need is the JS from the Star Tribune icons.</p>
 
 <div class="strib-guide-example" data-example-id="">
-<script src="//static.startribune.com/assets/libs/strib-icons/0.0.9/strib-icons.js"></script>
+<script src="//static.startribune.com/assets/libs/strib-icons/0.0.10/strib-icons.js"></script>
 
 <svg class="strib-icon-svg">
   <use xlink:href="#strib-home"></use>
@@ -142,7 +144,7 @@
   <use xlink:href="#strib-strib-star"></use>
 </svg>
 </div>
-<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//static.startribune.com/assets/libs/strib-icons/0.0.9/strib-icons.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//static.startribune.com/assets/libs/strib-icons/0.0.10/strib-icons.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 
 <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"strib-icon-svg"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"#strib-home"</span><span class="nt">&gt;&lt;/use&gt;</span>
@@ -179,6 +181,9 @@
         </div>
       </div>
     </footer>
+
+    <!-- Strib icons SVG -->
+    <script src="//static.startribune.com/assets/libs/strib-icons/0.0.10/strib-icons.js"></script>
 
     <!-- Dependencies for JS (note the Strib site uses jQuery 1.11) -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

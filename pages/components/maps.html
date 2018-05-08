@@ -30,7 +30,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Strib icons -->
-    <link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.9/strib-icons.css" type="text/css">
+    <link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.10/strib-icons.css" type="text/css">
 
     <!-- Actual style guide styles -->
     <link rel="stylesheet" href="../../build/strib-styles.default-debug.css" type="text/css">
@@ -61,15 +61,17 @@
 
     <!-- Header -->
     <header role="banner">
-      <nav>
+      <nav class="nav-top">
         <div class="container-lg">
-          <a href="../.." class="logo" title="Home"><span class="sr-only">Go to homepage</span></a>
-          <h1>Style guide</h1>
+          <a href="/" class="logo" title="Home">
+            <svg class="strib-icon-svg">
+              <use xlink:href="#strib-strib-logo"></use>
+            </svg>
 
-          <ul>
-            <li><a href="../..">Layout</a></li>
-            <li><a href="../..">Styles</a></li>
-          </ul>
+            <span class="sr-only">Go to homepage</span>
+          </a>
+
+          <h1>Style guide</h1>
         </div>
       </nav>
 
@@ -85,10 +87,11 @@
 
 <div class="strib-guide-example" data-example-id="">
 <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js"></script>
+
 <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css" rel="stylesheet" />
 
 <figure>
-  <div id="map" class="" style="height: 30em;"></div>
+  <div id="map" class="figure-object" style="height: 30em;"></div>
 
   <figcaption>
     This map depicts blah blah blah.  Some map and design data
@@ -112,10 +115,11 @@ map.addControl(nav, 'top-left');
 </script>
 </div>
 <div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+
 <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
 
 <span class="nt">&lt;figure&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"map"</span> <span class="na">style=</span><span class="s">"height: 30em;"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"map"</span> <span class="na">class=</span><span class="s">"figure-object"</span> <span class="na">style=</span><span class="s">"height: 30em;"</span><span class="nt">&gt;&lt;/div&gt;</span>
 
   <span class="nt">&lt;figcaption&gt;</span>
     This map depicts blah blah blah.  Some map and design data
@@ -140,10 +144,11 @@ map.addControl(nav, 'top-left');
 
 <div class="strib-guide-example" data-example-id="">
 <script src="https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"></script>
+
 <link href="https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css" rel="stylesheet" />
 
 <figure>
-  <div id="map-fallback" class="" style="height: 30em;"></div>
+  <div id="map-fallback" class="figure-object" style="height: 30em;"></div>
 
   <figcaption>
     This map depicts blah blah blah.  Some map and design data
@@ -162,10 +167,11 @@ var styleLayer = L.mapbox.styleLayer('mapbox://styles/shadowflare/cjfljh7oh6v6k2
 </script>
 </div>
 <div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+
 <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
 
 <span class="nt">&lt;figure&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"map-fallback"</span> <span class="na">style=</span><span class="s">"height: 30em;"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"map-fallback"</span> <span class="na">class=</span><span class="s">"figure-object"</span> <span class="na">style=</span><span class="s">"height: 30em;"</span><span class="nt">&gt;&lt;/div&gt;</span>
 
   <span class="nt">&lt;figcaption&gt;</span>
     This map depicts blah blah blah.  Some map and design data
@@ -198,6 +204,9 @@ var styleLayer = L.mapbox.styleLayer('mapbox://styles/shadowflare/cjfljh7oh6v6k2
         </div>
       </div>
     </footer>
+
+    <!-- Strib icons SVG -->
+    <script src="//static.startribune.com/assets/libs/strib-icons/0.0.10/strib-icons.js"></script>
 
     <!-- Dependencies for JS (note the Strib site uses jQuery 1.11) -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

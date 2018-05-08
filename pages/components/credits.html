@@ -30,7 +30,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Strib icons -->
-    <link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.9/strib-icons.css" type="text/css">
+    <link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.10/strib-icons.css" type="text/css">
 
     <!-- Actual style guide styles -->
     <link rel="stylesheet" href="../../build/strib-styles.default-debug.css" type="text/css">
@@ -61,15 +61,17 @@
 
     <!-- Header -->
     <header role="banner">
-      <nav>
+      <nav class="nav-top">
         <div class="container-lg">
-          <a href="../.." class="logo" title="Home"><span class="sr-only">Go to homepage</span></a>
-          <h1>Style guide</h1>
+          <a href="/" class="logo" title="Home">
+            <svg class="strib-icon-svg">
+              <use xlink:href="#strib-strib-logo"></use>
+            </svg>
 
-          <ul>
-            <li><a href="../..">Layout</a></li>
-            <li><a href="../..">Styles</a></li>
-          </ul>
+            <span class="sr-only">Go to homepage</span>
+          </a>
+
+          <h1>Style guide</h1>
         </div>
       </nav>
 
@@ -176,7 +178,7 @@
 <article>
   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 
-  <footer>
+  <footer class="article-footer">
     <div class="byline">
       <address>
         <a rel="author" href="mailto:john.doe@example.com">john.doe@example.com</a>
@@ -189,7 +191,7 @@
 <div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;article&gt;</span>
   <span class="nt">&lt;p&gt;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<span class="nt">&lt;/p&gt;</span>
 
-  <span class="nt">&lt;footer&gt;</span>
+  <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"article-footer"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"byline"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;address&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">rel=</span><span class="s">"author"</span> <span class="na">href=</span><span class="s">"mailto:john.doe@example.com"</span><span class="nt">&gt;</span>john.doe@example.com<span class="nt">&lt;/a&gt;</span>
@@ -205,26 +207,38 @@
 <article>
   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 
-  <footer>
-    <div class="byline-expanded">
-      <address>
-        <a rel="author" href="mailto:john.doe@example.com">john.doe@example.com</a>
-        <a rel="author" href="tel:1-555-555-5555">(555) 555-5555</a>
-      </address>
-    </div>
+  <footer class="article-footer">
+    <h1>Credits</h1>
+
+    <ul class="credits">
+      <li>Edited by John DoeEditor</li>
+      <li>Data analysis by Jane DoeData</li>
+      <li>Design and development by Jem DoeDesign</li>
+    </ul>
+
+    <h1>Methodology</h1>
+
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
   </footer>
 </article>
 </div>
 <div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;article&gt;</span>
   <span class="nt">&lt;p&gt;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<span class="nt">&lt;/p&gt;</span>
 
-  <span class="nt">&lt;footer&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"byline-expanded"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;address&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">rel=</span><span class="s">"author"</span> <span class="na">href=</span><span class="s">"mailto:john.doe@example.com"</span><span class="nt">&gt;</span>john.doe@example.com<span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">rel=</span><span class="s">"author"</span> <span class="na">href=</span><span class="s">"tel:1-555-555-5555"</span><span class="nt">&gt;</span>(555) 555-5555<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;/address&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"article-footer"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Credits<span class="nt">&lt;/h1&gt;</span>
+
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"credits"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Edited by John DoeEditor<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Data analysis by Jane DoeData<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Design and development by Jem DoeDesign<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+
+    <span class="nt">&lt;h1&gt;</span>Methodology<span class="nt">&lt;/h1&gt;</span>
+
+    <span class="nt">&lt;p&gt;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<span class="nt">&lt;/p&gt;</span>
+
   <span class="nt">&lt;/footer&gt;</span>
 <span class="nt">&lt;/article&gt;</span></code></pre></div>
 
@@ -243,6 +257,9 @@
         </div>
       </div>
     </footer>
+
+    <!-- Strib icons SVG -->
+    <script src="//static.startribune.com/assets/libs/strib-icons/0.0.10/strib-icons.js"></script>
 
     <!-- Dependencies for JS (note the Strib site uses jQuery 1.11) -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

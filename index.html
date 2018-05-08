@@ -30,7 +30,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Strib icons -->
-    <link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.9/strib-icons.css" type="text/css">
+    <link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.10/strib-icons.css" type="text/css">
 
     <!-- Actual style guide styles -->
     <link rel="stylesheet" href="./build/strib-styles.default-debug.css" type="text/css">
@@ -61,15 +61,17 @@
 
     <!-- Header -->
     <header role="banner">
-      <nav>
+      <nav class="nav-top">
         <div class="container-lg">
-          <a href="." class="logo" title="Home"><span class="sr-only">Go to homepage</span></a>
-          <h1>Style guide</h1>
+          <a href="/" class="logo" title="Home">
+            <svg class="strib-icon-svg">
+              <use xlink:href="#strib-strib-logo"></use>
+            </svg>
 
-          <ul>
-            <li><a href=".">Layout</a></li>
-            <li><a href=".">Styles</a></li>
-          </ul>
+            <span class="sr-only">Go to homepage</span>
+          </a>
+
+          <h1>Style guide</h1>
         </div>
       </nav>
 
@@ -128,6 +130,7 @@
   <li><a href="./pages/components/buttons.html">Buttons</a></li>
   <li><a href="./pages/components/forms.html">Forms</a></li>
   <li><a href="./pages/components/gallery.html">Galleries</a></li>
+  <li><a href="./pages/components/social.html">Social and sharing</a></li>
   <li><a href="./pages/components/maps.html">Maps</a></li>
 </ul>
 
@@ -153,6 +156,8 @@
 
 <ul>
   <li><a href="./pages/examples/wrapper.html">Wrapper class</a></li>
+  <li><a href="./pages/examples/full-page.html">Full page single column</a></li>
+  <li><a href="./pages/examples/feature-aside-column.html">Full page aside column</a></li>
 </ul>
 
     </main>
@@ -169,6 +174,9 @@
         </div>
       </div>
     </footer>
+
+    <!-- Strib icons SVG -->
+    <script src="//static.startribune.com/assets/libs/strib-icons/0.0.10/strib-icons.js"></script>
 
     <!-- Dependencies for JS (note the Strib site uses jQuery 1.11) -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

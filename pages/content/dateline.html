@@ -30,7 +30,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Strib icons -->
-    <link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.9/strib-icons.css" type="text/css">
+    <link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.10/strib-icons.css" type="text/css">
 
     <!-- Actual style guide styles -->
     <link rel="stylesheet" href="../../build/strib-styles.default-debug.css" type="text/css">
@@ -61,15 +61,17 @@
 
     <!-- Header -->
     <header role="banner">
-      <nav>
+      <nav class="nav-top">
         <div class="container-lg">
-          <a href="../.." class="logo" title="Home"><span class="sr-only">Go to homepage</span></a>
-          <h1>Style guide</h1>
+          <a href="/" class="logo" title="Home">
+            <svg class="strib-icon-svg">
+              <use xlink:href="#strib-strib-logo"></use>
+            </svg>
 
-          <ul>
-            <li><a href="../..">Layout</a></li>
-            <li><a href="../..">Styles</a></li>
-          </ul>
+            <span class="sr-only">Go to homepage</span>
+          </a>
+
+          <h1>Style guide</h1>
         </div>
       </nav>
 
@@ -79,7 +81,7 @@
     <main id="main-content" class="container-lg" role="main">
       <h1>Datelines</h1>
 
-      <p>Styling for the dateline.  Note that <a href="http://schema.org/">schema.org</a> provides a <a href="http://schema.org/dateline">dateline</a> property.</p>
+      <p>Styling for the dateline. Note that <a href="http://schema.org/">schema.org</a> provides a <a href="http://schema.org/dateline">dateline</a> property.</p>
 
 <h2 id="on-its-own-line">On it’s own line</h2>
 
@@ -108,19 +110,21 @@
 
 <div class="strib-guide-example" data-example-id="">
 <p>
-  <span class="dateline">
+  <span class="dateline" itemprop="dateline">
     <span class="dateline-location">Minneapolis</span>,  Minn.
   </span>
 
-  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into ...
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into ...
+
 </p>
 </div>
 <div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"dateline"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"dateline"</span> <span class="na">itemprop=</span><span class="s">"dateline"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"dateline-location"</span><span class="nt">&gt;</span>Minneapolis<span class="nt">&lt;/span&gt;</span>,  Minn.
   <span class="nt">&lt;/span&gt;</span>
 
-  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into ...
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into ...
+
 <span class="nt">&lt;/p&gt;</span></code></pre></div>
 
 
@@ -138,6 +142,9 @@
         </div>
       </div>
     </footer>
+
+    <!-- Strib icons SVG -->
+    <script src="//static.startribune.com/assets/libs/strib-icons/0.0.10/strib-icons.js"></script>
 
     <!-- Dependencies for JS (note the Strib site uses jQuery 1.11) -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

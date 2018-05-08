@@ -30,7 +30,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Strib icons -->
-    <link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.9/strib-icons.css" type="text/css">
+    <link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.10/strib-icons.css" type="text/css">
 
     <!-- Actual style guide styles -->
     <link rel="stylesheet" href="../../build/strib-styles.default-debug.css" type="text/css">
@@ -61,15 +61,17 @@
 
     <!-- Header -->
     <header role="banner">
-      <nav>
+      <nav class="nav-top">
         <div class="container-lg">
-          <a href="../.." class="logo" title="Home"><span class="sr-only">Go to homepage</span></a>
-          <h1>Style guide</h1>
+          <a href="/" class="logo" title="Home">
+            <svg class="strib-icon-svg">
+              <use xlink:href="#strib-strib-logo"></use>
+            </svg>
 
-          <ul>
-            <li><a href="../..">Layout</a></li>
-            <li><a href="../..">Styles</a></li>
-          </ul>
+            <span class="sr-only">Go to homepage</span>
+          </a>
+
+          <h1>Style guide</h1>
         </div>
       </nav>
 
@@ -105,7 +107,7 @@
 <div class="strib-guide-example" data-example-id="">
 <button type="button">Button</button>
 <button type="button" class="secondary">Secondary</button>
-<button type="button" class="alt">Alt</button>
+<button type="button" class="secondary-dark">Secondary dark</button>
 <button type="button" class="danger">Danger</button>
 <button type="button" class="warning">Warning</button>
 <button type="button" class="dark">Dark</button>
@@ -113,7 +115,7 @@
 </div>
 <div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"secondary"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"alt"</span><span class="nt">&gt;</span>Alt<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"secondary-dark"</span><span class="nt">&gt;</span>Secondary dark<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"warning"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"dark"</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/button&gt;</span>
@@ -124,7 +126,7 @@
 <div class="strib-guide-example" data-example-id="">
 <button type="button" class="button-outline">Button</button>
 <button type="button" class="button-outline secondary">Secondary</button>
-<button type="button" class="button-outline alt">Alt</button>
+<button type="button" class="button-outline secondary-dark">Secondary dark</button>
 <button type="button" class="button-outline danger">Danger</button>
 <button type="button" class="button-outline warning">Warning</button>
 <button type="button" class="button-outline dark">Dark</button>
@@ -132,7 +134,7 @@
 </div>
 <div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-outline"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-outline secondary"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-outline alt"</span><span class="nt">&gt;</span>Alt<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-outline secondary-dark"</span><span class="nt">&gt;</span>Secondary dark<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-outline danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-outline warning"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-outline dark"</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/button&gt;</span>
@@ -146,7 +148,7 @@
 <button type="button">Button</button>
 <button type="button" class="button-link">Button</button>
 <button type="button" class="button-link secondary">Secondary</button>
-<button type="button" class="button-link alt">Alt</button>
+<button type="button" class="button-link secondary-dark">Secondary dark</button>
 <button type="button" class="button-link danger">Danger</button>
 <button type="button" class="button-link warning">Warning</button>
 <button type="button" class="button-link dark">Dark</button>
@@ -155,7 +157,7 @@
 <div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-link"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-link secondary"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-link alt"</span><span class="nt">&gt;</span>Alt<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-link secondary-dark"</span><span class="nt">&gt;</span>Secondary dark<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-link danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-link warning"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-link dark"</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/button&gt;</span>
@@ -166,7 +168,7 @@
 <div class="strib-guide-example" data-example-id="">
 <button type="button" disabled="">Button</button>
 <button type="button" class="secondary" disabled="">Secondary</button>
-<button type="button" class="alt" disabled="">Alt</button>
+<button type="button" class="secondary-dark" disabled="">Secondary dark</button>
 <button type="button" class="danger" disabled="">Danger</button>
 <button type="button" class="warning" disabled="">Warning</button>
 <button type="button" class="dark" disabled="">Dark</button>
@@ -174,7 +176,7 @@
 </div>
 <div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"secondary"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"alt"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Alt<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"secondary-dark"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Secondary dark<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"danger"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"warning"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"dark"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/button&gt;</span>
@@ -186,7 +188,7 @@
 
 <div class="strib-guide-example" data-example-id="">
 <button type="button">
-  <i class="strib-icon strib-search"></i>
+<i class="strib-icon strib-search"></i>
 </button>
 
 <button type="button" class="button-outline">
@@ -202,7 +204,7 @@
 </button>
 </div>
 <div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"strib-icon strib-search"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"strib-icon strib-search"</span><span class="nt">&gt;&lt;/i&gt;</span>
 <span class="nt">&lt;/button&gt;</span>
 
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button-outline"</span><span class="nt">&gt;</span>
@@ -232,6 +234,9 @@
         </div>
       </div>
     </footer>
+
+    <!-- Strib icons SVG -->
+    <script src="//static.startribune.com/assets/libs/strib-icons/0.0.10/strib-icons.js"></script>
 
     <!-- Dependencies for JS (note the Strib site uses jQuery 1.11) -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

@@ -30,7 +30,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Strib icons -->
-    <link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.9/strib-icons.css" type="text/css">
+    <link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.10/strib-icons.css" type="text/css">
 
     <!-- Actual style guide styles -->
     <link rel="stylesheet" href="../../build/strib-styles.default-debug.css" type="text/css">
@@ -61,15 +61,17 @@
 
     <!-- Header -->
     <header role="banner">
-      <nav>
+      <nav class="nav-top">
         <div class="container-lg">
-          <a href="../.." class="logo" title="Home"><span class="sr-only">Go to homepage</span></a>
-          <h1>Style guide</h1>
+          <a href="/" class="logo" title="Home">
+            <svg class="strib-icon-svg">
+              <use xlink:href="#strib-strib-logo"></use>
+            </svg>
 
-          <ul>
-            <li><a href="../..">Layout</a></li>
-            <li><a href="../..">Styles</a></li>
-          </ul>
+            <span class="sr-only">Go to homepage</span>
+          </a>
+
+          <h1>Style guide</h1>
         </div>
       </nav>
 
@@ -112,13 +114,13 @@
 
 <h2 id="article-footer">Article footer</h2>
 
-<p>This is a general style for credits at the bottom of the article. You can use the <code class="highlighter-rouge">.article-footer</code> class if for some reason you are unable to use semantic tags. This is repeated in the <a href="./credits.html">bylines and credits section</a>.</p>
+<p>This is a general style for credits at the bottom of the article. You can use the <code class="highlighter-rouge">.article-footer</code> class. This is repeated in the <a href="./credits.html">bylines and credits section</a>.</p>
 
 <div class="strib-guide-example" data-example-id="">
 <article>
   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 
-  <footer>
+  <footer class="article-footer">
     <div class="byline">
       <address>
         <a rel="author" href="mailto:john.doe@example.com">john.doe@example.com</a>
@@ -131,7 +133,7 @@
 <div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;article&gt;</span>
   <span class="nt">&lt;p&gt;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<span class="nt">&lt;/p&gt;</span>
 
-  <span class="nt">&lt;footer&gt;</span>
+  <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"article-footer"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"byline"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;address&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">rel=</span><span class="s">"author"</span> <span class="na">href=</span><span class="s">"mailto:john.doe@example.com"</span><span class="nt">&gt;</span>john.doe@example.com<span class="nt">&lt;/a&gt;</span>
@@ -149,7 +151,7 @@
 <article>
   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 
-  <footer>
+  <footer class="article-footer">
     <h1>Credits</h1>
 
     <ul class="credits">
@@ -168,7 +170,7 @@
 <div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;article&gt;</span>
   <span class="nt">&lt;p&gt;</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<span class="nt">&lt;/p&gt;</span>
 
-  <span class="nt">&lt;footer&gt;</span>
+  <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"article-footer"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;h1&gt;</span>Credits<span class="nt">&lt;/h1&gt;</span>
 
     <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"credits"</span><span class="nt">&gt;</span>
@@ -191,10 +193,56 @@
 <div class="strib-guide-example" data-example-id="">
 <footer role="contentinfo" class="with-copyright footer-strib-site">
   <div class="container-lg">
-    <div class="footer-strib-site-top-section">
-      <div class="logo"></div>
+    <div class="footer-strib-site-top-section">      
+      <svg class="strib-icon-svg logo">
+        <use xlink:href="#strib-strib-logo"></use>
+      </svg>
+
       <span>Follow us on:</span>
-      <!-- TODO: social share icons -->
+
+      <ul class="social-links">
+        <li>
+          <a href="https://www.facebook.com/startribune/" target="_blank" rel="noopener">
+            <i class="strib-icon strib-social-facebook-circle"></i>
+            <span class="sr-only">Star Tribune Facebook page</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://twitter.com/StarTribune/" target="_blank" rel="noopener">
+            <i class="strib-icon strib-social-twitter-circle"></i>
+            <span class="sr-only">Star Tribune Twitter account</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://plus.google.com/+startribune/" target="_blank" rel="noopener">
+            <i class="strib-icon strib-social-google-circle"></i>
+            <span class="sr-only">Star Tribune Google+ account</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="http://pinterest.com/startribune/" target="_blank" rel="noopener">
+            <i class="strib-icon strib-social-pinterest-circle"></i>
+            <span class="sr-only">Star Tribune Pinterest page</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="http://www.instagram.com/startribune/" target="_blank" rel="noopener">
+            <i class="strib-icon strib-social-instagram-circle"></i>
+            <span class="sr-only">Star Tribune Instagram account</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="http://startribune.tumblr.com/" target="_blank" rel="noopener">
+            <i class="strib-icon strib-social-tumblr-circle"></i>
+            <span class="sr-only">Star Tribune Tumblr page</span>
+          </a>
+        </li>
+      </ul>
     </div>
 
     <div class="row link-set">
@@ -267,10 +315,56 @@
 </div>
 <div class="strib-guide-highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;footer</span> <span class="na">role=</span><span class="s">"contentinfo"</span> <span class="na">class=</span><span class="s">"with-copyright footer-strib-site"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-lg"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"footer-strib-site-top-section"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"logo"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"footer-strib-site-top-section"</span><span class="nt">&gt;</span>      
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"strib-icon-svg logo"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;use</span> <span class="na">xlink:href=</span><span class="s">"#strib-strib-logo"</span><span class="nt">&gt;&lt;/use&gt;</span>
+      <span class="nt">&lt;/svg&gt;</span>
+
       <span class="nt">&lt;span&gt;</span>Follow us on:<span class="nt">&lt;/span&gt;</span>
-      <span class="c">&lt;!-- TODO: social share icons --&gt;</span>
+
+      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"social-links"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.facebook.com/startribune/"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">rel=</span><span class="s">"noopener"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"strib-icon strib-social-facebook-circle"</span><span class="nt">&gt;&lt;/i&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Star Tribune Facebook page<span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+
+        <span class="nt">&lt;li&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://twitter.com/StarTribune/"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">rel=</span><span class="s">"noopener"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"strib-icon strib-social-twitter-circle"</span><span class="nt">&gt;&lt;/i&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Star Tribune Twitter account<span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+
+        <span class="nt">&lt;li&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://plus.google.com/+startribune/"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">rel=</span><span class="s">"noopener"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"strib-icon strib-social-google-circle"</span><span class="nt">&gt;&lt;/i&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Star Tribune Google+ account<span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+
+        <span class="nt">&lt;li&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://pinterest.com/startribune/"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">rel=</span><span class="s">"noopener"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"strib-icon strib-social-pinterest-circle"</span><span class="nt">&gt;&lt;/i&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Star Tribune Pinterest page<span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+
+        <span class="nt">&lt;li&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://www.instagram.com/startribune/"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">rel=</span><span class="s">"noopener"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"strib-icon strib-social-instagram-circle"</span><span class="nt">&gt;&lt;/i&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Star Tribune Instagram account<span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+
+        <span class="nt">&lt;li&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://startribune.tumblr.com/"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="na">rel=</span><span class="s">"noopener"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"strib-icon strib-social-tumblr-circle"</span><span class="nt">&gt;&lt;/i&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Star Tribune Tumblr page<span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row link-set"</span><span class="nt">&gt;</span>
@@ -356,6 +450,9 @@
         </div>
       </div>
     </footer>
+
+    <!-- Strib icons SVG -->
+    <script src="//static.startribune.com/assets/libs/strib-icons/0.0.10/strib-icons.js"></script>
 
     <!-- Dependencies for JS (note the Strib site uses jQuery 1.11) -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

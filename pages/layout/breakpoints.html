@@ -30,7 +30,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Strib icons -->
-    <link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.9/strib-icons.css" type="text/css">
+    <link rel="stylesheet" href="//static.startribune.com/assets/libs/strib-icons/0.0.10/strib-icons.css" type="text/css">
 
     <!-- Actual style guide styles -->
     <link rel="stylesheet" href="../../build/strib-styles.default-debug.css" type="text/css">
@@ -61,15 +61,17 @@
 
     <!-- Header -->
     <header role="banner">
-      <nav>
+      <nav class="nav-top">
         <div class="container-lg">
-          <a href="../.." class="logo" title="Home"><span class="sr-only">Go to homepage</span></a>
-          <h1>Style guide</h1>
+          <a href="/" class="logo" title="Home">
+            <svg class="strib-icon-svg">
+              <use xlink:href="#strib-strib-logo"></use>
+            </svg>
 
-          <ul>
-            <li><a href="../..">Layout</a></li>
-            <li><a href="../..">Styles</a></li>
-          </ul>
+            <span class="sr-only">Go to homepage</span>
+          </a>
+
+          <h1>Style guide</h1>
         </div>
       </nav>
 
@@ -79,37 +81,37 @@
     <main id="main-content" class="container-lg" role="main">
       <h1>Breakpoints</h1>
 
-      <p>Breakpoints are common device sizes at which content could change and re-align.  It’s important to note that breakpoints may be based on common device widths, but they are essentially arbitrary, especially given the multitude of devices available.  Content should look good at any reasonable device width.</p>
+      <p>Breakpoints are common device sizes at which content could change and re-align. It’s important to note that breakpoints may be based on common device widths, but they are essentially arbitrary, especially given the multitude of devices available. Content should look good at any reasonable device width.</p>
 
 <p>Media queries are “mobile-first”, meaning that the default without a media query is assumed to be the smallest possible device, and media queries such as <code class="highlighter-rouge">@media (min-width: 576px) { ... }</code> are used to change the design on larger screens.</p>
 
 <h2 id="variables">Variables</h2>
 
-<p>Breakpoints are defined in the <code class="highlighter-rouge">$breakpoints</code> variable.  This can be updated if you are using the library via SASS.  The number of items or the keys can change, though it is important to go from smallest to largest, and it is suggested to always keep the first item at <code class="highlighter-rouge">0</code>.</p>
+<p>Breakpoints are defined in the <code class="highlighter-rouge">$breakpoints</code> variable. This can be updated if you are using the library via SASS. The number of items or the keys can change, though it is important to go from smallest to largest, and it is suggested to always keep the first item at <code class="highlighter-rouge">0</code>.</p>
 
 <figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="nv">$breakpoints</span><span class="p">:</span> <span class="p">(</span>
-  <span class="na">default</span><span class="p">:</span> <span class="m">0</span><span class="o">,</span>
-  <span class="na">xs</span><span class="p">:</span> <span class="m">420px</span><span class="o">,</span>
-  <span class="na">sm</span><span class="p">:</span> <span class="m">576px</span><span class="o">,</span>
-  <span class="na">md</span><span class="p">:</span> <span class="m">768px</span><span class="o">,</span>
-  <span class="na">lg</span><span class="p">:</span> <span class="m">992px</span><span class="o">,</span>
-  <span class="na">xl</span><span class="p">:</span> <span class="m">1200px</span>
+<span class="na">default</span><span class="p">:</span> <span class="m">0</span><span class="o">,</span>
+<span class="na">xs</span><span class="p">:</span> <span class="m">420px</span><span class="o">,</span>
+<span class="na">sm</span><span class="p">:</span> <span class="m">576px</span><span class="o">,</span>
+<span class="na">md</span><span class="p">:</span> <span class="m">768px</span><span class="o">,</span>
+<span class="na">lg</span><span class="p">:</span> <span class="m">992px</span><span class="o">,</span>
+<span class="na">xl</span><span class="p">:</span> <span class="m">1200px</span>
 <span class="o">);</span></code></pre></figure>
 
-<p>Related, the core font size is defined by breakpoints.  Since <code class="highlighter-rouge">em</code>’s are used for spacing, this allows for everything, including spacing, to adjust relative to the font size.  So, if you change the breakpoints variable, make sure to update the breakpoints font variable.</p>
+<p>Related, the core font size is defined by breakpoints. Since <code class="highlighter-rouge">em</code>’s are used for spacing, this allows for everything, including spacing, to adjust relative to the font size. So, if you change the breakpoints variable, make sure to update the breakpoints font variable.</p>
 
 <figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="nv">$breakpoints-font-size</span><span class="p">:</span> <span class="p">(</span>
-  <span class="na">default</span><span class="p">:</span> <span class="m">14px</span><span class="o">,</span>
-  <span class="na">xs</span><span class="p">:</span> <span class="m">14px</span><span class="o">,</span>
-  <span class="na">sm</span><span class="p">:</span> <span class="m">15px</span><span class="o">,</span>
-  <span class="na">md</span><span class="p">:</span> <span class="m">15px</span><span class="o">,</span>
-  <span class="na">lg</span><span class="p">:</span> <span class="m">16px</span><span class="o">,</span>
-  <span class="na">xl</span><span class="p">:</span> <span class="m">16px</span>
+<span class="na">default</span><span class="p">:</span> <span class="m">16px</span><span class="o">,</span>
+<span class="na">xs</span><span class="p">:</span> <span class="m">16px</span><span class="o">,</span>
+<span class="na">sm</span><span class="p">:</span> <span class="m">16px</span><span class="o">,</span>
+<span class="na">md</span><span class="p">:</span> <span class="m">16px</span><span class="o">,</span>
+<span class="na">lg</span><span class="p">:</span> <span class="m">17px</span><span class="o">,</span>
+<span class="na">xl</span><span class="p">:</span> <span class="m">18px</span>
 <span class="o">);</span></code></pre></figure>
 
 <h2 id="suffixes">Suffixes</h2>
 
-<p>It is common for relevant classes to have suffixes that apply to specific breakpoints.  For instance a class that makes something blue by default might be <code class="highlighter-rouge">.blue</code>, but if you wanted to only have it blue for medium-sized screens then we might use something like <code class="highlighter-rouge">.blue-md</code>.</p>
+<p>It is common for relevant classes to have suffixes that apply to specific breakpoints. For instance a class that makes something blue by default might be <code class="highlighter-rouge">.blue</code>, but if you wanted to only have it blue for medium-sized screens then we might use something like <code class="highlighter-rouge">.blue-md</code>.</p>
 
     </main>
 
@@ -125,6 +127,9 @@
         </div>
       </div>
     </footer>
+
+    <!-- Strib icons SVG -->
+    <script src="//static.startribune.com/assets/libs/strib-icons/0.0.10/strib-icons.js"></script>
 
     <!-- Dependencies for JS (note the Strib site uses jQuery 1.11) -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
