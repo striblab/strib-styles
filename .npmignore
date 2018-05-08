@@ -14,3 +14,6 @@ Dockerfile
 Gemfile
 Gemfile.lock
 gulpfile.js
+.bundle
+.sass-cache
+.publish
