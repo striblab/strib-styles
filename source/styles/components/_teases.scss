@@ -2,256 +2,69 @@
  * tease elements
  */
 
-// Though one should not use a class for this, allow for someone to
-// just in case
-.article.tease,
-article.tease {
-  &:after {
-    content: " ";
-    display: table;
-    clear: both;
-  }
-  &:before {
-    height: 1px;
-    width: 100%;
-    border-bottom: solid 1px #ccc;
-    margin: 0 0 $spacer-component*1.75 0;
-    content: " ";
-    display: block;
-  }
+  // Though one should not use a class for this, allow for someone to
+  // just in case
+  .article.tease,
+  article.tease {
+    &:after {
+      content: " ";
+      display: table;
+      clear: both;
+    }
+    &:before {
+      height: 1px;
+      width: 100%;
+      border-bottom: solid 1px #ccc;
+      margin: 0 0 $spacer-component*1.75 0;
+      content: " ";
+      display: block;
+    }
 
-
-  @include all-contexts('default');
-  font-size: $font-size-component-unit;
-  margin-bottom: $spacer-component * 2;
-  margin-top: $spacer-component * 2; //DB not sure what this does
-  .text,
-  .copy,
-  p {
     @include all-contexts('default');
-  } // Update headings
-  h1,
-  h2,
-  h3,
-  h4 {
-    @extend .label;
-
-    &+p {
-      margin-top: 0;
-    }
-  } // DB
-  header {
-    @include font-styles('benton-sans');
-    font-size: $font-size-micro;
-    font-weight: bold;
-    letter-spacing: .5px;
-    color: map-get($grays, medium);
-    text-transform: uppercase;
-    margin: $spacer-component/4 0 $spacer-component/2 0;
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-  }
-  h1 {
-    a {
-      @include font-styles('whitman-display-condensed-bold');
-      color: map-get($grays, dark);
-      display: block;
-      margin-bottom: $spacer-component/4;
-      font-size: 1.9999em;
-      line-height: 100%;
-      font-weight: bold;
-      -o-transition: color .1s linear;
-      -webkit-transition: color .1s linear;
-      transition: color .1s linear;
-      text-decoration: none;
-    }
-  }
-  figure.tease-photo {
-    width: 145px;
-    float: right;
-    margin-left: $spacer-component * .75;
-    @include media-breakpoint-down('xs') {
-      width: 100%;
-      float: none;
-      margin: 0;
-    }
-  }
-  .tease-timestamp {
-    @include font-styles('benton-sans');
-    color: map-get($theme, green-primary-spring);
-    margin-bottom: $spacer-component/2;
-    text-transform: uppercase;
-    font-size: $font-size-micro;
-    letter-spacing: .5px;
-  }
-  .tease-summary {
-    @include font-styles('poynter-serif');
-    color: map-get($grays, dark);
-    margin-bottom: $spacer-component/2;
-    letter-spacing: -.2px;
-    line-height: 1.385em;
-    font-size: $font-size-existing;
-  }
-
-  ul {
-    // list-style: none;
-    margin: 0;
-    list-style-type: none;
-    li {
-      @include font-styles('benton-sans-condensed');
-      font-size: $font-size-existing;
-      color: map-get($grays, dark);
-      display: block;
-      margin-bottom: $spacer-component/4;
-      margin-left: $spacer-component;
-      text-indent: -5px;
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-      i {
-        color: map-get($theme, green-primary-spring);
-        width: 15px;
-        display: inline-block;
-      }
-      &:before {
-        color: map-get($theme, green-primary-spring);
-        padding-right: 0.23em;
-        position: relative;
-        top: .1em;
-      }
-      &.related-icn-photo,
-      &.related-icn-document,
-      &.related-icn-video,
-      &.related-icn-gallery,
-      &.related-icn-graphic,
-      &.related-icn-podcast,
-      &.related-icn-poll,
-      &.related-icn-comments {
-        margin-left: -5px;
-        text-indent: 0;
-      }
-      &.related-icn-photo:before,
-      &.related-icn-document:before,
-      &.related-icn-video:before,
-      &.related-icn-gallery:before,
-      &.related-icn-graphic:before,
-      &.related-icn-podcast:before,
-      &.related-icn-poll:before,
-      &.related-icn-comments:before,
-      &.related-icn-article:before {
-        display: block;
-        float: left;
-        height: 19px;
-        width: 16px;
-        padding-right: 1px;
-        margin-top: -2px;
-      }
-      &.related-icn-photo:before {
-        content: url(http://assets.startribune.com/static/img/icons/icn-relatedcontent-photo-30-30.svg);
-      }
-      &.related-icn-document:before {
-        content: url(http://assets.startribune.com/static/img/icons/icn-relatedcontent-document-30-30.svg);
-      }
-      &.related-icn-video:before {
-        content: url(http://assets.startribune.com/static/img/icons/icn-relatedcontent-video-30-30.svg);
-      }
-      &.related-icn-gallery:before {
-        content: url(http://assets.startribune.com/static/img/icons/icn-relatedcontent-gallery-30-30.svg);
-      }
-      &.related-icn-graphic:before {
-        content: url(http://assets.startribune.com/static/img/icons/icn-relatedcontent-graphic-30-30.svg);
-      }
-      &.related-icn-podcast:before {
-        content: url(http://assets.startribune.com/static/img/icons/icn-relatedcontent-podcast-30-30.svg);
-      }
-      &.related-icn-poll:before {
-        content: url(http://assets.startribune.com/static/img/icons/icn-relatedcontent-poll-30-30.svg);
-      }
-      &.related-icn-comments:before {
-        content: url(http://assets.startribune.com/static/img/icons/icn-relatedcontent-comments-30-30.svg);
-      }
-      &.related-icn-article:before {
-        content: "\2022";
-      }
-    }
-  }
-  &.collection {
-    width: 300px;
-    header {
-      @include font-styles('popular');
-      font-size: 1.23077em;
-      font-weight: bold;
-      padding-right: 5px;
-      text-decoration: none;
-      position: relative;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #000;
-      padding-top: 4px;
-      display: block;
-    }
-    figure.tease-photo {
-      width: 100%;
-      float: none;
-      margin: 0;
-      img {
-        margin-bottom: 0.35em;
-      }
-      .tease-photo-img {
-        -webkit-background-size: cover;
-        background-size: cover;
-        height: 0;
-        width: 100%;
-        padding-bottom: 62.5%;
-        overflow: hidden;
-      }
-    }
-    li {
-      padding-top: 10px;
-      display: list-item;
-      margin-bottom: 10px;
-      list-style-type: disc;
-      margin-left: 15px;
-      text-indent: 0;
-    }
+    font-size: $font-size-component-unit;
+    margin-bottom: $spacer-component * 2;
+    margin-top: $spacer-component * 2; //DB not sure what this does
+    .text,
+    .copy,
+    p {
+      @include all-contexts('default');
+    } // Update headings
+    h1,
+    h2,
+    h3,
     h4 {
+      @extend .label;
+
+      &+p {
+        margin-top: 0;
+      }
+    } // DB
+    header {
+      @include font-styles('benton-sans');
+      font-size: $font-size-micro;
+      font-weight: bold;
+      letter-spacing: .5px;
+      color: map-get($grays, medium);
+      text-transform: uppercase;
+      margin: $spacer-component/4 0 $spacer-component/2 0;
       a {
-        @include font-styles('whitman-osf');
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+    h1 {
+      a {
+        @include font-styles('whitman-display-condensed-bold');
         color: map-get($grays, dark);
-        font-style: normal;
-        font-weight: normal;
         display: block;
         margin-bottom: $spacer-component/4;
-        font-size: 18px;
-        line-height: 110%;
+        font-size: 1.9999em;
+        line-height: 100%;
+        font-weight: bold;
         -o-transition: color .1s linear;
         -webkit-transition: color .1s linear;
         transition: color .1s linear;
         text-decoration: none;
-      }
-    }
-  }
-  &.more-from-section {
-    .tease-container-left {
-      float: left;
-      width: 22%;
-      margin-right: 4%;
-      @include media-breakpoint-down('xs') {
-        float: none;
-        width: 100%;
-        margin-right: 0;
-      }
-    }
-    .tease-container-right {
-      float: left;
-      width: 73%;
-      @include media-breakpoint-down('xs') {
-        float: none;
-        width: 100%;
-        margin-right: 0;
       }
     }
     figure.tease-photo {
@@ -262,6 +75,193 @@ article.tease {
         width: 100%;
         float: none;
         margin: 0;
+      }
+    }
+    .tease-timestamp {
+      @include font-styles('benton-sans');
+      color: map-get($theme, green-primary-spring);
+      margin-bottom: $spacer-component/2;
+      text-transform: uppercase;
+      font-size: $font-size-micro;
+      letter-spacing: .5px;
+    }
+    .tease-summary {
+      @include font-styles('poynter-serif');
+      color: map-get($grays, dark);
+      margin-bottom: $spacer-component/2;
+      letter-spacing: -.2px;
+      line-height: 1.385em;
+      font-size: $font-size-existing;
+    }
+
+    ul {
+      // list-style: none;
+      margin: 0;
+      list-style-type: none;
+      li {
+        @include font-styles('benton-sans-condensed');
+        font-size: $font-size-existing;
+        color: map-get($grays, dark);
+        display: block;
+        margin-bottom: $spacer-component/4;
+        margin-left: $spacer-component;
+        text-indent: -5px;
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+        i {
+          color: map-get($theme, green-primary-spring);
+          width: 15px;
+          display: inline-block;
+        }
+        &:before {
+          color: map-get($theme, green-primary-spring);
+          padding-right: 0.23em;
+          position: relative;
+          top: .1em;
+        }
+        &.related-icn-photo,
+        &.related-icn-document,
+        &.related-icn-video,
+        &.related-icn-gallery,
+        &.related-icn-graphic,
+        &.related-icn-podcast,
+        &.related-icn-poll,
+        &.related-icn-comments {
+          margin-left: -5px;
+          text-indent: 0;
+        }
+        &.related-icn-photo:before,
+        &.related-icn-document:before,
+        &.related-icn-video:before,
+        &.related-icn-gallery:before,
+        &.related-icn-graphic:before,
+        &.related-icn-podcast:before,
+        &.related-icn-poll:before,
+        &.related-icn-comments:before,
+        &.related-icn-article:before {
+          display: block;
+          float: left;
+          height: 19px;
+          width: 16px;
+          padding-right: 1px;
+          margin-top: -2px;
+        }
+        &.related-icn-photo:before {
+          content: url(http://assets.startribune.com/static/img/icons/icn-relatedcontent-photo-30-30.svg);
+        }
+        &.related-icn-document:before {
+          content: url(http://assets.startribune.com/static/img/icons/icn-relatedcontent-document-30-30.svg);
+        }
+        &.related-icn-video:before {
+          content: url(http://assets.startribune.com/static/img/icons/icn-relatedcontent-video-30-30.svg);
+        }
+        &.related-icn-gallery:before {
+          content: url(http://assets.startribune.com/static/img/icons/icn-relatedcontent-gallery-30-30.svg);
+        }
+        &.related-icn-graphic:before {
+          content: url(http://assets.startribune.com/static/img/icons/icn-relatedcontent-graphic-30-30.svg);
+        }
+        &.related-icn-podcast:before {
+          content: url(http://assets.startribune.com/static/img/icons/icn-relatedcontent-podcast-30-30.svg);
+        }
+        &.related-icn-poll:before {
+          content: url(http://assets.startribune.com/static/img/icons/icn-relatedcontent-poll-30-30.svg);
+        }
+        &.related-icn-comments:before {
+          content: url(http://assets.startribune.com/static/img/icons/icn-relatedcontent-comments-30-30.svg);
+        }
+        &.related-icn-article:before {
+          content: "\2022";
+        }
+      }
+    }
+    &.collection {
+      width: 300px;
+      header {
+        @include font-styles('popular');
+        font-size: 1.23077em;
+        font-weight: bold;
+        padding-right: 5px;
+        text-decoration: none;
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #000;
+        padding-top: 4px;
+        display: block;
+      }
+      figure.tease-photo {
+        width: 100%;
+        float: none;
+        margin: 0;
+        img {
+          margin-bottom: 0.35em;
+        }
+        .tease-photo-img {
+          -webkit-background-size: cover;
+          background-size: cover;
+          height: 0;
+          width: 100%;
+          padding-bottom: 62.5%;
+          overflow: hidden;
+        }
+      }
+      li {
+        padding-top: 10px;
+        display: list-item;
+        margin-bottom: 10px;
+        list-style-type: disc;
+        margin-left: 15px;
+        text-indent: 0;
+      }
+      h4 {
+        a {
+          @include font-styles('whitman-osf');
+          color: map-get($grays, dark);
+          font-style: normal;
+          font-weight: normal;
+          display: block;
+          margin-bottom: $spacer-component/4;
+          font-size: 18px;
+          line-height: 110%;
+          -o-transition: color .1s linear;
+          -webkit-transition: color .1s linear;
+          transition: color .1s linear;
+          text-decoration: none;
+        }
+      }
+    }
+    &.more-from-section {
+      .tease-container-left {
+        float: left;
+        width: 22%;
+        margin-right: 4%;
+        @include media-breakpoint-down('xs') {
+          float: none;
+          width: 100%;
+          margin-right: 0;
+        }
+      }
+      .tease-container-right {
+        float: left;
+        width: 73%;
+        @include media-breakpoint-down('xs') {
+          float: none;
+          width: 100%;
+          margin-right: 0;
+        }
+      }
+      figure.tease-photo {
+        width: 145px;
+        float: right;
+        margin-left: $spacer-component * .75;
+        @include media-breakpoint-down('xs') {
+          width: 100%;
+          float: none;
+          margin: 0;
+        }
       }
       h3 {
         a {
@@ -280,4 +280,3 @@ article.tease {
       }
     }
   }
-}
