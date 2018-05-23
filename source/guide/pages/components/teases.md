@@ -96,16 +96,15 @@ This tease is used in the Zone 2 area on article pages, generally below the cont
 
 {% example html %}
 <article class="tease more-from-section">
-   <div class="tease-container-left">
+  <div class="tease-container-left">
     <div class="tease-timestamp js-timestamp " data-st-timestamp="2018-05-23T19:18:56.000Z">28 minutes ago</div>
   </div>
   
-
   <div class="tease-container-right">
     <figure class="tease-photo">
       <a href="xxx" >
         <div class=""><img src="http://stmedia.stimg.co/ows_152709034121313.jpg?fit=crop&amp;bg=999&amp;crop=faces" ></div>
-    </a>
+      </a>
     </figure>
     <h3><a href="xxx">Trump praises Fox News' Tomi Lahren after Mpls. confrontation</a></h3>
     <div class="tease-summary"> Lahren was leaving Union's rooftop when customer tossed water on her Sunday.</div>   
@@ -118,9 +117,6 @@ This tease is used in the Zone 2 area on article pages, generally below the cont
     </div>
   </div> 
 </article>
-
-
-
 
 {% endexample %}
 
