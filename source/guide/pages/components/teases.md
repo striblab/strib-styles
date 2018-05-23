@@ -15,7 +15,7 @@ Note that teases are not semantic entities. They are usually associated as a cla
   <figure class="tease-photo">
     <a href="">
       <div class="tease-photo-img stack-thumbnail-mod is-story">
-        <img src="http://stmedia.stimg.co/ows_152299140218616.jpg?h=91&amp;w=145&amp;fit=crop&amp;bg=999&amp;crop=faces" alt="Karl-Anthony Towns defended the Nuggets’ Nikola Jokic during the first half in Denver on Thursday.">
+        <img src="http://stmedia.stimg.co/ows_152299140218616.jpg?fit=crop&amp;bg=999&amp;crop=faces" alt="Karl-Anthony Towns defended the Nuggets’ Nikola Jokic during the first half in Denver on Thursday.">
       </div>
     </a>
   </figure>
@@ -29,28 +29,28 @@ Note that teases are not semantic entities. They are usually associated as a cla
 <div class="tease-related">
   <ul>
   <li>
-    <a href="/xxx"><i class="strib-icon strib-camera color-green-light"></i>Photo: photo</a>
+    <a href="/xxx"><i class="strib-icon strib-camera"></i>Photo: photo</a>
   </li>
   <li>
-    <a href="/xxx"><i class="strib-icon strib-document color-green-light"></i>Document: Associated document</a>
+    <a href="/xxx"><i class="strib-icon strib-document"></i>Document: Associated document</a>
   </li>
   <li>
-    <a href="/xxx"><i class="strib-icon strib-media-video-square color-green-light"></i>Video: Associated video</a>
+    <a href="/xxx"><i class="strib-icon strib-media-video-square"></i>Video: Associated video</a>
   </li>
    <li>
-    <a href="/xxx"><i class="strib-icon strib-graphic color-green-light"></i>Graphic: Associated graphic</a>
+    <a href="/xxx"><i class="strib-icon strib-graphic"></i>Graphic: Associated graphic</a>
   </li>
    <li>
-    <a href="/xxx"><i class="strib-icon strib-podcast color-green-light"></i>Podcast: Associated podcast</a>
+    <a href="/xxx"><i class="strib-icon strib-podcast"></i>Podcast: Associated podcast</a>
   </li>
    <li>
-    <a href="/xxx"><i class="strib-icon strib-poll color-green-light"></i>Poll: Associated poll</a>
+    <a href="/xxx"><i class="strib-icon strib-poll"></i>Poll: Associated poll</a>
   </li>
   <li>
-    <a href="/xxx/#comments"><i class="strib-icon strib-comment-bubble color-green-light"></i>159 comments </a>
+    <a href="/xxx/#comments"><i class="strib-icon strib-comment-bubble"></i>159 comments </a>
   </li>
   <li>
-    <a href="/xxx/" ><i class="strib-icon strib-gallery-grid color-green-light"></i>Gallery: Associated gallery</a>
+    <a href="/xxx/"><i class="strib-icon strib-gallery-grid"></i>Gallery: Associated gallery</a>
   </li>
   <li class="related-icn-article">
     <a href="/xxx">Associated article</a>
