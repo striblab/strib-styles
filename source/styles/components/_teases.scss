@@ -1,4 +1,4 @@
-/**
+  /**
  * tease elements
  */
 
@@ -6,6 +6,21 @@
 // just in case
 .article.tease,
 article.tease {
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+  &:before {
+    height: 1px;
+    width: 100%;
+    border-bottom: solid 1px #ccc;
+    margin: 0 0 $spacer-component*1.75 0;
+    content: " ";
+    display: block;
+  }
+
+
   @include all-contexts('default');
   font-size: $font-size-component-unit;
   margin-bottom: $spacer-component * 2;
@@ -96,12 +111,13 @@ article.tease {
         text-decoration: none;
         color: inherit;
       }
-      i { 
+      i {
         color: map-get($theme, green-primary-spring);
-        width:15px;
-        display:inline-block;}
+        width: 15px;
+        display: inline-block;
+      }
       &:before {
-       color: map-get($theme, green-primary-spring);
+        color: map-get($theme, green-primary-spring);
         padding-right: 0.23em;
         position: relative;
         top: .1em;
@@ -113,8 +129,7 @@ article.tease {
       &.related-icn-graphic,
       &.related-icn-podcast,
       &.related-icn-poll,
-      &.related-icn-comments
-       {
+      &.related-icn-comments {
         margin-left: -5px;
         text-indent: 0;
       }
@@ -163,21 +178,106 @@ article.tease {
       }
     }
   }
-}
-
-.article.tease,
-article.tease {
-  &:after {
-    content: " ";
-    display: table;
-    clear: both;
+  &.collection {
+    width: 300px;
+    header {
+      @include font-styles('popular');
+      font-size: 1.23077em;
+      font-weight: bold;
+      padding-right: 5px;
+      text-decoration: none;
+      position: relative;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #000;
+      padding-top: 4px;
+      display: block;
+      position: relative;
+    }
+    figure.tease-photo {
+      width: 100%;
+      float: none;
+      margin: 0;
+      img {
+        margin-bottom: 0.35em;
+      }
+      .tease-photo-img {
+        -webkit-background-size: cover;
+        background-size: cover;
+        height: 0;
+        width: 100%;
+        padding-bottom: 62.5%;
+        overflow: hidden;
+      }
+    }
+    li {
+      padding-top: 10px;
+      display: list-item;
+      margin-bottom: 10px;
+      list-style-type: disc;
+      margin-left: 15px;
+      text-indent: 0;
+    }
+    h4 {
+      a {
+        @include font-styles('whitman-osf');
+        color: map-get($grays, dark);
+        font-style: normal;
+        font-weight: normal;
+        display: block;
+        margin-bottom: $spacer-component/4;
+        font-size: 18px;
+        line-height: 110%;
+        -o-transition: color .1s linear;
+        -webkit-transition: color .1s linear;
+        transition: color .1s linear;
+        text-decoration: none;
+      }
+    }
   }
-  &:before {
-    height: 1px;
-    width: 100%;
-    border-bottom: solid 1px #ccc;
-    margin: 0 0 $spacer-component*1.75 0;
-    content: " ";
-    display: block;
+  &.more-from-section {
+    .tease-container-left {
+      float: left;
+      width: 22%;
+      margin-right: 4%;
+      @include media-breakpoint-down('xs') {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+    .tease-container-right {
+      float: left;
+      width: 73%;
+      @include media-breakpoint-down('xs') {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+    figure.tease-photo {
+      width: 145px;
+      float: right;
+      margin-left: $spacer-component * .75;
+      @include media-breakpoint-down('xs') {
+        width: 100%;
+        float: none;
+        margin: 0;
+      }
+      h3 {
+        a {
+          @include font-styles('whitman-display-condensed-bold');
+          color: map-get($grays, dark);
+          display: block;
+          margin-bottom: $spacer-component/4;
+          font-size: 1.35em;
+          line-height: 100%;
+          font-weight: bold;
+          -o-transition: color .1s linear;
+          -webkit-transition: color .1s linear;
+          transition: color .1s linear;
+          text-decoration: none;
+        }
+      }
+    }
   }
-}
