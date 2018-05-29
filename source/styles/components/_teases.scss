@@ -178,7 +178,8 @@
       }
     }
     &.collection {
-      width: 300px;
+      width: 100%;
+      max-width:300px;
       header {
         @include font-styles('popular');
         font-size: 1.23077em;
@@ -238,6 +239,7 @@
         float: left;
         width: 22%;
         margin-right: 4%;
+        line-height:0;
         @include media-breakpoint-down('xs') {
           float: none;
           width: 100%;

@@ -15,7 +15,7 @@ Note that teases are not semantic entities. They are usually associated as a cla
   <figure class="tease-photo">
     <a href="">
       <div class="tease-photo-img">
-        <img src="http://stmedia.stimg.co/ows_152299140218616.jpg?fit=crop&amp;bg=999&amp;crop=faces" alt="Karl-Anthony Towns defended the Nuggets’ Nikola Jokic during the first half in Denver on Thursday.">
+        <img src="http://placekitten.com/145/100" alt="Kitten placeholder image">
       </div>
     </a>
   </figure>
@@ -62,32 +62,43 @@ Note that teases are not semantic entities. They are usually associated as a cla
 
 ## collection-section-multi
 
-This tease is used in the Zone 2 and 3 area of pages, generally below the content. Shows 3 stories from the associated section.
+This tease is used in the Zone 2 and 3 area of pages, generally below the content. Shows 3 stories from the associated section. Example shown in a grid.
+
 
 {% example html %}
-<article class="tease collection">
-  <header>
-    <a href="/sports/">Sports</a>
-  </header>
-    <ul>
-      <figure class="tease-photo">
-        <a href="/xxx">
-          <div class="tease-photo-img">
-            <img src="http://stmedia.stimg.co/ROBISON4.JPG?h=150&w=300&fit=crop&bg=999&crop=faces">
-          </div>
-        </a>
-      </figure>
-      <li>
-        <h4><a href="/xxx">Linebacker Barr decides not to attend Vikings' voluntary workouts this week</a></h4>
-      </li>
-      <li>
-        <h4><a href="/xxx">ESPN expert: Wolves would dump Thibodeau before trading Towns</a></h4>
-      </li>
-      <li>
-        <h4><a href="/xxx">U basketball recruit Omersa puts on dunk show at AAU tournament</a></h4>
-      </li>      
-    </ul>
-</article>
+<div class="row">
+  <div class="col col-30">
+    <div class="example-fill">col-30</div>
+  </div>
+  <div class="col col-30">
+    <article class="tease collection">
+    <header>
+      <a href="/sports/">Sports</a>
+    </header>
+      <ul>
+        <figure class="tease-photo">
+          <a href="/xxx">
+            <div class="tease-photo-img">
+              <img src="http://placekitten.com/300/150" alt="Kitten placeholder image">
+            </div>
+          </a>
+        </figure>
+        <li>
+          <h4><a href="/xxx">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</a></h4>
+        </li>
+        <li>
+          <h4><a href="/xxx">Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</a></h4>
+        </li>
+        <li>
+          <h4><a href="/xxx">Proident, sunt in culpa qui officia deserunt mollit anim id</a></h4>
+        </li>      
+      </ul>
+  </article>
+  </div>
+  <div class="col col-30">
+    <div class="example-fill">col-30</div>
+  </div>
+</div>
 {% endexample %}
 
 ## downpage more-from-section
@@ -97,17 +108,17 @@ This tease is used in the Zone 2 area on article pages, generally below the cont
 {% example html %}
 <article class="tease more-from-section">
   <div class="tease-container-left">
-    <div class="tease-timestamp js-timestamp " data-st-timestamp="2018-05-23T19:18:56.000Z">28 minutes ago</div>
+    <time class="tease-timestamp js-timestamp" pubdate datetime="2017-07-30T16:00:00">July 30, 2017 &mdash; 4:00pm</time>
   </div>
   
   <div class="tease-container-right">
     <figure class="tease-photo">
       <a href="xxx" >
-        <div class=""><img src="http://stmedia.stimg.co/ows_152709034121313.jpg?fit=crop&amp;bg=999&amp;crop=faces" ></div>
+        <div class=""><img src="http://placekitten.com/145/120" alt="Kitten placeholder image"></div>
       </a>
     </figure>
-    <h3><a href="xxx">Trump praises Fox News' Tomi Lahren after Mpls. confrontation</a></h3>
-    <div class="tease-summary"> Lahren was leaving Union's rooftop when customer tossed water on her Sunday.</div>   
+    <h3><a href="xxx">Lorem ipsum dolor sit amet, consectetur adipisicing</a></h3>
+    <div class="tease-summary">Proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</div>   
     <div class="tease-related">
       <ul>
         <li>
