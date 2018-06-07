@@ -65,7 +65,7 @@ layout: page
 
 ## Interactive
 
-* [Maps](./pages/components/maps.html)
+* [Maps](./pages/interactive/maps.html)
 * Charts
 * Scrolling
 
