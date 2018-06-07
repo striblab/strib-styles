@@ -46,7 +46,6 @@ layout: page
 * [Forms](./pages/components/forms.html)
 * [Galleries](./pages/components/gallery.html)
 * [Social and sharing](./pages/components/social.html)
-* [Maps](./pages/components/maps.html)
 
 <!-- ### Strib-embeds
 
@@ -63,6 +62,12 @@ layout: page
 
 * [Screen readers](./pages/utilities/screen-reader.html)
 * [Debug and diagnostics](./pages/utilities/debug.html)
+
+## Interactive
+
+* [Maps](./pages/components/maps.html)
+* Charts
+* Scrolling
 
 ## Examples
 

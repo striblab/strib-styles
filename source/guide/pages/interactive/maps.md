@@ -11,9 +11,7 @@ Best practices and styles for using maps.
 ## Mapbox example
 
 {% example html %}
-
 <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js"></script>
-
 <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css" rel="stylesheet">
 
 <figure>
@@ -27,25 +25,23 @@ Best practices and styles for using maps.
 </figure>
 
 <script>
-mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiODRHdjBSWSJ9.lF4ymp-69zdGvZ5X4Tokzg';
-var map = new mapboxgl.Map({
-  container: 'map',
-  style: 'mapbox://styles/shadowflare/cjfljh7oh6v6k2smuvb3jftac',
-  center: [-93.191872, 44.960911],
-  zoom: 9,
-  attributionControl: false
-});
+  mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiODRHdjBSWSJ9.lF4ymp-69zdGvZ5X4Tokzg';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/shadowflare/cjfljh7oh6v6k2smuvb3jftac',
+    center: [-93.191872, 44.960911],
+    zoom: 9,
+    attributionControl: false
+  });
 
-var nav = new mapboxgl.NavigationControl();
-map.addControl(nav, 'top-left');
+  var nav = new mapboxgl.NavigationControl();
+  map.addControl(nav, 'top-left');
 </script>
 
 {% endexample %}
 
 {% example html %}
-
 <script src="https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"></script>
-
 <link href="https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css" rel="stylesheet">
 
 <figure>
@@ -59,12 +55,12 @@ map.addControl(nav, 'top-left');
 </figure>
 
 <script>
-L.mapbox.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiODRHdjBSWSJ9.lF4ymp-69zdGvZ5X4Tokzg';
-var fallbackMap = L.mapbox.map('map-fallback', undefined, {
-  attributionControl: false,
-}).setView([44.960911, -93.191872], 9 + 1);
-var styleLayer = L.mapbox.styleLayer('mapbox://styles/shadowflare/cjfljh7oh6v6k2smuvb3jftac')
-    .addTo(fallbackMap);
+  L.mapbox.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiODRHdjBSWSJ9.lF4ymp-69zdGvZ5X4Tokzg';
+  var fallbackMap = L.mapbox.map('map-fallback', undefined, {
+    attributionControl: false,
+  }).setView([44.960911, -93.191872], 9 + 1);
+  var styleLayer = L.mapbox.styleLayer('mapbox://styles/shadowflare/cjfljh7oh6v6k2smuvb3jftac')
+      .addTo(fallbackMap);
 </script>
 
 {% endexample %}
