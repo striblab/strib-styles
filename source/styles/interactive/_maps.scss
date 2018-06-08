@@ -1,0 +1,22 @@
+/**
+ * Styles for maps
+ */
+
+.figure-map {
+  min-height: 20em;
+}
+
+// Some overrides for MapboxGL
+.mapboxgl-ctrl-group > button {
+  border-radius: 0;
+}
+
+a.mapboxgl-ctrl-logo:empty {
+  outline: 0 !important;
+}
+
+// Leaflet overrides for consistency
+.leaflet-bar a {
+  background-color: #FFFFFF;
+  border-radius: 0;
+}

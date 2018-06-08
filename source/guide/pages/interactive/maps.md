@@ -15,7 +15,7 @@ Best practices and styles for using maps.
 <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css" rel="stylesheet">
 
 <figure>
-  <div id="map" class="figure-object" style="height: 30em;"></div>
+  <div id="map" class="figure-object figure-map"></div>
 
   <figcaption>
     This map depicts blah blah blah.  Some map and design data
@@ -45,7 +45,7 @@ Best practices and styles for using maps.
 <link href="https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css" rel="stylesheet">
 
 <figure>
-  <div id="map-fallback" class="figure-object" style="height: 30em;"></div>
+  <div id="map-fallback" class="figure-object figure-map"></div>
 
   <figcaption>
     This map depicts blah blah blah.  Some map and design data
