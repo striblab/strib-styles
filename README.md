@@ -25,18 +25,18 @@ Avoid `top-margin` as it can be be collapsed and create unexpected results.
 The following is a one-time installation and quite possibly already installed for you.
 
 1.  Install [Git](https://git-scm.com/).
-    * On a Mac, this can be installed with [Homebrew](https://brew.sh/): `brew install git`
+    - On a Mac, this can be installed with [Homebrew](https://brew.sh/): `brew install git`
 1.  Install [Ruby](https://www.ruby-lang.org/en/documentation/installation/)
-    * On a Mac, this is already installed
+    - On a Mac, this is already installed
 1.  Install [Node](https://nodejs.org/en/)
-    * On a Mac, this can be installed with [Homebrew](https://brew.sh/): `brew install node`
+    - On a Mac, this can be installed with [Homebrew](https://brew.sh/): `brew install node`
 1.  Ensure `bundler` is installed: `gem install bundler`
 1.  Ensure `gulp` is installed globally: `npm install -g gulp`
 
 For this project specifically:
 
 1.  Get the code: `git clone https://github.com/striblab/strib-styles.git && cd strib-styles`
-1.  Install Ruby gems: `bundle install`
+1.  Install Ruby gems: `bundle install --path ./.bundle`
 1.  Install Node packages: `npm install`
 
 ### Docker
@@ -63,9 +63,9 @@ The uncompiled CSS/Sass styles are in the `source/styles` folder.
 
 The guide, or the reference for the styles, is a [Jekyll](https://jekyllrb.com/) site under `source/guide/` which will get compiled to the `guide/` directory.
 
-* Guide specific files are managed in `source/guide/guide-styles/`
-* The core styles will be compiled and added to the guide in `source/guide/styles/` via the build process.
-* _TODO_: Describe custom variables and plugins.
+- Guide specific files are managed in `source/guide/guide-styles/`
+- The core styles will be compiled and added to the guide in `source/guide/styles/` via the build process.
+- _TODO_: Describe custom variables and plugins.
 
 ### Local server
 
