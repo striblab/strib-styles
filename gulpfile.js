@@ -97,14 +97,14 @@ gulp.task('js', ['js:lint'], async () => {
       );
 
       const bundle = await rollup.rollup({
-        input: 'source/js/' + file.relative,
+        input: './source/js/' + file.relative,
         plugins: [
           rollupJSON(),
           rollupResolve(),
           rollupBabel({
             exclude: 'node_modules/**'
           }),
-          rollupUglify()
+          rollupUglify.uglify()
         ]
       });
 
