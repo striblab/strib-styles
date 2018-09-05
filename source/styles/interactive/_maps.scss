@@ -2,8 +2,10 @@
  * Styles for maps
  */
 
+// Onfortunately, the aspect ratio trick cannot be used given how
+// the map containers work.
 .figure-map {
-  min-height: 20em;
+  min-height: 30em;
 }
 
 // Some overrides for MapboxGL
@@ -17,6 +19,6 @@ a.mapboxgl-ctrl-logo:empty {
 
 // Leaflet overrides for consistency
 .leaflet-bar a {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 0;
 }
