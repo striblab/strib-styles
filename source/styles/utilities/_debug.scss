@@ -10,117 +10,292 @@
  */
 
 // Handle issue mixing
-@mixin debug-element($message, $type: 'error', $hover: true) {
-	@if $type == 'error' {
-		outline: 3px solid map-get($theme, 'red-dark') !important;
+@mixin debug-element($message, $type: "error", $hover: true) {
+  @if $type == "error" {
+    outline: 3px solid map-get($theme, "red-dark") !important;
   }
-	@if $type == 'warning' {
-		outline: 3px solid map-get($theme, 'orange-dark') !important;
+  @if $type == "warning" {
+    outline: 3px solid map-get($theme, "orange-dark") !important;
   }
-	@if $message {
-		&:before {
-      background-color: map-get($grays, 'lightest');
+  @if $message {
+    &:before {
+      background-color: map-get($grays, "lightest");
       color: $color-black;
 
-			@if $type == 'error' {
-				content: 'Error: ' + $message;
-				background-color: map-get($theme, 'red-dark');
+      @if $type == "error" {
+        content: "Error: " + $message;
+        background-color: map-get($theme, "red-dark");
         color: $color-white;
       }
-			@if $type == 'warning' {
-				content: 'Warning: ' + $message;
-				background-color: map-get($theme, 'orange-dark');
+      @if $type == "warning" {
+        content: "Warning: " + $message;
+        background-color: map-get($theme, "orange-dark");
         color: $color-white;
       }
 
-			display: block;
-			position: fixed;
+      display: block;
+      position: fixed;
       min-width: 5em;
-			max-width: 15em;
+      max-width: 15em;
       right: 0;
-			bottom: 45%;
-			font-size: 1rem;
-			padding: 0.5em 1em;
+      bottom: 45%;
+      font-size: 1rem;
+      padding: 0.5em 1em;
       z-index: 99999;
 
       @if $hover {
-				opacity: 0;
-				transition: opacity 0.35s ease-in-out;
+        opacity: 0;
+        transition: opacity 0.35s ease-in-out;
       }
     }
 
-	  &:hover:before, &:focus:before {
-		  opacity: 1;
+    &:hover:before,
+    &:focus:before {
+      opacity: 1;
     }
   }
 }
 
 // Conditionals cant have imports
 @if $debug {
-
   @if $root {
     // Missing HTML doc languages may result in a screenreader reading your site
     // in an amazing french accent. I love it. A lot of other people don't.
     html:not([lang]),
     html[lang=""] {
-  	  display: block;
-      @include debug-element('No set html doc language.', 'warning', false);
+      display: block;
+      @include debug-element("No set html doc language.", "warning", false);
     }
   }
 
   // Use alt tags
   img:not([alt]) {
-    @include debug-element('Should have an alt attribute describing the image or a blank alt attribute.');
+    @include debug-element(
+      "Should have an alt attribute describing the image or a blank alt attribute."
+    );
   }
 
   // Use hrefs
   a:not([href]),
   a[href=""] {
-    @include debug-element('Link without (or empty) href attribute.');
+    @include debug-element("Link without (or empty) href attribute.");
   }
 
   a[href^="javascript"] {
-    @include debug-element('Link has javascript in href.', 'warning');
+    @include debug-element("Link has javascript in href.", "warning");
   }
   a:empty {
-    @include debug-element('Link has no text/content.');
+    @include debug-element("Link has no text/content.");
   }
 
   // Form elements
   input:not([id]),
   select:not([id]),
   textarea:not([id]) {
-    @include debug-element('Inputs should have an id attribute that corresponds to a for attribute of a label element', 'warning');
+    @include debug-element(
+      "Inputs should have an id attribute that corresponds to a for attribute of a label element",
+      "warning"
+    );
   }
 
   label:not([for]) {
-    @include debug-element('Labels should have an for attribute that corresponds to the id of an input element', 'warning');
+    @include debug-element(
+      "Labels should have an for attribute that corresponds to the id of an input element",
+      "warning"
+    );
   }
 
   input:not([type]) {
-    @include debug-element('Input elements shoudl have a type.');
+    @include debug-element("Input elements shoudl have a type.");
   }
 
   input[type="submit"]:not([value]) {
-    @include debug-element('Input with type submit, need to have a value.');
+    @include debug-element("Input with type submit, need to have a value.");
   }
 
   /* stylelint-disable */
 
   // Deprecated elements
-  acronym, applet, basefont, bgsound, big, center, dir, font, frame, frameset, isindex, listing, multicol, nextid, nobr, noembed, noframes, plaintext, rb, spacer, strike, tt, u, xmp, marquee, blink {
-    @include debug-element('Deprecated element.');
+  acronym,
+  applet,
+  basefont,
+  bgsound,
+  big,
+  center,
+  dir,
+  font,
+  frame,
+  frameset,
+  isindex,
+  listing,
+  multicol,
+  nextid,
+  nobr,
+  noembed,
+  noframes,
+  plaintext,
+  rb,
+  spacer,
+  strike,
+  tt,
+  u,
+  xmp,
+  marquee,
+  blink {
+    @include debug-element("Deprecated element.");
   }
 
   // Deprecated attributes
-  link[rev], a[rev], link[charset], a[charset], a[shape], a[coords], img[longdesc], iframe[longdesc], link[target], area[nohref], head[profile], html[version], img[name], meta[scheme], object[archive], object[classid], object[codebase], object[codetype], object[declare], object[standby], param[valuetype], param[type], td[axis], t[axist], td[abbr], t[abbr], td[scope], [align], body[alink], body[vlink], body[text], body[background], [bgcolor], object[border], table[border], [cellpadding], [cellspacing], col[char], colgroup[char], tbody[char], td[char], tfoot[char], th[char], tr[char], col[charoff], colgroup[charoff], tbody[charoff], td[charoff], tfoot[charoff], th[charoff], tr[charoff], br[clear], dl[compact], menu[compact], ol[compact], ul[compact], table[frame], iframe[frameborder], img[hspace], object[hspace], img[vspace], object[vspace], iframe[marginheight], iframe[marginwidth], hr[noshade], li[type], ol[type], ul[type], [valign], hr[width], table[width], td[width], th[width], colgroup[width], pre[width] {
-    @include debug-element('Deprecated attribute.');
+  link[rev],
+  a[rev],
+  link[charset],
+  a[charset],
+  a[shape],
+  a[coords],
+  img[longdesc],
+  iframe[longdesc],
+  link[target],
+  area[nohref],
+  head[profile],
+  html[version],
+  img[name],
+  meta[scheme],
+  object[archive],
+  object[classid],
+  object[codebase],
+  object[codetype],
+  object[declare],
+  object[standby],
+  param[valuetype],
+  param[type],
+  td[axis],
+  t[axist],
+  td[abbr],
+  t[abbr],
+  td[scope],
+  [align],
+  body[alink],
+  body[vlink],
+  body[text],
+  body[background],
+  [bgcolor],
+  object[border],
+  table[border],
+  [cellpadding],
+  [cellspacing],
+  col[char],
+  colgroup[char],
+  tbody[char],
+  td[char],
+  tfoot[char],
+  th[char],
+  tr[char],
+  col[charoff],
+  colgroup[charoff],
+  tbody[charoff],
+  td[charoff],
+  tfoot[charoff],
+  th[charoff],
+  tr[charoff],
+  br[clear],
+  dl[compact],
+  menu[compact],
+  ol[compact],
+  ul[compact],
+  table[frame],
+  iframe[frameborder],
+  img[hspace],
+  object[hspace],
+  img[vspace],
+  object[vspace],
+  iframe[marginheight],
+  iframe[marginwidth],
+  hr[noshade],
+  li[type],
+  ol[type],
+  ul[type],
+  [valign],
+  hr[width],
+  table[width],
+  td[width],
+  th[width],
+  colgroup[width],
+  pre[width] {
+    @include debug-element("Deprecated attribute.");
   }
 
   /* stylelint-enable */
 
   // Bad JS attributes
-  [onafterprint], [onbeforeprint], [onbeforeunload], [onerror], [onhaschange], [onload], [onmessage], [onoffline], [ononline], [onpagehide], [onpageshow], [onpopstate], [onredo], [onresize], [onstorage], [onundo], [onunload], [onblur], [onchage], [oncontextmenu], [onfocus], [onformchange], [onforminput], [oninput], [oninvalid], [onreset], [onselect], [onsubmit], [onkeydown], [onkeypress], [onkeyup], [onclick], [ondblclick], [ondrag], [ondragend], [ondragenter], [ondragleave], [ondragover], [ondragstart], [ondrop], [onmousedown], [onmousemove], [onmouseout], [onmouseover], [onmouseup], [onmousewheel], [onscroll], [onabort], [oncanplay], [oncanplaythrough], [ondurationchange], [onemptied], [onended], [onerror], [onloadeddata], [onloadedmetadata], [onloadstart], [onpause], [onplay], [onplaying], [onprogress], [onratechange], [onreadystatechange], [onseeked], [onseeking], [onstalled], [onsuspend], [ontimeupdate], [onvolumechange], [onwaiting] {
-    @include debug-element('Dont use inline event attribues.');
+  [onafterprint],
+  [onbeforeprint],
+  [onbeforeunload],
+  [onerror],
+  [onhaschange],
+  [onload],
+  [onmessage],
+  [onoffline],
+  [ononline],
+  [onpagehide],
+  [onpageshow],
+  [onpopstate],
+  [onredo],
+  [onresize],
+  [onstorage],
+  [onundo],
+  [onunload],
+  [onblur],
+  [onchage],
+  [oncontextmenu],
+  [onfocus],
+  [onformchange],
+  [onforminput],
+  [oninput],
+  [oninvalid],
+  [onreset],
+  [onselect],
+  [onsubmit],
+  [onkeydown],
+  [onkeypress],
+  [onkeyup],
+  [onclick],
+  [ondblclick],
+  [ondrag],
+  [ondragend],
+  [ondragenter],
+  [ondragleave],
+  [ondragover],
+  [ondragstart],
+  [ondrop],
+  [onmousedown],
+  [onmousemove],
+  [onmouseout],
+  [onmouseover],
+  [onmouseup],
+  [onmousewheel],
+  [onscroll],
+  [onabort],
+  [oncanplay],
+  [oncanplaythrough],
+  [ondurationchange],
+  [onemptied],
+  [onended],
+  [onloadeddata],
+  [onloadedmetadata],
+  [onloadstart],
+  [onpause],
+  [onplay],
+  [onplaying],
+  [onprogress],
+  [onratechange],
+  [onreadystatechange],
+  [onseeked],
+  [onseeking],
+  [onstalled],
+  [onsuspend],
+  [ontimeupdate],
+  [onvolumechange],
+  [onwaiting] {
+    @include debug-element("Dont use inline event attribues.");
   }
 }

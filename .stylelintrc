@@ -5,6 +5,7 @@
   ],
   "rules": {
     "color-hex-case": null,
-    "color-hex-length": null
+    "color-hex-length": null,
+    "no-descending-specificity": null
   }
 }

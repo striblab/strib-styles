@@ -5,17 +5,17 @@
 
 // Though one should not use a class for this, allow for someone to
 // just in case
-.aside,
-aside {
-  @include all-contexts('default');
+aside,
+.aside {
+  @include all-contexts("default");
   font-size: $font-size-component-unit;
   margin-bottom: $spacer-component * 2;
   margin-top: $spacer-component * 2;
 
+  p,
   .text,
-  .copy,
-  p {
-    @include all-contexts('default');
+  .copy {
+    @include all-contexts("default");
     font-size: $font-size-small;
   }
 

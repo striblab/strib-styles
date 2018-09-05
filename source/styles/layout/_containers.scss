@@ -55,10 +55,6 @@
   @include aspect-ratio(1.85, 1);
 }
 
-.container-16-9 {
-  @include aspect-ratio(16, 9);
-}
-
 .container-16-10 {
   @include aspect-ratio(16, 9);
 }

@@ -13,20 +13,17 @@
   }
 
   @include normalize;
-}
-@else {
-  #{$selector-wrapper} {
-    line-height: 1.15;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-  }
-
-  #{$selector-wrapper},
+} @else {
   body#{$selector-wrapper} {
     margin: 0;
   }
 
   #{$selector-wrapper} {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    margin: 0;
+
     @include normalize;
   }
 }
