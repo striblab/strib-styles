@@ -56,6 +56,19 @@
   </head>
 
   <body>
+    <!-- Normally, scripts would be at the bottom of the page so that
+      they would not interrupt content loading, but we want them to be
+      available for pages -->
+    <!-- Strib icons SVG -->
+    <script src="//static.startribune.com/assets/libs/strib-icons/0.0.10/strib-icons.js"></script>
+
+    <!-- Dependencies for JS (note the Strib site uses jQuery 1.11) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- Guide-specific scripts -->
+    <script src="{{ base }}/build/strib-styles.all.js"></script>
+
+
     <!-- Screen reader announcements -->
     <div aria-live="polite" id="announcer" class="sr-only"></div>
 
@@ -99,15 +112,6 @@
         </div>
       </div>
     </footer>
-
-    <!-- Strib icons SVG -->
-    <script src="//static.startribune.com/assets/libs/strib-icons/0.0.10/strib-icons.js"></script>
-
-    <!-- Dependencies for JS (note the Strib site uses jQuery 1.11) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
-    <!-- Guide-specific scripts -->
-    <script src="{{ base }}/build/strib-styles.all.js"></script>
 
     <!-- Page specific JS or other -->
     {{ page.bottom }}
