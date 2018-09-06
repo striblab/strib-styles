@@ -239,6 +239,9 @@ class MapboxCrossPlatformMap {
     if (this.gl) {
       return this.addGeoJSONGL(id, geojson, styles);
     }
+    else {
+      return this.addGeoJSONNoGL(id, geojson, styles);
+    }
   }
 
   // Add GeoJSON GL
@@ -257,7 +260,7 @@ class MapboxCrossPlatformMap {
 
       // Find the index of the first symbol layer in the map style
       let firstSymbolId;
-      for (var i = 0; i < layers.length; i++) {
+      for (let i = 0; i < layers.length; i++) {
         if (layers[i].type === 'symbol') {
           firstSymbolId = layers[i].id;
           break;
@@ -284,6 +287,32 @@ class MapboxCrossPlatformMap {
         firstSymbolId
       );
     });
+  }
+
+  // GeoJSON for noGL map
+  addGeoJSONNoGL(id, geojson, styles) {
+    let translatedStyles = {};
+    [['fillColor', 'fill-color'], ['fillOpacity', 'fill-opacity']].forEach(
+      t => {
+        if (styles[t[1]]) {
+          translatedStyles[t[0]] = styles[t[1]];
+        }
+      }
+    );
+
+    // https://leafletjs.com/reference-1.3.4.html#path-option
+    styles = defaultsDeep(translatedStyles, {
+      // https://www.mapbox.com/mapbox-gl-js/style-spec/#layers-fill
+      fillColor: stribStyles['colors-data'].categories[0].hex,
+      fillOpacity: 0.8,
+      stroke: true,
+      color: '#FFFFFF',
+      weight: 1.5
+    });
+
+    L.geoJSON(geojson, {
+      style: styles
+    }).addTo(this.map);
   }
 }
 

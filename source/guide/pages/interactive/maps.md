@@ -92,6 +92,10 @@ If you want to work with the map and do specific things based on which platform 
 
 #### Adding JSON
 
+This is an example of adding GeoJSON to a map.
+
+_This is just experimental. This may be a bad idea as the API's to do this for each platform is significantly different._
+
 {% example html %}
 
 <figure>
