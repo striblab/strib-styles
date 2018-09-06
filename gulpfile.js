@@ -19,6 +19,7 @@ const ghPages = require('gulp-gh-pages');
 const geach = require('gulp-each');
 const eslint = require('gulp-eslint');
 const jest = require('jest-cli');
+const sassExtract = require('sass-extract');
 const autoprefixer = require('autoprefixer');
 const browserSync = require('browser-sync').create();
 const mime = require('mime-types');
@@ -79,6 +80,25 @@ gulp.task('assets:images', () => {
   return gulp.src(['source/images/**/*']).pipe(gulp.dest('build/images/'));
 });
 
+// Get variables from sass
+gulp.task('js:style-vars', () => {
+  let rendered = sassExtract.renderSync(
+    {
+      file: 'source/styles/_variables.scss'
+    },
+    { plugins: ['compact'] }
+  );
+
+  // Remove $
+  let vars = _.mapKeys(rendered.vars.global, (v, k) => k.replace(/^\$/, ''));
+
+  // Write out
+  fs.writeFileSync(
+    path.join('build', 'strib-styles.styles.json'),
+    JSON.stringify(vars)
+  );
+});
+
 // Lint JS
 gulp.task('js:lint', () => {
   return gulp
@@ -88,7 +108,7 @@ gulp.task('js:lint', () => {
 });
 
 // Use Rollup to compile JS.  TODO: Try to move to a config file
-gulp.task('js', ['js:lint'], async () => {
+gulp.task('js', ['js:style-vars', 'js:lint'], async () => {
   return gulp.src(['source/js/**/*.js']).pipe(
     geach(async (content, file, done) => {
       let name = file.relative.replace('.js', '');
