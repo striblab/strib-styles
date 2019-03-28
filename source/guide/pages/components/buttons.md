@@ -90,3 +90,24 @@ Feel free to use icons in buttons, though, make sure to see the [icons](../conte
   <i class="strib-icon strib-close"></i>
 </button>
 {% endexample %}
+
+## Making your own button
+
+You can use SASS to easily create new buttons with specific colors.
+
+{% highlight scss %}
+.custom-solid-button {
+  @include button();
+  @include button-colors('pink');
+}
+
+.custom-outline-button {
+  @include button();
+  @include button-outline-colors('pink');
+}
+
+.custom-link-button {
+  @include button();
+  @include button-outline-colors('pink', true);
+}
+{% endhighlight %}

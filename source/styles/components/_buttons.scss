@@ -3,7 +3,32 @@
  */
 
 // Mixins for creating different types of buttons more easily
-@mixin button-colors($color: map-get($theme, 'green-primary-emerald')) {
+@mixin button() {
+  display: inline-block;
+  line-height: 1em;
+  margin: 0;
+  padding: $spacer * 0.5 $spacer;
+  color: $color-white;
+  background-color: map-get($theme, "green-primary-emerald");
+  // Provide border, in case one needs to be added
+  border: 1px solid transparent;
+  outline: none;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  cursor: pointer;
+  border-radius: $spacer * 0.33333;
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+@mixin button-colors($color: map-get($theme, "green-primary-emerald")) {
   background-color: $color;
 
   &:focus {
@@ -24,8 +49,9 @@
     }
   }
 }
+
 @mixin button-outline-colors(
-  $color: map-get($theme, 'green-primary-emerald'),
+  $color: map-get($theme, "green-primary-emerald"),
   $link: false
 ) {
   background-color: transparent;
@@ -47,60 +73,39 @@
 
 // Default button
 button,
-a[role='button'],
+a[role="button"],
 a.button,
-input[type='button'],
-input[type='submit'],
-input[type='reset'],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
 .button {
-  display: inline-block;
-  line-height: 1em;
-  margin: 0;
-  padding: $spacer * 0.5 $spacer;
-  color: $color-white;
-  background-color: map-get($theme, 'green-primary-emerald');
-  // Provide border, in case one needs to be added
-  border: 1px solid transparent;
-  outline: none;
-  text-decoration: none;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  user-select: none;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  cursor: pointer;
-  border-radius: $spacer * 0.33333;
-
-  &:disabled {
-    cursor: default;
-  }
+  @include button;
 
   @include button-colors;
 
   &.secondary {
-    @include button-colors(map-get($theme, 'green-primary-spring'));
+    @include button-colors(map-get($theme, "green-primary-spring"));
   }
   &.secondary-dark {
-    @include button-colors(map-get($theme, 'green-secondary-forest'));
+    @include button-colors(map-get($theme, "green-secondary-forest"));
   }
   &.danger {
-    @include button-colors(map-get($theme, 'red-dark'));
+    @include button-colors(map-get($theme, "red-dark"));
   }
   &.warning {
-    @include button-colors(map-get($theme, 'orange-dark'));
+    @include button-colors(map-get($theme, "orange-dark"));
   }
   &.dark {
-    @include button-colors(map-get($grays, 'dark'));
+    @include button-colors(map-get($grays, "dark"));
   }
   &.light {
-    @include button-colors(map-get($grays, 'light'));
+    @include button-colors(map-get($grays, "light"));
   }
 }
 
 // Normalize sets this to button, but this messes things up for some
 // reason
-a[role='button'] {
+a[role="button"] {
   -webkit-appearance: inherit;
 }
 
@@ -109,51 +114,51 @@ a[role='button'] {
   @include button-outline-colors;
 
   &.secondary {
-    @include button-outline-colors(map-get($theme, 'green-primary-spring'));
+    @include button-outline-colors(map-get($theme, "green-primary-spring"));
   }
   &.secondary-dark {
-    @include button-outline-colors(map-get($theme, 'green-secondary-forest'));
+    @include button-outline-colors(map-get($theme, "green-secondary-forest"));
   }
   &.danger {
-    @include button-outline-colors(map-get($theme, 'red-dark'));
+    @include button-outline-colors(map-get($theme, "red-dark"));
   }
   &.warning {
-    @include button-outline-colors(map-get($theme, 'orange-dark'));
+    @include button-outline-colors(map-get($theme, "orange-dark"));
   }
   &.dark {
-    @include button-outline-colors(map-get($grays, 'dark'));
+    @include button-outline-colors(map-get($grays, "dark"));
   }
   &.light {
-    @include button-outline-colors(map-get($grays, 'light'));
+    @include button-outline-colors(map-get($grays, "light"));
   }
 }
 
 // "Link" style
 .button-link {
-  @include button-outline-colors(map-get($theme, 'green-primary-spring'), true);
+  @include button-outline-colors(map-get($theme, "green-primary-spring"), true);
 
   &.secondary {
     @include button-outline-colors(
-      map-get($theme, 'green-secondary-forest'),
+      map-get($theme, "green-secondary-forest"),
       true
     );
   }
   &.secondary-dark {
     @include button-outline-colors(
-      map-get($theme, 'green-secondary-forest'),
+      map-get($theme, "green-secondary-forest"),
       true
     );
   }
   &.danger {
-    @include button-outline-colors(map-get($theme, 'red-dark'), true);
+    @include button-outline-colors(map-get($theme, "red-dark"), true);
   }
   &.warning {
-    @include button-outline-colors(map-get($theme, 'orange-dark'), true);
+    @include button-outline-colors(map-get($theme, "orange-dark"), true);
   }
   &.dark {
-    @include button-outline-colors(map-get($grays, 'dark'), true);
+    @include button-outline-colors(map-get($grays, "dark"), true);
   }
   &.light {
-    @include button-outline-colors(map-get($grays, 'light'), true);
+    @include button-outline-colors(map-get($grays, "light"), true);
   }
 }
