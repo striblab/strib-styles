@@ -69,54 +69,62 @@ p,
 
 // Headings
 h1,
+.h1,
 h2,
+.h2,
 h3,
+.h3,
 h4,
+.h4,
 h5,
+.h5,
 h6,
+.h6,
 .heading {
-  @include all-contexts("heading");
-
   padding: ($spacer / 2) 0 0;
   margin: 0 0 ($spacer / 2);
 }
 
-h1 {
-  font-size: 3em;
-}
-
-h2 {
+h1,
+.h1 {
+  @include all-contexts("heading");
   font-size: 2.5em;
 }
 
-h3 {
+h2,
+.h2 {
+  @include all-contexts("heading");
   font-size: 2em;
 }
 
-h4 {
+h3,
+.h3 {
   @include all-contexts("heading-depth");
   font-size: 1.5em;
   font-weight: bold;
 }
 
-h5 {
-  @include all-contexts("heading-depth");
-  font-size: 1.25em;
-  font-weight: bold;
-}
-
-h6 {
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
   @include all-contexts("heading-depth");
   font-size: 1em;
   font-weight: bold;
 }
 
 // Section title
-.title {
-  @include all-contexts("title");
+.section-title {
+  @include all-contexts("section-title");
   font-size: 5em;
   padding: ($spacer / 3) 0 0;
   margin: 0 0 ($spacer / 3);
+}
+
+.article-title {
+  @include all-contexts("article-title");
 }
 
 // Label
@@ -194,7 +202,7 @@ dl {
 // Lead paragraph
 .lead {
   @include all-contexts("lead");
-  font-size: $font-size-xlarge;
+  font-size: $font-size-large;
   margin-bottom: $spacer;
 }
 

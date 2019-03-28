@@ -29,7 +29,7 @@ $spacer-component: $spacer-component-magnitude * 1em !default;
 // Path to where images are.  This can be whatever, but do not include
 // trailing slash.
 // See function: image()
-$image-path: './images' !default;
+$image-path: "./images" !default;
 
 // Font face display
 $font-display: fallback !default;
@@ -41,7 +41,7 @@ $font-default-font-weight: normal !default;
 
 // Set of fonts to reference
 $font-benton-sans: (
-  font-family: #{'Benton Sans',
+  font-family: #{"Benton Sans",
   Helvetica,
   Arial,
   sans-serif},
@@ -51,7 +51,7 @@ $font-benton-sans: (
 ) !default;
 
 $font-benton-sans-condensed: (
-  font-family: #{'Benton Sans Condensed Medium',
+  font-family: #{"Benton Sans Condensed Medium",
   Helvetica,
   Arial,
   sans-serif},
@@ -61,7 +61,7 @@ $font-benton-sans-condensed: (
 ) !default;
 
 $font-popular: (
-  font-family: #{'Popular',
+  font-family: #{"Popular",
   Helvetica,
   Arial,
   sans-serif},
@@ -71,7 +71,7 @@ $font-popular: (
 ) !default;
 
 $font-popular-light: (
-  font-family: #{'Popular Light',
+  font-family: #{"Popular Light",
   Helvetica,
   Arial,
   sans-serif},
@@ -81,7 +81,7 @@ $font-popular-light: (
 ) !default;
 
 $font-popular-medium: (
-  font-family: #{'Popular Medium',
+  font-family: #{"Popular Medium",
   Helvetica,
   Arial,
   sans-serif},
@@ -91,7 +91,7 @@ $font-popular-medium: (
 ) !default;
 
 $font-poynter-serif: (
-  font-family: #{'Poynter Serif RE',
+  font-family: #{"Poynter Serif RE",
   Georgia,
   Times,
   serif},
@@ -101,7 +101,7 @@ $font-poynter-serif: (
 ) !default;
 
 $font-whitman-display: (
-  font-family: #{'Whitman Display',
+  font-family: #{"Whitman Display",
   Georgia,
   Times,
   serif},
@@ -111,7 +111,7 @@ $font-whitman-display: (
 ) !default;
 
 $font-whitman-display-condensed-bold: (
-  font-family: #{'Whitman Display Condensed Bold',
+  font-family: #{"Whitman Display Condensed Bold",
   Georgia,
   Times,
   serif},
@@ -121,7 +121,7 @@ $font-whitman-display-condensed-bold: (
 ) !default;
 
 $font-whitman-display-compressed-bold: (
-  font-family: #{'Whitman Display Compressed Bold',
+  font-family: #{"Whitman Display Compressed Bold",
   Georgia,
   Times,
   serif},
@@ -131,7 +131,7 @@ $font-whitman-display-compressed-bold: (
 ) !default;
 
 $font-whitman-osf: (
-  font-family: #{'Whitman OSF',
+  font-family: #{"Whitman OSF",
   Georgia,
   Times,
   serif},
@@ -144,8 +144,8 @@ $font-menlo: (
   font-family: #{Menlo,
   Monaco,
   Consolas,
-  'Liberation Mono',
-  'Courier New',
+  "Liberation Mono",
+  "Courier New",
   monospace},
   line-height: $font-default-line-height,
   letter-spacing: $font-default-letter-spacing,
@@ -168,35 +168,61 @@ $font-sets: (
 
 // Contexts.  These mostly switch fonts for different contexts
 $contexts: (
-  news:
-    (
-      default: $font-benton-sans,
-      text: $font-poynter-serif,
-      heading: $font-whitman-display,
-      lead: $font-whitman-display,
-      heading-depth: $font-benton-sans,
-      label: map-merge($font-benton-sans, (font-weight: bold)),
-      title:
-        map-merge($font-popular, (text-transform: uppercase, font-weight: bold)),
-      mono: $font-menlo
-    ),
-  feature:
-    (
-      default: $font-benton-sans,
-      text: $font-benton-sans-condensed,
-      heading: $font-benton-sans,
-      lead: $font-popular,
-      heading-depth: $font-benton-sans,
-      label: $font-benton-sans,
-      title: map-merge($font-popular, (text-transform: uppercase)),
-      mono: $font-menlo
-    )
+  news: (
+    default: $font-benton-sans,
+    text: $font-poynter-serif,
+    heading: $font-whitman-display,
+    lead: $font-whitman-display,
+    heading-depth: $font-benton-sans,
+    label:
+      map-merge(
+        $font-benton-sans,
+        (
+          font-weight: bold
+        )
+      ),
+    article-title:
+      map-merge(
+        $font-whitman-display-condensed-bold,
+        (
+          font-weight: bold
+        )
+      ),
+    section-title:
+      map-merge(
+        $font-popular,
+        (
+          text-transform: uppercase,
+          font-weight: bold
+        )
+      ),
+    mono: $font-menlo
+  ),
+  feature: (
+    default: $font-benton-sans,
+    text: $font-benton-sans-condensed,
+    heading: $font-benton-sans,
+    lead: $font-popular,
+    heading-depth: $font-benton-sans,
+    label: $font-benton-sans,
+    article-title: $font-benton-sans,
+    section-title:
+      map-merge(
+        $font-popular,
+        (
+          text-transform: uppercase
+        )
+      ),
+    mono: $font-menlo
+  )
 ) !default;
 // Set default
-$context-default: 'news' !default;
+$context-default: "news" !default;
 $contexts: map-merge(
   $contexts,
-  (default: map-get($contexts, $context-default))
+  (
+    default: map-get($contexts, $context-default)
+  )
 );
 
 // Font sizes
@@ -212,7 +238,8 @@ $font-size-existing: 0.76471em !default;
 $font-size-small-adjust: 0.9em !default;
 $font-size-large: 1.25em !default;
 $font-size-xlarge: 2.15em !default;
-$font-size-xxlarge: 5.55em !default;
+$font-size-xxlarge: 3.5em !default;
+$font-size-xxxlarge: 5.55em !default;
 
 // Colors
 $color-black: #0a0203 !default;
@@ -254,15 +281,69 @@ $color-text-mute: map-get($grays, medium) !default;
 
 // Data colors
 $colors-data: (
-  reds: (#f2ac93, #f28670, #f2614c, #c22a22, #9c0004),
-  oranges: (#f2d2a4, #f2af80, #e07242, #c2421f, #822010),
-  blues: (#d1e6e1, #a7e6e3, #67b4c2, #3580a3, #0d4673),
-  greens: (#c7e5b5, #9ee384, #5bbf48, #299e3d, #118241),
-  grays: (#f7f7f7, #cccccc, #969696, #636363, #252525),
-  light-blue: (#dae1e7, #c6d1d9, #a8b9c5, #7f98aa, #556e7f, #2c3942),
-  categories: (#66af50, #bf603c, #59a897, #4c4c39),
-  political-parties: (#9c0004, #f2614c, #f7f7f7, #67b4c2, #0d4673),
-  divergent: (#271d42, #857aaa, #f7f7f7, #5bbf48, #118241)
+  reds: (
+    #f2ac93,
+    #f28670,
+    #f2614c,
+    #c22a22,
+    #9c0004
+  ),
+  oranges: (
+    #f2d2a4,
+    #f2af80,
+    #e07242,
+    #c2421f,
+    #822010
+  ),
+  blues: (
+    #d1e6e1,
+    #a7e6e3,
+    #67b4c2,
+    #3580a3,
+    #0d4673
+  ),
+  greens: (
+    #c7e5b5,
+    #9ee384,
+    #5bbf48,
+    #299e3d,
+    #118241
+  ),
+  grays: (
+    #f7f7f7,
+    #cccccc,
+    #969696,
+    #636363,
+    #252525
+  ),
+  light-blue: (
+    #dae1e7,
+    #c6d1d9,
+    #a8b9c5,
+    #7f98aa,
+    #556e7f,
+    #2c3942
+  ),
+  categories: (
+    #66af50,
+    #bf603c,
+    #59a897,
+    #4c4c39
+  ),
+  political-parties: (
+    #9c0004,
+    #f2614c,
+    #f7f7f7,
+    #67b4c2,
+    #0d4673
+  ),
+  divergent: (
+    #271d42,
+    #857aaa,
+    #f7f7f7,
+    #5bbf48,
+    #118241
+  )
 ) !default;
 
 // Political colors
