@@ -22,16 +22,16 @@
 // Default
 @if ($selector-wrapper == false) {
   body {
-    @include all-contexts('default', true);
+    @include all-contexts("default", true);
     background-color: $color-text-bg;
     color: $color-text;
     -webkit-font-smoothing: subpixel-antialiased;
 
     ::-moz-selection {
-      background-color: map-get($theme, 'blue-light');
+      background-color: map-get($theme, "blue-light");
     }
     ::selection {
-      background-color: map-get($theme, 'blue-light');
+      background-color: map-get($theme, "blue-light");
     }
   }
 
@@ -40,16 +40,16 @@
   }
 } @else {
   & {
-    @include all-contexts('default', true);
+    @include all-contexts("default", true);
     background-color: $color-text-bg;
     color: $color-text;
     -webkit-font-smoothing: subpixel-antialiased;
 
     ::-moz-selection {
-      background-color: map-get($theme, 'blue-light');
+      background-color: map-get($theme, "blue-light");
     }
     ::selection {
-      background-color: map-get($theme, 'blue-light');
+      background-color: map-get($theme, "blue-light");
     }
   }
 
@@ -62,7 +62,7 @@
 p,
 .text,
 .copy {
-  @include all-contexts('text');
+  @include all-contexts("text");
   margin-top: 0;
   margin-bottom: $spacer;
 }
@@ -75,7 +75,7 @@ h4,
 h5,
 h6,
 .heading {
-  @include all-contexts('heading');
+  @include all-contexts("heading");
 
   padding: ($spacer / 2) 0 0;
   margin: 0 0 ($spacer / 2);
@@ -94,26 +94,26 @@ h3 {
 }
 
 h4 {
-  @include all-contexts('heading-depth');
-  font-size: 1.5;
+  @include all-contexts("heading-depth");
+  font-size: 1.5em;
   font-weight: bold;
 }
 
 h5 {
-  @include all-contexts('heading-depth');
-  font-size: 1.25;
+  @include all-contexts("heading-depth");
+  font-size: 1.25em;
   font-weight: bold;
 }
 
 h6 {
-  @include all-contexts('heading-depth');
-  font-size: 1;
+  @include all-contexts("heading-depth");
+  font-size: 1em;
   font-weight: bold;
 }
 
 // Section title
 .title {
-  @include all-contexts('title');
+  @include all-contexts("title");
   font-size: 5em;
   padding: ($spacer / 3) 0 0;
   margin: 0 0 ($spacer / 3);
@@ -121,7 +121,7 @@ h6 {
 
 // Label
 .label {
-  @include all-contexts('label');
+  @include all-contexts("label");
   font-size: $font-size-unit;
   padding: 0;
   margin: 0;
@@ -193,7 +193,7 @@ dl {
 
 // Lead paragraph
 .lead {
-  @include all-contexts('lead');
+  @include all-contexts("lead");
   font-size: $font-size-xlarge;
   margin-bottom: $spacer;
 }
@@ -236,7 +236,7 @@ abbr {
 
 // Blockquote
 blockquote {
-  @include all-contexts('text');
+  @include all-contexts("text");
   font-size: $font-size-large;
   letter-spacing: normal;
   margin: 0 0 #{1em / $font-size-large}em;
@@ -246,14 +246,14 @@ blockquote {
   }
 
   & > footer {
-    @include all-contexts('default');
+    @include all-contexts("default");
     color: map-get($grays, medium);
     font-size: $font-size-small;
     padding: 0.5em 0 0;
     text-align: left;
 
     &::before {
-      content: '\2014 \00A0';
+      content: "\2014 \00A0";
     }
 
     & cite {
