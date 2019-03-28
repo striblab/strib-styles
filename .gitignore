@@ -3,12 +3,10 @@ guide/**/*
 source/guide/build/*
 source/guide/build/**/*
 
-!source/guide/pages/components/*
 
 # Common
-.publish
 .bundle
-.jekyll-metadata
+.vscode
 .drake
 *yarn.lock
 .tmp
@@ -75,3 +73,6 @@ coverage
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Exceptions
+!source/guide/pages/components/*
