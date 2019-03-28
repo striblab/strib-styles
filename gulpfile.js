@@ -34,17 +34,17 @@ const rollupJSON = require('rollup-plugin-json');
 sass.compiler = require('node-sass');
 
 // Lint styles/css
-gulp.task('styles:lint', () => {
+const stylesLint = () => {
   return gulp.src(['source/styles/**/*.scss']).pipe(
     stylelint({
       failAfterError: false,
       reporters: [{ formatter: 'string', console: true }]
     })
   );
-});
+};
 
 // Compile styles
-gulp.task('styles', ['styles:lint'], () => {
+const styles = () => {
   return gulp
     .src(['source/styles/**/*.scss', '!source/styles/**/_*.scss'])
     .pipe(sourcemaps.init())
@@ -73,42 +73,49 @@ gulp.task('styles', ['styles:lint'], () => {
     )
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('build/'));
-});
+};
 
 // Assets images
-gulp.task('assets:images', () => {
+const assetsImages = () => {
   return gulp.src(['source/images/**/*']).pipe(gulp.dest('build/images/'));
-});
+};
 
 // Get variables from sass
-gulp.task('js:style-vars', () => {
-  let rendered = sassExtract.renderSync(
-    {
-      file: 'source/styles/_variables.scss'
-    },
-    { plugins: ['compact'] }
-  );
+const jsStyleVars = done => {
+  try {
+    let rendered = sassExtract.renderSync(
+      {
+        file: 'source/styles/_variables.scss'
+      },
+      { plugins: ['compact'] }
+    );
 
-  // Remove $
-  let vars = _.mapKeys(rendered.vars.global, (v, k) => k.replace(/^\$/, ''));
+    // Remove $
+    let vars = _.mapKeys(rendered.vars.global, (v, k) => k.replace(/^\$/, ''));
 
-  // Write out
-  fs.writeFileSync(
-    path.join('build', 'strib-styles.styles.json'),
-    JSON.stringify(vars)
-  );
-});
+    // Write out
+    fs.writeFileSync(
+      path.join('build', 'strib-styles.styles.json'),
+      JSON.stringify(vars)
+    );
+
+    done();
+  }
+  catch (e) {
+    done(e);
+  }
+};
 
 // Lint JS
-gulp.task('js:lint', () => {
+const jsLint = () => {
   return gulp
     .src(['source/js/**/*.js', 'gulpfile.js'])
     .pipe(eslint())
     .pipe(eslint.format());
-});
+};
 
 // Use Rollup to compile JS.  TODO: Try to move to a config file
-gulp.task('js', ['js:style-vars', 'js:lint'], async () => {
+const js = () => {
   return gulp.src(['source/js/**/*.js']).pipe(
     geach(async (content, file, done) => {
       let name = file.relative.replace('.js', '');
@@ -138,40 +145,37 @@ gulp.task('js', ['js:style-vars', 'js:lint'], async () => {
       done(null);
     })
   );
-});
+};
 
 // Test JS via Jest (and JSDOM)
-gulp.task(
-  'js:test',
-  gulpJest('js:test', {
-    rootDir: __dirname,
-    cache: false,
-    testMatch: ['**/*.test.js'],
-    transform: {
-      '^.+\\.js$': 'babel-jest'
-    }
-    //setupFiles: ['./tests/globals.js']
-  })
-);
-
-// Create guide with Jekyll
-gulp.task('guide', ['guide:get-build'], done => {
-  gulpRunner(
-    'bundle',
-    ['exec', 'jekyll', 'build', '-d', 'guide', '-s', 'source/guide'],
-    done
-  );
+const jsTest = gulpJest('js:test', {
+  rootDir: __dirname,
+  cache: false,
+  testMatch: ['**/*.test.js'],
+  transform: {
+    '^.+\\.js$': 'babel-jest'
+  }
+  //setupFiles: ['./tests/globals.js']
 });
 
 // Copy build files over to guide.  This is probably stupid
 // since it is just duplicating things.  Maybe copy this over
 // to the Jekyll output.
-gulp.task('guide:get-build', ['assets:images', 'styles', 'js'], () => {
+const guideGetBuild = () => {
   return gulp.src(['build/**/*']).pipe(gulp.dest('source/guide/build'));
-});
+};
+
+// Create guide with Jekyll
+const guide = done => {
+  gulpRunner(
+    'bundle',
+    ['exec', 'jekyll', 'build', '-d', 'guide', '-s', 'source/guide'],
+    done
+  );
+};
 
 // Watch for building
-gulp.task('watch:guide', () => {
+const watch = () => {
   gulp.watch(
     [
       'source/styles/**/*.scss',
@@ -180,47 +184,73 @@ gulp.task('watch:guide', () => {
       // Ensure we don't watch the build since it gets copied over
       '!source/guide/build/**/*'
     ],
-    ['guide']
+    gulp.series('guide')
   );
-  gulp.watch(['source/js/**/*.js'], ['js:test']);
-});
+  gulp.watch(['source/js/**/*.js'], gulp.series('js'));
+};
 
 // Local server
-gulp.task('server', ['build:guide'], () => {
+const server = () => {
   return browserSync.init({
     port: 3000,
     server: './guide/',
     files: './guide/**/*'
   });
-});
+};
 
 // Publish to gh-pages
-gulp.task('publish', ['build'], () => {
+const publishPages = () => {
   return gulp.src('guide/**/*').pipe(
     ghPages({
       message: 'Automatically updated with gulp-gh-pages [timestamp]'
     })
   );
-});
+};
 
 // Cleanup
-gulp.task('build:clean', () => {
+const cleanBuild = () => {
   return del(['build/**/*']);
-});
-gulp.task('guide:clean', () => {
+};
+const cleanGuide = () => {
   return del(['guide/**/*', 'source/guide/build/**/*']);
-});
+};
 
-// Task combinations
-gulp.task('build:guide', ['guide']);
-gulp.task('build:styles', ['styles']);
-gulp.task('build:js', ['js', 'js:test']);
-gulp.task('build:assets', ['assets:images']);
+// Tasks
+gulp.task('styles:lint', stylesLint);
+gulp.task('styles', gulp.series('styles:lint', styles));
 
-gulp.task('build', ['build:guide']);
-gulp.task('develop', ['server', 'watch:guide']);
-gulp.task('clean', ['build:clean', 'guide:clean']);
-gulp.task('default', ['build']);
+gulp.task('assets:images', assetsImages);
+gulp.task('assets', gulp.parallel('assets:images'));
+
+gulp.task('js:style-vars', jsStyleVars);
+gulp.task('js:lint', jsLint);
+gulp.task('js:test', jsTest);
+gulp.task(
+  'js',
+  // Babel and Jest tests are not working
+  //gulp.series(gulp.parallel('js:style-vars', 'js:lint'), js, 'js:test')
+  gulp.series(gulp.parallel('js:style-vars', 'js:lint'), js)
+);
+
+gulp.task(
+  'guide:get-build',
+  gulp.series(gulp.parallel('assets', 'styles', 'js'), guideGetBuild)
+);
+gulp.task('guide', gulp.series('guide:get-build', guide));
+
+gulp.task('watch', watch);
+gulp.task('server', server);
+
+gulp.task('clean:build', cleanBuild);
+gulp.task('clean:guide', cleanGuide);
+gulp.task('clean', gulp.parallel('clean:build', 'clean:guide'));
+
+gulp.task('publish:gh-pages', publishPages);
+
+gulp.task('build', gulp.parallel('guide'));
+gulp.task('develop', gulp.series('guide', gulp.parallel('server', 'watch')));
+gulp.task('publish', gulp.series('clean', 'build', 'publish:gh-pages'));
+gulp.task('default', gulp.parallel('build'));
 
 // Run command line task
 function gulpRunner(command, args, done) {
