@@ -56,18 +56,35 @@ If you figure needs a bit of spacing at the bottom before the cite or caption, a
 <figure>
   <div class="figure-object example-fill" style="height: 5em;">&nbsp;</div>
 
-  <figcaption><span class="readin">Figure spacing: </span>Use the <code>.figure-object</code> class to give the figure some bottom spacing.</figcaption>
-
+  <figcaption>
+    <span class="readin">Figure spacing: </span>Use the <code>.figure-object</code> class to give the figure some bottom spacing.
+  </figcaption>
 </figure>
 
 {% endexample %}
 
 ## Background fill
 
-To get an image to completely fill the background of a container, add the `.image-bg-fill` class and set the background image. Note that this is using an [aspect ratio container](../layout/containers.html) to maintain a specific aspect ratio.
+To get an image to completely fill the background of a container, add the `.image-bg-fill` class and set the background image.  You should use more complex CSS and media queries to utilize reponsive images.  Note that this is using an [aspect ratio container](../layout/containers.html) to maintain a specific aspect ratio.
 
 {% example html %}
 
 <div class="image-bg-fill container-16-9" style="background-image: url(http://placekitten.com/1500/1500);"></div>
 
+{% endexample %}
+
+The above method works well, but if for some reason you need to use an `img` element, you can also get some similar results with the `.object-cover` class.
+
+{% example html %}
+  <div class="object-cover-container" style="height: 60vh">
+    <img class="object-ficovert" 
+      src="http://placekitten.com/2400/1200" 
+      alt="Kitten placeholder image"
+      srcset="http://placekitten.com/400/200 400w,
+        http://placekitten.com/800/400 800w,
+        http://placekitten.com/1000/500 1000w,
+        http://placekitten.com/1500/750 1500w,
+        http://placekitten.com/2000/1000 2000w"
+      sizes="(max-width: 800px) 100vw, 95vw">
+  </div>
 {% endexample %}

@@ -64,3 +64,18 @@ Currently available aspect ratio containers:
 * `.container-16-9`
 * `.container-16-10`
 * `.container-1618-1` (1.618:1), also `.container-golden`
+
+## Object cover
+
+It can be helpful, specifically for video or images, to have an object fit inside it's container completely and crop the edges as needed even in different sizes.  The CSS property and value `object-fit: cover` does this well.
+
+Note that [`object-fit`](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit) does not work in IE.  Consider using a [polyfill](https://github.com/constancecchen/object-fit-polyfill) to get better browser support.
+
+{% example html %}
+<div style="height: 80vh" class="object-cover-container">
+  <video muted playsinline autoplay class="object-cover">
+    <source src="https://static.startribune.com/guide/assets/videos/final-four-landscape-1200.webm" type="video/webm">
+    <source src="https://static.startribune.com/guide/assets/videos/final-four-landscape-1200.mp4" type="video/mp4">
+  </video>
+</div>
+{% endexample %}
