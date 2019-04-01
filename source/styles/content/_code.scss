@@ -3,10 +3,10 @@
  */
 
 code {
-  @include all-contexts('mono');
+  @include all-contexts("mono");
   font-size: $font-size-small-adjust;
   padding: 0.15em 0.4em;
-  background-color: map-get($grays, lighter);
+  background-color: map-get($grays, "lighter");
   color: map-get($theme, orange);
 }
 
@@ -24,7 +24,7 @@ kbd {
   font-size: $font-size-small-adjust;
   padding: 0.15em 0.4em;
   color: $color-white;
-  background-color: map-get($grays, darker);
+  background-color: map-get($grays, "dark");
   font-weight: bold;
 
   & kbd {
