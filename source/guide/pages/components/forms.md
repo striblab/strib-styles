@@ -3,11 +3,11 @@ title: Forms
 layout: page
 ---
 
-Some forms
+Make sure to use semantic [HTML5 for inputs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input).  For buttons, see the [Buttons](./buttons.html) page.
 
 ## Basics
 
-Here's everything in its basic form.
+Here's everything in its basic form.  Overall, the style definitions will work for any type of inputs that are not buttons, but if needed, you can add the `.input` class.
 
 {% example html %}
 <form>
