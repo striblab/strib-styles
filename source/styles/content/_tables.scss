@@ -11,20 +11,27 @@ table {
   text-align: left;
 
   thead th {
+    font-size: $font-size-micro;
+    text-transform: uppercase;
     vertical-align: bottom;
-    border-bottom: 2px solid map-get($grays, light);
-    padding: 0.5em 0.75em;
+    font-weight: normal;
+    border-bottom: 3px solid map-get($grays, "lighter");
+    padding: 0.5em #{(0.75em / $font-size-micro)}em;
+  }
+
+  tr.active-row {
+    background-color: map-get($grays, "lightest");
   }
 
   tbody th,
   td {
-    border-top: 1px solid map-get($grays, light);
+    border-bottom: 1px solid map-get($grays, "lighter");
     padding: 0.5em 0.75em;
   }
 
   &.table-striped {
     tbody tr:nth-of-type(odd) {
-      background-color: map-get($grays, lighter);
+      background-color: map-get($grays, "lightest");
     }
   }
 
