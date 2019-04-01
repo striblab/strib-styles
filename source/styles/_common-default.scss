@@ -2,23 +2,23 @@
  * Common default imports
  */
 
-@import 'utilities/clearfix';
-@import 'utilities/typography';
-@import 'utilities/colors';
-@import 'utilities/screen-readers';
+@import "utilities/clearfix";
+@import "utilities/typography";
+@import "utilities/colors";
+@import "utilities/screen-readers";
 
-@import 'content/typography';
-@import 'content/code';
-@import 'content/images';
-@import 'content/figures';
-@import 'content/video';
-@import 'content/tables';
-@import 'content/dateline';
-@import 'content/strib-icons';
+@import "content/typography";
+@import "content/code";
+@import "content/images";
+@import "content/figures";
+@import "content/video";
+@import "content/tables";
+@import "content/dateline";
+@import "content/strib-icons";
 
-@import 'layout/layout';
-@import 'layout/containers';
-@import 'layout/grid';
+@import "layout/layout";
+@import "layout/containers";
+@import "layout/grid";
 
 // @import 'st-bug';
 // @import 'st-gallery';
@@ -29,18 +29,18 @@
 // @import 'st-quote';
 // @import 'st-video';
 
-@import 'components/footers';
-@import 'components/navigation';
-@import 'components/credits';
-@import 'components/hero';
-@import 'components/asides';
-@import 'components/teases';
-@import 'components/alerts';
-@import 'components/buttons';
-@import 'components/forms';
-@import 'components/gallery';
-@import 'components/social';
+@import "components/footers";
+@import "components/navigation";
+@import "components/credits";
+@import "components/hero";
+@import "components/asides";
+@import "components/teases";
+@import "components/alerts";
+@import "components/buttons";
+@import "components/forms";
+@import "components/social";
 
-@import 'interactive/maps';
+@import "interactive/maps";
+@import "interactive/gallery";
 
-@import 'utilities/debug';
+@import "utilities/debug";

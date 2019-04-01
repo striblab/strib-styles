@@ -46,7 +46,6 @@ layout: page
 - [Asides](./pages/components/asides.html)
 - [Buttons](./pages/components/buttons.html)
 - [Forms](./pages/components/forms.html)
-- [Galleries](./pages/components/gallery.html)
 - [Social and sharing](./pages/components/social.html)
 
 <!-- ### Strib-embeds
@@ -67,6 +66,7 @@ layout: page
 
 ## Interactive
 
+- [Galleries](./pages/interactive/gallery.html)
 - [Maps](./pages/interactive/maps.html)
 - Charts
 - Scrolling
